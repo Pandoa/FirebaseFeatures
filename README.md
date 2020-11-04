@@ -13,4 +13,4 @@
 ### 1.1. Create a Firebase project.
 To use Firebase, you need a Firebase project. To create one, go to [the Firebase Console](https://console.firebase.google.com/u/0/), click on `Add a project` and fill the fields asked.
 ### 1.2. `google-services.json`
-To work, Firebase requires the file `google-services.json`. Go to `Project Settings > Global Settings` and click on ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true) to download the `google-services.json` file.
+To work, Firebase requires the file `google-services.json`. Go to `Project Settings > Global Settings` and click on <img align="center" width="170" height="30" src="https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true"> to download the `google-services.json` file.
