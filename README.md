@@ -48,7 +48,7 @@ AdMob helps you monetize your mobile app through in-app advertising. Three types
 |:warning:| For development, you should pick a [Sample ad unit ID](https://developers.google.com/admob/android/test-ads#sample_ad_units) or your AdMob account might be flagged. |
 |:--:|:---|
 ### 2.1.1. Banner View
-<img src="https://developers.google.com/admob/images/format-banner.svg" align="right"/>
+<img src="https://developers.google.com/admob/images/format-banner.svg" align="left" width="100"/>
 Banners are rectangular ads that occupy a portion of an app's layout. They can be refreshed automatically after a period of time.
 </br></br></br>
 
@@ -58,15 +58,19 @@ Once the Banner is created, you can manage its behavior with the following metho
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/BannerViewFunctions.png?raw=true)
 
 ### 2.1.2. Interstitial Ads
-<img src="https://developers.google.com/admob/images/format-interstitial.svg" align="right"/>
+<img src="https://developers.google.com/admob/images/format-interstitial.svg" align="left" width="100"/>
 Interstitial ads are full-page ad format that appear at natural breaks and transitions, such as level completion.
-</br></br>
+</br></br></br>
 
 The following Blueprint code shows how to create an Interstitial Ad, load an ad and finally show it. The ad will then be discarded by your user.
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/CreateInterstitial.png?raw=true)
 ### 2.1.3. Rewarded Videos
-<img src="https://developers.google.com/admob/images/format-rewarded.svg" align="right"/>
-Rewarded videos are ad formats that reward users for watching ads. Great for monetising free-to-play users.
+<img src="https://developers.google.com/admob/images/format-rewarded.svg" align="left" width="100"/>
+Rewarded videos are ad formats that reward users for watching ads. They are great for monetising free-to-play users.
+</br></br></br>
+
+Here's how to show a Rewarded Video to your users: you start by binding the reward event to a custom function, you then load the ad with your Ad Unit Id and finally show it when it is loaded.
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/ShowRewardedVideo.png?raw=true)
 
 ## 2.2. Analytics
 ## 2.3. Auth
