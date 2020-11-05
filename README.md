@@ -43,6 +43,19 @@ PrivateDependencyModuleNames.Add("FirebaseFeatures");
 
 ## 2. Firebase Components
 ### 2.1. AdMob
+AdMob helps you monetize your mobile app through in-app advertising. Three types of advertising are available:
+#### 2.1.1. Banner View
+<img src="https://developers.google.com/admob/images/format-banner.svg" align="left"/>
+Banners are rectangular ads that occupy a portion of an app's layout. They can be refreshed automatically after a period of time.
+
+#### 2.1.2. Interstitial Ads
+<img src="https://developers.google.com/admob/images/format-interstitial.svg" align="left"/>
+Interstitial ads are full-page ad format that appear at natural breaks and transitions, such as level completion.
+
+#### 2.1.3. Rewarded Videos
+<img src="https://developers.google.com/admob/images/format-rewarded.svg" align="left"/>
+Rewarded videos are ad formats that reward users for watching ads. Great for monetising free-to-play users.
+
 ### 2.2. Analytics
 ### 2.3. Auth
 ### 2.4. Cloud Firestore
