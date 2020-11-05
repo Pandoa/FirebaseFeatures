@@ -3,17 +3,16 @@
 |:warning:| This documentation is still in construction|
 |:---:|:---
 ## Table of Content
-1. Setup Firebase Features</br>
-  1.1. Create a Firebase project.</br>
-  1.2. AdMob Configuration</br>
-  1.3. `google-services.json`</br>
-  1.4. Configuration for C++</br>
-2. Firebase Components</br>
-  2.1. AdMob</br>
-  2.1. AdMob</br>
-  2.2. Analytics</br>
-  2.3. Auth</br>
-  2.4. Cloud Firestore</br>
+1. [Setup Firebase Features](#1-setup-firebase-features)</br>
+  1.1. [Create a Firebase project](#11-create-a-firebase-project).</br>
+  1.2. [AdMob Configuration](#12-admob-configuration)</br>
+  1.3. [`google-services.json`](#13-google-servicesjson)</br>
+  1.4. [Configuration for C++](#14-configuration-for-c)</br>
+2. [Firebase Components](#2-firebase-components)</br>
+  2.1. [AdMob](#21-admob)</br>
+  2.2. [Analytics](#22-analytics)</br>
+  2.3. [Auth](#23-auth)</br>
+  2.4. [Cloud Firestore](#24-cloud-firestore)</br>
   2.5. Cloud Functions</br>
   2.6. Cloud Messaging</br>
   2.7. Cloud Storage</br>
