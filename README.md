@@ -25,6 +25,11 @@
 To use Firebase, you need a Firebase project. To create one, go to [the Firebase Console](https://console.firebase.google.com/u/0/), click on `Add a project` and fill the fields asked for your new project.
 ## 1.2. AdMob Configuration
 If you plan to use AdMob, you have to configure it first. Start by going to [AdMob Home Page](https://apps.admob.com/v2/home).  Click `Application > Add an Application`. Once the application is added, go to `Application Settings` and click on `Associate with Firebase`. This last step will ask you your application's package name that you choose while creating your Firebase Project.
+You now need to go to `Apps > YourApp > App Settings`, copy the App ID and paste it in `DefaultEngine.ini` with the following structure:
+```ini
+[Firebase]
+AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
+```
 ## 1.3. `google-services.json`
 To work, Firebase requires the file `google-services.json` (or `google-services.plist` for iOS). Go to `Project Settings > Global Settings` and click on <img align="center" width="170" height="30" src="https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true"> to download the `google-services.json` file.
 
@@ -96,7 +101,11 @@ You can use Firebase Authentication to allow users to sign in to your app using 
 ### 2.3.1. Sign Up new Users
 To sign up new users, you need to create a form that allows new users to register with your app using their email address and a password. When a user completes the form, validate the email address and password provided by the user, then pass them to the `Create User with Email and Password`:
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/AuthCreateUser.png?raw=true)
-
+### 2.3.2. Sign In
+Firebase offers several methods to sign in:
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/AuthSignIn.png?raw=true)
+### 2.3.3. Going Further
+The Firebase C++ SDK offers a lot of methods in the `Auth` module. We've converted all of them to Unreal Engine with Blueprint support. However, this documentation won't list all of them and their use. To see and learn how to use them, have a look at [the Official Firebase C++ SDK Documentation](https://firebase.google.com/docs/auth/cpp/start). We have kept the same name for each methods. Futures are replaced with execution pins on asynchronous nodes to keep it easy to use.
 ## 2.4. Cloud Firestore
 ## 2.5. Cloud Functions
 ## 2.6. Cloud Messaging
