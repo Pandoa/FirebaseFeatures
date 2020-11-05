@@ -35,9 +35,11 @@ If you plan to use AdMob, you have to configure it first.
 AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 ```
 ## 1.3. `google-services.json`
-To work, Firebase requires the file `google-services.json` (or `google-services.plist` for iOS). Go to `Project Settings > Global Settings` and click on <img align="center" width="170" height="30" src="https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true"> to download the `google-services.json` file.
+To work, Firebase requires the file `google-services.json` (or `google-services.plist` for iOS). 
+1. Go to `Project Settings > Global Settings` 
+2. Click on <img align="center" width="170" height="30" src="https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true"> to download the `google-services.json` file.
+3. Now that `google-services.json` is downloaded, you need to copy it to `<YourProject>/Services/`.  You can then start the Editor and proceed to the next step.
 
-Now that `google-services.json` is downloaded, you need to copy it to `<YourProject>/Services/`.  You can now start the Editor and proceed to the next step.
 |:information_source:| If the file is invalid or not placed correctly, you will see an error message in the output log when you start the Editor with the message `Failed to create Firebase Application. Make sure the google-services.json file exists and is valid`. If this message doesn't appear, you can assume it is correctly configured.|
 |:--:|:--|
 
