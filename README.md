@@ -118,6 +118,11 @@ The Firebase C++ SDK offers a lot of methods in the `Auth` module. We've convert
 ## 2.5. Cloud Functions
 ## 2.6. Cloud Messaging
 ## 2.7. Cloud Storage
+Cloud Storage for Firebase lets you upload and share user generated content, such as images and video, which allows you to build rich media content into your apps. Your data is stored in a [Google Cloud Storage](https://cloud.google.com/storage) bucket, an exabyte scale object storage solution with high availability and global redundancy. Cloud Storage lets you securely upload these files directly from mobile devices and web browsers, handling spotty networks with ease.
+### 2.7.1 Download a file from Cloud Storage
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/StorageDownloadFile.png?raw=true)
+### 2.7.2. Upload a file to Cloud Storage
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/StorageUploadFile.png?raw=true)
 ## 2.8. Dynamic Links
 ## 2.9. Realtime Database
 ## 2.10. Remote Config
