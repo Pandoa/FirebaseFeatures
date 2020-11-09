@@ -13,12 +13,12 @@
   2.2. [Analytics](#22-analytics)</br>
   2.3. [Auth](#23-auth)</br>
   2.4. [Cloud Firestore](#24-cloud-firestore)</br>
-  2.5. Cloud Functions</br>
-  2.6. Cloud Messaging</br>
-  2.7. Cloud Storage</br>
-  2.8. Dynamic Links</br>
-  2.9. Realtime Database</br>
-  2.10. Remote Config</br>
+  2.5. [Cloud Functions](#25-cloud-functions)</br>
+  2.6. [Cloud Messaging](26-cloud-messaging)</br>
+  2.7. [Cloud Storage](#27-cloud-storage)</br>
+  2.8. [Dynamic Links](#28-dynamic-links)</br>
+  2.9. [Realtime Database](#29-realtime-database)</br>
+  2.10. [Remote Config](#210-remote-config)</br>
 
 # 1. Setup Firebase Features
 ## 1.1. Create a Firebase project.
