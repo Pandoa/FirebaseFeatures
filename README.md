@@ -37,7 +37,7 @@ AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 ```
 -->
 ## 1.3. `google-services.json`
-To work, Firebase requires the file `google-services.json` (or `google-services.plist` for iOS). 
+To work, Firebase requires the file `google-services.json` (or `GoogleService-Info.plist` for iOS). 
 1. Go to `Project Settings > Global Settings` 
 2. Click on <img align="center" width="170" height="30" src="https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true"> to download the `google-services.json` file.
 3. Now that `google-services.json` is downloaded, you need to copy it to `<YourProject>/Services/`.  You can then start the Editor and proceed to the next step.
@@ -121,3 +121,8 @@ The Firebase C++ SDK offers a lot of methods in the `Auth` module. We've convert
 ## 2.8. Dynamic Links
 ## 2.9. Realtime Database
 ## 2.10. Remote Config
+You can use Firebase Remote Config to define parameters in your app and update their values in the cloud, allowing you to modify the appearance and behavior of your app without distributing an app update.
+
+With Firebase Features, you would do the following to get config data from Firebase:
+You start by fetching the Remote Config Data from Firebase's server. Once it's done, you activate the fetched data with the `Activate Fetched` node. After that, you can safely get your data to configure your game with the `Get String`, `Get Bool`, `Get Int32`, `Get Float`, `Get Int64` or `Get Data` nodes.
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/RemoteConfigExample.png?raw=true)
