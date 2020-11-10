@@ -115,6 +115,9 @@ Firebase offers several methods to sign in:
 ### 2.3.3. Going Further
 The Firebase C++ SDK offers a lot of methods in the `Auth` module. We've converted all of them to Unreal Engine with Blueprint support. However, this documentation won't list all of them and their use. To see and learn how to use them, have a look at [the Official Firebase C++ SDK Documentation](https://firebase.google.com/docs/auth/cpp/start). We have kept the same name for each methods. Futures are replaced with execution pins on asynchronous nodes to keep it easy to use.
 ## 2.4. Cloud Firestore
+Cloud Firestore is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud Platform. Like Firebase Realtime Database, it keeps your data in sync across client apps through realtime listeners and offers offline support for mobile and web so you can build responsive apps that work regardless of network latency or Internet connectivity.
+### 2.4.1. Get Data from Firestore
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/FirestoreGetData.png?raw=true)
 ## 2.5. Cloud Functions
 ## 2.6. Cloud Messaging
 ## 2.7. Cloud Storage
