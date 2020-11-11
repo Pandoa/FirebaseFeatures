@@ -119,7 +119,13 @@ Cloud Firestore is a flexible, scalable database for mobile, web, and server dev
 ### 2.4.1. Get Data from Firestore
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/FirestoreGetData.png?raw=true)
 ## 2.5. Cloud Functions
+Cloud Functions for Firebase is a serverless framework that lets you automatically run backend code in response to events triggered by Firebase features and HTTPS requests. Your JavaScript or TypeScript code is stored in Google's cloud and runs in a managed environment. There's no need to manage and scale your own servers.
+### 2.5.1. Call a function
+To call a Cloud Function, you have to first retrieve an Https Callable Reference with the node `Get Https Callble`. Once the reference is retrieved, you can call it with a Variant data parameter.
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/CallCloudFunctions.png?raw=true)
+
 ## 2.6. Cloud Messaging
+
 ## 2.7. Cloud Storage
 Cloud Storage for Firebase lets you upload and share user generated content, such as images and video, which allows you to build rich media content into your apps. Your data is stored in a [Google Cloud Storage](https://cloud.google.com/storage) bucket, an exabyte scale object storage solution with high availability and global redundancy. Cloud Storage lets you securely upload these files directly from mobile devices and web browsers, handling spotty networks with ease.
 ### 2.7.1 Download a file from Cloud Storage
@@ -127,7 +133,9 @@ Cloud Storage for Firebase lets you upload and share user generated content, suc
 ### 2.7.2. Upload a file to Cloud Storage
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/StorageUploadFile.png?raw=true)
 ## 2.8. Dynamic Links
+
 ## 2.9. Realtime Database
+
 ## 2.10. Remote Config
 You can use Firebase Remote Config to define parameters in your app and update their values in the cloud, allowing you to modify the appearance and behavior of your app without distributing an app update.
 
