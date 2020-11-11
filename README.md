@@ -144,7 +144,13 @@ Firebase Dynamic Links are links that work the way you want, on multiple platfor
 You can listen to Dynamic Links with the `On Dynamic Link Received` node.
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DynamicLinksEvent.png?raw=true)
 ## 2.9. Realtime Database
+The Firebase Realtime Database stores and synchronizes data using a NoSQL cloud database. Data is synchronized across all clients in realtime, and remains available when your app goes offline.
 
+### 2.9.1. Save data
+For basic write operations, you can use the `Set Value` node to save data to a specified reference, replacing any existing data at that path:
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DatabaseSetValue.png?raw=true)
+### 2.9.2. Retrieve data
+...
 ## 2.10. Remote Config
 You can use Firebase Remote Config to define parameters in your app and update their values in the cloud, allowing you to modify the appearance and behavior of your app without distributing an app update.
 
