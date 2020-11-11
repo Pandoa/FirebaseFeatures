@@ -125,7 +125,13 @@ To call a Cloud Function, you have to first retrieve an Https Callable Reference
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/CallCloudFunctions.png?raw=true)
 
 ## 2.6. Cloud Messaging
+Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably send messages at no cost.
 
+Using FCM, you can notify a client app that new email or other data is available to sync. You can send notification messages to drive user re-engagement and retention. For use cases such as instant messaging, a message can transfer a payload of up to 4KB to a client app.
+### 2.6.1. Receive a message
+To handle Messaging's module events, we have to call the `Listen for Messaging Events` node:
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/MessagingReceiveMessage.png?raw=true)
+After that, the execution pin `On Message` is going to fire each time a message is received.
 ## 2.7. Cloud Storage
 Cloud Storage for Firebase lets you upload and share user generated content, such as images and video, which allows you to build rich media content into your apps. Your data is stored in a [Google Cloud Storage](https://cloud.google.com/storage) bucket, an exabyte scale object storage solution with high availability and global redundancy. Cloud Storage lets you securely upload these files directly from mobile devices and web browsers, handling spotty networks with ease.
 ### 2.7.1 Download a file from Cloud Storage
