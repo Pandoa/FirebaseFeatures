@@ -131,6 +131,7 @@ Using FCM, you can notify a client app that new email or other data is available
 ### 2.6.1. Receive a message
 To handle Messaging's module events, we have to call the `Listen for Messaging Events` node:
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/MessagingReceiveMessage.png?raw=true)
+
 After that, the execution pin `On Message` is going to fire each time a message is received.
 ## 2.7. Cloud Storage
 Cloud Storage for Firebase lets you upload and share user generated content, such as images and video, which allows you to build rich media content into your apps. Your data is stored in a [Google Cloud Storage](https://cloud.google.com/storage) bucket, an exabyte scale object storage solution with high availability and global redundancy. Cloud Storage lets you securely upload these files directly from mobile devices and web browsers, handling spotty networks with ease.
@@ -139,7 +140,9 @@ Cloud Storage for Firebase lets you upload and share user generated content, suc
 ### 2.7.2. Upload a file to Cloud Storage
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/StorageUploadFile.png?raw=true)
 ## 2.8. Dynamic Links
-
+Firebase Dynamic Links are links that work the way you want, on multiple platforms, and whether or not your app is already installed.
+You can listen to Dynamic Links with the `On Dynamic Link Received` node.
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DynamicLinksEvent.png?raw=true)
 ## 2.9. Realtime Database
 
 ## 2.10. Remote Config
