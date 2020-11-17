@@ -19,6 +19,7 @@
   2.8. [Dynamic Links](#28-dynamic-links)</br>
   2.9. [Realtime Database](#29-realtime-database)</br>
   2.10. [Remote Config](#210-remote-config)</br>
+3. [Support](#3-support)
 
 # 1. Setup Firebase Features
 ## 1.1. Create a Firebase project.
@@ -157,3 +158,6 @@ You can use Firebase Remote Config to define parameters in your app and update t
 With Firebase Features, you would do the following to get config data from Firebase:
 You start by fetching the Remote Config Data from Firebase's server. Once it's done, you activate the fetched data with the `Activate Fetched` node. After that, you can safely get your data to configure your game with the `Get String`, `Get Bool`, `Get Int32`, `Get Float`, `Get Int64` or `Get Data` nodes.
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/RemoteConfigExample.png?raw=true)
+
+# 3. Support
+If you need help, have a feature request or experience troubles, please contact us at [pandores.marketplace@gmail.com](mailto:pandores.marketplace+FirebaseFeatures@gmail.com?subject=Firebase%20Features%20-%20).
