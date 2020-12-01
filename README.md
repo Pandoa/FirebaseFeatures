@@ -4,6 +4,7 @@
 ![](https://cdn1.epicgames.com/ue/product/Screenshot/Slide2.PNG-1920x1080-159ca9b10cb2776eb016b999d15a9fc7.jpg)
 
 ## Table of Content
+0. [Introduction](#0-introduction)
 1. [Setup Firebase Features](#1-setup-firebase-features)</br>
   1.1. [Create a Firebase project](#11-create-a-firebase-project).</br>
   1.2. [AdMob Configuration](#12-admob-configuration)</br>
@@ -21,6 +22,9 @@
   2.9. [Realtime Database](#29-realtime-database)</br>
   2.10. [Remote Config](#210-remote-config)</br>
 3. [Support](#3-support)
+
+# 0. Introduction
+Firebase - Features allows you to easily use the Firebase C++ SDK within Unreal Engine. Go full Blueprints without touching a single line of C++, full C++ with an API totally written for Unreal Engine 4 C++ or mix both easily.
 
 # 1. Setup Firebase Features
 ## 1.1. Create a Firebase project.
