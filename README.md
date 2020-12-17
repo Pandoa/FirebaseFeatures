@@ -156,7 +156,7 @@ The Firebase Realtime Database stores and synchronizes data using a NoSQL cloud 
 For basic write operations, you can use the `Set Value` node to save data to a specified reference, replacing any existing data at that path:
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DatabaseSetValue.png?raw=true)
 ### 2.9.2. Retrieve data
-...
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DatabaseGetValue.png?raw=true)
 ## 2.10. Remote Config
 You can use Firebase Remote Config to define parameters in your app and update their values in the cloud, allowing you to modify the appearance and behavior of your app without distributing an app update.
 
