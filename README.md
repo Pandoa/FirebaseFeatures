@@ -21,7 +21,8 @@
   2.8. [Dynamic Links](#28-dynamic-links)</br>
   2.9. [Realtime Database](#29-realtime-database)</br>
   2.10. [Remote Config](#210-remote-config)</br>
-3. [Support](#3-support)
+3. [Troubleshoting](#3-troubleshoting)
+4. [Support](#4-support)
 
 # 0. Introduction
 Firebase - Features allows you to easily use the Firebase C++ SDK within Unreal Engine. Go full Blueprints without touching a single line of C++, full C++ with an API totally written for Unreal Engine 4 C++ or mix both easily.
@@ -164,5 +165,16 @@ With Firebase Features, you would do the following to get config data from Fireb
 You start by fetching the Remote Config Data from Firebase's server. Once it's done, you activate the fetched data with the `Activate Fetched` node. After that, you can safely get your data to configure your game with the `Get String`, `Get Bool`, `Get Int32`, `Get Float`, `Get Int64` or `Get Data` nodes.
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/RemoteConfigExample.png?raw=true)
 
-# 3. Support
+# 3. Troubleshoting
+## 3.1. Android
+If you experience a crash on startup when running your game on Android, you might first want to get the crash reason. To do so, open a terminal and run the following command:
+```batch
+adb logcat
+```
+### 3.1.1. `Invalid application ID`
+If the logs from `adb` indicate `Invalid application ID`, it means your AdMob application ID is invalid. The crash will disappear once you use the good one available on AdMob page.
+|:warning:| The AdMob application ID is not an ad ID. It looks like `ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX`.|
+|:--:|:---|
+
+# 4. Support
 If you need help, have a feature request or experience troubles, please contact us at [pandores.marketplace@gmail.com](mailto:pandores.marketplace+FirebaseFeatures@gmail.com?subject=Firebase%20Features%20-%20).
