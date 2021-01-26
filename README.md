@@ -36,13 +36,11 @@ If you plan to use AdMob, you have to configure it first.
 2. Click `Application` > `Add an Application`. 
 3. Once the application is added, go to `Application Settings`
 4. Click on `Associate with Firebase`. This last step will ask you your application's package name that you choose while creating your Firebase Project.
-<!--
 5. You now need to go to `Apps` > `YourApp` > `App Settings`, copy the App ID and paste it in `DefaultEngine.ini` with the following structure: 
  ```ini
 [Firebase]
 AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 ```
--->
 ## 1.3. `google-services.json`
 To work, Firebase requires the file `google-services.json` (or `GoogleService-Info.plist` for iOS). 
 1. Go to `Project Settings > Global Settings` 
