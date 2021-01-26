@@ -59,6 +59,11 @@ PrivateDependencyModuleNames.Add("FirebaseFeatures");
 |:warning:|You need to regenerate project files for the includes to work with your code editor.|
 |:--:|:--|
 
+## 1.5. Disabling unused modules
+If you want to disable a Firebase Module, you can do so by going to your project's configuration > Plugins > Firebase Features.
+You can then untick the box of the modules you don't want to use.
+![Firebase Features configuration panel](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/ConfigPanel.png?raw=true)
+
 # 2. Firebase Components
 ## 2.1. AdMob
 AdMob helps you monetize your mobile app through in-app advertising. Three types of advertising are available.
