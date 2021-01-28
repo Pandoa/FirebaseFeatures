@@ -69,7 +69,28 @@ You can then untick the box of the modules you don't want to use.
 AdMob helps you monetize your mobile app through in-app advertising. Three types of advertising are available.
 |:warning:| For development, you should pick a [Sample ad unit ID](https://developers.google.com/admob/android/test-ads#sample_ad_units) or your AdMob account might be flagged. |
 |:--:|:---|
-### 2.1.1. Banner View
+### 2.1.1. Setting up AdMob for development  
+For development, AdMob displays test ads instead of real ads. To enable test ads there are two possibilities.
+#### 2.1.1.1. Using Test Ad IDs
+Instead of using created ads' IDs, you can pick the one matching the type of ad you display to automatically use test ads:
+|Ad Type| Ad ID|
+|:---|:---|
+|Banner|	ca-app-pub-3940256099942544/6300978111|
+|Interstitial|	ca-app-pub-3940256099942544/1033173712|
+|Interstitial Video|	ca-app-pub-3940256099942544/8691691433|
+|Rewarded Video|	ca-app-pub-3940256099942544/5224354917|
+
+You would then pass these Ads IDs for the parameter `Ad Unit Id`.
+
+You can read more about these ads IDs [here](https://developers.google.com/admob/android/test-ads#sample_ad_units).
+#### 2.1.1.2. Adding the Device ID for Development
+A more convenient method to not have to change Ad Unit IDs is to register your device as a Test Device.
+
+To do so:
+1. Get your Test Device ID. You get it watching your device logs with `adb logcat` when you launch an ad. A line looking like `AdRequest.Builder.addTestDevice("YOUR_DEVICE_TEST_ID")` will appear in the logs.
+2. Each time you load an ad, add your test device ID(s) to the ad request as followed:
+![Add Test Device](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/TestAdDeviceId.png?raw=true)
+### 2.1.2. Banner View
 <img src="https://developers.google.com/admob/images/format-banner.svg" align="left" width="100"/>
 Banners are rectangular ads that occupy a portion of an app's layout. They can be refreshed automatically after a period of time.
 </br></br></br>
@@ -79,14 +100,14 @@ Here is a simple use case to create a banner, load an add and finally show the a
 Once the Banner is created, you can manage its behavior with the following methods:
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/BannerViewFunctions.png?raw=true)
 
-### 2.1.2. Interstitial Ads
+### 2.1.3. Interstitial Ads
 <img src="https://developers.google.com/admob/images/format-interstitial.svg" align="left" width="100"/>
 Interstitial ads are full-page ad format that appear at natural breaks and transitions, such as level completion.
 </br></br></br></br>
 
 The following Blueprint code shows how to create an Interstitial Ad, load an ad and finally show it. The ad will then be discarded by your user.
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/CreateInterstitial.png?raw=true)
-### 2.1.3. Rewarded Videos
+### 2.1.4. Rewarded Videos
 <img src="https://developers.google.com/admob/images/format-rewarded.svg" align="left" width="100"/>
 Rewarded videos are ad formats that reward users for watching ads. They are great for monetising free-to-play users.
 </br></br></br></br>
