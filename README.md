@@ -64,6 +64,9 @@ If you want to disable a Firebase Module, you can do so by going to your project
 You can then untick the box of the modules you don't want to use.
 ![Firebase Features configuration panel](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/ConfigPanel.png?raw=true)
 
+|:warning:| Disabling a module will skip its initialization. Be careful to not call a method of a module that you disabled.|
+|:---:|:---|
+
 # 2. Firebase Components
 ## 2.1. AdMob
 AdMob helps you monetize your mobile app through in-app advertising. Three types of advertising are available.
