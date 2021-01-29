@@ -184,9 +184,24 @@ The Firebase Realtime Database stores and synchronizes data using a NoSQL cloud 
 For basic write operations, you can use the `Set Value` node to save data to a specified reference, replacing any existing data at that path:
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DatabaseSetValue.png?raw=true)
 ### 2.9.2. Retrieve data
-![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DatabaseGetValue.png?raw=true) 2.9.3. Watch data
+![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DatabaseGetValue.png?raw=true)
 ### 2.9.3. Watch data
+Realtime Database allows you to react to Database change in realtime. To do so, you just have to setup the listeners and bind the `OnValueChanged` delegate:
+
 ![](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DatabaseWatchValue.png?raw=true)
+
+There are other events you can listen for as well:
+|Event Name|Details|
+|:---|:---|
+|`OnChildAdded`| Called when a child has been added to the reference watched.|
+|`OnChildChanged`| Called when a child of the reference we watch has been modified.|
+|`OnChildMoved`| Called when a child of the reference we watch has been moved.|
+|`OnChildRemoved`| Called when a child of the reference we watch has been removed.|
+|`OnCancelled`| Called when the watch has been cancelled.|
+|`OnValueChanged`| Called when the value watched has changed.|
+
+
+
 ## 2.10. Remote Config
 You can use Firebase Remote Config to define parameters in your app and update their values in the cloud, allowing you to modify the appearance and behavior of your app without distributing an app update.
 
