@@ -13,7 +13,7 @@ If you plan to use AdMob, you have to configure it first.
 AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 ```  
 
-## `google-services.json`
+## File `google-services.json`
 
 To work, Firebase requires the file `google-services.json` (or `GoogleService-Info.plist` for iOS). 
 1. Go to `Project Settings > Global Settings` 
