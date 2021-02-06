@@ -1,8 +1,12 @@
 ![logo](_media/icon.svg)
 
-# Firebase - Features <small>1.2.1</small>
+# docsify <small>4.11.6</small>
 
-> Firebase integration for Unreal Engine
+> A magical documentation site generator.
 
-[Marketplace](https://github.com/docsifyjs/docsify/)
-[Support](mailto:pandores.marketplace@gmail.com)
+- Simple and lightweight
+- No statically built html files
+- Multiple themes
+
+[GitHub](https://github.com/docsifyjs/docsify/)
+[Getting Started](#docsify)

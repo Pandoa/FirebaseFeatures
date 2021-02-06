@@ -1,10 +1,14 @@
 {
-  "name": "firebasefeatures",
-  "version": "1.2.1",
-  "description": "Firebase - Features documentation.",
+  "name": "docsify",
+  "version": "4.11.6",
+  "description": "A magical documentation generator.",
   "author": {
-    "url": "https://github.com/"
+    "name": "qingwei-li",
+    "email": "cinwell.li@gmail.com",
+    "url": "https://github.com/QingWei-Li"
   },
+  "homepage": "https://docsify.js.org",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/docsifyjs/docsify.git"
