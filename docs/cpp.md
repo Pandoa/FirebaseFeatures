@@ -3,7 +3,7 @@ This section contains information for C++ development using Firebase - Features 
 ## Includes
 Here is an exhaustive list of incldes available:
 ```cpp
-#include "FirebaseFeatures.h
+#include "FirebaseFeatures.h"
 #include "FirebaseSdk/FirebaseVariant.h"
 #include "Auth/Auth.h"
 #include "Auth/Credential.h"
