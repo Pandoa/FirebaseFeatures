@@ -1,14 +1,8 @@
 {
-  "name": "docsify",
-  "version": "4.11.6",
+  "name": "firebasefeatures",
+  "version": "1.2.1",
   "description": "A magical documentation generator.",
-  "author": {
-    "name": "qingwei-li",
-    "email": "cinwell.li@gmail.com",
-    "url": "https://github.com/QingWei-Li"
-  },
   "homepage": "https://docsify.js.org",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/docsifyjs/docsify.git"
@@ -42,7 +36,7 @@
     "build": "rimraf lib themes && run-s build:js build:css build:css:min build:ssr build:cover",
     "prepare": "npm run build",
     "pub:next": "cross-env RELEASE_TAG=next sh build/release.sh",
-    "pub": "sh build/release.sh",
+    "pub": "bash build/release.sh",
     "postinstall": "opencollective-postinstall"
   },
   "husky": {
