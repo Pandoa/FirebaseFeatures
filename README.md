@@ -1,6 +1,6 @@
 
 # The documentation has moved to [here](https://pandoa.github.io/FirebaseFeatures/).
-
+<!--
 # [Firebase Features - Documentation](https://www.unrealengine.com/marketplace/en-US/product/firebase-features)
 
 ![](https://cdn1.epicgames.com/ue/product/Screenshot/Slide2.PNG-1920x1080-159ca9b10cb2776eb016b999d15a9fc7.jpg)
@@ -227,4 +227,4 @@ If you encounter this issue:
 2. Download the `google-services.json` again and replace the one in your project with it.
 
 # 4. Support
-If you need help, have a feature request or experience troubles, please contact us at [pandores.marketplace@gmail.com](mailto:pandores.marketplace+FirebaseFeatures@gmail.com?subject=Firebase%20Features%20-%20).
+If you need help, have a feature request or experience troubles, please contact us at [pandores.marketplace@gmail.com](mailto:pandores.marketplace+FirebaseFeatures@gmail.com?subject=Firebase%20Features%20-%20).-->
