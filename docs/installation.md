@@ -32,7 +32,7 @@ To create a Realtime Database for your project:
 ## Crashlytics (Android Only)
 To enable Crashlytics for your project:
 1. Open your project's `Config/DefaultEngine.ini` in a text editor.
-2. Add `CrashlyticsEnabled=true` under the `Fiebase` category.
+2. Add `CrashlyticsEnabled=true` under the `Firebase` category.
 ```ini
 [Firebase]
 AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
