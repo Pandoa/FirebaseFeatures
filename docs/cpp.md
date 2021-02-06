@@ -1,7 +1,7 @@
 # Getting Started with C++
 This section contains information for C++ development using Firebase - Features as well as some examples.
 ## Includes
-Here is an exhaustive list of incldes available:
+Here is an exhaustive list of includes available:
 ```cpp
 #include "FirebaseFeatures.h"
 #include "FirebaseSdk/FirebaseVariant.h"
