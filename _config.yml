@@ -1,0 +1,23 @@
+theme: jekyll-theme-tactile
+gems: 
+  - jemoji
+title: Firebase - Features
+description: |
+  Documentation for the Firebase Features plugin available on the Unreal Engine Marketplace.
+show_downloads: false
+google_analytics: G-FS58SSLH7N
+github:
+  is_project_page: false
+author:
+  name: pandoa
+  email: pandores.marketplace@gmail.com
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+# Build settings
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
