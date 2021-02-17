@@ -22,4 +22,8 @@ You need to change the minSdk to the `y` value:
 2. Locate the `Platforms` > `Android` > `APK Packaging` > `Minimum SDK Version (19=KitKat, 21=Lolipop)` config.
 3. Set its value to `y`.
 
+## Desktop
+### Crashes when calling `Firebase - Features` functions.
+If you encouter crashes when using the Desktop platform, the cause is very likely a missing `google-services.json` file. Follow the instructions [here](/installation) correctly. Make sure to check the Output Log after editor startup.
 
+!> If you plan to only use `Firebase - Features` on iOS, you'll have to download the `.json` and the `.plist` to test it in editor.
