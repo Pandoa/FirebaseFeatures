@@ -14,3 +14,12 @@ If the logs from `adb` indicate `Invalid application ID`, it means your AdMob ap
 If you encounter this issue:
 1. Go in the Firebase Console. Click on `Realtime Database` in the left panel and create a new Realtime Database.
 2. Download the `google-services.json` again and replace the one in your project with it.
+
+### uses-sdk:minSdkVersion `x` cannot be smaller than version `y` declared in library [com.google.firebase:firebase_messaging_cpp]
+As we use the latest available libraries for Firebase C++ SDK, you might encounter this error if you target an old SDK version.
+You need to change the minSdk to the `y` value:
+1. Open Project's Config.
+2. Locate the `Platforms` > `Android` > `APK Packaging` > `Minimum SDK Version (19=KitKat, 21=Lolipop)` config.
+3. Set its value to `y`.
+
+
