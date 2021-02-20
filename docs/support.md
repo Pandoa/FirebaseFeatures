@@ -16,12 +16,12 @@ You can then start getting the logs with:
 adb logcat
 ```
 After that, crash or make the bug happens.
-- **iOS**: 
-1. Connect your iOS device to the Mac through USB.
-2. Launch Xcode. Go to `Windows` > `Devices and Simulators`.
-3. Reproduce the problem you encountered.
-4. Choose your device from the devices section on the left side of the screen.
-5. Click on the up-triangle on the bottom of the screen to view device logs.
+- **iOS**: You can get the device's logs with the following steps:
+    1. Connect your iOS device to the Mac through USB.
+    2. Launch Xcode. Go to `Windows` > `Devices and Simulators`.
+    3. Reproduce the problem you encountered.
+    4. Choose your device from the devices section on the left side of the screen.
+    5. Click on the up-triangle on the bottom of the screen to view device logs.
 
 
 ## Contact
