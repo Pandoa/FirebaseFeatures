@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<urlset xmlns="http://www.google.com/schemas/sitemap/0.84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+		<url>
+			<loc>https://pandoa.github.io/FirebaseFeatures/#/</loc>
+			<changefreq>daily</changefreq>
+			<priority>1</priority>
+		</url>
+
+		<url>
+			<loc>https://pandoa.github.io/FirebaseFeatures/#/support</loc>
+			<changefreq>daily</changefreq>
+			<priority>0.5</priority>
+		</url>
+
+		<url>
+			<loc>https://pandoa.github.io/FirebaseFeatures/#/installation</loc>
+			<changefreq>daily</changefreq>
+			<priority>0.5</priority>
+		</url>
+
+		<url>
+			<loc>https://pandoa.github.io/FirebaseFeatures/#/components</loc>
+			<changefreq>daily</changefreq>
+			<priority>0.5</priority>
+		</url>
+
+		<url>
+			<loc>https://pandoa.github.io/FirebaseFeatures/#/troubleshoting</loc>
+			<changefreq>daily</changefreq>
+			<priority>0.6</priority>
+		</url>
+
+		<url>
+			<loc>https://pandoa.github.io/FirebaseFeatures/#/introduction</loc>
+			<changefreq>daily</changefreq>
+			<priority>0.4</priority>
+		</url>
+
+		<url>
+			<loc>https://pandoa.github.io/FirebaseFeatures/#/cpp</loc>
+			<changefreq>daily</changefreq>
+			<priority>0.2</priority>
+		</url>
+
+	</urlset>
+
