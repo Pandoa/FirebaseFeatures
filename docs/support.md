@@ -19,9 +19,8 @@ that's probably the reason of the error.
     - **iOS**: You can get the device's logs with the following steps:
         1. Connect your iOS device to the Mac through USB.
         2. Launch Xcode. Go to `Windows` > `Devices and Simulators`.
-        3. Reproduce the problem you encountered.
-        4. Choose your device from the devices section on the left side of the screen.
-        5. Click on the up-triangle on the bottom of the screen to view device logs.
+        3. Click on `View Device Logs`.
+        ![Device Logs](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DevicesiOSLogs.png?raw=true)
 
 
 ## Contact
