@@ -3,20 +3,31 @@ This section contains information for C++ development using Firebase - Features 
 # Includes
 Here is an exhaustive list of includes available:
 ```cpp
+// Common files
 #include "FirebaseFeatures.h"
 #include "FirebaseSdk/FirebaseVariant.h"
+
+// Auth
 #include "Auth/Auth.h"
 #include "Auth/Credential.h"
 #include "Auth/User.h"
+
+// Analytics
 #include "Analytics/FirebaseAnalyticsProvider.h"
 #include "Analytics/FirebaseAnalyticsLibrary.h"
+
+// AdMob
 #include "AdMob/AdMobLibrary.h"
 #include "AdMob/AdMobTypes.h"
 #include "AdMob/BannerView.h"
 #include "AdMob/InterstitialAd.h"
 #include "AdMob/RewardedVideo.h"
+
+// Realtime Database
 #include "Database/Database.h"
 #include "Database/DatabaseReference.h"
+
+// Firestore
 #include "Firestore/Firestore.h"
 #include "Firestore/Query.h"
 #include "Firestore/FieldValue.h"
@@ -24,10 +35,18 @@ Here is an exhaustive list of includes available:
 #include "Firestore/DocumentSnapshot.h"
 #include "Firestore/DocumentReference.h"
 #include "Firestore/CollectionReference.h"
+
+// Cloud Functions
 #include "Functions/FunctionsLibrary.h"
 #include "Functions/CallableReference.h"
+
+// Cloud Messaging
 #include "Messaging/MessagingLibrary.h"
+
+// Remote Config
 #include "RemoteConfig/RemoteConfig/.h"
+
+// Cloud Storage
 #include "Storage/Storage.h"
 #include "Storage/StorageReference.h"
 ```
