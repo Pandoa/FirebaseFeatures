@@ -33,6 +33,37 @@ Here is an exhaustive list of includes available:
 ```
 
 ## Code Examples
+### Analytics
+The headers available for this part of the SDK are:
+```cpp
+#include "Analytics/FirebaseAnalyticsProvider.h"
+#include "Analytics/FirebaseAnalyticsLibrary.h"
+```
+#### Get the Firebase Analytics Provider
+```cpp
+const TSharedPtr<FFirebaseAnalyticsProvider> Provider =  UFirebaseAnalyticsLibrary::GetAnalyticsProvider();
+
+// Provider is invalid if not set in project's settings.
+// See the setup page for more info on setup.
+if (Provider)
+{
+    // Use the provider.
+}
+```
+#### Managing the Analytics Session
+The `UFirebaseAnalyticsLibrary` class provides static methods to manage the Analytics Session.
+```cpp
+// To start the analytics session.
+// Short-hand for GetProvider()->StartSession().
+UFirebaseAnalyticsLibrary::StartSession();
+
+// Do stuff with analytics.
+
+// To end the analytics session.
+// Short-hand for GetProvider()->EndSession().
+UFirebaseAnalyticsLibrary::EndSession();
+```
+
 ### Realtime Database
 ```cpp
 UDatabase* const Database = UDatabase::GetInstanceFromUrl(TEXT("https://app-db.firebaseio.com/"));
