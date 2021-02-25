@@ -1,6 +1,6 @@
 # Getting Started with C++
 This section contains information for C++ development using Firebase - Features as well as some examples.
-## Includes
+# Includes
 Here is an exhaustive list of includes available:
 ```cpp
 #include "FirebaseFeatures.h"
@@ -32,14 +32,14 @@ Here is an exhaustive list of includes available:
 #include "Storage/StorageReference.h"
 ```
 
-## Code Examples
-### Analytics
+# Code Examples
+## Analytics
 The headers available for this part of the SDK are:
 ```cpp
 #include "Analytics/FirebaseAnalyticsProvider.h"
 #include "Analytics/FirebaseAnalyticsLibrary.h"
 ```
-#### Get the Firebase Analytics Provider
+### Get the Firebase Analytics Provider
 ```cpp
 const TSharedPtr<FFirebaseAnalyticsProvider> Provider =  UFirebaseAnalyticsLibrary::GetAnalyticsProvider();
 
@@ -50,7 +50,7 @@ if (Provider)
     // Use the provider.
 }
 ```
-#### Managing the Analytics Session
+### Managing the Analytics Session
 The `UFirebaseAnalyticsLibrary` class provides static methods to manage the Analytics Session.
 ```cpp
 // To start the analytics session.
@@ -64,7 +64,7 @@ UFirebaseAnalyticsLibrary::StartSession();
 UFirebaseAnalyticsLibrary::EndSession();
 ```
 
-### Realtime Database
+## Realtime Database
 ```cpp
 UDatabase* const Database = UDatabase::GetInstanceFromUrl(TEXT("https://app-db.firebaseio.com/"));
 if (Database)
