@@ -16,7 +16,7 @@ AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 ## File `google-services.json`
 
 To work, Firebase requires the file `google-services.json` (or `GoogleService-Info.plist` for iOS). 
-1. Go to `Project Settings > Global Settings` 
+1. Go to `Project Overview > Project Settings` 
 2. Click on <img align="center" width="170" height="30" src="https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true"> to download the `google-services.json` file.
 3. Now that `google-services.json` is downloaded, you need to copy it to `<YourProject>/Services/`.  You can then start the Editor and proceed to the next step.
 
