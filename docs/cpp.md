@@ -53,6 +53,7 @@ Here is an exhaustive list of includes available:
 
 # Code Examples
 ## Analytics
+?> Make sure to read ![Before Starting](https://pandoa.github.io/FirebaseFeatures/#/components?id=before-starting).
 The headers available for this part of the SDK are:
 ```cpp
 #include "Analytics/FirebaseAnalyticsProvider.h"
@@ -63,8 +64,7 @@ The headers available for this part of the SDK are:
 // The provider inheriting the Engine's IAnalyticsProvider (for 4.25+).
 const TSharedPtr<FFirebaseAnalyticsProvider> Provider =  UFirebaseAnalyticsLibrary::GetAnalyticsProvider();
 
-// Provider is invalid if not set in project's settings.
-// See the setup page for more info on setup.
+// Provider is invalid if not set in config file.
 if (Provider)
 {
     // Use the provider.
@@ -92,7 +92,7 @@ if (Database)
     Database->GoOnline();
 
     // Should keep the reference marked as UPROPERTY somewhere
-	// to prevent its garbage collection.
+    // to prevent its garbage collection.
     UDatabaseReference* const Ref = Database->GetReferenceFromPath(TEXT("/SomeVal"));
 
     if (Ref && Ref->IsValid())
