@@ -41,6 +41,7 @@ The headers available for this part of the SDK are:
 ```
 ### Get the Firebase Analytics Provider
 ```cpp
+// The provider inheriting the Engine's IAnalyticsProvider (for 4.25+).
 const TSharedPtr<FFirebaseAnalyticsProvider> Provider =  UFirebaseAnalyticsLibrary::GetAnalyticsProvider();
 
 // Provider is invalid if not set in project's settings.
