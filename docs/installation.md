@@ -20,6 +20,10 @@ To work, Firebase requires the file `google-services.json` (or `GoogleService-In
 2. Click on <img align="center" width="170" height="30" src="https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true"> to download the `google-services.json` file.
 3. Now that `google-services.json` is downloaded, you need to copy it to `<YourProject>/Services/`.  You can then start the Editor and proceed to the next step.
 
+The following image shows the required steps to arrive to the Download button:
+
+![Firebase Console Download Services Actions](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/FBConsoleProjectSettings.png?raw=true)
+
 !> If the file is invalid or not placed correctly, you will see an error message in the output log when you start the Editor with the message `Failed to create Firebase Application. Make sure the google-services.json file exists and is valid`. If this message doesn't appear, you can assume it is correctly configured.
 
 !> Even if you plan to only use `Firebase - Features` on iOS, we recommend to download the `.json` file as well as the `.plist` to test in-Editor.
