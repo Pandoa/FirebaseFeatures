@@ -53,7 +53,8 @@ Here is an exhaustive list of includes available:
 
 # Code Examples
 ## Analytics
-?> Make sure to read [Before Starting](https://pandoa.github.io/FirebaseFeatures/#/components?id=before-starting).
+?> Make sure to read the [Before Starting](https://pandoa.github.io/FirebaseFeatures/#/components?id=before-starting) section.
+
 The headers available for this part of the SDK are:
 ```cpp
 #include "Analytics/FirebaseAnalyticsProvider.h"
