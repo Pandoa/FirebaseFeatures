@@ -86,6 +86,7 @@ AdMobEnabled=false ; <- The module we want to disable.
 ```
 
 The current modules you can enable/disable this way are:  
+
 |Module Name|Config Name|Default Value|
 |:---|:---|:---:|
 |AdMob|`AdMobEnabled`|`true`|
