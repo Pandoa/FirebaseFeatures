@@ -61,3 +61,11 @@ You can then untick the box of the modules you don't want to use.
 ![Firebase Features configuration panel](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/ConfigPanel.png?raw=true)
 
 !> Disabling a module will skip its initialization. Be careful to not call a method of a module that you disabled.
+
+## Removing the all the code for a module
+If you want to remove totally a module from the plugin, you can do so by editing a line in `FirebaseFeatures.Build.cs`.
+This file is located to `<Engine_Dir>/Plugins/Marketplace/FirebaseFeatures/Source/FirebaseFeatures/`.
+
+Open the file and comment out the library you don't want in the list starting at line `22`. Also, read the code comment containing an example.
+
+
