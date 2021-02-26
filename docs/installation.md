@@ -88,3 +88,4 @@ The current modules you can enable/disable this way are:
 |AdMob|`AdMobEnabled`|`true`|
 |Crashlytics|`CrashlyticsEnabled`|`false`|
 
+!> Send an email to [pandores.marketplace@gmail.com](mailto:pandores.marketplace@gmail.com) if you want to disable an unlisted module.
