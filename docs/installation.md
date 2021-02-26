@@ -84,6 +84,11 @@ AdMobApplicationId="ca-app-pub-XXX~XXX" ; Other configs.
 ; ...
 AdMobEnabled=false ; <- The module we want to disable.
 ```
+3. If it worked correctly, you should have the following output during an Android build:
+```log
+Firebase Features is enabled.
+   -> Module is disabled.
+```
 
 The current modules you can enable/disable this way are:  
 
