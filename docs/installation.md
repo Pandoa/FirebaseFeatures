@@ -62,10 +62,29 @@ You can then untick the box of the modules you don't want to use.
 
 !> Disabling a module will skip its initialization. Be careful to not call a method of a module that you disabled.
 
-## Removing the all the code for a module
+## Removing all the code for a module
 If you want to remove totally a module from the plugin, you can do so by editing a line in `FirebaseFeatures.Build.cs`.
 This file is located to `<Engine_Dir>/Plugins/Marketplace/FirebaseFeatures/Source/FirebaseFeatures/`.
 
 Open the file and comment out the library you don't want in the list starting at line `22`. Also, read the code comment containing an example.
 
+?> After following this procedure, the specified module won't be linked and used in your app at all.
+
+## Disabling a Module (Android)
+Android has one last step to totally eradicate a module from your application.
+
+1. Open the default Engine config file, usually located at `<Project>/Config/DefaultEngine.ini`.
+2. Under the `Firebase` category add `ModuleEnabled=false`.
+```ini
+[Firebase]
+AdMobApplicationId="ca-app-pub-XXX~XXX" ; Other configs.
+; ...
+AdMobEnabled=false ; <- The module we want to disable.
+```
+
+The current modules you can enable/disable this way are:
+|Module Name|Config Name|Default Value|
+|:---|:---|:---:|
+|AdMob|`AdMobEnabled`|`true`|
+|Crashlytics|`CrashlyticsEnabled`|`false`|
 
