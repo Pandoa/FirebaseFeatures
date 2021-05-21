@@ -24,7 +24,8 @@ A more convenient method to not have to change Ad Unit IDs is to register your d
 
 To do so:
 1. Get your Test Device ID. You get it watching your device logs with `adb logcat` when you launch an ad. A line looking like `AdRequest.Builder.addTestDevice("YOUR_DEVICE_TEST_ID")` will appear in the logs.
-2. Each time you load an ad, add your test device ID(s) to the ad request as followed:
+2. Each time you load an ad, add your test device ID(s) to the ad request as followed:  
+
 ![Add Test Device](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/TestAdDeviceId.png?raw=true)    
 
 
