@@ -10,7 +10,7 @@ If the logs from `adb` indicate `Invalid application ID`, it means your AdMob ap
 
 !> The AdMob application ID is not an ad ID. It looks like `ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX`.
 
-### Undefined symbols when packaging for Android with architecture `x86` or `x86_64`
+### Undefined symbols when packaging for Android with architecture `x86` or `x86_64`.
 The plugin only comes with the Firebase C++ SDK compiled for arm64-v8a and armeabi-v7a for Android.
 
 To add support for x86 or x86_64:
@@ -18,12 +18,20 @@ To add support for x86 or x86_64:
 2. Unzip the files and copy them to `FirebaseFeatures/Source/ThirdParty/libs/android/{arch}`. i.e. for `x86_64`, the following file has to exist: `FirebaseFeatures/Source/ThirdParty/libs/android/x86_64/c++/libfirebase_app.a`.
 3. Open `FirebaseFeatures/Source/FirebaseFeatures.Build.cs` and uncomment the line `297` (x86) or `298` (x86_64).
 
+### Application crashes at startup: failed to find `google-services.json`.
+If you correctly placed `google-services.json` and `GoogleService-Info.plist` to the `Services` folder, this error shouldn't happen. You can manually fix it with the following steps:
+
+1. Rename your packaged game `MyGame.apk` or `MyGame.ipa` to `MyGame.zip`.
+2. Copy `GoogleService-Info.plist` (case-sensitive) for iOS or `google-services.json` for Android to the root of the zip archive.
+3. Rename `MyGame.zip` to `MyGame.apk` for Android or `MyGame.ipa` for iOS.
+
+
 ### Error: Cook failed. Editor terminated with exit code `16384`.
 If you encounter this issue:
 1. Go in the Firebase Console. Click on `Realtime Database` in the left panel and create a new Realtime Database.
 2. Download the `google-services.json` again and replace the one in your project with it.
 
-### uses-sdk:minSdkVersion `x` cannot be smaller than version `y` declared in library [com.google.firebase:firebase_messaging_cpp]
+### uses-sdk:minSdkVersion `x` cannot be smaller than version `y` declared in library `[com.google.firebase:firebase_messaging_cpp]`
 As we use the latest available libraries for Firebase C++ SDK, you might encounter this error if you target an old SDK version.
 You need to change the minSdk to the `y` value:
 1. Open Project's Config.
