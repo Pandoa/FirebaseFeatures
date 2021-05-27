@@ -11,7 +11,7 @@ If the logs from `adb` indicate `Invalid application ID`, it means your AdMob ap
 !> The AdMob application ID is not an ad ID. It looks like `ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX`.
 
 ### Undefined symbols when packaging for Android with architecture `x86` or `x86_64`.
-The plugin only comes with the Firebase C++ SDK compiled for arm64-v8a and armeabi-v7a for Android.
+The plugin only comes with the Firebase C++ SDK compiled for `arm64-v8a` and `armeabi-v7a` for Android.
 
 To add support for x86 or x86_64:
 1. Download the binaries from the corresponding link [x86_64](https://drive.google.com/file/d/1_7M2rxWNOxnt_ijLTlb5P1e-1q5zNtNx/view?usp=sharing) or [x86](https://drive.google.com/file/d/1lgfNdldpKNL9MkImqRAoSyQADMbuN4B8/view?usp=sharing).
