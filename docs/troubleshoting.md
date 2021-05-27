@@ -1,10 +1,11 @@
 
 # Troubleshoting
-### Android
+## Useful logs for Android
 If you experience a crash on startup when running your game on Android, you might first want to get the crash reason. To do so, open a terminal and run the following command:
 ```sh
 adb logcat
 ```
+## iOS and Android
 ### `Invalid application ID`
 If the logs from `adb` indicate `Invalid application ID`, it means your AdMob application ID is invalid. The crash will disappear once you use the good one available on AdMob page.
 
