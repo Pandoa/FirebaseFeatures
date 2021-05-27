@@ -10,6 +10,14 @@ If the logs from `adb` indicate `Invalid application ID`, it means your AdMob ap
 
 !> The AdMob application ID is not an ad ID. It looks like `ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX`.
 
+### Undefined symbols when packaging for Android with architecture `x86` or `x86_64`
+The plugin only comes with the Firebase C++ SDK compiled for arm64-v8a and armeabi-v7a for Android.
+
+To add support for x86 or x86_64:
+1. Download the binaries from the corresponding link [x86_64](https://drive.google.com/file/d/1_7M2rxWNOxnt_ijLTlb5P1e-1q5zNtNx/view?usp=sharing) or [x86](https://drive.google.com/file/d/1lgfNdldpKNL9MkImqRAoSyQADMbuN4B8/view?usp=sharing).
+2. Unzip the files and copy them to `FirebaseFeatures/Source/ThirdParty/libs/android/{arch}`. i.e. for `x86_64`, the following file has to exist: `FirebaseFeatures/Source/ThirdParty/libs/android/x86_64/c++/libfirebase_app.a`.
+3. Open `FirebaseFeatures/Source/FirebaseFeatures.Build.cs` and uncomment the line `297` (x86) or `298` (x86_64).
+
 ### Error: Cook failed. Editor terminated with exit code `16384`.
 If you encounter this issue:
 1. Go in the Firebase Console. Click on `Realtime Database` in the left panel and create a new Realtime Database.
