@@ -23,7 +23,7 @@ To add support for x86 or x86_64:
 If you correctly placed `google-services.json` and `GoogleService-Info.plist` to the `Services` folder, this error shouldn't happen. You can manually fix it with the following steps:
 
 1. Rename your packaged game `MyGame.apk` or `MyGame.ipa` to `MyGame.zip`.
-2. Copy `GoogleService-Info.plist` (case-sensitive) for iOS or `google-services.json` for Android to the root of the zip archive.
+2. Copy `GoogleService-Info.plist` (case-sensitive) for iOS or `google-services.json` for Android to the root of the application (`MyApp.zip/Payload/MyApp.app/`).
 3. Rename `MyGame.zip` to `MyGame.apk` for Android or `MyGame.ipa` for iOS.
 
 
