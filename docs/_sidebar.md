@@ -4,5 +4,5 @@
   - [Installation](/installation)
   - [C++](cpp.md)
   - [Firebase Components](/components)
-  - [Troubleshoting](troubleshoting.md)
+  - [Troubleshooting](troubleshoting.md)
   - [Support](support.md)
