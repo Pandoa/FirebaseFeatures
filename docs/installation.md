@@ -11,6 +11,10 @@ If you plan to use AdMob, you have to configure it first.
  ```ini
 [Firebase]
 AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
+
+; Optional platform overrides, fall back to AdMobApplicationId if not set.
+AndroidAdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
+iOSAdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 ```  
 
 ## File `google-services.json`
