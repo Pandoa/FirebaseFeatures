@@ -19,12 +19,12 @@ To add support for x86 or x86_64:
 2. Unzip the files and copy them to `FirebaseFeatures/Source/ThirdParty/libs/android/{arch}`. i.e. for `x86_64`, the following file has to exist: `FirebaseFeatures/Source/ThirdParty/libs/android/x86_64/c++/libfirebase_app.a`.
 3. Open `FirebaseFeatures/Source/FirebaseFeatures.Build.cs` and uncomment the line `297` (x86) or `298` (x86_64).
 
-### Application crashes at startup: failed to find `google-services.json`.
-If you correctly placed `google-services.json` and `GoogleService-Info.plist` to the `Services` folder, this error shouldn't happen. You can manually fix it with the following steps:
+### Application crashes at startup
+If your application crashes at startup after enabling the plugin, the reason is probably one of the following:
+1. Invalid `google-services.json` or invalid `GoogleService-Info.plist`.
+2. Invalid AdMob Application ID.
 
-1. Rename your packaged game `MyGame.apk` or `MyGame.ipa` to `MyGame.zip`.
-2. Copy `GoogleService-Info.plist` (case-sensitive) for iOS or `google-services.json` for Android to the root of the zip archive for Android or to `MyApp.zip/Payload/MyApp.app/` for iOS.
-3. Rename `MyGame.zip` to `MyGame.apk` for Android or `MyGame.ipa` for iOS.
+!> If you disabled AdMob for iOS without rebuilding the plugin, you still need a valid AdMob application ID. It is not required if you rebuilt the plugin.
 
 
 ### Error: Cook failed. Editor terminated with exit code `16384`.
