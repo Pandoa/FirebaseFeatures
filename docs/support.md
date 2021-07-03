@@ -16,15 +16,15 @@ that's probably the reason of the error.
     adb logcat
     ```
     After that, crash or make the bug happens.
-    - **iOS**: You can get the device's logs with the following steps:
-        1. Connect your iOS device to the Mac through USB.
-        2. Launch Xcode. Go to `Windows` > `Devices and Simulators`.
-        3. Click on `View Device Logs`.
-        ![Device Logs](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/DevicesiOSLogs.png?raw=true)
+    - **iOS**: You can get the device's logs with the following steps: 
+        1. Open XCode go to `Window` > `Devices and Simulators`.
+        2. Select your device in the left and click Open Console.
+        3. Select to start recording messages.
+        4. In the search bar in the top right corner, enter `process: <YourProcessName>` to filter system messages.
+        5. Clear the console and make your crash or issue happens.
 
 
 ## Contact
 If you need help, have a feature request or experience troubles, please contact us at [pandores.marketplace@gmail.com](mailto:pandores.marketplace+FirebaseFeatures@gmail.com?subject=Firebase%20Features%20-%20).
 
 !> Please, include logs in your email.
-
