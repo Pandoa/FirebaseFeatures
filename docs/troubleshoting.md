@@ -39,6 +39,13 @@ You need to change the minSdk to the `y` value:
 2. Locate the `Platforms` > `Android` > `APK Packaging` > `Minimum SDK Version (19=KitKat, 21=Lolipop)` config.
 3. Set its value to `y`.
 
+### Packaging failed. Dependency resolved to an incompatible version
+This error means that there is a plugin using Google's libraries of a different version, creating a conflict.
+There are two options to solve the issue:
+1. Simply disable the other plugin.
+2. Change Firebase Features' or the other plugin's Google's libraries version. It can get complicated and requires some code changes. If you are facing this issue, please
+contact us by email.
+
 ## Desktop
 ### Crashes when calling `Firebase - Features` functions.
 If you encouter crashes when using the Desktop platform, the cause is very likely a missing `google-services.json` file. Follow the instructions [here](/installation) correctly. Make sure to check the Output Log after editor startup.
