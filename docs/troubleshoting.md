@@ -40,11 +40,11 @@ You need to change the minSdk to the `y` value:
 3. Set its value to `y`.
 
 ### Packaging failed. Dependency resolved to an incompatible version
-This error means that there is a plugin using Google's libraries of a different version, creating a conflict.
+This error means that there is a plugin using Google's libraries of a different version, creating a conflict.  
 There are two options to solve the issue:
 1. Simply disable the other plugin.
-2. Change Firebase Features' or the other plugin's Google's libraries version. It can get complicated and requires some code changes. If you are facing this issue, please
-contact us by email.
+2. Change Firebase Features' or the other plugin's Google's libraries version. 
+It can get complicated and requires some code changes. If you are facing this issue and want to use this solution, please contact us by email.
 
 ## Desktop
 ### Crashes when calling `Firebase - Features` functions.
