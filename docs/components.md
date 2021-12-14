@@ -171,7 +171,7 @@ There are other events you can listen for as well:
 ### Setup Disconnection Handler
 Operations can be setup on the Database when a user disconnects.
 
-![](https://github.com/Pandoa/FirebaseFeatures/blob/gh-pages/docs/_images/DatabaseDisconnectionHandler.png)
+![](https://github.com/Pandoa/FirebaseFeatures/blob/gh-pages/docs/_images/DatabaseDisconnectionHandler.png?raw=true)
 
 The following operations are available:
 1. Remove Value
