@@ -168,7 +168,16 @@ There are other events you can listen for as well:
 |`OnCancelled`| Called when the watch has been cancelled.|
 |`OnValueChanged`| Called when the value watched has changed.|
 
+### Setup Disconnection Handler
+Operations can be setup on the Database when a user disconnects.
 
+![](https://github.com/Pandoa/FirebaseFeatures/blob/gh-pages/docs/_images/DatabaseDisconnectionHandler.png)
+
+The following operations are available:
+1. Remove Value
+2. Set Value
+3. Set Value and Priority
+4. Update Children
 
 ## Remote Config
 You can use Firebase Remote Config to define parameters in your app and update their values in the cloud, allowing you to modify the appearance and behavior of your app without distributing an app update.
