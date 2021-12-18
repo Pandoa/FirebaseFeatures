@@ -22,14 +22,14 @@ iOSAdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 
 To work, Firebase requires the file `google-services.json` (or `GoogleService-Info.plist` for iOS). 
 1. Go to `Project Overview > Project Settings` 
-2. Click on <img align="center" width="170" height="30" src="https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/download-gs.png?raw=true"> to download the `google-services.json` file.
+2. Click on <img align="center" width="170" height="30" src="_images/download-gs.png"> to download the `google-services.json` file.
 3. Now that `google-services.json` is downloaded, you need to copy it to `<YourProject>/Services/`.  You can then start the Editor and proceed to the next step.
 
 The following image shows the required steps to arrive to the Download button:
 
 <div class="centered">
 
-![Firebase Console Download Services Actions](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/FBConsoleProjectSettings.png?raw=true)
+![Firebase Console Download Services Actions](_images/FBConsoleProjectSettings.png)
 
 </div>
 
@@ -69,7 +69,7 @@ You can then untick the box of the modules you don't want to use.
 
 <div class="centered">
 
-![Firebase Features configuration panel](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/ConfigPanel.png?raw=true)
+![Firebase Features configuration panel](_images/ConfigPanel.png)
 
 </div>
 

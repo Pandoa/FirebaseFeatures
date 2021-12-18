@@ -25,17 +25,14 @@ This page doesn't exist anymore.
 
 <!--
 
-<div class="code-switcher show-cpp-true">
+<div class="code-switcher show-cpp-false">
 <div class="switcher" >
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
 
 ```cpp
-FAdMobAdRequest Request;
-Request.TestAdDeviceId = { TEXT("MyDeviceTestID") };
-
-MyAd->LoadAd(Request);
+// C++ example code not available yet.
 ```
 
 </div>

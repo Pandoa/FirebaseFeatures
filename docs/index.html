@@ -32,7 +32,7 @@
 	.markdown-section p.tip code {color: var(--theme-color); background-color: #333}
 	.markdown-section blockquote p {padding: 10px;color:white;}
 	.markdown-section blockquote {background: linear-gradient(0.25turn, #3953AB, #C73D4D, #E6AD43);border-radius:4px;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)}
-	.markdown-section pre {border-radius:4px}
+	.markdown-section pre {border-radius:12px}
 	.markdown-section pre>code {color: #ddd;line-height:18px}
 	.markdown-section p.tip, .markdown-section tr:nth-child(2n) {background:#222}
 	.markdown-section p.warn {border: 1px solid #bF7F7F; color:white;border-radius:6px}
@@ -177,7 +177,7 @@
 	{
 		background: #333;
 		padding: 20px 30px;
-		border-radius: 5px;
+		border-radius: 12px;
 		position: relative;
 		border-top-right-radius: 0;
 		
@@ -417,10 +417,10 @@
 	function getCookie(name) {
 		var nameEQ = name + "=";
 		var ca = document.cookie.split(';');
-		for(var i=0;i < ca.length;i++) {
+		for(var i=0;i<ca.length;i++){
 			var c = ca[i];
 			while (c.charAt(0)==' ') c = c.substring(1,c.length);
-			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			if (c.indexOf(nameEQ)==0)return c.substring(nameEQ.length,c.length);
 		}
 		return null;
 	}
@@ -468,6 +468,10 @@ var CustomMacros =
 
 var CustomTypes = 
 [
+	"FAdMobCallback",
+	"EAdMobBannerViewPosition",
+	"EFirebaseAuthError",
+	"UUser",
 	"ThisClass",
 	"EAdMobError",
 	"FAdMobAdRequest",
