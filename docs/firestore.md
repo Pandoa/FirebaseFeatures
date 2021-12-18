@@ -351,7 +351,7 @@ End Object
 
 If you're not sure whether the document exists, pass the option to merge the new data with any existing document to avoid overwriting entire documents.
 
-## Add a Document
+### Add a Document
 
 When you use `Set` to create a document, you must specify an ID for the document to create. For example:
 
@@ -765,7 +765,7 @@ End Object
 </div>
 </div>
 
-## Delete Data
+## Delete Data from Cloud Firestore
 
 Documentation available soon...
 
