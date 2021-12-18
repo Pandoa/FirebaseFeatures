@@ -1,6 +1,7 @@
 # Setup Firebase Features
 ## Create a Firebase project.
 To use Firebase, you need a Firebase project. To create one, go to [the Firebase Console](https://console.firebase.google.com/u/0/), click on `Add a project` and fill the fields asked for your new project.
+
 ## AdMob Configuration
 If you plan to use AdMob, you have to configure it first.
 1. Start by going to [AdMob Home Page](https://apps.admob.com/v2/home).  
@@ -8,6 +9,7 @@ If you plan to use AdMob, you have to configure it first.
 3. Once the application is added, go to `Application Settings`
 4. Click on `Associate with Firebase`. This last step will ask you your application's package name that you choose while creating your Firebase Project.
 5. You now need to go to `Apps` > `YourApp` > `App Settings`, copy the App ID and paste it in `DefaultEngine.ini` with the following structure: 
+
  ```ini
 [Firebase]
 AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
@@ -25,7 +27,11 @@ To work, Firebase requires the file `google-services.json` (or `GoogleService-In
 
 The following image shows the required steps to arrive to the Download button:
 
+<div class="centered">
+
 ![Firebase Console Download Services Actions](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/FBConsoleProjectSettings.png?raw=true)
+
+</div>
 
 !> If the file is invalid or not placed correctly, you will see an error message in the output log when you start the Editor with the message `Failed to create Firebase Application. Make sure the google-services.json file exists and is valid`. If this message doesn't appear, you can assume it is correctly configured.
 
@@ -61,7 +67,11 @@ PrivateDependencyModuleNames.Add("FirebaseFeatures");
 If you want to disable a Firebase Module, you can do so by going to your project's configuration > Plugins > Firebase Features.
 You can then untick the box of the modules you don't want to use.
 
+<div class="centered">
+
 ![Firebase Features configuration panel](https://github.com/Pandoa/FirebaseFeatures/blob/main/Images/ConfigPanel.png?raw=true)
+
+</div>
 
 !> Disabling a module will skip its initialization. Be careful to not call a method of a module that you disabled.
 
@@ -95,9 +105,13 @@ Firebase Features is enabled.
 
 The current modules you can enable/disable this way are:  
 
+<div style="position:relative;left:-25%;margin-left:50%">
+
 |Module Name|Config Name|Default Value|
 |:---|:---|:---:|
 |AdMob|`AdMobEnabled`|`true`|
 |Crashlytics|`CrashlyticsEnabled`|`false`|
+
+</div>
 
 !> Send an email to [pandores.marketplace@gmail.com](mailto:pandores.marketplace@gmail.com) if you want to disable an unlisted module.
