@@ -21,6 +21,7 @@ This page doesn't exist anymore.
   - [Troubleshooting](troubleshoting.md)
   - [Support](support.md)
 
+?> If the left side bar still references this page, please clear your browser cache to have the new navigation.
 
 <!--
 
