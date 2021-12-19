@@ -7,6 +7,7 @@ There are several ways to write data to Cloud Firestore:
 
 * Set the data of a document within a collection, explicitly specifying a document identifier.
 * Add a new document to a collection. In this case, Cloud Firestore automatically generates the document identifier.
+
 This guide explains how to use the set, add, or update individual documents in Cloud Firestore.
 
 

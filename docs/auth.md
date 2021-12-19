@@ -375,11 +375,12 @@ End Object
 </div>
 </div>
 
-By using a listener, you ensure that the Auth object isn't in an intermediate state—such as initialization—when you get the current user.
+By using a listener, you ensure that the Auth object isn't in an intermediate state — such as initialization — when you get the current user.
 
-You can also get the currently signed-in user by calling current_user. If a user isn't signed in, current_user returns nullptr.
+You can also get the currently signed-in user by calling `CurrentUser`. If a user isn't signed in, `CurrentUser` returns `nullptr`.
 
-!> *Note:* `CurrentUser()` might also return `nullptr` because the Auth object has not finished initializing. If you use a listener to keep track of the user's sign-in status, you don't need to handle this case.
+!> *Note:* `CurrentUser()` might also return `nullptr` because the Auth object has not finished initializing. If you use a listener to keep track of the user's sign-in status, you don't 
+need to handle this case.
 
 #### Persist a User's Credential
 The user's credentials will be stored in the local keystore after a user is signed in. The local cache of user credentials can be deleted by signing the user out.
