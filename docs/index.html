@@ -31,7 +31,8 @@
 	.markdown-section p.tip:before {background: var(--theme-color)}
 	.markdown-section p.tip code {color: var(--theme-color); background-color: #333}
 	.markdown-section blockquote p {padding: 10px;color:white;}
-	.markdown-section blockquote {background: linear-gradient(0.25turn, #3953AB, #C73D4D, #E6AD43);border-radius:4px;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)}
+	.markdown-section blockquote {background: linear-gradient(0.25turn, #3953AB, #039BE5, #E6AD43);
+		border-radius:4px;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)}
 	.markdown-section pre {border-radius:12px}
 	.markdown-section pre>code {color: #ddd;line-height:18px}
 	.markdown-section p.tip, .markdown-section tr:nth-child(2n) {background:#222}
@@ -334,7 +335,20 @@
 		border: none;
 		color: #bFbF7F;
 		cursor: pointer;
-	}	
+	}
+
+	@media (max-width: 600px)
+	{
+		.code-switcher
+		{
+			padding: 8px 10px;
+		}
+		
+		.markdown-section
+		{
+			max-width:95%
+		}
+	}
 	
 	
   </style>
@@ -468,34 +482,9 @@ var CustomMacros =
 
 var CustomTypes = 
 [
-	"EFirestoreError",
-	"UFirestoreDocumentReference",
-	"UFirestoreCollectionReference",
-	"FAdMobCallback",
-	"EAdMobBannerViewPosition",
-	"EFirebaseAuthError",
-	"UUser",
 	"ThisClass",
-	"EAdMobError",
-	"FAdMobAdRequest",
-	"UMyClass",
-	"FString",
 	"int32",
-	"UWindowsToastNotifier",
 	"Super",
-	"TCHAR",
-	"FDateTime",
-	"TStatId",
-	"UObject",
-	"FTickableGameObject",
-	"EObjectFlags",
-	"TMap",
-	"TArray",
-	"TSet",
-	"UTexture2D",
-    "FVector2D",
-    "FLinearColor",
-    "FVector"
 ];
 
 (function () {
@@ -506,6 +495,11 @@ var CustomTypes =
 				return 'ue-macro';
 			}
 			else if (CustomTypes.includes(content))
+			{
+				return 'ue-class';
+			}
+			
+			if (content.length > 1 && (content[0] == "F" || content[0] == "U"|| content[0] == "E" || content[0] == "T") && content[1] == content[1].toUpperCase())
 			{
 				return 'ue-class';
 			}
