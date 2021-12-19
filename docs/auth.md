@@ -138,7 +138,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=9AE880FC44C7E17BB517689562A71DC1,PinName="Password",PinToolTip="Password\nString",PinType.PinCategory="string",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,DefaultValue="my_v4ry_$€cr€t_p4$$w0rd",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/AuthSignInuser.png"/>
+<img src="_images/AuthSignInUser.png"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
