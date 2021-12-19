@@ -12,6 +12,6 @@ The following modules are available in the plugin:
 - Cloud Storage
 - Dynamic Links
 - Remote Config
-- Crashlytics (Currently Android only)
+- Crashlytics (iOS and Android only)
 
 ?> A question? Send an email to [pandores.marketplace@gmail.com](mailto:pandores.marketplace+doc@gmail.com).

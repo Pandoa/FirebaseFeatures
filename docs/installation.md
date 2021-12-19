@@ -44,7 +44,7 @@ To create a Realtime Database for your project:
 3. Click on `Create a Database`
 4. Download and update your current `google-services.json`.
 
-## Crashlytics (Android Only)
+## Crashlytics
 To enable Crashlytics for your project:
 1. Open your project's `Config/DefaultEngine.ini` in a text editor.
 2. Add `CrashlyticsEnabled=true` under the `Firebase` category.
