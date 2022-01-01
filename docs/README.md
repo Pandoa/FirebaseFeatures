@@ -9,5 +9,5 @@
 > Get started by reading the [installation guide](/installation) or with the [Blueprint Examples](/components).
 
 <div class="centered">
-<a class="gumroad-button" href="https://pandoresmarketplace.gumroad.com/l/FirebaseFeatures?wanted=true" data-gumroad-single-product="true">Buy my product</a>
+<a class="gumroad-button" href="https://pandoresmarketplace.gumroad.com/l/FirebaseFeatures?wanted=true">Buy my product</a>
 </div>
