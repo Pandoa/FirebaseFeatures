@@ -1,6 +1,7 @@
 - Setup
   - [Introduction](/introduction)
   - [Installation](/installation)
+  - [Rebuild the Plugin](/rebuildplugin)
   
 - Components
   - [AdMob](/admob)
