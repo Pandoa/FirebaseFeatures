@@ -83,8 +83,7 @@ Open the file and comment out the library you don't want in the list starting at
 
 ?> After following this procedure, the specified module won't be linked and used in your app at all.  
 
-!> After doing so, you have to rebuild the plugin. If you target iOS/Android, make sure to delete any intermediate files to trigger a full plugin rebuild.
-For Desktop platforms, you have to move the plugin to `<Project>/Plugins` and have a C++ project so the plugin triggers a rebuild.
+!> After doing so, you have to [rebuild the plugin](/rebuildplugin).
 
 ## Disabling a Module (Android)
 Android has one last step to totally eradicate a module from your application.
