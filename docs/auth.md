@@ -1014,7 +1014,7 @@ End Object
 
 There are two ways to get credential for Google Sign-In.
 
-The first is to use the `Sign In and Get Credential from Google`. Under the hood, this node will do the following:
+The first is to use the `Sign In and Get Credential from Google` method. Under the hood, this method will do the following:
 
 1. Sign the current user into Google Sign-In, pausing the app and prompting the Google Sign-In form if required.
 2. Create a Credential object based on the signed in user.
