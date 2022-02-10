@@ -1201,7 +1201,7 @@ End Object
 </div>
 
 ### Other Providers
-Examples for the other provides are coming soon.
+Examples for the other providers are coming soon.
 
 
 
