@@ -75,6 +75,8 @@ You can then untick the box of the modules you don't want to use.
 
 !> Disabling a module will skip its initialization. Be careful to not call a method of a module that you disabled.
 
+?> If you disable AdMob here, you have to follow the steps [here](https://pandoa.github.io/FirebaseFeatures/#/installation?id=disabling-a-module-android) as well for Android. As AdMob will terminate the application if the libraries are included in the build but it is not initialized.
+
 ## Removing all the code for a module (Advanced)
 If you want to remove totally a module from the plugin, you can do so by editing a line in `FirebaseFeatures.Build.cs`.
 This file is located to `<Engine_Dir>/Plugins/Marketplace/FirebaseFeatures/Source/FirebaseFeatures/`.
