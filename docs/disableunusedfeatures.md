@@ -15,6 +15,6 @@ To turn off features:
 After these steps the following happens:
 1. The module's initialization is skipped when the plugin loads.
 2. On Android, Java libraries of the disabled module aren't included in the build anymore. (iOS Objective-C frameworks require a rebuild to be excluded).
-3. If you rebuild the plugin, all the code of the plugin will be removed from the build and methods will be no-ops.
+3. If you rebuild the plugin, all the code of the module will be removed from the build and methods will be no-ops.
 4. If you rebuild the plugin, the module's C++ libraries won't be linked agaisnt the executable anymore.
 
