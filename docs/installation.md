@@ -44,16 +44,6 @@ To create a Realtime Database for your project:
 3. Click on `Create a Database`
 4. Download and update your current `google-services.json`.
 
-## Crashlytics
-To enable Crashlytics for your project:
-1. Open your project's `Config/DefaultEngine.ini` in a text editor.
-2. Add `CrashlyticsEnabled=true` under the `Firebase` category.
-```ini
-[Firebase]
-AdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
-CrashlyticsEnabled=true
-```
-
 ## Configuration for C++
 This step is only required if you plan to use Firebase Features through C++ code.
 Open  `YourProject.Build.cs` and add the following line to your module's constructor:
@@ -64,55 +54,4 @@ PrivateDependencyModuleNames.Add("FirebaseFeatures");
 !> You need to regenerate project files for the includes to work with your code editor.
 
 ## Disabling unused modules
-If you want to disable a Firebase Module, you can do so by going to your project's configuration > Plugins > Firebase Features.
-You can then untick the box of the modules you don't want to use.
-
-<div class="centered">
-
-![Firebase Features configuration panel](_images/ConfigPanel.png)
-
-</div>
-
-!> Disabling a module will skip its initialization. Be careful to not call a method of a module that you disabled.
-
-?> If you disable AdMob here, you have to follow the steps for [Disabling a Module (Android)](https://pandoa.github.io/FirebaseFeatures/#/installation?id=disabling-a-module-android) as well for Android. As AdMob will terminate the application if the libraries are included in the build but it is not initialized.
-
-## Removing all the code for a module (Advanced)
-If you want to remove totally a module from the plugin, you can do so by editing a line in `FirebaseFeatures.Build.cs`.
-This file is located to `<Engine_Dir>/Plugins/Marketplace/FirebaseFeatures/Source/FirebaseFeatures/`.
-
-Open the file and comment out the library you don't want in the list starting at line `22`. Also, read the code comment containing an example.
-
-?> After following this procedure, the specified module won't be linked and used in your app at all.  
-
-!> After doing so, you have to [rebuild the plugin](/rebuildplugin).
-
-## Disabling a Module (Android)
-Android has one last step to totally eradicate a module from your application.
-
-1. Open the default Engine config file, usually located at `<Project>/Config/DefaultEngine.ini`.
-2. Under the `Firebase` category add `ModuleEnabled=false`.
-```ini
-[Firebase]
-AdMobApplicationId="ca-app-pub-XXX~XXX" ; Other configs.
-; ...
-AdMobEnabled=false ; <- The module we want to disable.
-```
-3. If it worked correctly, you should have the following output during an Android build:
-```log
-Firebase Features is enabled.
-   -> Module is disabled.
-```
-
-The current modules you can enable/disable this way are:  
-
-<div style="position:relative;left:-25%;margin-left:50%">
-
-|Module Name|Config Name|Default Value|
-|:---|:---|:---:|
-|AdMob|`AdMobEnabled`|`true`|
-|Crashlytics|`CrashlyticsEnabled`|`false`|
-
-</div>
-
-!> Send an email to [pandores.marketplace@gmail.com](mailto:pandores.marketplace@gmail.com) if you want to disable an unlisted module.
+Starting with plugin version `1.4.12`, [these steps](/disableunusedfeatures) can be followed to disable parts of the plugin.
