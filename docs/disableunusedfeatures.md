@@ -6,7 +6,7 @@ By default, all features are enabled.
 To turn off features:
 1. Open the Editor and go to `Edit` > `Project Settings...`.
 2. In the left panel, scroll down under the `Plugins` category and click on `Firebase Features`.
-3. Untick the checkboxes of the feature to disable.
+3. Under the `Features` category, untick the checkboxes of the feature to disable.
 
 <div class="centered">
   <img src="./_images/EnableFeatures.png"/>  
