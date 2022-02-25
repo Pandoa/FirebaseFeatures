@@ -1,6 +1,6 @@
 # Rebuild the Plugin
 
-> If you want to rebuild the plugin to disable a module, make sure you followed the steps [here](https://pandoa.github.io/FirebaseFeatures/#/installation?id=removing-all-the-code-for-a-module-advanced) for this module.
+> If you want to rebuild the plugin to disable a module, make sure you followed the steps [here](/disableunusedfeatures) for this module.
 
 1. If the project doesn't contain C++ code, add an empty C++ class from the Editor.
 2. Close the Editor.
