@@ -277,15 +277,14 @@ End Object
 </div>
 </div>
   
-  
-## Download Files
-  
-Once you have a reference, you can download files from Cloud Storage in three ways:
 
+## Download Files
+
+Once you have a reference, you can download files from Cloud Storage in three ways:
 1. Download to a buffer in memory
 2. Download to an specific path on the device
 3. Generate an string URL representing the file online
-  
+
 
 ### Download in memory
 Download the file to a byte buffer in memory using the `GetBytes()` method. This is the easiest way to quickly download a file, but it must load entire contents of your file into memory. If you request a file larger than your app's available memory, your app will crash. To protect against memory issues, make sure to set the max size to something you know your app can handle, or use another download method.
@@ -346,7 +345,8 @@ End Object
 </div>
 </div>
 </div> 
-  
+
+
 ### Download to a local file
 
 The `GetFile()` method downloads a file directly to a local device. Use this if your users want to have access to the file while offline or to share in a different app.
