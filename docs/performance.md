@@ -46,7 +46,15 @@ To start and stop a custom code trace, wrap the code that you want to trace with
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Performance/FirebasePerformanceLibrary.h"
+
+// Creates and starts the trace.
+FFirebaseTrace Trace = UFirebasePerformanceLibrary::CreateAndStartTrace(TEXT("CUSTOM_TRACE_NAME"));
+
+/* Code to trace */
+
+// Stops the task.
+Trace.Stop();
 ```
 
 </div>
@@ -144,7 +152,16 @@ To add a custom metric, add a line of code similar to the following each time th
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+// Creates and starts the trace.
+FFirebaseTrace Trace = UFirebasePerformanceLibrary::CreateAndStartTrace(TEXT("CUSTOM_TRACE_NAME"));
+
+// We increment our metric by 1.
+Trace.IncrementMetric(TEXT("EVENT_NAME"), /* ByValue */ 1);
+
+/* Code to trace */
+
+// Stops the task.
+Trace.Stop();
 ```
 
 </div>
