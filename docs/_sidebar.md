@@ -14,6 +14,7 @@
   - [Cloud Storage](/storage)
   - [Crashlytics](/crashlytics)
   - [Dynamic Links](/dynamiclinks)
+  - [Performance](/performance)
   - [Realtime Database](/database)
   - [Remote Config](/remoteconfig)
   
