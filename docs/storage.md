@@ -151,11 +151,12 @@ Once you have a reference, you can upload files to Cloud Storage in two ways:
 
 1. Upload from a byte buffer in memory
 2. Upload from a file path representing a file on device
-  
+
+
 ### Upload from data in memory
 
 The `PutBytes()` method is the simplest way to upload a file to Cloud Storage. `PutBytes()` takes a byte buffer and return a `Metadata` which will contain information about the file when the upload completes. You can use a `Controller` to manage your upload and monitor its status.
-  
+
 <div class="code-switcher show-cpp-false">
 <div class="switcher" >
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
