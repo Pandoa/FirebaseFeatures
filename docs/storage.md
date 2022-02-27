@@ -143,7 +143,8 @@ End Object
 You can also use the `Parent` and `Root` methods to navigate up in our file hierarchy. `Parent` navigates up one level, while `Root` navigates all the way to the top.
   
 `Child`, `Parent`, and `Root` can be chained together multiple times, as each returns a reference. The exception is the `Parent` of `Root`, which is an invalid `StorageReference`.
-  
+
+
 ## Upload Files
 
 Once you have a reference, you can upload files to Cloud Storage in two ways:
