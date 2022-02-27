@@ -3,6 +3,8 @@ Gain insight into your app's performance issues.
 
 Firebase Performance Monitoring is a service that helps you to gain insight into the performance characteristics of your iOS or Android application.
 
+> Firebase Performance is enabled by default and records default metrics about your application automatically. After the first app launch, allow up to 30 minutes to see data in the Firebase Console.
+
 ## Add custom monitoring for specific app code
 
 Performance Monitoring collects traces to help you monitor the performance of your app. A trace is a report of performance data captured between two points in time in your app.
