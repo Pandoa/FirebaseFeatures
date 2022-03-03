@@ -3,6 +3,7 @@
   - [Installation](/installation)
   - [Disable Unused Features](/disableunusedfeatures)
   - [Rebuild the Plugin](/rebuildplugin)
+  - [Build for UE5](/ue5)
   
 - Components
   - [AdMob](/admob)
