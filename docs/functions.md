@@ -12,7 +12,35 @@ Once the reference is retrieved, you can call it with a Variant data parameter.
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Functions/FunctionsLibrary.h"
+#include "Functions/CallableReference.h"
+
+/* First, we get the Cloud Function. */
+FFirebaseHttpsCallableReference Callable = UFirebaseFunctionsLibrary::GetHttpsCallable(TEXT("my_function"));
+
+/* Calls the Cloud Function. */
+Callable.Call
+(
+    /* The function's parameters */
+    FFirebaseVariant
+    ({
+        { TEXT("MyInt"), 12 },
+        { TEXT("MyString"), TEXT("Value") }
+    }),
+
+    /* Our callback called after the function's execution. */
+    FFunctionsCallCallback::CreateLambda([](const EFirebaseFunctionsError Error, const FFirebaseVariant& Result) -> void
+    {
+        if (Error == EFirebaseFunctionsError::None)
+        {
+            // Function called.
+        }
+        else
+        {
+            // Failed to call the function.
+        }
+    })
+);
 ```
 
 </div>
