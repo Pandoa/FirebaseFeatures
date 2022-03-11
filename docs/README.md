@@ -9,6 +9,6 @@
 > Get started by reading the [installation guide](/installation) or with the [Blueprint Examples](/components).
 
 <div class="centered">
-  <a class="ue-button" href="https://www.unrealengine.com/marketplace/en-US/product/firebase-features">Buy this product on <img width="50px" src="_images/buyueicon.png"/></a>
+  <a class="ue-button" href="https://www.unrealengine.com/marketplace/en-US/product/firebase-features">Buy this product on <img width="45px" src="_images/buyueicon.png"/></a>
 <a class="gumroad-button" href="https://pandoresmarketplace.gumroad.com/l/FirebaseFeatures?wanted=true">Buy this product on</a>
 </div>
