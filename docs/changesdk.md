@@ -2,7 +2,7 @@
 
 The following steps will guide you to change the version of the SDK used internally by the plugin:
 
-1. Download the version of the SDK you want to use. Releases of the SDK can be found [here](https://github.com/firebase/firebase-cpp-sdk/releases). If you don't want to build the SDK, you can download the prebuild binaries.
+1. Download the version of the SDK you want to use. Releases of the SDK can be found [here](https://github.com/firebase/firebase-cpp-sdk/releases). If you don't want to build the SDK, you can download the prebuilt binaries.
 2. Convert your project to a C++ project if it isn't the case already. It can be done by simply adding an empty C++ through the Editor.
 3. Copy the plugin from `<UE_ROOT>/Engine/Plugins/Marketplace/FirebaseFeatures/` to `<PROJECT_ROOT>/Plugins/FirebaseFeatures`.
 4. Replace the libraries of the current SDK by the ones you downlaoded. The location of the libraries depend of the platform:
