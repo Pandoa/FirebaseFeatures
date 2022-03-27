@@ -46,6 +46,52 @@ There are two options to solve the issue:
 2. Change Firebase Features' or the other plugin's Google's libraries version. 
 It can get complicated and requires some code changes. If you are facing this issue and want to use this solution, please contact us by email.
 
+### Android Build Errors when Using Unreal Engine 4.25: `org.gradle.api.internal.file.DefaultFilePropertyFactory$DefaultDirectoryVar$2 cannot be cast to org.gradle.api.file.Directory`
+
+As the plugin uses recent Firebase libraries, an outdated Gradle version causes problem while packaging the project. To solve this issue, Gradle has to be updated. The following steps will guide you to update it:
+1. Open the *UnrealBuildTool* project in Visual Studio. It can be found at `<EngineRoot>\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.csproj`. 
+
+<div class="centered">
+  <img src="_images/UnrealBuildToolcs.png"/>
+</div>
+
+2. In Visual Studio, open the file `Platform/Android/UEDeployAndroid.cs`.
+
+<div class="centered">
+  <img src="_images/UEDeployAndroidcs.png"/>
+</div>
+
+3. On line **25**, replace 
+```cs
+private const string ANDROID_TOOLS_BUILD_GRADLE_VERSION = "com.android.tools.build:gradle:3.5.3";
+```
+by 
+```cs
+private const string ANDROID_TOOLS_BUILD_GRADLE_VERSION = "com.android.tools.build:gradle:4.0.0";
+```
+
+4. If your user doesn’t have write access to the Engine directoy, open `<EngineRoot>\Engine\Source\Programs\UnrealBuildTool\obj\Development` and delete or rename the following files to be able to generate a new build:
+  - UnrealBuildTool.exe
+  - UnrealBuildTool.csproj.FileListAbsolute.txt
+  - UnrealBuildTool.pdb
+ 
+<div class="centered">
+  <img src="_images/UBFilesToDelete.png"/>
+</div>
+
+5. Go back in Visual Studio and build Unreal Build Tool by right-clicking on the solution.
+
+<div class="centered">
+  <img src="_images/BuildSolution.png"/>
+</div>
+
+6. Make sure the solution is being built as **Development** and not **Debug**.
+
+
+<div class="centered">
+  <img src="_images/BuildResult.png"/>
+</div>
+
 ## Desktop
 ### Crashes when calling `Firebase - Features` functions.
 If you encouter crashes when using the Desktop platform, the cause is very likely a missing `google-services.json` file. Follow the instructions [here](/installation) correctly. Make sure to check the Output Log after editor startup.
