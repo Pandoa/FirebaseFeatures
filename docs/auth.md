@@ -1323,7 +1323,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=FACB39274557FC316A0DF39D0FB23389,PinName="Credential",PinToolTip="Credential\nCredential Structure (by ref)",PinType.PinCategory="struct",PinType.PinSubCategory="",PinType.PinSubCategoryObject=ScriptStruct'"/Script/FirebaseFeatures.Credential"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=True,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_150 CFEA7CF146F0C0D5DDCF27AE22EAA332,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=True,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/SignInWithGooglePlayGames.png"/>
+<img src="_images/SignInWithPlayGames.png"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
