@@ -71,9 +71,9 @@ private const string ANDROID_TOOLS_BUILD_GRADLE_VERSION = "com.android.tools.bui
 ```
 
 4. If your user doesn’t have write access to the Engine directoy, open `<EngineRoot>\Engine\Source\Programs\UnrealBuildTool\obj\Development` and delete or rename the following files to be able to generate a new build:
-  - UnrealBuildTool.exe
-  - UnrealBuildTool.csproj.FileListAbsolute.txt
-  - UnrealBuildTool.pdb
+  - `UnrealBuildTool.exe`
+  - `UnrealBuildTool.csproj.FileListAbsolute.txt`
+  - `UnrealBuildTool.pdb`
  
 <div class="centered">
   <img src="_images/UBFilesToDelete.png"/>
