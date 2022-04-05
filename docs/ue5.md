@@ -1,5 +1,7 @@
 # Build the Plugin for Unreal Engine 5 Preview 2
 
+!> An update is currently being reviewed by the Unreal Engine Marketplace Team to support Unreal Engine 5.0.
+
 The following steps can be used to build and use the plugin with Unreal Engine 5 Preview 2:
 
 1. Make sure your project contains C++ code. You can add an empty C++ class from the Editor.
