@@ -7,14 +7,18 @@ Two types of logs can be helpful:
 1. **The Output Log**: In the Editor, go to `windows` > `Developer Tools` > `Output Log`. If you see red or yellow text, 
 that's probably the reason of the error.
 2. **The device's logs**: Especially useful on Android and iOS. 
-    - **Android**: Start by cleaning the logs with: 
-    ```bash
-    adb logcat -c
-    ```
-    You can then start getting the logs with:
-    ```bash
-    adb logcat
-    ```
+    - **Android**: 
+        1. Connect your Android device to your computer.
+        2. Open a command line prompt.
+        3. Start by cleaning the logs with: 
+        ```bash
+        adb logcat -c
+        ```
+        4. You can then start getting the logs with:
+        ```bash
+        adb logcat
+        ```
+        5. Save the ouptut in a file and link it to your email when contacting us.
     After that, crash or make the bug happens.
     - **iOS**: You can get the device's logs with the following steps: 
         1. Open XCode go to `Window` > `Devices and Simulators`.
