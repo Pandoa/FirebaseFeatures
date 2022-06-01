@@ -18,8 +18,8 @@ that's probably the reason of the error.
         ```bash
         adb logcat
         ```
-        5. Save the ouptut in a file and link it to your email when contacting us.
-    After that, crash or make the bug happens.
+        5. After that, make the bug happen.
+        6. Save the ouptut in a file and link it to your email when contacting us.
     - **iOS**: You can get the device's logs with the following steps: 
         1. Open XCode go to `Window` > `Devices and Simulators`.
         2. Select your device in the left and click Open Console.
