@@ -53,5 +53,5 @@ PrivateDependencyModuleNames.Add("FirebaseFeatures");
 
 !> You need to regenerate project files for the includes to work with your code editor.
 
-## Disabling unused modules
+## Disabling unused modules 
 Starting with plugin version `1.4.12`, [these steps](/disableunusedfeatures) can be followed to disable parts of the plugin.
