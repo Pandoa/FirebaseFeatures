@@ -6,7 +6,7 @@ If you experience a crash on startup when running your game on Android, you migh
 adb logcat
 ```
 ## iOS and Android
-### Failed to Sign In with Google: `DEVELOPER_ERROR`.
+### Failed to Sign In with Google: `DEVELOPER_ERROR` - Missing SHA1 Fingerprint.
 The most common cause of this issue is not having set the SHA1 fingerprint of the application in the Firebase Console.
 To solve the issue:
 1. Follow [this guide](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Mobile/Android/DistributionSigning/) to sign the Unreal Engine application.
