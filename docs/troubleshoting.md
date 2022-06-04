@@ -10,7 +10,12 @@ adb logcat
 The most common cause of this issue is not having set the SHA1 fingerprint of the application in the Firebase Console.
 To solve the issue:
 1. Follow [this guide](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Mobile/Android/DistributionSigning/) to sign the Unreal Engine application.
-2. Get the SHA1 fingerprint of the app and set it in the Firebase Console. [This guide](https://developers.google.com/android/guides/client-auth?authuser=0&hl=en) shows how to get the SHA1 fingerprint.
+2. Get the SHA1 fingerprint of the app. [This guide](https://developers.google.com/android/guides/client-auth?authuser=0&hl=en) shows how to get the SHA1 fingerprint.
+3. Set the SHA1 for your Android app in the Firebase Console under project's settings. 
+
+<div class="centered">
+  <img src="_images/SetSHA1.png"/>
+</div>
 
 ### `Invalid application ID`
 If the logs from `adb` indicate `Invalid application ID`, it means your AdMob application ID is invalid. The crash will disappear once you use the good one available on AdMob page.
