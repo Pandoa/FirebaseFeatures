@@ -16,10 +16,10 @@ Once the reference is retrieved, you can call it with a Variant data parameter.
 #include "Functions/CallableReference.h"
 
 /* First, we get the Cloud Function. */
-FFirebaseHttpsCallableReference Callable = UFirebaseFunctionsLibrary::GetHttpsCallable(TEXT("my_function"));
+static FFirebaseHttpsCallableReference Callable = UFirebaseFunctionsLibrary::GetHttpsCallable("my_function");
 
 /* Calls the Cloud Function. */
-Callable.Call
+Callable
 (
     /* The function's parameters */
     FFirebaseVariant
