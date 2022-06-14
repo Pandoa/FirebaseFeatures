@@ -6,6 +6,25 @@ If you experience a crash on startup when running your game on Android, you migh
 adb logcat
 ```
 ## iOS and Android
+
+### Build Failed - `File google-services.json is missing.`
+If your `google-services.json` is correctly placed but you get the following error while building.
+```log
+> File google-services.json is missing. The Google Services Plugin cannot function without it.
+UATHelper: Packaging (Android (ASTC)):    Searched Location:
+UATHelper: Packaging (Android (ASTC)): 5 actionable tasks: 5 executed
+UATHelper: Packaging (Android (ASTC)):   X:\AFSProject\app\src\release\google-services.json
+UATHelper: Packaging (Android (ASTC)):   X:\AFSProject\app\src\google-services.json
+UATHelper: Packaging (Android (ASTC)):   X:\AFSProject\app\google-services.json
+```
+!> Note that it searches for a project named `AFSProject` and not for your own project name.
+
+You can solve this error by disabling the plugin named `AndroidFileServer`.
+
+<div class="centered">
+  <img src="_images/DisableAFS.png"/>
+</div>
+
 ### Failed to Sign In with Google: `DEVELOPER_ERROR` - Missing SHA1 Fingerprint.
 The most common cause of this issue is not having set the SHA1 fingerprint of the application in the Firebase Console.
 To solve the issue:
