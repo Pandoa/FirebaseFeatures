@@ -9,7 +9,7 @@ The following steps will guide you to change the version of the SDK used interna
     * For Windows, libraries are in `FirebaseFeatures\Source\ThirdParty\firebase_cpp_sdk\libs\windows\VS2015\MD\x64\Release\`.
     * For MacOS, libraries are in `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/libs/darwin/universal/`.
     * For Linux, libraries are in `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/libs/darwin/universal/linux/x86_64/`.
-    * For Android, libraries are in `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/8.9.0/libs/android/{arch}/c++/`.
+    * For Android, libraries are in `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/9.4.0/libs/android/{arch}/c++/`.
     * For iOS, frameworks are in `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/frameworks/ios/universal`. Note that every framework has to be zipped.
 5. Replace the includes in the corresponding directories.
 6. Right click on your `.uproject` file and select `Generate <IDE> project files`.
