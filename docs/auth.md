@@ -1026,7 +1026,64 @@ The first is to use the `Sign In and Get Credential from Google` method. Under t
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Auth/Auth.h"
+#include "Google/GoogleServices.h"
+#include "Auth/Credential.h"
+
+// First, signs in with the Google Sign-In SDK to retrieve the required
+// data to authenticate against Firebase.
+UGoogleServicesLibrary::SignIn
+(
+	/* ServerClientID */
+	TEXT("{server-client-id}"),
+		
+	/* bSkipIfSigned */
+	false,
+		
+	/* bUseSilentSignIn */
+	true,
+
+	/* Callback */
+	FGoogleSignInCallback::CreateLambda([](bool bSuccess, FString ErrorMessage) -> void
+	{
+		// The user completed the Google Sign-In and is now authenticated against the 
+		// Google Sign-In SDK.
+		if (bSuccess)
+		{
+			// Gets the data required for the Firebase backend.
+			const FString IdToken     = UGoogleServicesLibrary::GetIdToken();
+			const FString AccessToken = UGoogleServicesLibrary::GetAccessToken();
+
+			// Creates a credential for the backend.
+			FCredential GoogleCredential = UCredentialLibrary::GetCredentialFromGoogle(IdToken, AccessToken);
+
+			// And uses this credential to finally authenticate for Firebase.
+			FAuth::SignInWithCredential(GoogleCredential, FSignInUserCallback::CreateLambda(
+				[](const EFirebaseAuthError Error, UUser* User) -> void
+			{
+				// Checks for success.
+				if (Error == EFirebaseAuthError::None)
+				{
+					// The user is authenticated, user data can be accessed.
+				}
+
+				// Failed to authenticate.
+				else
+				{
+					// Simply log the error code.
+					UE_LOG(LogTemp, Error, TEXT("Failed to authenticate against Firebase. Code: %d"), Error);
+				}
+			}));
+		}
+
+		// An error occurred or the user canceled the Google Sign-In overlay.
+		else
+		{
+			// We just print the error to logs.
+			UE_LOG(LogTemp, Error, TEXT("Failed to sign-in against Google, reason: %s"), *ErrorMessage);
+		}
+	})
+);
 ```
 
 </div>
