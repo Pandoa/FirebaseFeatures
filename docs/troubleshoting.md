@@ -127,3 +127,10 @@ private const string ANDROID_TOOLS_BUILD_GRADLE_VERSION = "com.android.tools.bui
 If you encouter crashes when using the Desktop platform, the cause is very likely a missing `google-services.json` file. Follow the instructions [here](/installation) correctly. Make sure to check the Output Log after editor startup.
 
 !> If you plan to only use `Firebase - Features` on iOS, you'll have to download the `.json` and the `.plist` to test it in editor.
+
+### Crash in Packaged Game caused by Firestore
+If the game crashes in packaged games with Firestore enabled, the cause is most likely Firestore's persistence system. It can be disabled in the plugin's settings as shown in the below image.
+
+<div class="centered">
+  <img src="_images/FirestorePersistence.png"/>
+</div>
