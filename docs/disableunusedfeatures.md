@@ -13,6 +13,7 @@ To turn off features:
 </div>
 
 ?> Disabling AdMob requires to rebuild the plugin. Otherwise, the Mobile Ads SDK will terminate the application when it starts.
+?> Rebuilding the plugin is required to disable a module on iOS.
 
 After these steps the following happens:
 1. The module's initialization is skipped when the plugin loads.
