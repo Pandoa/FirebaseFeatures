@@ -123,6 +123,14 @@ private const string ANDROID_TOOLS_BUILD_GRADLE_VERSION = "com.android.tools.bui
 </div>
 
 ## Desktop
+
+### Linux - `libsecret-1.so`: cannot open shared object file.
+The Linux Firebase SDK has a dependency on libsecret. You can install it with apt:
+
+```sh
+sudo apt-get install -y libsecret-1-0
+```
+
 ### Crashes when calling `Firebase - Features` functions.
 If you encouter crashes when using the Desktop platform, the cause is very likely a missing `google-services.json` file. Follow the instructions [here](/installation) correctly. Make sure to check the Output Log after editor startup.
 
