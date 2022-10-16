@@ -1136,6 +1136,8 @@ End Object
 </div>
 </div>
 
+!> The `Server Client ID` is called `Web Client ID` in the Firebase Console.
+
 The second method is to use the `Get Credential from Google` node. This node requires two tokens that must be obtained from the Google Sign-In SDK after authenticating the user with it.
 
 <div class="code-switcher show-cpp-false">
