@@ -142,3 +142,7 @@ If the game crashes in packaged games with Firestore enabled, the cause is most 
 <div class="centered">
   <img src="_images/FirestorePersistence.png"/>
 </div>
+
+### Linux - Build fails with duplicate symbols for `libcurl`
+1. Open `Plugins/FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/libs/linux/x86_64_PIC`.
+2. Delete the file `libcurl.a`.
