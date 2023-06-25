@@ -139,5 +139,6 @@ End Object
 </div>
 </div>
 
+## Write a Function
 
-![]()
+To learn more about writing Cloud Functions and how to deploy them, refer to the [official Firebase Documentation](https://firebase.google.com/docs/functions).
