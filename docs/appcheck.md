@@ -18,7 +18,11 @@ For detailed instructions on how to register with each provider, refer to the An
 ## 2. Configure App Check
 
 In the plugin's settings, select which *App Check Provider* you want to use for each platform, and restart the Editor to apply the changes.
+
+<div class="centered">
+
 ![App Check configuration window](_images/AppCheckConfig.png)
+</div>
 
 ## 3. Debug Config for Desktop
 On desktop, select the *Debug Provider* and add an environment variable named `FIREBASE_APPCHECK_DEBUG_TOKEN` containing your debug token. The plugin will use it to satisfy the requirements to test in Editor.
