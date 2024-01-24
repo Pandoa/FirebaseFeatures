@@ -32,6 +32,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 8%; 
 }
 </style>
 
