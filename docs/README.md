@@ -35,6 +35,8 @@
 }
 </style>
 
+## Explore the Documentation
+
 <div class="fb-f-cont">
 
 <a class="fb-elem" href="#firestore">
@@ -44,90 +46,90 @@
   </div>
 </a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#functions">
   <image src="_images/firebase/CloudFunctions.png" class="fb"/>
   <div class="fb-txt">
     Cloud Functions
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#auth">
   <image src="_images/firebase/Auth.png" class="fb"/>
   <div class="fb-txt">
     Authentication
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#database">
   <image src="_images/firebase/Database.png" class="fb"/>
   <div class="fb-txt">
     Realtime Database
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#storage">
   <image src="_images/firebase/Storage.png" class="fb"/>
   <div class="fb-txt">
     Cloud Storage
   </div>
-</div>
+</a>
 
 
-<div class="fb-elem">
+<a class="fb-elem" href="#appcheck">
   <image src="_images/firebase/AppCheck.png" class="fb"/>
   <div class="fb-txt">
     AppCheck
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#crashlytics">
   <image src="_images/firebase/Crashlytics.png" class="fb"/>
   <div class="fb-txt">
     Crashlytics
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#admob">
   <image src="_images/firebase/AdMob.png" class="fb"/>
   <div class="fb-txt">
     AdMob
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#analytics">
   <image src="_images/firebase/Analytics.png" class="fb"/>
   <div class="fb-txt">
     Analytics
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#messaging">
   <image src="_images/firebase/Messaging.png" class="fb"/>
   <div class="fb-txt">
     Cloud Messaging
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#remoteconfig">
   <image src="_images/firebase/RemoteConfig.png" class="fb"/>
   <div class="fb-txt">
     RemoteConfig
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#dynamiclinks">
   <image src="_images/firebase/Dynamicinks.png" class="fb"/>
   <div class="fb-txt">
     Dynamic Links
   </div>
-</div>
+</a>
 
-<div class="fb-elem">
+<a class="fb-elem" href="#performance">
   <image src="_images/firebase/Performance.png" class="fb"/>
   <div class="fb-txt">
     Performance
   </div>
-</div>
+</a>
 
 </div>
 
