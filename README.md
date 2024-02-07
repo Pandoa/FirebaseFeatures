@@ -1,5 +1,7 @@
 
 # The documentation has moved to [here](https://pandoa.github.io/FirebaseFeatures/).
+
+> This repository shouldn't be referenced anymore.
 <!--
 # [Firebase Features - Documentation](https://www.unrealengine.com/marketplace/en-US/product/firebase-features)
 
