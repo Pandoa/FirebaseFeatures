@@ -5,6 +5,7 @@ Firebase - Features allows you to easily use the Firebase C++ SDK within Unreal 
 The following modules are available in the plugin:
 - AdMob (iOS and Android only)
 - Analytics (iOS and Android only)
+- AppCheck
 - Authentication
 - Cloud Firestore
 - Cloud Functions
