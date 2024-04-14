@@ -2,6 +2,8 @@
 
 This section contains patch notes for the plugin.
 
+!> The Unreal Engine Marketplace allows updates only for the last three major Engine versions. To get the latest version of the plugin on older Engine versions, download the plugin through the latest Engine installation or contact our support email address.
+
 
 ### `1.7.12`
 - Bumped the Firebase C++ SDK for Linux to version `11.9.0`.
