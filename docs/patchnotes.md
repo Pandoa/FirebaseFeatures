@@ -8,3 +8,5 @@ This section contains patch notes for the plugin.
 - Add `GetToken()` C++ function and `Get Token` async node to get the Firebase Installation ID token.
 - `ListenForMessagingEvents` async node now fires immediatly if a previous Firebase Messaging Token was missed.
 
+### `1.7.11`
+- Bumped the Firebase C++ SDK for iOS to version `11.9.0`.
