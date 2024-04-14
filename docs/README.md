@@ -134,7 +134,7 @@
 
 </div>
 
-!> Get started by reading the [installation guide](/installation) or with the [Blueprint Examples](/components).
+!> Get started by reading the [installation guide](/installation).
 
 <div class="centered">
   <a class="ue-button" href="https://www.unrealengine.com/marketplace/en-US/product/firebase-features">Buy this product on <img width="40px" src="_images/buyueicon.png"/></a>
