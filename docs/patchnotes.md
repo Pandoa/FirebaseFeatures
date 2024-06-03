@@ -8,7 +8,7 @@ This section contains patch notes for the plugin.
 - Updated the Firebase C++ SDK for iOS to version `12.0.0`.
 
 ### `1.7.13`
-- Add support for Unreal Engine 5.4 Preview 1.
+- Add support for Unreal Engine 5.4.
 - Replace Linux binaries with PIC binaries.
 
 ### `1.7.12`
