@@ -9,7 +9,7 @@ adb logcat
 
 ### Application Crashes at Launch in Testflight
 
-Open your project's `Target.cs` and add the following code in the construtor:
+Open your project's `Target.cs` and add the following code in the constructor:
 
 ```cs
 // Your target. Already present in the file.
