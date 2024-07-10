@@ -7,6 +7,29 @@ adb logcat
 ```
 ## iOS and Android
 
+### Application Crashes at Launch in Testflight
+
+Open your project's `Target.cs` and add the following code in the construtor:
+
+```cs
+// Your target. Already present in the file.
+public class MyProjectTarget : TargetRules
+{
+    public MyProjectTarget(TargetInfo Target) : base(Target)
+    {
+        Type = TargetType.Game;
+
+        ExtraModuleNames.AddRange( new string[] { "MyProject" } );
+
+        // Add these three lines:
+        if (Target.Platform == UnrealTargetPlatform.IOS)
+        {
+            GlobalDefinitions.Add("FORCE_ANSI_ALLOCATOR=1");
+        }
+    }
+}
+```
+
 ### Build Failed - `File google-services.json is missing.`
 If your `google-services.json` is correctly placed but you get the following error while building.
 ```log
