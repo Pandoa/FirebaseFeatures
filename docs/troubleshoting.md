@@ -5,11 +5,103 @@ If you experience a crash on startup when running your game on Android, you migh
 ```sh
 adb logcat
 ```
-## iOS and Android
+## Android and iOS
 
-### Application Crashes at Launch in Testflight
+<script>
+function onCollapserClicked(event) {
+  const collapser = event.target.parentNode.children[1];
+  if (collapser.style.maxHeight) {
+    collapser.style.maxHeight = null;
+    collapser.parentNode.className += " collapsed";
+  }
+  else {
+    collapser.style.maxHeight = collapser.scrollHeight + "px";
+    collapser.parentNode.className = collapser.parentNode.className.replaceAll("collapsed", "");
+  }
+}
+(function () {
+  const collapsers = document.querySelectorAll(".collapser > h2");
+  for (const collapser of collapsers) {
+    collapser.onclick = onCollapserClicked;
+  }
+})();
+</script>
 
-Open your project's `Target.cs` and add the following code in the constructor:
+<style>
+.collapser-container {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+.collapser {
+  margin: 0;
+  background: #080808;
+  padding: 0;
+}
+
+.collapser > h2 {
+  user-select: none;
+  cursor: pointer;
+  margin: 0;
+  padding-top: 0;
+  color: #bbb;
+  padding: 20px;
+  margin-bottom: 0;
+  background: #101010;
+  border-bottom: 1px solid #222;
+  font-size: 1.5rem;
+}
+
+.collapser > h2 > code {
+  font-size: 1.2rem !important;
+}
+
+.collapser > .collapser-content {
+  transition: max-height 0.2s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.collapser-content-container {
+  padding: 20px; 
+}
+
+.label-ios::after {
+  content: "iOS";
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  color: #000;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.label-android::after {
+  content: "Android";
+  background: #3DbC74;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+</style>
+
+<div class="collapser-container">
+<div class="collapser">
+<h2>
+  Application Crashes at Launch in Testflight 
+  <span class="label-ios" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
+
+Open your project's `Target.cs` and add the lines of code under the `TODO` in the constructor:
 
 ```cs
 // Your target. Already present in the file.
@@ -21,7 +113,7 @@ public class MyProjectTarget : TargetRules
 
         ExtraModuleNames.AddRange( new string[] { "MyProject" } );
 
-        // Add these three lines:
+        // TODO: Add these three lines:
         if (Target.Platform == UnrealTargetPlatform.IOS)
         {
             GlobalDefinitions.Add("FORCE_ANSI_ALLOCATOR=1");
@@ -30,7 +122,17 @@ public class MyProjectTarget : TargetRules
 }
 ```
 
-### Build Failed - `File google-services.json is missing.`
+</div></div></div>
+
+
+<div class="collapser">
+<h2>
+  Build Failed: <code>File google-services.json is missing.</code> 
+  <span class="label-android" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 If your `google-services.json` is correctly placed but you get the following error while building.
 ```log
 > File google-services.json is missing. The Google Services Plugin cannot function without it.
@@ -48,7 +150,16 @@ You can solve this error by disabling the plugin named `AndroidFileServer`.
   <img src="_images/DisableAFS.png"/>
 </div>
 
-### Failed to Sign In with Google: `DEVELOPER_ERROR` - Missing SHA1 Fingerprint.
+</div></div></div>
+
+<div class="collapser">
+<h2>
+Failed to Sign In with Google: <code>DEVELOPER_ERROR</code> - Missing SHA1 Fingerprint.
+<span class="label-android" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 The most common cause of this issue is not having set the SHA1 fingerprint of the application in the Firebase Console.
 To solve the issue:
 1. Follow [this guide](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Mobile/Android/DistributionSigning/) to sign the Unreal Engine application.
@@ -59,46 +170,126 @@ To solve the issue:
   <img src="_images/SetSHA1.png"/>
 </div>
 
-### `Invalid application ID`
+</div></div></div>
+
+
+<div class="collapser">
+<h2>
+Invalid application ID
+<span class="label-android" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 If the logs from `adb` indicate `Invalid application ID`, it means your AdMob application ID is invalid. The crash will disappear once you use the good one available on AdMob page.
 
 !> The AdMob application ID is not an ad ID. It looks like `ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX`.
 
-### Undefined symbols when packaging for Android with architecture `x86` or `x86_64`.
-The plugin only comes with the Firebase C++ SDK compiled for `arm64-v8a` and `armeabi-v7a` for Android.
+</div></div></div>
 
-To add support for x86 or x86_64:
-1. Download the binaries from the corresponding link [x86_64](https://drive.google.com/file/d/1_7M2rxWNOxnt_ijLTlb5P1e-1q5zNtNx/view?usp=sharing) or [x86](https://drive.google.com/file/d/1lgfNdldpKNL9MkImqRAoSyQADMbuN4B8/view?usp=sharing).
-2. Unzip the files and copy them to `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/8.9.0/libs/android/{arch}`. i.e. for `x86_64`, the following file has to exist: `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/8.9.0/libs/android/x86_64/c++/libfirebase_app.a`.
-3. Open `FirebaseFeatures/Source/FirebaseFeatures.Build.cs` and uncomment the line `297` (x86) or `298` (x86_64).
 
-### Application crashes at startup
+<div class="collapser">
+<h2>
+Application crashes at startup
+<span class="label-android" />
+<span class="label-ios" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
+
 If your application crashes at startup after enabling the plugin, the reason is probably one of the following:
 1. Invalid `google-services.json` or invalid `GoogleService-Info.plist`.
 2. Invalid AdMob Application ID.
 
 !> If you disabled AdMob for iOS without rebuilding the plugin, you still need a valid AdMob application ID. It is not required if you rebuilt the plugin.
 
+</div></div></div>
 
-### Error: Cook failed. Editor terminated with exit code `16384`.
+<div class="collapser">
+<h2>
+Error: Cook failed. Editor terminated with exit code <code>16384</code>
+<span class="label-android" />
+<span class="label-ios" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 If you encounter this issue:
 1. Go in the Firebase Console. Click on `Realtime Database` in the left panel and create a new Realtime Database.
 2. Download the `google-services.json` again and replace the one in your project with it.
 
-### uses-sdk:minSdkVersion `x` cannot be smaller than version `y` declared in library `[com.google.firebase:firebase_messaging_cpp]`
+
+</div></div></div>
+
+
+<div class="collapser">
+<h2>
+uses-sdk:minSdkVersion <code>x</code> cannot be smaller than version <code>y</code> declared in library <code>[com.google.firebase:firebase_messaging_cpp]</code>
+<span class="label-android" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 As we use the latest available libraries for Firebase C++ SDK, you might encounter this error if you target an old SDK version.
 You need to change the minSdk to the `y` value:
 1. Open Project's Config.
 2. Locate the `Platforms` > `Android` > `APK Packaging` > `Minimum SDK Version (19=KitKat, 21=Lolipop)` config.
 3. Set its value to `y`.
 
-### Packaging failed. Dependency resolved to an incompatible version
+</div></div></div>
+
+<div class="collapser">
+<h2>
+Packaging failed. Dependency resolved to an incompatible version
+<span class="label-android" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 This error means that there is a plugin using Google's libraries of a different version, creating a conflict.  
 There are two options to solve the issue:
 1. Simply disable the other plugin.
 2. Change Firebase Features' or the other plugin's Google's libraries version. 
 It can get complicated and requires some code changes. If you are facing this issue and want to use this solution, please contact us by email.
 
+</div></div></div>
+
+<div class="collapser">
+<h2>
+Undefined symbols when packaging for Android with architecture <code>x86</code> or <code>x86_64</code>.
+<span class="label-android" />
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
+For some Engine versions, the plugin only comes with the Firebase C++ SDK compiled for `arm64-v8a` and `armeabi-v7a` for Android.
+
+To add support for x86 or x86_64:
+1. Download the binaries from the corresponding link [x86_64](https://drive.google.com/file/d/1_7M2rxWNOxnt_ijLTlb5P1e-1q5zNtNx/view?usp=sharing) or [x86](https://drive.google.com/file/d/1lgfNdldpKNL9MkImqRAoSyQADMbuN4B8/view?usp=sharing).
+2. Unzip the files and copy them to `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/8.9.0/libs/android/{arch}`. i.e. for `x86_64`, the following file has to exist: `FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/8.9.0/libs/android/x86_64/c++/libfirebase_app.a`.
+3. Open `FirebaseFeatures/Source/FirebaseFeatures.Build.cs` and uncomment the line `297` (x86) or `298` (x86_64).
+
+</div></div></div>
+
+</div>
+
+<!--
+
+<div class="collapser">
+<h2>
+TITLE
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
+CONTENT
+
+</div></div></div>
+
+-->
+
+<!--
 ### Android Build Errors when Using Unreal Engine 4.25: `org.gradle.api.internal.file.DefaultFilePropertyFactory$DefaultDirectoryVar$2 cannot be cast to org.gradle.api.file.Directory`
 
 As the plugin uses recent Firebase libraries, an outdated Gradle version causes problem while packaging the project. To solve this issue, Gradle has to be updated. The following steps will guide you to update it:
@@ -145,27 +336,84 @@ private const string ANDROID_TOOLS_BUILD_GRADLE_VERSION = "com.android.tools.bui
   <img src="_images/BuildResult.png"/>
 </div>
 
+-->
+
 ## Desktop
 
-### Linux - `libsecret-1.so`: cannot open shared object file.
+<div class="collapser-container">
+
+<div class="collapser">
+<h2>
+Linux - <code>libsecret-1.so</code>: cannot open shared object file.
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 The Linux Firebase SDK has a dependency on libsecret. You can install it with apt:
 
 ```sh
 sudo apt-get install -y libsecret-1-0
 ```
 
-### Crashes when calling `Firebase - Features` functions.
+</div></div></div>
+
+<div class="collapser">
+<h2>
+Crashes when calling <code>Firebase - Features</code> functions.
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 If you encouter crashes when using the Desktop platform, the cause is very likely a missing `google-services.json` file. Follow the instructions [here](/installation) correctly. Make sure to check the Output Log after editor startup.
 
 !> If you plan to only use `Firebase - Features` on iOS, you'll have to download the `.json` and the `.plist` to test it in editor.
 
-### Crash in Packaged Game caused by Firestore
+</div></div></div>
+
+<div class="collapser">
+<h2>
+Crash in Packaged Game caused by Firestore
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
 If the game crashes in packaged games with Firestore enabled, the cause is most likely Firestore's persistence system. It can be disabled in the plugin's settings as shown in the below image.
 
 <div class="centered">
   <img src="_images/FirestorePersistence.png"/>
 </div>
 
-### Linux - Build fails with duplicate symbols for `libcurl`
+</div></div></div>
+
+<div class="collapser">
+<h2>
+Linux - Build fails with duplicate symbols for <code>libcurl</code>
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
+
 1. Open `Plugins/FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/libs/linux/x86_64_PIC`.
 2. Delete the file `libcurl.a`.
+
+</div></div></div>
+
+</div>
+
+
+<!--
+
+<div class="collapser">
+<h2>
+TITLE
+</h2>
+<div class="collapser-content">
+<div class="collapser-content-container">
+
+CONTENT
+
+</div></div></div>
+
+-->
+
+<div style="margin-bottom: 200px" />

@@ -1,6 +1,8 @@
 
 # Support
 
+This section shows how to get support for the plugin.
+
 ## Detecting the Problem
 If you encounter an issue, you can get useful information with the logs.
 Two types of logs can be helpful:
@@ -31,4 +33,4 @@ that's probably the reason of the error.
 ## Contact
 If you need help, have a feature request or experience troubles, please contact us at [pandores.marketplace@gmail.com](mailto:pandores.marketplace+FirebaseFeatures@gmail.com?subject=Firebase%20Features%20-%20).
 
-!> Please, include logs in your email.
+?> <b>Please, include logs in your mail</b>.
