@@ -3,6 +3,10 @@
 This section contains patch notes for the plugin.
 
 !> The Unreal Engine Marketplace allows updates only for the last three major Engine versions. To get the latest version of the plugin on older Engine versions, download the plugin through the latest Engine installation or contact our support email address.
+
+### `1.7.16`
+- Fix 4.27 build errors.
+
 ### `1.7.15`
 - Updated the Firebase C++ SDK for iOS to version `12.1.0`.
 
