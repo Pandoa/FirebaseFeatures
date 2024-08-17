@@ -4,6 +4,10 @@ This section contains patch notes for the plugin.
 
 !> The Unreal Engine Marketplace allows updates only for the last three major Engine versions. To get the latest version of the plugin on older Engine versions, download the plugin through the latest Engine installation or contact our support email address.
 
+### `1.7.17`
+- `AddSnapshotListener` now returns a handle to remove the listener. Call `Remove` on this handle to stop listening.
+- `AddSnapshotListener` is now available on all platforms.
+
 ### `1.7.16`
 - Fix 4.27 build errors.
 
