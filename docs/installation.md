@@ -2,10 +2,10 @@
 
 > If you want to use the plugin for desktop only, the steps are the same as for Android.
 
-## Create a Firebase project.
+## 1. Create a Firebase project.
 To use Firebase, you need a Firebase project. To create one, go to [the Firebase Console](https://console.firebase.google.com/u/0/), click on `Add a project` and fill the fields asked for your new project.
 
-## AdMob Configuration
+## 2. Configure AdMob (optional)
 If you plan to use AdMob, you have to configure it first.
 1. Start by going to [AdMob Home Page](https://apps.admob.com/v2/home).  
 2. Click `Application` > `Add an Application`. 
@@ -21,7 +21,7 @@ AndroidAdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 iOSAdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 ```  
 
-## File `google-services.json`
+## 3. Install the File `google-services.json`
 
 To work, Firebase requires the file `google-services.json` (or `GoogleService-Info.plist` for iOS). 
 1. Go to `Project Overview > Project Settings` 
@@ -42,14 +42,14 @@ The following image shows the required steps to arrive to the Download button:
 
 !> Desktop platforms use the Android `google-services.json` file.
 
-## Creating a Realtime Database
+## 4. Creating a Realtime Database (optional)
 To create a Realtime Database for your project:
 1. Go to the [Firebase Console](https://console.firebase.google.com/).
 2. In the left panel, click on Realtime Database.
 3. Click on `Create a Database`
 4. Download and update your current `google-services.json`.
 
-## Configuration for C++
+## 5. Configuration for C++ (optional)
 This step is only required if you plan to use Firebase Features through C++ code.
 Open  `YourProject.Build.cs` and add the following line to your module's constructor:
 ```csharp
@@ -58,5 +58,5 @@ PrivateDependencyModuleNames.Add("FirebaseFeatures");
 
 !> You need to regenerate project files for the includes to work with your code editor.
 
-## Disabling unused modules 
+## 6. Disabling unused modules (optional)
 Starting with plugin version `1.4.12`, [these steps](/disableunusedfeatures) can be followed to disable parts of the plugin.
