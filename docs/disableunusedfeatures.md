@@ -13,7 +13,7 @@ To turn off features:
 </div>
 
 ?> Disabling AdMob requires to rebuild the plugin. Otherwise, the Mobile Ads SDK will terminate the application when it starts.
-
+?> Some features depend on each other. Most features depend on Firebase Analytics. If your build failed after disabling a feature, another feature probably depends on it.
 ?> Rebuilding the plugin is required to disable a module on iOS.
 
 After these steps the following happens:
