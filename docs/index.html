@@ -18,9 +18,9 @@
   <meta property="og:url" content="https://pandoa.github.io/FirebaseFeatures/" />
   <style>
 	:root {--theme-color:#E6AD43;}
-	html, body, .content {background: #121212}
+	html, body, .content {background: #101010}
 	.markdown-section a {color:#E6AD43;font-weight:400}
-	.sidebar {background-color: #242424}
+	.sidebar {background-color: #202020}
 	textarea {display:none}
 	.sidebar a.section-link {font-size: 0.8em}
 	.app-sub-sidebar li > a.section-link {color:var(--theme-color)}
@@ -60,8 +60,21 @@
 	.markdown-section code {
   border-radius: 8px !important;
 }
-	.anchor span {font-weight:600}
-	/* width */
+.markdown-section p.tip {
+	padding-left: 60px;
+}
+.markdown-section p.tip:before {
+	font-size: 10px;
+	font-weight: bolder;
+	left: 20px;
+	top: calc(50% - 10px);
+	line-height: 15px;
+	height: 20px;
+	width: 20px;
+	content: url(_svgs/warn.svg);
+	background: none;
+}
+.anchor span {font-weight:600}
     ::-webkit-scrollbar {
       width: 6px;
 	  height: 6px;
@@ -306,6 +319,13 @@
 	{
 		border-bottom:none;
 	}
+	.markdown-section pre > code,
+	.markdown-section pre {
+		background-color: #181818;
+	}
+	.fb-elem > img {
+		box-shadow: none;
+	}
 	
 	.markdown-section td {
 		padding: 10px 15px;
@@ -316,17 +336,23 @@
     .ue-button:hover {
       filter: invert(0);
     }
+
+		.markdown-section p.warn {
+			border-radius: 12px;
+		}
     
     .ue-button {
       transition: 0.25s ease-in-out;
-       border: 1px solid white;
-      background: #eee;
-      border-radius: 4px;
+      border: 3px solid #f2f2f2;
+			font-weight: bolder !important;
+      background: #ddd;
+      border-radius: 8px;
       color: black !important;
       text-decoration:none;
       padding: 20px 22px;
       margin-right: 10px;
-      filter: invert(1);
+			font-size: 1.2rem;
+      filter: invert(1) drop-shadow(0 0 0.75rem #00000055);
     }
     
     .ue-button img {

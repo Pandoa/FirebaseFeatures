@@ -34,6 +34,13 @@ section.content li.new:before {
 }
 </style>
 
+### `1.7.20`
+<ul>
+  <li class="new">
+  Add support for iOS Simulator on Unreal Engine 5.4+.
+  </li>
+</ul>
+
 ### `1.7.19`
 <ul>
   <li class="new">

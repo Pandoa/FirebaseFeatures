@@ -1,5 +1,5 @@
 # Introduction
-Firebase - Features allows you to easily use the Firebase C++ SDK within Unreal Engine. Go full Blueprints without touching a single line of C++, full C++ with an API totally written for Unreal Engine C++ or mix both easily.
+Firebase - Features allows you to easily use the Firebase SDK within Unreal Engine. Go full Blueprints without touching a single line of C++, full C++ with an API totally written for Unreal Engine C++ or mix both easily.
 
 # Content
 The following modules are available in the plugin:
@@ -16,4 +16,8 @@ The following modules are available in the plugin:
 - Crashlytics (iOS and Android only)
 - Performance (iOS and Android only)
 
+# Getting Started
+Follow the [installation guide](/installation).
+
+# Contact
 ?> A question? Send an email to [pandores.marketplace@gmail.com](mailto:pandores.marketplace+doc@gmail.com).

@@ -1,6 +1,8 @@
 # Setup Firebase Features
 
-> If you want to use the plugin for desktop only, the steps are the same as for Android.
+This section guides you to install the plugin and start using it.
+
+> If you want to use the plugin for desktop (Windows, MacOS, Linux), the steps are the same as for Android.
 
 ## 1. Create a Firebase project.
 To use Firebase, you need a Firebase project. To create one, go to [the Firebase Console](https://console.firebase.google.com/u/0/), click on `Add a project` and fill the fields asked for your new project.
