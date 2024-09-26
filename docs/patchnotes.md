@@ -1,6 +1,6 @@
-# Patch Notes
+# Release Notes
 
-This section contains patch notes for the plugin.
+This section contains release notes for the plugin.
 
 !> The Unreal Engine Marketplace allows updates only for the last three major Engine versions. To get the latest version of the plugin on older Engine versions, download the plugin through the latest Engine installation or contact our support email address.
 
