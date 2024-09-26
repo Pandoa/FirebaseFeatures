@@ -23,6 +23,6 @@
   - [Remote Config](/remoteconfig)
   
 - Support
-  - [Patch Notes](patchnotes.md)
+  - [Release Notes](patchnotes.md)
   - [Troubleshooting](troubleshoting.md)
   - [Support](support.md)
