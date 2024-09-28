@@ -34,6 +34,37 @@ section.content li.new:before {
 }
 </style>
 
+### `1.7.22`
+<ul>
+  <li class="new">
+    Added <code>OnPaid</code> event on <code>Rewarded Video Ad</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidFailToPresentFullScreenContent</code> event on <code>Rewarded Video Ad</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdWillPresentFullScreenContent</code> event on <code>Rewarded Video Ad</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidDismissFullScreenContent</code> event on <code>Rewarded Video Ad</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidRecordImpression</code> event on <code>Rewarded Video Ad</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidRecordClick</code> event on <code>Rewarded Video Ad</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdWillDismissFullScreenContent</code> event on <code>Rewarded Video Ad</code> object.
+  </li>
+  <li>
+    Rewrote <code>Rewarded Video Ad</code> to use the native SDK. Other ad formats will be rewritten in following updates, following the deprecation of the Firebase C++ Admob SDK by Google.
+  </li>
+  <li class="warn">
+    Deprecated the old API of <code>Rewarded Video Ad</code>. Please, update your code to use the new API by following the deprecation message recommendations.
+  </li>
+</ul>
+
 ### `1.7.21`
 <ul>
   <li class="new">
