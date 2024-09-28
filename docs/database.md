@@ -1,5 +1,13 @@
 # Realtime Database
 
+
+<style>
+.markdown-section h2 {
+   border-top: 4px solid #333;
+   padding-top: 35px;
+}
+</style>
+
 The Firebase Realtime Database stores and synchronizes data using a NoSQL cloud database. Data is synchronized across all clients in realtime, and remains available when your app goes offline.
 
 ## Get Started with Firebase Realtime Database 

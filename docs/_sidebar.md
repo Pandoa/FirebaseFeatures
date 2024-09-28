@@ -2,10 +2,7 @@
   - [Introduction](/introduction)
   - [Installation](/installation)
   - [Disable Unused Features](/disableunusedfeatures)
-
-- Edit the Plugin
   - [Rebuild the Plugin](/rebuildplugin)
-  - [Change the SDK](/changesdk)
   
 - Components
   - [AdMob](/admob)

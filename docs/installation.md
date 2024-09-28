@@ -52,16 +52,7 @@ The following image shows the required steps to arrive to the Download button:
 
 !> Desktop platforms use the Android `google-services.json` file.
 
-## 4. Creating a Realtime Database (optional)
-If you plan to use Realtime Database, you need to create a Firebase Console.
-
-To create a Realtime Database for your project:
-1. Go to the [Firebase Console](https://console.firebase.google.com/).
-2. In the left panel, click on Realtime Database.
-3. Click on `Create a Database`
-4. Download and update your current `google-services.json`.
-
-## 5. Configuration for C++ (optional)
+## 4. Configuration for C++ (optional)
 This step is only required if you plan to use Firebase Features through C++ code. You can safely skip it if you plan to code using Blueprints only.
 
 Open  `YourProject.Build.cs` and add the following line to your module's constructor:
@@ -71,15 +62,7 @@ PrivateDependencyModuleNames.Add("FirebaseFeatures");
 
 !> You need to regenerate project files for the includes to work with your code editor.
 
-## 6. Disabling unused modules (optional)
-
-Unused modules can be removed to reduce the size of your app. You can safely skip this step if you are just starting developing.
-
-As this part can get quite technical, we recommend doing it later once you are sure of what you are going to use in the plugin.
-
-Starting with plugin version `1.4.12`, [these steps](/disableunusedfeatures) can be followed to disable parts of the plugin. 
-
-## 7. You are done!
+## 5. You are done!
 
 If you correctly placed your `google-services.json` file in the `Services` folder, you can start the Unreal Engine Editor and use the plugin!
 

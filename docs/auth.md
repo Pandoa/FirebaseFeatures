@@ -1,3 +1,10 @@
+<style>
+.markdown-section h2 {
+   border-top: 4px solid #333;
+   padding-top: 35px;
+}
+</style>
+
 # Auth
 You can use Firebase Authentication to allow users to sign in to your app using one or more sign-in methods, including email address and password sign-in, and federated identity providers such as Google Sign-in and Facebook Login.
 

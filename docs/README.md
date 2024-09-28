@@ -1,7 +1,13 @@
 
 # Firebase - Features
 
->  Native Firebase integration for Unreal Engine.
+<style>
+.markdown-section p strong {
+  color: #fff;
+}
+</style>
+
+>  A native Firebase integration for Unreal Engine supporting **Windows**, **MacOS**, **Linux** **iOS**, and **Android**.
 
 ## Explore the Documentation
 

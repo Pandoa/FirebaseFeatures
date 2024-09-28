@@ -1,3 +1,10 @@
+<style>
+.markdown-section h2 {
+   border-top: 4px solid #333;
+   padding-top: 35px;
+}
+</style>
+
 # Cloud Storage
 
 Cloud Storage for Firebase lets you upload and share user generated content, such as images and video, which allows you to build rich media content into your apps. Your data is stored in a [Google Cloud Storage](https://cloud.google.com/storage) bucket — an exabyte scale object storage solution with high availability and global redundancy. Cloud Storage for Firebase lets you securely upload these files directly from mobile devices and web browsers, handling spotty networks with ease.
