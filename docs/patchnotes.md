@@ -34,6 +34,13 @@ section.content li.new:before {
 }
 </style>
 
+### `1.7.21`
+<ul>
+  <li class="new">
+  Add AppOpen ad.
+  </li>
+</ul>
+
 ### `1.7.20`
 <ul>
   <li class="new">
