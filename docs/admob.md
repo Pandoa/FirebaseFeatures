@@ -1,5 +1,12 @@
 # AdMob
 
+<style>
+.markdown-section h2 {
+   border-top: 4px solid #333;
+   padding-top: 35px;
+}
+</style>
+
 This section covers how to use AdMob with the Firebase - Features plugin.  
 AdMob helps you monetize your mobile app through in-app advertising. Three types of advertising are available.
 

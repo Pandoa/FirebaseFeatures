@@ -1,19 +1,27 @@
 # Setup Firebase Features
 
-This section guides you to install the plugin and start using it.
+This section guides you to install the plugin and start using it. You can skip the optional steps.
 
 > If you want to use the plugin for desktop (Windows, MacOS, Linux), the steps are the same as for Android.
+
+<style>
+.markdown-section h2 {
+   border-top: 4px solid #333;
+   padding-top: 35px;
+}
+</style>
 
 ## 1. Create a Firebase project.
 To use Firebase, you need a Firebase project. To create one, go to [the Firebase Console](https://console.firebase.google.com/u/0/), click on `Add a project` and fill the fields asked for your new project.
 
 ## 2. Configure AdMob (optional)
+
 If you plan to use AdMob, you have to configure it first.
 1. Start by going to [AdMob Home Page](https://apps.admob.com/v2/home).  
 2. Click `Application` > `Add an Application`. 
 3. Once the application is added, go to `Application Settings`
 4. Click on `Associate with Firebase`. This last step will ask you your application's package name that you choose while creating your Firebase Project.
-5. You now need to go to `Apps` > `YourApp` > `App Settings`, copy the App ID and paste it in `DefaultEngine.ini` with the following structure: 
+5. You now need to go to `Apps` > `YourApp` > `App Settings`, copy the App ID and paste it in `DefaultEngine.ini` with the following structure:   
 
  ```ini
 [Firebase]
@@ -45,6 +53,8 @@ The following image shows the required steps to arrive to the Download button:
 !> Desktop platforms use the Android `google-services.json` file.
 
 ## 4. Creating a Realtime Database (optional)
+If you plan to use Realtime Database, you need to create a Firebase Console.
+
 To create a Realtime Database for your project:
 1. Go to the [Firebase Console](https://console.firebase.google.com/).
 2. In the left panel, click on Realtime Database.
@@ -52,7 +62,8 @@ To create a Realtime Database for your project:
 4. Download and update your current `google-services.json`.
 
 ## 5. Configuration for C++ (optional)
-This step is only required if you plan to use Firebase Features through C++ code.
+This step is only required if you plan to use Firebase Features through C++ code. You can safely skip it if you plan to code using Blueprints only.
+
 Open  `YourProject.Build.cs` and add the following line to your module's constructor:
 ```csharp
 PrivateDependencyModuleNames.Add("FirebaseFeatures");
@@ -61,4 +72,112 @@ PrivateDependencyModuleNames.Add("FirebaseFeatures");
 !> You need to regenerate project files for the includes to work with your code editor.
 
 ## 6. Disabling unused modules (optional)
-Starting with plugin version `1.4.12`, [these steps](/disableunusedfeatures) can be followed to disable parts of the plugin.
+
+Unused modules can be removed to reduce the size of your app. You can safely skip this step if you are just starting developing.
+
+As this part can get quite technical, we recommend doing it later once you are sure of what you are going to use in the plugin.
+
+Starting with plugin version `1.4.12`, [these steps](/disableunusedfeatures) can be followed to disable parts of the plugin. 
+
+## 7. You are done!
+
+If you correctly placed your `google-services.json` file in the `Services` folder, you can start the Unreal Engine Editor and use the plugin!
+
+You can click on one of the modules below to access its documentation.
+
+<div class="fb-f-cont">
+
+<a class="fb-elem" href="#firestore">
+  <image src="_images/firebase/Firestore.png" class="fb"/>
+  <div class="fb-txt">
+    Firestore
+  </div>
+</a>
+
+<a class="fb-elem" href="#functions">
+  <image src="_images/firebase/CloudFunctions.png" class="fb"/>
+  <div class="fb-txt">
+    Cloud Functions
+  </div>
+</a>
+
+<a class="fb-elem" href="#auth">
+  <image src="_images/firebase/Auth.png" class="fb"/>
+  <div class="fb-txt">
+    Authentication
+  </div>
+</a>
+
+<a class="fb-elem" href="#database">
+  <image src="_images/firebase/Database.png" class="fb"/>
+  <div class="fb-txt">
+    Realtime Database
+  </div>
+</a>
+
+<a class="fb-elem" href="#storage">
+  <image src="_images/firebase/Storage.png" class="fb"/>
+  <div class="fb-txt">
+    Cloud Storage
+  </div>
+</a>
+
+
+<a class="fb-elem" href="#appcheck">
+  <image src="_images/firebase/AppCheck.png" class="fb"/>
+  <div class="fb-txt">
+    AppCheck
+  </div>
+</a>
+
+<a class="fb-elem" href="#crashlytics">
+  <image src="_images/firebase/Crashlytics.png" class="fb"/>
+  <div class="fb-txt">
+    Crashlytics
+  </div>
+</a>
+
+<a class="fb-elem" href="#admob">
+  <image src="_images/firebase/AdMob.png" class="fb"/>
+  <div class="fb-txt">
+    AdMob
+  </div>
+</a>
+
+<a class="fb-elem" href="#analytics">
+  <image src="_images/firebase/Analytics.png" class="fb"/>
+  <div class="fb-txt">
+    Analytics
+  </div>
+</a>
+
+<a class="fb-elem" href="#messaging">
+  <image src="_images/firebase/Messaging.png" class="fb"/>
+  <div class="fb-txt">
+    Cloud Messaging
+  </div>
+</a>
+
+<a class="fb-elem" href="#remoteconfig">
+  <image src="_images/firebase/RemoteConfig.png" class="fb"/>
+  <div class="fb-txt">
+    RemoteConfig
+  </div>
+</a>
+
+<a class="fb-elem" href="#dynamiclinks">
+  <image src="_images/firebase/Dynamicinks.png" class="fb"/>
+  <div class="fb-txt">
+    Dynamic Links
+  </div>
+</a>
+
+<a class="fb-elem" href="#performance">
+  <image src="_images/firebase/Performance.png" class="fb"/>
+  <div class="fb-txt">
+    Performance
+  </div>
+</a>
+
+</div>
+

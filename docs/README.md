@@ -3,39 +3,6 @@
 
 >  Native Firebase integration for Unreal Engine.
 
-<style>
-.fb {
-  border-radius: 0;
-  border-width: 0;
-  width: 100px;
-}
-.fb-elem {
-  display: flex;
-  flex-direction: column;
-  justify-content: middle;
-  align-items: center;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-  margin: 20px 3%;
-  text-decoration: none !important;
-}
-.fb-txt {
-  margin-top: 10px;
-  font-size: 1.1rem;
-}
-.fb-elem:hover {
-  transform: scale(1.05);
-}
-.fb-f-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0 8%; 
-}
-</style>
-
 ## Explore the Documentation
 
 <div class="fb-f-cont">
