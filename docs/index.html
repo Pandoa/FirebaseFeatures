@@ -1826,7 +1826,7 @@ if (!re.test(userAgent)) {
 	var gtagEl = document.createElement('script');
 	gtagEl.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=G-EGXMT0XTHL');
 	gtagEl.setAttribute('defer', 'true');
-	document.appendChild(gtagEl);
+	document.body.appendChild(gtagEl);
 	window.dataLayer = window.dataLayer || [];
 	function gtag() { dataLayer.push(arguments); }
 	gtag('js', new Date());
