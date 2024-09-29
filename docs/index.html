@@ -574,16 +574,6 @@
 			}
 		}
 	</script>
-<script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js" data-ga="UA-179486364-1"></script>
-<script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
-<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
-<script src="js/prism-cpp.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-ini.min.js"></script>
-<script src="js/custom-class.min.js"></script>
-<!--script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script-->
-<!--script src="https://gumroad.com/js/gumroad.js"></script-->
 
 <script>
 var CustomMacros = [
@@ -610,8 +600,18 @@ var CustomTypes = [
 	"FVector2D",
 	"FAdMobCallback",
 	"FFirebaseError",
+	"UFirestoreDocumentReference",
 ];
+</script>
 
+<script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js" data-ga="UA-179486364-1"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+<script src="js/prism-cpp.min.js"></script>
+<script src="js/custom-class.min.js"></script>
+<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+
+<script>
 (function () {
 	if (!Prism.languages['cpp']['ue-macro']) {
 		Prism.languages['cpp']['ue-macro'] = [];
@@ -635,9 +635,10 @@ var CustomTypes = [
 			}
 		}
 	});
-}());
+})();
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGXMT0XTHL"></script>
+
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-EGXMT0XTHL"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
