@@ -110,7 +110,7 @@
 !> Get started by reading the [installation guide](/installation).
 
 <div class="centered" style="margin-top: 50px;">
-  <a class="ue-button" href="https://www.unrealengine.com/marketplace/en-US/product/firebase-features">Get this plugin <img width="40px" src="_images/buyueicon.png" alt="Unreal Engine Icon" /></a>
+  <a class="ue-button" href="https://www.unrealengine.com/marketplace/en-US/product/firebase-features">Get this plugin <img width="40px" height="40px" src="_images/buyueicon.png" alt="Unreal Engine Icon" /></a>
 <!--
   <a class="gumroad-button" href="https://pandoresmarketplace.gumroad.com/l/FirebaseFeatures?wanted=true">Buy this product on</a>
 -->
