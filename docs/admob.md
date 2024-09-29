@@ -477,7 +477,62 @@ App open ads are a special ad format intended for publishers wishing to monetize
 <div class="cpp">
 
 ```cpp
-// C++ example not available yet.
+// File containing the UAppOpenAd class.
+#include "AdMob/FbAppOpenAd.h"
+
+/***********************************************
+    Create an ad. 
+************************************************/
+
+UAppOpenAd* Ad = NewObject<UAppOpenAd>();
+
+/***********************************************
+    Later, load an ad.
+************************************************/
+
+// Create the ad request.
+FAdMobAdRequest Request;
+Request.Keywords = { TEXT("game"), TEXT("fun") };
+
+// Launch the load of the ad.
+Ad->Load(
+   /* Ad Unit ID */
+   TEXT("ca-app-pub-3940256099942544/5575463023"),
+   /* Our request */
+   Request, 
+   /* Callback when the ad is loaded. */
+   FFirebaseAdMobCallback::CreateLambda([](FFirebaseError Error)
+   {
+      if (Error)
+      {
+         // Failed to load the ad as something went wrong. Check the output log for the reason.
+         UE_LOG(LogTemp, Error, TEXT("Failed to load an ad: %s"), *Error.Message);
+      }
+      else
+      {
+         // Ad is loaded and ready to be shown.
+      }
+   })
+);
+
+/***********************************************
+    Finally, after the ad was loaded, show the ad.
+************************************************/
+
+/* Shows the ad */
+Ad->Show(FFirebaseAdMobCallback::CreateLambda([](FFirebaseError Error)
+{
+   if (Error)
+   {
+      // Failed to show the ad as something went wrong. Check the output log for reason.
+      UE_LOG(LogTemp, Error, TEXT("Failed to show ad: %s"), *Error.Message);
+   }
+   else
+   {
+      // Ad is currently on screen.
+   }
+});
+
 ```
 
 </div>
