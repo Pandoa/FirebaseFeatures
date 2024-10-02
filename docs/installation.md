@@ -4,6 +4,13 @@ This section guides you to install the plugin and start using it. You can skip t
 
 > If you want to use the plugin for desktop (Windows, MacOS, Linux), the steps are the same as for Android.
 
+<div style="display:flex;justify-content:center">
+<div style="max-width: 640px;flex-grow:1;">
+<iframe src="https://www.youtube.com/embed/SbVVrKnS78Y?rel=0" class="video" alt="Installation Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen msallowfullscreen oallowfullscreen webkitallowfullscreen>
+</iframe>
+</div>
+</div>
+
 <style>
 .markdown-section h2 {
    border-top: 4px solid #333;

@@ -5,6 +5,8 @@ __diff_output__
 lib/
 node_modules
 themes/
+.presite/
+docsgen/
 
 # exceptions
 !.gitkeep
