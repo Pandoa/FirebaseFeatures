@@ -11,6 +11,12 @@
 			<changefreq>daily</changefreq>
 			<priority>0.5</priority>
 		</url>
+
+		<url>
+			<loc>https://pandoa.github.io/FirebaseFeatures/installation</loc>
+			<changefreq>daily</changefreq>
+			<priority>0.5</priority>
+		</url>
 		
 		<url>
 			<loc>https://pandoa.github.io/FirebaseFeatures/firestore</loc>
