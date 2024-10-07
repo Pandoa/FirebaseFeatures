@@ -1740,6 +1740,67 @@
 </head>
 
 <body data-page="firestore.md" class="ready sticky">
+  
+  <script>
+    function copyBlueprintCode(button) {
+      button.innerHTML = "Copied!";
+      setTimeout(() => { button.innerHTML = "Copy Code" }, 5000);
+      var c = button.parentNode.children[0];
+      c.style.display = "block";
+      c.select();
+      document.execCommand("copy");
+      c.style.display = "none";
+    }
+    var bShowCPP = false;
+    function switchCode() {
+      bShowCPP = !bShowCPP;
+      var elems = document.getElementsByClassName('code-switcher');
+
+      for (var i = 0; i < elems.length; ++i) {
+        elems[i].classList.remove('show-cpp-' + !bShowCPP);
+        elems[i].classList.add('show-cpp-' + bShowCPP);
+      }
+
+      setCookie('bShowCPP', bShowCPP, 7);
+    }
+    function switchCpp() {
+      bShowCPP = false;
+      switchCode();
+    }
+    function switchBp() {
+      bShowCPP = true;
+      switchCode();
+    }
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    function changeSelectedCode() {
+      setTimeout(() => {
+        bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+        switchCode();
+      }, 0);
+    }
+
+    bShowCPP = JSON.parse(getCookie('bShowCPP'));
+  </script>
+
   <main>
     <button class="sidebar-toggle" aria-label="Menu">
       <div class="sidebar-toggle-button">
@@ -1851,68 +1912,6 @@
             padding-top: 35px;
           }
         </style>
-
-
-        <script>
-          function copyBlueprintCode(button) {
-            button.innerHTML = "Copied!";
-            setTimeout(() => { button.innerHTML = "Copy Code" }, 5000);
-            var c = button.parentNode.children[0];
-            c.style.display = "block";
-            c.select();
-            document.execCommand("copy");
-            c.style.display = "none";
-          }</script>
-        <script>
-          var bShowCPP = false;
-          function switchCode() {
-            bShowCPP = !bShowCPP;
-            var elems = document.getElementsByClassName('code-switcher');
-
-            for (var i = 0; i < elems.length; ++i) {
-              elems[i].classList.remove('show-cpp-' + !bShowCPP);
-              elems[i].classList.add('show-cpp-' + bShowCPP);
-            }
-
-            setCookie('bShowCPP', bShowCPP, 7);
-          }
-          function switchCpp() {
-            bShowCPP = false;
-            switchCode();
-          }
-          function switchBp() {
-            bShowCPP = true;
-            switchCode();
-          }
-          function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-              var date = new Date();
-              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-              expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + value + expires + "; path=/";
-          }
-          function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-              var c = ca[i];
-              while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-          }
-
-          function changeSelectedCode() {
-            setTimeout(() => {
-              bShowCPP = !JSON.parse(getCookie('bShowCPP'));
-              switchCode();
-            }, 0);
-          }
-
-          bShowCPP = JSON.parse(getCookie('bShowCPP'));
-        </script>
 
 
         <h1 id="cloud-firestore"><a href="#cloud-firestore" data-id="cloud-firestore" class="anchor"><span>Cloud
