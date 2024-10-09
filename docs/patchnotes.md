@@ -34,6 +34,13 @@ section.content li.new:before {
 }
 </style>
 
+### `1.7.23`
+<ul>
+  <li>
+    Fix a crash on iOS with distribution builds.
+  </li>
+</ul>
+
 ### `1.7.22`
 <ul>
   <li class="new">
