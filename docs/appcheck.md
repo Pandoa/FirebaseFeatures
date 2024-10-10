@@ -21,7 +21,8 @@ In the plugin's settings, select which *App Check Provider* you want to use for 
 
 <div class="centered">
 
-![App Check configuration window](_images/AppCheckConfig.png)
+<img src="_images/AppCheckConfig.png" alt="App Check configuration window">
+
 </div>
 
 ## 3. Debug Config for Desktop

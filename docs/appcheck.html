@@ -1732,7 +1732,9 @@
 You usually need to register all of your project's apps, because once you enable enforcement for a Firebase product, only registered apps will be able to access the product's backend resources.
 For detailed instructions on how to register with each provider, refer to the Android and iOS specific documentation.</p></li><li><p><em>Optional</em>: In the app registration settings, set a custom time-to-live (TTL) for App Check tokens issued by the provider. You can set the TTL to any value between 30 minutes and 7 days. When changing this value, be aware of the following tradeoffs:</p><ul><li>Security: Shorter TTLs provide stronger security, because it reduces the window in which a leaked or intercepted token can be abused by an attacker.</li><li>Performance: Shorter TTLs mean your app will perform attestation more frequently. Because the app attestation process adds latency to network requests every time it's performed, a short TTL can impact the performance of your app.</li><li>Quota and cost: Shorter TTLs and frequent re-attestation deplete your quota faster, and for paid services, potentially cost more. See <a href="https://firebase.google.com/docs/app-check#quotas_limits" target="_blank" rel="noopener">Quotas &amp; limits</a>.</li></ul><p>The default TTL is reasonable for most apps. Note that the App Check library refreshes tokens at approximately half the TTL duration.</p></li></ol><h2 id="_2-configure-app-check"><a href="appcheck.html#_2-configure-app-check" data-id="_2-configure-app-check" class="anchor"><span>2. Configure App Check</span></a></h2><p>In the plugin's settings, select which <em>App Check Provider</em> you want to use for each platform, and restart the Editor to apply the changes.</p><div class="centered">
 
-<p><img src="/_images/AppCheckConfig.png" data-origin="_images/AppCheckConfig.png" alt="App Check configuration window"></p></div>
+<img src="_images/AppCheckConfig.png" alt="App Check configuration window">
+
+</div>
 
 <h2 id="_3-debug-config-for-desktop"><a href="appcheck.html#_3-debug-config-for-desktop" data-id="_3-debug-config-for-desktop" class="anchor"><span>3. Debug Config for Desktop</span></a></h2><p>On desktop, select the <em>Debug Provider</em> and add an environment variable named <code>FIREBASE_APPCHECK_DEBUG_TOKEN</code> containing your debug token. The plugin will use it to satisfy the requirements to test in Editor.</p><div class="docsify-pagination-container">
         <div class="pagination-item pagination-item--previous">
@@ -1817,4 +1819,4 @@ For detailed instructions on how to register with each provider, refer to the An
     document.getElementsByTagName('head')[0].appendChild(script);
   }, 3000);
 </script>
-<iframe allow="join-ad-interest-group" data-tagging-id="G-EGXMT0XTHL" data-load-time="1728570457628" height="0" width="0" src="https://td.doubleclick.net/td/ga/rul?tid=G-EGXMT0XTHL&amp;gacid=1025319336.1728570458&amp;gtm=45je4a90h2v9174335085za200&amp;dma=0&amp;gcd=13l3l3l3l1l1&amp;npa=0&amp;pscdl=&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=101671035~101686685&amp;z=1709712516" style="display: none; visibility: hidden;"></iframe><div class="progress" style="opacity: 0; width: 0%;"></div></body></html>
+<div class="progress" style="opacity: 0; width: 0%;"></div></body></html>

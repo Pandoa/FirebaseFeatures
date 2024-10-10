@@ -54,6 +54,7 @@ async function main() {
 
     removeAllSelector(document, '.delete-static');
     removeAllSelector(document, 'script[src*="livereload.js"]');
+    removeAllSelector(document, 'iframe[allow="join-ad-interest-group"]');
 
     const linksToFix = document.querySelectorAll('a[href^="#/"]');
     for (const linkToFix of linksToFix) {
