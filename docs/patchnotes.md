@@ -4,6 +4,8 @@ This section contains release notes for the plugin.
 
 !> The Unreal Engine Marketplace allows updates only for the last three major Engine versions. To get the latest version of the plugin on older Engine versions, download the plugin through the latest Engine installation or contact our support email address.
 
+<h2 style="display:none">Firebase Features Release Note List<h2>
+
 <style>
 section.content ul {
   list-style: none;
