@@ -3,14 +3,14 @@
 Google Analytics collects usage and behavior data for your app.
 
 
-### Before Starting
+## Before Starting
 Firebase Features uses Unreal Engine's analytic system. To use this system as the default system for your project, you have to edit your project's configuration. 
 Open `<YourGame>/Config/DefaultEngine.ini` and add the following lines:
 ```ini
 [Analytics]
 ProviderModuleName=FirebaseFeatures
 ```
-### Managing the Analytic Session
+## Managing the Analytic Session
 You can now start an Analytic Session with the following node:
 
 <div class="code-switcher show-cpp-false">
@@ -117,7 +117,7 @@ End Object
 </div>
 </div>
 
-### Logging Events
+## Logging Events
 Now that the analytic session has started, you can start logging events. Firebase Features offers several methods to easily log different kinds of events:
 
 <div class="centered">
@@ -126,7 +126,7 @@ Now that the analytic session has started, you can start logging events. Firebas
 
 </div>
 
-### Going Further
+## Going Further
 Firebase Features offers other methods to manage analytics. You can safely call them after you started the session.
 
 <div class="centered">
