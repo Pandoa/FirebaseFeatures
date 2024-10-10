@@ -56,12 +56,15 @@ async function main() {
     removeAllSelector(document, 'script[src*="livereload.js"]');
     removeAllSelector(document, 'iframe[allow="join-ad-interest-group"]');
 
+    const pageTitle = document.querySelector('title');
+    pageTitle.innerHTML += ' | Firebase for Unreal Engine';
+
     const linksToFix = document.querySelectorAll('a[href^="#/"]');
     for (const linkToFix of linksToFix) {
       linkToFix.href = linkToFix.getAttribute("href").slice(2);
     }
 
-    await fs.writeFileSync(OUT_DIR + route + '.html', dom.serialize());
+    fs.writeFileSync(OUT_DIR + route + '.html', dom.serialize());
   }
 
 
