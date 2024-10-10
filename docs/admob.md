@@ -122,7 +122,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=22595CDF4344D3403D70D09AAA93A5B1,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_75 3DE4DAD14A6073AAD84A75A1E6C4EE57,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/TestAdDeviceId.png"/>
+<img src="_images/TestAdDeviceId.png" alt="add test device blueprint code example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -130,7 +130,7 @@ End Object
 
 ## Banner View
 
-<img src="https://developers.google.com/admob/images/format-banner.svg" align="left" width="100" style="margin-right:20px"/>
+<img src="https://developers.google.com/admob/images/format-banner.svg" align="left" width="100" style="margin-right:20px" alt="admob banner ad icon"/>
 
 Banners are rectangular ads that occupy a portion of an app's layout. They can be refreshed automatically after a period of time.  
 
@@ -337,7 +337,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_MakeArray Name="K2Node_MakeArra
    CustomProperties Pin (PinId=0BB3E7684BC5D7934796AF9FBF2B76C1,PinName="[1]",PinType.PinCategory="string",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,DefaultValue="Unreal Engine",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/CreateBannerView.png"/>
+<img src="_images/CreateBannerView.png" alt="create banner view blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -442,31 +442,28 @@ End Object
 
 
 ## Interstitial Ads
-<img src="https://developers.google.com/admob/images/format-interstitial.svg"  align="left" width="100" style="margin-right:20px"/>
+<img src="https://developers.google.com/admob/images/format-interstitial.svg"  align="left" width="100" style="margin-right:20px" alt="interstitial ad icon"/>
 
 Interstitial ads are full-page ad format that appear at natural breaks and transitions, such as level completion.
 
 The following Blueprint code shows how to create an Interstitial Ad, load an ad and finally show it. The ad will then be discarded by your user.
 
 
-![](_images/CreateInterstitial.png)
+<img src="_images/CreateInterstitial.png" alt="interstitial ad blueprint example"/>
 
 ## Rewarded Videos
 
-<img src="https://developers.google.com/admob/images/format-rewarded.svg"  align="left" width="100" style="margin-right:20px"/>
+<img src="https://developers.google.com/admob/images/format-rewarded.svg"  align="left" width="100" style="margin-right:20px" alt="rewarded video blueprint example"/>
 
 Rewarded videos are ad formats that reward users for watching ads. They are great for monetising free-to-play users.  
 
 Here's how to show a Rewarded Video to your users: you start by binding the reward event to a custom function, you then load the ad with your Ad Unit Id and finally show it when it is loaded.
 
-
-![](_images/ShowRewardedVideo.png)
-
-
+<img src="_images/ShowRewardedVideo.png" alt="rewarded video blueprint code example">
 
 ## AppOpen Ads
 
-<img src="https://developers.google.com/static/admob/images/format-app-open.svg"  align="left" width="100" style="margin-right:20px"/>
+<img src="https://developers.google.com/static/admob/images/format-app-open.svg"  align="left" width="100" style="margin-right:20px" alt="appopen icon"/>
 
 App open ads are a special ad format intended for publishers wishing to monetize their app load screens. App open ads can be closed at any time, and are designed to be shown when your users bring your app to the foreground.
 
@@ -597,7 +594,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=B1A69CF841DC6AF107ED3CA5B492A48E,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_AsyncAction_23 1924316D4F6D1BF21A6FC6B4C02DF22D,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/ShowAppOpen.png"/>
+<img src="_images/ShowAppOpen.png" alt="show app open ad blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 
@@ -656,7 +653,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=B1A69CF841DC6AF107ED3CA5B492A48E,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(K2Node_AsyncAction_186 AB2D0726409CA5EFD0A2E382C45812FC,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
   </textarea>
-  <img src="_images/ShowAppOpenFull.png"/>
+  <img src="_images/ShowAppOpenFull.png" alt="show app open blueprint code example"/>
   <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 
