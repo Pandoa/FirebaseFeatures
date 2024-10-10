@@ -25,7 +25,11 @@ const setupPage = async (page) => {
 async function main() {
   const routes = await getRoutes();
 
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ 
+    headless: true,
+    args: ["--disable-extensions", "--no-sandbox"],
+    waitForInitialPage: false,
+  });
 
   console.log("Building " + routes.length + " files.");
 

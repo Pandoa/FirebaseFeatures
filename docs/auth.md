@@ -80,7 +80,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=DA5AF4E5482BE086A47FB9991950BF17,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_14 F59518FC44DB68E2E221049724D172E9,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/AuthCreateUser.png"/>
+<img src="_images/AuthCreateUser.png" alt="create user blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -145,7 +145,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=9AE880FC44C7E17BB517689562A71DC1,PinName="Password",PinToolTip="Password\nString",PinType.PinCategory="string",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,DefaultValue="my_v4ry_$€cr€t_p4$$w0rd",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/AuthSignInUser.png"/>
+<img src="_images/AuthSignInUser.png" alt="sign in user blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -259,7 +259,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=E78E771943E7EC6AA9B80389782F9021,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_95 428215024C281A3D180BBA8504B849EE,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/AuthStateChanged.png"/>
+<img src="_images/AuthStateChanged.png" alt="auth events blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -376,7 +376,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=E78E771943E7EC6AA9B80389782F9021,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_95 428215024C281A3D180BBA8504B849EE,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/AuthStateChanged.png"/>
+<img src="_images/AuthStateChanged.png" alt="auth state change blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -469,7 +469,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallF
    CustomProperties Pin (PinId=C97556D645E924038C6DC29D434852FA,PinName="ReturnValue",PinFriendlyName="DisplayName",PinToolTip="Display Name\nString\n\nGets the display name associated with the user, if any.",Direction="EGPD_Output",PinType.PinCategory="string",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/AuthUserProps.png"/>
+<img src="_images/AuthUserProps.png" alt="user props blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -567,7 +567,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_BreakStruct Name="K2Node_BreakS
    CustomProperties Pin (PinId=9B1A36C449F444B8AC315E8E00123F05,PinName="PhoneNumber",PinFriendlyName="Phone Number",PinToolTip="Phone Number\nString\n\nGets the phone number for the user, in E.164 format.",Direction="EGPD_Output",PinType.PinCategory="string",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=True,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/AuthGetProviders.png"/>
+<img src="_images/AuthGetProviders.png" alt="get providers blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -645,7 +645,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_MakeStruct Name="K2Node_MakeStr
    CustomProperties Pin (PinId=8B78F5954C5BCE49E01334B03FE33368,PinName="bResetPhotoUrl",PinFriendlyName=NSLOCTEXT("", "A2C1629F40FCCD80696026A866BD5728", "Reset Photo Url"),PinToolTip="Reset Photo Url\nBoolean\n\nIf we want to reset the photo URL.\nIf it is set to true, the content of PthotoUrl is ignored.",PinType.PinCategory="bool",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,DefaultValue="False",AutogeneratedDefaultValue="False",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/AuthUpdateProfile.png"/>
+<img src="_images/AuthUpdateProfile.png" alt="update profile blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -703,7 +703,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=071C51774D2D3F3EABEF26BFF3E8C722,PinName="Email",PinToolTip="Email\nString",PinType.PinCategory="string",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,DefaultValue="new_mail@mydomain.org",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/UpdateUserEmail.png"/>
+<img src="_images/UpdateUserEmail.png" alt="update user email blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -760,7 +760,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=251B86A744015D188715A8854A82674F,PinName="User",PinToolTip="User\nUser Object Reference",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject=Class'"/Script/FirebaseFeatures.User"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_CallFunction_161 BFE499E3421D4A8679824EB0C07762E0,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/VerificationEmail.png"/>
+<img src="_images/VerificationEmail.png" alt="veritification email blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -821,7 +821,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=0E808EE34D748D8EDD2E6E96B2CB101D,PinName="Password",PinToolTip="Password\nString",PinType.PinCategory="string",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,DefaultValue="NEW_SECURE_PASSWORD",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/UpdatePassword.png"/>
+<img src="_images/UpdatePassword.png" alt="update password blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -872,7 +872,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=0757AD764417BA6973AB518F876585AA,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_106 C52E724D4A30A5931645169C63C9F135,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/ResetPasswordEmail.png"/>
+<img src="_images/ResetPasswordEmail.png" alt="reset password with email blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -933,7 +933,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=56E1CF484CB0ADE0202200B2AE683421,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_107 E729ABE84570DCB80AC50FBB21562EFB,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/DeleteUser.png"/>
+<img src="_images/DeleteUser.png" alt="delete user blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -1009,7 +1009,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=6A58570348F65E74DFC9ACB6587D9D09,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_108 D7C445BF47E8C8900B0A19A7106EFDFA,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/Reauthenticate.png"/>
+<img src="_images/Reauthenticate.png" alt="reauthenticate user blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -1137,7 +1137,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=FACB39274557FC316A0DF39D0FB23389,PinName="Credential",PinToolTip="Credential\nCredential Structure (by ref)",PinType.PinCategory="struct",PinType.PinSubCategory="",PinType.PinSubCategoryObject=ScriptStruct'"/Script/FirebaseFeatures.Credential"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=True,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_116 E914679B4CF6D78899C8C687D9873176,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=True,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/GoogleSignInOverlay.png"/>
+<img src="_images/GoogleSignInOverlay.png" alt="google sign in blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -1197,7 +1197,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_Custom
    CustomProperties Pin (PinId=FF35FAF64B441E4502978682FFE50443,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_115 4D75B8F14238C25E358907B25627F16A,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/GoogleSignInWithToken.png"/>
+<img src="_images/GoogleSignInWithToken.png" alt="Google signing with token blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -1260,7 +1260,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=FACB39274557FC316A0DF39D0FB23389,PinName="Credential",PinToolTip="Credential\nCredential Structure (by ref)",PinType.PinCategory="struct",PinType.PinSubCategory="",PinType.PinSubCategoryObject=ScriptStruct'"/Script/FirebaseFeatures.Credential"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=True,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_120 CD4D84C14CEC0B99E2060B9F7ADC739B,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=True,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/SignInWithGameCenter.png"/>
+<img src="_images/SignInWithGameCenter.png" alt="Game Center signin blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -1325,7 +1325,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=3B19AE7F4E29F270B2372CB896476873,PinName="Credential",PinToolTip="Credential\nCredential Structure (by ref)",PinType.PinCategory="struct",PinType.PinSubCategory="",PinType.PinSubCategoryObject=ScriptStruct'"/Script/FirebaseFeatures.Credential"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=True,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_124 DDD24AB04CB744111A362C92A4B6B9D0,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=True,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/SignInWithApple.png"/>
+<img src="_images/SignInWithApple.png" alt="Signin with apple unreal engine blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
@@ -1389,7 +1389,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=FACB39274557FC316A0DF39D0FB23389,PinName="Credential",PinToolTip="Credential\nCredential Structure (by ref)",PinType.PinCategory="struct",PinType.PinSubCategory="",PinType.PinSubCategoryObject=ScriptStruct'"/Script/FirebaseFeatures.Credential"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=True,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_150 CFEA7CF146F0C0D5DDCF27AE22EAA332,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=True,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/SignInWithPlayGames.png"/>
+<img src="_images/SignInWithPlayGames.png" alt="signin with google playgames blueprint example"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
