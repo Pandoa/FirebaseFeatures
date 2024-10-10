@@ -19,30 +19,32 @@ const removeAllSelector = (document, selector) => {
 const setupPage = async (page) => {
   page.setDefaultTimeout(5000);
   page.setDefaultNavigationTimeout(5000);
-  await page.setViewport({ width: 1920, height: 1080 });
+  await page.setViewport({ width: 0, height: 0 });
 }
 
 async function main() {
   const routes = await getRoutes();
 
   const browser = await puppeteer.launch({ 
-    headless: true,
+    headless: false,
     args: ["--disable-extensions", "--no-sandbox"],
     waitForInitialPage: false,
+    defaultViewport: null,
+    ignoreHTTPSErrors: true,
   });
 
   console.log("Building " + routes.length + " files.");
 
   for (const route of routes) {
     console.log(` - Building ${route}`);
-    const page = await browser.newPage();
+    const [page] = await browser.pages();
     await setupPage(page);
     await page.goto(WEBSITE_ROOT_URL + '/#/' + route);
     await page.waitForNetworkIdle({  });
 
     const pageSourceHTML = await page.content();
 
-    await page.close();    
+    // await page.close();    
 
     const dom = new jsdom.JSDOM(pageSourceHTML
       .replaceAll('href="/"', 'href="."')
@@ -60,6 +62,8 @@ async function main() {
 
     await fs.writeFileSync(OUT_DIR + route + '.html', dom.serialize());
   }
+
+
 
   await browser.close();
 }
