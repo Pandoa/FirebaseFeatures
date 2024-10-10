@@ -46,7 +46,8 @@ async function main() {
 
     const dom = new jsdom.JSDOM(pageSourceHTML
       .replaceAll('href="/"', 'href="."')
-      .replaceAll('?id=', '.html#'));
+      .replaceAll('?id=', '.html#')
+      .replaceAll('js.html#', 'js.html?id='));
     const document = dom.window.document;
 
     removeAllSelector(document, '.delete-static');
