@@ -130,7 +130,7 @@ End Object
 
 ## Banner View
 
-<img src="https://developers.google.com/admob/images/format-banner.svg" align="left" width="100" style="margin-right:20px" alt="admob banner ad icon"/>
+<img src="_svgs/format-banner.svg" align="left" width="100" style="margin-right:20px;border:0;box-shadow:none" alt="admob banner ad icon"/>
 
 Banners are rectangular ads that occupy a portion of an app's layout. They can be refreshed automatically after a period of time.  
 
@@ -442,7 +442,7 @@ End Object
 
 
 ## Interstitial Ads
-<img src="https://developers.google.com/admob/images/format-interstitial.svg"  align="left" width="100" style="margin-right:20px" alt="interstitial ad icon"/>
+<img src="_svgs/format-interstitial.svg"  align="left" width="100" style="margin-right:20px;border:0;box-shadow:none" alt="interstitial ad icon"/>
 
 Interstitial ads are full-page ad format that appear at natural breaks and transitions, such as level completion.
 
@@ -453,7 +453,7 @@ The following Blueprint code shows how to create an Interstitial Ad, load an ad 
 
 ## Rewarded Videos
 
-<img src="https://developers.google.com/admob/images/format-rewarded.svg"  align="left" width="100" style="margin-right:20px" alt="rewarded video blueprint example"/>
+<img src="_svgs/format-rewarded.svg"  align="left" width="100" style="margin-right:20px;border:0;box-shadow:none" alt="rewarded video blueprint example"/>
 
 Rewarded videos are ad formats that reward users for watching ads. They are great for monetising free-to-play users.  
 
@@ -463,7 +463,7 @@ Here's how to show a Rewarded Video to your users: you start by binding the rewa
 
 ## AppOpen Ads
 
-<img src="https://developers.google.com/static/admob/images/format-app-open.svg"  align="left" width="100" style="margin-right:20px" alt="appopen icon"/>
+<img src="_svgs/format-app-open.svg"  align="left" width="100" style="margin-right:20px;border:0;box-shadow:none" alt="appopen icon"/>
 
 App open ads are a special ad format intended for publishers wishing to monetize their app load screens. App open ads can be closed at any time, and are designed to be shown when your users bring your app to the foreground.
 
