@@ -122,7 +122,7 @@ Now that the analytic session has started, you can start logging events. Firebas
 
 <div class="centered">
 
-![](_images/AnalyticLogFunctions.png)
+<img src="_images/AnalyticLogFunctions.png"/>
 
 </div>
 
@@ -131,7 +131,7 @@ Firebase Features offers other methods to manage analytics. You can safely call 
 
 <div class="centered">
 
-![](_images/AnalyticsFunctions.png)
+<img src="_images/AnalyticsFunctions.png"/>
 
 </div>
 

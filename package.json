@@ -1,0 +1,12 @@
+{
+  "name": "static-docgen",
+  "version": "1.0.0",
+  "author": "Pandores",
+  "scripts": {
+    "build": "node gen/gen.js"
+  },
+  "dependencies": {
+    "jsdom": "^25.0.1",
+    "puppeteer": "^23.5.2"
+  }
+}
