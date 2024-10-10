@@ -1763,7 +1763,7 @@
 </tbody></table>
 </div>
 
-<p>You would then pass these Ads IDs for the parameter <code>Ad Unit Id</code>.</p><p>You can read more about these ads IDs <a href="https://developers.google.com/admob/android/test-ads#sample_ad_units" target="_blank" rel="noopener">here</a>.</p><h3 id="adding-the-device-id-for-development"><a href="admob.html#adding-the-device-id-for-development" data-id="adding-the-device-id-for-development" class="anchor"><span>Adding the Device ID for Development</span></a></h3><p>A more convenient method to not have to change Ad Unit IDs is to register your device as a Test Device.</p><p>To do so:</p><ol><li>Get your Test Device ID. You get it watching your device logs with <code>adb logcat</code> when you launch an ad. A line looking like <code>AdRequest.Builder.addTestDevice("YOUR_DEVICE_TEST_ID")</code> will appear in the logs.</li><li>Each time you load an ad, add your test device ID(s) to the ad request as followed:  </li></ol><div class="code-switcher show-cpp-false">
+<p>You would then pass these Ads IDs for the parameter <code>Ad Unit Id</code>.</p><p>You can read more about these ads IDs <a href="https://developers.google.com/admob/android/test-ads#sample_ad_units" target="_blank" rel="noopener">in the official doc</a>.</p><h3 id="adding-the-device-id-for-development"><a href="admob.html#adding-the-device-id-for-development" data-id="adding-the-device-id-for-development" class="anchor"><span>Adding the Device ID for Development</span></a></h3><p>A more convenient method to not have to change Ad Unit IDs is to register your device as a Test Device.</p><p>To do so:</p><ol><li>Get your Test Device ID. You get it watching your device logs with <code>adb logcat</code> when you launch an ad. A line looking like <code>AdRequest.Builder.addTestDevice("YOUR_DEVICE_TEST_ID")</code> will appear in the logs.</li><li>Each time you load an ad, add your test device ID(s) to the ad request as followed:  </li></ol><div class="code-switcher show-cpp-false">
 <div class="switcher">
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
@@ -2132,7 +2132,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=0FE2AF56478DF74652F378A8AC2B21D4,PinName="BannerView",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject=Class'"/Script/FirebaseFeatures.BannerView"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/BannerViewFunctions.png">
+<img src="_images/BannerViewFunctions.png" alt="banner view blueprint node functions">
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>

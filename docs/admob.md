@@ -30,7 +30,7 @@ Instead of using created ads' IDs, you can pick the one matching the type of ad 
 
 You would then pass these Ads IDs for the parameter `Ad Unit Id`.
 
-You can read more about these ads IDs [here](https://developers.google.com/admob/android/test-ads#sample_ad_units).
+You can read more about these ads IDs [in the official doc](https://developers.google.com/admob/android/test-ads#sample_ad_units).
 
 ### Adding the Device ID for Development
 
@@ -434,7 +434,7 @@ Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncA
    CustomProperties Pin (PinId=0FE2AF56478DF74652F378A8AC2B21D4,PinName="BannerView",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject=Class'"/Script/FirebaseFeatures.BannerView"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
 End Object
 </textarea>
-<img src="_images/BannerViewFunctions.png"/>
+<img src="_images/BannerViewFunctions.png" alt="banner view blueprint node functions"/>
 <button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
