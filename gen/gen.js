@@ -17,13 +17,26 @@ const removeAllSelector = (document, selector) => {
 };
 
 const setupPage = async (page) => {
-  page.setDefaultTimeout(5000);
-  page.setDefaultNavigationTimeout(5000);
+  const timeout = getConfig()["load_timeout"] ?? 10000;
+  page.setDefaultTimeout(timeout);
+  page.setDefaultNavigationTimeout(timeout);
   await page.setViewport({ width: 0, height: 0 });
+}
+
+const getConfig = () => {
+  try {
+    return JSON.parse(fs.readFileSync("./gen/gen.config.json").toString('utf-8'));
+  }
+  catch (e)
+  {
+    return {}
+  }
 }
 
 async function main() {
   const routes = await getRoutes();
+
+  const config = getConfig();
 
   const browser = await puppeteer.launch({ 
     headless: false,
@@ -39,35 +52,46 @@ async function main() {
     console.log(` - Building ${route}`);
     const [page] = await browser.pages();
     await setupPage(page);
-    await page.goto(WEBSITE_ROOT_URL + '/#/' + route);
+    await page.goto((config["root_url"] ?? WEBSITE_ROOT_URL) + '/#/' + route);
     await page.waitForNetworkIdle({  });
 
-    const pageSourceHTML = await page.content();
+    let pageSourceHTML = await page.content();
 
-    // await page.close();    
+    for (const strReplace of (config["string_replaces"] ?? [])) {
+      if (Array.isArray(strReplace) && strReplace.length >= 2) {
+        pageSourceHTML = pageSourceHTML.replaceAll(strReplace[0], strReplace[1]);
+      }
+    }
 
-    const dom = new jsdom.JSDOM(pageSourceHTML
-      .replaceAll('href="/"', 'href="."')
-      .replaceAll('?id=', '.html#')
-      .replaceAll('js.html#', 'js.html?id='));
+    const dom = new jsdom.JSDOM(pageSourceHTML);
+    
     const document = dom.window.document;
 
-    removeAllSelector(document, '.delete-static');
-    removeAllSelector(document, 'script[src*="livereload.js"]');
-    removeAllSelector(document, 'iframe[allow="join-ad-interest-group"]');
+    for (const delSelector of (config["remove_selectors"] ?? [])) {
+      removeAllSelector(document, delSelector);
+    }
 
     const pageTitle = document.querySelector('title');
+    const pageDescription = document.querySelector('meta[name="description"]');
+    const pageKeywords = document.querySelector('meta[name="keywords"]');
+
     pageTitle.innerHTML += ' | Firebase for Unreal Engine';
+
+    if (typeof config["descriptions"] === 'object' && typeof config["descriptions"][route]) {
+      pageDescription.setAttribute("content", config["descriptions"][route]);
+    }
+    
+    if (typeof config["keywords"] === 'object' && typeof config["keywords"][route]) {
+      pageKeywords.setAttribute("content", config["keywords"][route]);
+    }
 
     const linksToFix = document.querySelectorAll('a[href^="#/"]');
     for (const linkToFix of linksToFix) {
       linkToFix.href = linkToFix.getAttribute("href").slice(2);
     }
 
-    fs.writeFileSync(OUT_DIR + route + '.html', dom.serialize());
+    fs.writeFileSync((config["out_dir"] ?? OUT_DIR) + route + '.html', dom.serialize());
   }
-
-
 
   await browser.close();
 }

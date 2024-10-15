@@ -1,0 +1,21 @@
+{
+  "root_url": "http://localhost:3000",
+  "out_dir": "build/",
+  "load_timeout": 10000,
+  "remove_selectors": [
+    ".delete-static",
+    "script[src*=\"livereload.js\"]",
+    "iframe[allow=\"join-ad-interest-group\"]"
+  ],
+  "string_replaces": [
+    ["href=\"/\"", "href=\".\""],
+    ["?id=", ".html#"],
+    ["js.html#", "js.html?id="]
+  ],
+  "descriptions": {
+    "admob": "Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob."
+  },
+  "keywords": {
+    "admob": "Firebase plugin, AdMob, Unreal Engine, Blueprints, Blueprints, monetization, game development, mobile advertising"
+  }
+}

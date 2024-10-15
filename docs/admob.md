@@ -12,6 +12,13 @@ AdMob helps you monetize your mobile app through in-app advertising. Three types
 
 ?> For development, you should pick a [Sample ad unit ID](https://developers.google.com/admob/android/test-ads#sample_ad_units) or your AdMob account might be flagged.
 
+<div style="display:flex;justify-content:center">
+<div style="max-width: 640px;flex-grow:1;">
+<iframe src="https://www.youtube.com/embed/rVBxrr6i76Q?rel=0" class="video" alt="Installation Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen msallowfullscreen oallowfullscreen webkitallowfullscreen>
+</iframe>
+</div>
+</div>
+
 ## Setting up AdMob for development  
 For development, AdMob displays test ads instead of real ads. To enable test ads there are two possibilities.
 ### Using Test Ad IDs
