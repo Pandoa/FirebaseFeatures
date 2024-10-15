@@ -36,6 +36,53 @@ section.content li.new:before {
 }
 </style>
 
+### `1.7.24`
+<ul>
+  <li class="new">
+    Added <code>OnPaid</code> event on <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidReceiveAd</code> event on <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidRecordImpression</code> event on <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidRecordClick</code> event on <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdWillPresentScreen</code> event on <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdWillDismissScreen</code> event on <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidDismissScreen</code> event on <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>OnAdDidReceiveAdWithError</code> event on <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>bInSafeArea</code> parameter when moving a <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>bAutoReloadAds</code> parameter when creating a <code>Banner View</code> object.
+  </li>
+  <li class="new">
+    Added <code>bAdaptive</code> to <code>FAdMobAdSize</code> struct to support adaptive banners.
+  </li>
+  <li>
+    <code>UBannerView::GetBoundingBox</code> is now an asynchronous function.
+  </li>
+  <li>
+    Rewrote <code>Banner View</code> to use the native SDK.
+  </li>
+  <li class="warn">
+    Deprecated the old API of <code>Banner View</code>. Please, update your code to use the new API by following the deprecation message recommendations.
+  </li>
+</ul>
+
+
 ### `1.7.23`
 <ul>
   <li>
@@ -67,7 +114,7 @@ section.content li.new:before {
     Added <code>OnAdWillDismissFullScreenContent</code> event on <code>Rewarded Video Ad</code> object.
   </li>
   <li>
-    Rewrote <code>Rewarded Video Ad</code> to use the native SDK. Other ad formats will be rewritten in following updates, following the deprecation of the Firebase C++ Admob SDK by Google.
+    Rewrote <code>Rewarded Video Ad</code> to use the native SDK. 
   </li>
   <li class="warn">
     Deprecated the old API of <code>Rewarded Video Ad</code>. Please, update your code to use the new API by following the deprecation message recommendations.
@@ -112,7 +159,7 @@ section.content li.new:before {
     Added <code>OnAdWillDismissFullScreenContent</code> event on <code>InterstitialAd</code> object.
   </li>
   <li>
-    Rewrote <code>InterstitialAd</code> to use the native SDK. Other ad formats will be rewritten in following updates, following the deprecation of the Firebase C++ Admob SDK by Google.
+    Rewrote <code>InterstitialAd</code> to use the native SDK. 
   </li>
   <li class="warn">
     Deprecated the old API of <code>InterstitialAd</code>. Please, update your code to use the new API by following the deprecation message recommendations.
