@@ -1,5 +1,4 @@
 - Setup
-  - [Introduction](/introduction)
   - [Installation](/installation)
   - [Disable Unused Features](/disableunusedfeatures)
   - [Rebuild the Plugin](/rebuildplugin)

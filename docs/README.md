@@ -1,13 +1,23 @@
-
-# Firebase - Features
-
 <style>
 .markdown-section p strong {
   color: #fff;
 }
 </style>
 
->  A native Firebase integration for Unreal Engine supporting **Windows**, **MacOS**, **Linux** **iOS**, and **Android**.
+# Firebase Features - Firebase Integration for Unreal Engine
+
+> A native Firebase integration for Unreal Engine supporting **Windows**, **MacOS**, **Linux** **iOS**, and **Android**.
+
+!> Get started by reading the [installation guide](/installation).
+
+
+<div class="centered" style="margin-top: 50px;">
+  <a class="ue-button" href="https://www.unrealengine.com/marketplace/en-US/product/firebase-features">Download this plugin <img width="40px" height="40px" src="_images/buyueicon.png" alt="Unreal Engine Icon" /></a>
+<!--
+  <a class="gumroad-button" href="https://pandoresmarketplace.gumroad.com/l/FirebaseFeatures?wanted=true">Buy this product on</a>
+-->
+</div>
+
 
 ## Explore the Documentation
 
@@ -107,11 +117,17 @@
 
 </div>
 
-!> Get started by reading the [installation guide](/installation).
+## Watch Tutorial Videos
 
-<div class="centered" style="margin-top: 50px;">
-  <a class="ue-button" href="https://www.unrealengine.com/marketplace/en-US/product/firebase-features">Get this plugin <img width="40px" height="40px" src="_images/buyueicon.png" alt="Unreal Engine Icon" /></a>
-<!--
-  <a class="gumroad-button" href="https://pandoresmarketplace.gumroad.com/l/FirebaseFeatures?wanted=true">Buy this product on</a>
--->
+<div style="display:flex;justify-content:space-evenly;">
+<div style="max-width: 400px;flex-grow:1;">
+<iframe src="https://www.youtube.com/embed/SbVVrKnS78Y?rel=0" class="video" alt="Installation Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen msallowfullscreen oallowfullscreen webkitallowfullscreen>
+</iframe>
+</div>
+<div style="max-width: 400px;flex-grow:1;">
+<iframe src="https://www.youtube.com/embed/rVBxrr6i76Q?rel=0" class="video" alt="Installation Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen msallowfullscreen oallowfullscreen webkitallowfullscreen>
+</iframe>
+</div>
+</div>
+
 </div>
