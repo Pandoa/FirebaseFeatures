@@ -13,9 +13,13 @@
     ["js.html#", "js.html?id="]
   ],
   "descriptions": {
-    "admob": "Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob."
+    "admob": "Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.",
+    "installation": "Easily install the Firebase plugin for Unreal Engine and start integrating Firebase services into your game. Follow our simple step-by-step guide and get up and running quickly. Explore the plugin's features and benefits for game development.",
+    "analytics": "Learn how to use Google Analytics in your Unreal Engine projects with Firebase. Explore the available methods and dive into Blueprint code examples for practical implementation. Gain valuable insights into your game's user behavior and performance with Google Analytics."
   },
   "keywords": {
-    "admob": "Firebase plugin, AdMob, Unreal Engine, Blueprints, Blueprints, monetization, game development, mobile advertising"
+    "admob": "Firebase plugin, AdMob, Unreal Engine, Blueprints, Blueprints, monetization, game development, mobile advertising",
+    "installation": "Firebase plugin, Unreal Engine, installation guide, game development, mobile development, Firebase services",
+    "analytics": "Firebase plugin, Google Analytics, Unreal Engine, Blueprints, game development, user analytics, game performance, data analysis"
   }
 }
