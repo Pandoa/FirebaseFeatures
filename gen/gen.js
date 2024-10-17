@@ -77,11 +77,11 @@ async function main() {
 
     pageTitle.innerHTML += ' | Firebase for Unreal Engine';
 
-    if (typeof config["descriptions"] === 'object' && typeof config["descriptions"][route]) {
+    if (typeof config["descriptions"] === 'object' && config["descriptions"][route]) {
       pageDescription.setAttribute("content", config["descriptions"][route]);
     }
     
-    if (typeof config["keywords"] === 'object' && typeof config["keywords"][route]) {
+    if (typeof config["keywords"] === 'object' && config["keywords"][route]) {
       pageKeywords.setAttribute("content", config["keywords"][route]);
     }
 
@@ -90,7 +90,8 @@ async function main() {
       linkToFix.href = linkToFix.getAttribute("href").slice(2);
     }
 
-    fs.writeFileSync((config["out_dir"] ?? OUT_DIR) + route + '.html', dom.serialize());
+    fs.writeFileSync((config["out_dir"] ?? OUT_DIR) + route + '.html', 
+      dom.serialize().replaceAll('\n\n', '\n').replaceAll('\n\n', '\n'));
   }
 
   await browser.close();

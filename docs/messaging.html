@@ -1,13 +1,8 @@
 <!DOCTYPE html><html lang="en" style="background-color:#101010;"><head>
-
-
-
 	<meta charset="UTF-8">
-	
-  <link rel="icon" href="./favicon-16x16.png?" type="image/png" sizes="16x16">
-	<link rel="icon" href="./favicon-32x32.png?" type="image/png" sizes="32x32">
-  <link rel="icon" href="./favicon.svg?" type="image/svg+xml" sizes="any">
-
+  <link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon-16x16.png" type="image/png" sizes="16x16">
+	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon.svg" type="image/svg+xml" sizes="any">
 	<title>Cloud Messaging | Firebase for Unreal Engine</title>
 	<script type="application/ld+json">
 		{
@@ -24,7 +19,7 @@
 				"name": "Pandores Marketplace",
 				"logo": {
 					"@type": "ImageObject",
-					"url": "https://pandoa.github.io/FirebaseFeatures/_media/favicon.ico"
+					"url": "https://pandoa.github.io/FirebaseFeatures/favicon.ico"
 				}
 			},
 			"datePublished": "2024-10-15",
@@ -32,7 +27,6 @@
 			"mainEntityOfPage": "https://pandoa.github.io/FirebaseFeatures/"
 		}
 	</script>
-	
 	<meta name="keywords" content="firebase,unreal,engine,features,plugin,integrate,blueprint,code,blueprints,support,game,engine,doc,docs,documentation">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="description" content="The most popular Firebase plugin for Unreal Engine. Easily integrate Firebase into your game and start developing something amazing. Start in minutes by following the installation guide. Supports AdMob, Google Analytics, AppCheck, Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Cloud Storage, Crashlytics, Dynamic Links, Firebase Performance, Realtime Database, Remote Config, ...">
@@ -49,42 +43,34 @@
 			-webkit-touch-callout: none;
 			box-sizing: border-box
 		}
-
 		body:not(.ready) {
 			overflow: hidden
 		}
-
 		body:not(.ready) .app-nav,
 		body:not(.ready)>nav,
 		body:not(.ready) [data-cloak] {
 			display: none
 		}
-
 		div#app {
 			font-size: 30px;
 			font-weight: lighter;
 			margin: 40vh auto;
 			text-align: center
 		}
-
 		div#app:empty:before {
 			content: "Loading..."
 		}
-
 		img.emoji {
 			height: 1.2em
 		}
-
 		img.emoji,
 		span.emoji {
 			vertical-align: middle
 		}
-
 		span.emoji {
 			font-family: Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 			font-size: 1.2em
 		}
-
 		.progress {
 			background-color: #ea6f5a;
 			background-color: var(--theme-color, #ea6f5a);
@@ -97,23 +83,19 @@
 			width: 0;
 			z-index: 999999
 		}
-
 		.search .search-keyword,
 		.search a:hover {
 			color: #ea6f5a;
 			color: var(--theme-color, #ea6f5a)
 		}
-
 		.search .search-keyword {
 			font-style: normal;
 			font-weight: 700
 		}
-
 		body,
 		html {
 			height: 100%
 		}
-
 		body {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
@@ -124,16 +106,13 @@
 			margin: 0;
 			overflow-x: hidden
 		}
-
 		img {
 			max-width: 100%
 		}
-
 		a[disabled] {
 			cursor: not-allowed;
 			opacity: .6
 		}
-
 		kbd {
 			border: 1px solid #ccc;
 			border-radius: 3px;
@@ -144,12 +123,10 @@
 			padding: 3px 5px;
 			vertical-align: middle
 		}
-
 		li input[type=checkbox] {
 			margin: 0 .2em .25em 0;
 			vertical-align: middle
 		}
-
 		.app-nav {
 			margin: 25px 60px 0 0;
 			position: absolute;
@@ -157,45 +134,37 @@
 			text-align: right;
 			z-index: 10
 		}
-
 		.app-nav.no-badge {
 			margin-right: 25px
 		}
-
 		.app-nav p {
 			margin: 0
 		}
-
 		.app-nav>a {
 			margin: 0 1rem;
 			padding: 5px 0
 		}
-
 		.app-nav li,
 		.app-nav ul {
 			display: inline-block;
 			list-style: none;
 			margin: 0
 		}
-
 		.app-nav a {
 			color: inherit;
 			font-size: 16px;
 			text-decoration: none;
 			transition: color .3s
 		}
-
 		.app-nav a.active,
 		.app-nav a:hover {
 			color: #ea6f5a;
 			color: var(--theme-color, #ea6f5a)
 		}
-
 		.app-nav a.active {
 			border-bottom: 2px solid #ea6f5a;
 			border-bottom: 2px solid var(--theme-color, #ea6f5a)
 		}
-
 		.app-nav li {
 			display: inline-block;
 			margin: 0 1rem;
@@ -203,7 +172,6 @@
 			position: relative;
 			cursor: pointer
 		}
-
 		.app-nav li ul {
 			background-color: #fff;
 			border: 1px solid;
@@ -220,7 +188,6 @@
 			top: 100%;
 			white-space: nowrap
 		}
-
 		.app-nav li ul li {
 			display: block;
 			font-size: 14px;
@@ -228,22 +195,18 @@
 			margin: 8px 14px;
 			white-space: nowrap
 		}
-
 		.app-nav li ul a {
 			display: block;
 			font-size: inherit;
 			margin: 0;
 			padding: 0
 		}
-
 		.app-nav li ul a.active {
 			border-bottom: 0
 		}
-
 		.app-nav li:hover ul {
 			display: block
 		}
-
 		.github-corner {
 			border-bottom: 0;
 			position: fixed;
@@ -252,11 +215,9 @@
 			top: 0;
 			z-index: 1
 		}
-
 		.github-corner:hover .octo-arm {
 			animation: octocat-wave .56s ease-in-out
 		}
-
 		.github-corner svg {
 			color: #3f3f3f;
 			fill: #ea6f5a;
@@ -277,25 +238,20 @@
 			height: 100%;
 			z-index: 0
 		}
-
 		main.hidden {
 			display: none
 		}
-
 		.anchor {
 			display: inline-block;
 			text-decoration: none;
 			transition: all .3s
 		}
-
 		.anchor span {
 			color: #c8c8c8
 		}
-
 		.anchor:hover {
 			text-decoration: underline
 		}
-
 		.sidebar {
 			border-right: 1px solid rgba(0, 0, 0, .07);
 			overflow-y: auto;
@@ -308,74 +264,62 @@
 			width: 300px;
 			z-index: 20
 		}
-
 		.sidebar>h1 {
 			margin: 0 auto 1rem;
 			font-size: 1.5rem;
 			font-weight: 300;
-			text-align: center
+			text-align: center;
+			font-weight: 600;
+			border-bottom: 2px solid #080808;
+			padding-bottom: 30px;
 		}
-
 		.sidebar>h1 a {
 			color: inherit;
 			text-decoration: none
 		}
-
 		.sidebar>h1 .app-nav {
 			display: block;
 			position: static
 		}
-
 		.sidebar .sidebar-nav {
 			line-height: 2em;
 			padding-bottom: 40px
 		}
-
 		.sidebar li.collapse .app-sub-sidebar {
 			display: none
 		}
-
 		.sidebar ul {
 			margin: 0 0 0 15px;
 			padding: 0
 		}
-
 		.sidebar li>p {
 			font-weight: 700;
 			margin: 0
 		}
-
 		.sidebar ul,
 		.sidebar ul li {
 			list-style: none
 		}
-
 		.sidebar ul li a {
 			border-bottom: none;
 			display: block
 		}
-
 		.sidebar ul li ul {
 			padding-left: 20px
 		}
-
 		.sidebar::-webkit-scrollbar {
 			width: 4px
 		}
-
 		.sidebar::-webkit-scrollbar-thumb {
 			background: transparent;
 			border-radius: 4px
 		}
-
 		.sidebar:hover::-webkit-scrollbar-thumb {
 			background: hsla(0, 0%, 53.3%, .4)
 		}
-
 		.sidebar:hover::-webkit-scrollbar-track {
 			background: hsla(0, 0%, 53.3%, .1)
 		}
-
 		.sidebar-toggle {
 			background-color: transparent;
 			background-color: rgba(63, 63, 63, .8);
@@ -389,13 +333,14 @@
 			transition: opacity .3s;
 			width: 284px;
 			z-index: 30;
-			cursor: pointer
+			cursor: pointer;
+			border-radius: 3px;
 		}
-
+		body.close .sidebar-toggle {
+		}
 		.sidebar-toggle:hover .sidebar-toggle-button {
 			opacity: .4
 		}
-
 		.sidebar-toggle span {
 			background-color: #ea6f5a;
 			background-color: var(--theme-color, #ea6f5a);
@@ -404,12 +349,10 @@
 			width: 16px;
 			height: 2px
 		}
-
 		body.sticky .sidebar,
 		body.sticky .sidebar-toggle {
 			position: fixed
 		}
-
 		.content {
 			padding-top: 60px;
 			position: absolute;
@@ -419,35 +362,29 @@
 			left: 300px;
 			transition: left .25s ease
 		}
-
 		.markdown-section {
 			margin: 0 auto;
 			max-width: 80%;
 			padding: 30px 15px 40px;
 			position: relative
 		}
-
 		.markdown-section>* {
 			box-sizing: border-box;
 			font-size: inherit
 		}
-
 		.markdown-section>:first-child {
 			margin-top: 0 !important
 		}
-
 		.markdown-section hr {
 			border: none;
 			border-bottom: 1px solid #eee;
 			margin: 2em 0
 		}
-
 		.markdown-section iframe {
 			border: 1px solid #eee;
 			width: 1px;
 			min-width: 100%
 		}
-
 		.markdown-section table {
 			border-collapse: collapse;
 			border-spacing: 0;
@@ -456,26 +393,21 @@
 			overflow: auto;
 			width: 100%
 		}
-
 		.markdown-section th {
 			font-weight: 700
 		}
-
 		.markdown-section td,
 		.markdown-section th {
 			border: 1px solid #ddd;
 			padding: 6px 13px
 		}
-
 		.markdown-section tr {
 			border-top: 1px solid #ccc
 		}
-
 		.markdown-section p.tip,
 		.markdown-section tr:nth-child(2n) {
 			background-color: #f8f8f8
 		}
-
 		.markdown-section p.tip {
 			border-bottom-right-radius: 2px;
 			border-left: 4px solid #f66;
@@ -484,11 +416,9 @@
 			padding: 12px 24px 12px 30px;
 			position: relative
 		}
-
 		code.lang-ini span.token.section-name.selector {
 			color: #bbb;
 		}
-
 		.markdown-section p.tip:before {
 			background-color: #f66;
 			border-radius: 100%;
@@ -505,39 +435,30 @@
 			text-align: center;
 			top: 14px
 		}
-
 		.markdown-section p.tip code {
 			background-color: #efefef
 		}
-
 		.markdown-section p.tip em {
 			color: #c8c8c8
 		}
-
 		.markdown-section p.warn {
 			background: rgba(234, 111, 90, .1);
 			border-radius: 2px;
 			padding: 1rem
 		}
-
 		.markdown-section ul.task-list>li {
 			list-style-type: none
 		}
-
 		body.close .sidebar {
 			transform: translateX(-300px)
 		}
-
 		body.close .sidebar-toggle {
 			width: auto
 		}
-
 		body.close .content {
 			left: 0
 		}
-
 		@media print {
-
 			.app-nav,
 			.github-corner,
 			.sidebar,
@@ -545,34 +466,27 @@
 				display: none
 			}
 		}
-
 		@media screen and (max-width:768px) {
-
 			.github-corner,
 			.sidebar,
 			.sidebar-toggle {
 				position: fixed
 			}
-
 			.app-nav {
 				margin-top: 16px
 			}
-
 			.app-nav li ul {
 				top: 30px
 			}
-
 			main {
 				height: auto;
 				min-height: 100vh;
 				overflow-x: hidden
 			}
-
 			.sidebar {
 				left: -300px;
 				transition: transform .25s ease-out
 			}
-
 			.content {
 				left: 0;
 				max-width: 100vw;
@@ -580,65 +494,52 @@
 				padding-top: 20px;
 				transition: transform .25s ease
 			}
-
 			.app-nav,
 			.github-corner {
 				transition: transform .25s ease-out
 			}
-
 			.sidebar-toggle {
 				background-color: transparent;
 				width: auto;
 				padding: 30px 30px 10px 10px
 			}
-
 			body.close .sidebar {
 				transform: translateX(300px)
 			}
-
 			body.close .sidebar-toggle {
 				background-color: rgba(63, 63, 63, .8);
 				transition: background-color 1s;
 				width: 284px;
 				padding: 10px
 			}
-
 			body.close .content {
 				transform: translateX(300px)
 			}
-
 			body.close .app-nav,
 			body.close .github-corner {
 				display: none
 			}
-
 			.github-corner:hover .octo-arm {
 				animation: none
 			}
-
 			.github-corner .octo-arm {
 				animation: octocat-wave .56s ease-in-out
 			}
 		}
-
 		@keyframes octocat-wave {
-
 			0%,
 			to {
 				transform: rotate(0)
 			}
-
 			20%,
 			60% {
 				transform: rotate(-25deg)
 			}
-
 			40%,
 			80% {
 				transform: rotate(10deg)
 			}
 		}
-
 		section.cover {
 			position: relative;
 			align-items: center;
@@ -649,11 +550,9 @@
 			width: 100%;
 			display: none
 		}
-
 		section.cover.show {
 			display: flex
 		}
-
 		section.cover.has-mask .mask {
 			background-color: #3f3f3f;
 			opacity: .8;
@@ -662,28 +561,23 @@
 			bottom: 0;
 			width: 100%
 		}
-
 		section.cover .cover-main {
 			flex: 1;
 			margin: 0 16px;
 			text-align: center;
 			position: relative
 		}
-
 		section.cover a {
 			color: inherit
 		}
-
 		section.cover a,
 		section.cover a:hover {
 			text-decoration: none
 		}
-
 		section.cover p {
 			line-height: 1.5rem;
 			margin: 1em 0
 		}
-
 		section.cover h1 {
 			color: inherit;
 			font-size: 2.5rem;
@@ -692,22 +586,18 @@
 			position: relative;
 			text-align: center
 		}
-
 		section.cover h1 a {
 			display: block
 		}
-
 		section.cover h1 small {
 			bottom: -.4375rem;
 			font-size: 1rem;
 			position: absolute
 		}
-
 		section.cover blockquote {
 			font-size: 1.5rem;
 			text-align: center
 		}
-
 		section.cover ul {
 			line-height: 1.8;
 			list-style-type: none;
@@ -715,7 +605,6 @@
 			max-width: 500px;
 			padding: 0
 		}
-
 		section.cover .cover-main>p:last-child a {
 			border-radius: 2rem;
 			border: 1px solid #ea6f5a;
@@ -731,46 +620,37 @@
 			text-decoration: none;
 			transition: all .15s ease
 		}
-
 		section.cover .cover-main>p:last-child a:last-child {
 			background-color: #ea6f5a;
 			background-color: var(--theme-color, #ea6f5a);
 			color: #fff
 		}
-
 		section.cover .cover-main>p:last-child a:last-child:hover {
 			color: inherit;
 			opacity: .8
 		}
-
 		section.cover .cover-main>p:last-child a:hover {
 			color: inherit
 		}
-
 		section.cover blockquote>p>a {
 			border-bottom: 2px solid #ea6f5a;
 			border-bottom: 2px solid var(--theme-color, #ea6f5a);
 			transition: color .3s
 		}
-
 		section.cover blockquote>p>a:hover {
 			color: #ea6f5a;
 			color: var(--theme-color, #ea6f5a)
 		}
-
 		.sidebar,
 		body {
 			background-color: #3f3f3f
 		}
-
 		.sidebar {
 			color: #c8c8c8
 		}
-
 		.sidebar li {
 			margin: 6px 15px 6px 0
 		}
-
 		.sidebar ul li a {
 			color: #c8c8c8;
 			font-size: 14px;
@@ -779,21 +659,17 @@
 			text-overflow: ellipsis;
 			white-space: nowrap
 		}
-
 		.sidebar ul li a:hover {
 			text-decoration: underline
 		}
-
 		.sidebar ul li ul {
 			padding: 0
 		}
-
 		.sidebar ul li.active>a {
 			color: #ea6f5a;
 			color: var(--theme-color, #ea6f5a);
 			font-weight: 600
 		}
-
 		.markdown-section h1,
 		.markdown-section h2,
 		.markdown-section h3,
@@ -802,60 +678,49 @@
 			color: #657b83;
 			font-weight: 600
 		}
-
 		.markdown-section a {
 			color: #ea6f5a;
 			color: var(--theme-color, #ea6f5a);
 			font-weight: 600
 		}
-
 		.markdown-section h1 {
 			font-size: 2rem;
 			margin: 0 0 1rem
 		}
-
 		.markdown-section h2 {
 			font-size: 1.75rem;
 			margin: 45px 0 .8rem
 		}
-
 		.markdown-section h3 {
 			font-size: 1.5rem;
 			margin: 40px 0 .6rem
 		}
-
 		.markdown-section h4 {
 			font-size: 1.25rem
 		}
-
 		.markdown-section h5 {
 			font-size: 1rem
 		}
-
 		.markdown-section h6 {
 			color: #777;
 			font-size: 1rem
 		}
-
 		.markdown-section figure,
 		.markdown-section ol,
 		.markdown-section p,
 		.markdown-section ul {
 			margin: 1.2em 0
 		}
-
 		.markdown-section ol,
 		.markdown-section p,
 		.markdown-section ul {
 			line-height: 1.6rem;
 			word-spacing: .05rem
 		}
-
 		.markdown-section ol,
 		.markdown-section ul {
 			padding-left: 1.5rem
 		}
-
 		.markdown-section blockquote {
 			border-left: 4px solid #ea6f5a;
 			border-left: 4px solid var(--theme-color, #ea6f5a);
@@ -863,20 +728,16 @@
 			margin: 2em 0;
 			padding-left: 20px
 		}
-
 		.markdown-section blockquote p {
 			font-weight: 600;
 			margin-left: 0
 		}
-
 		.markdown-section iframe {
 			margin: 1em 0
 		}
-
 		.markdown-section em {
 			color: #f5feff;
 		}
-
 		.markdown-section code {
 			background-color: #282828;
 			border-radius: 2px;
@@ -886,11 +747,9 @@
 			padding: 3px 5px;
 			white-space: pre-wrap
 		}
-
 		.markdown-section>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) code {
 			font-size: .8rem
 		}
-
 		.markdown-section pre {
 			-moz-osx-font-smoothing: initial;
 			-webkit-font-smoothing: initial;
@@ -903,55 +762,44 @@
 			position: relative;
 			word-wrap: normal
 		}
-
 		.token.cdata,
 		.token.comment,
 		.token.doctype,
 		.token.prolog {
 			color: #8e908c
 		}
-
 		.token.namespace {
 			opacity: .7
 		}
-
 		.token.boolean,
 		.token.number {
 			color: #c76b29
 		}
-
 		.token.punctuation {
 			color: #525252
 		}
-
 		.token.property {
 			color: #c08b30
 		}
-
 		.token.tag {
 			color: #2973b7
 		}
-
 		.token.string {
 			color: #ea6f5a;
 			color: var(--theme-color, #ea6f5a)
 		}
-
 		.token.selector {
 			color: #6679cc
 		}
-
 		.token.attr-name {
 			color: #2973b7
 		}
-
 		.language-css .token.string,
 		.style .token.string,
 		.token.entity,
 		.token.url {
 			color: #22a2c9
 		}
-
 		.token.attr-value,
 		.token.control,
 		.token.directive,
@@ -959,48 +807,38 @@
 			color: #ea6f5a;
 			color: var(--theme-color, #ea6f5a)
 		}
-
 		.token.keyword {
 			color: #e96900
 		}
-
 		.token.atrule,
 		.token.regex,
 		.token.statement {
 			color: #22a2c9
 		}
-
 		.token.placeholder,
 		.token.variable {
 			color: #3d8fd1
 		}
-
 		.token.deleted {
 			text-decoration: line-through
 		}
-
 		.token.inserted {
 			border-bottom: 1px dotted #202746;
 			text-decoration: none
 		}
-
 		.token.italic {
 			font-style: italic
 		}
-
 		.token.bold,
 		.token.important {
 			font-weight: 700
 		}
-
 		.token.important {
 			color: #c94922
 		}
-
 		.token.entity {
 			cursor: help
 		}
-
 		.markdown-section pre>code {
 			-moz-osx-font-smoothing: initial;
 			-webkit-font-smoothing: initial;
@@ -1017,12 +855,10 @@
 			padding: 2.2em 5px;
 			white-space: inherit
 		}
-
 		.markdown-section code:after,
 		.markdown-section code:before {
 			letter-spacing: .05rem
 		}
-
 		code .token {
 			-moz-osx-font-smoothing: initial;
 			-webkit-font-smoothing: initial;
@@ -1030,7 +866,6 @@
 			position: relative;
 			left: auto
 		}
-
 		pre:after {
 			color: #ccc;
 			content: attr(data-lang);
@@ -1044,12 +879,10 @@
 			text-align: right;
 			top: 0
 		}
-
 		.markdown-section p.tip {
 			background-color: #282828;
 			color: #657b83
 		}
-
 		input[type=search] {
 			background: #4f4f4f;
 			border-color: #4f4f4f;
@@ -1060,187 +893,146 @@
 		:root {
 			--theme-color: #E6AD43;
 		}
-
 		html,
 		body,
 		.content {
 			background: #101010
 		}
-
 		.markdown-section a {
 			color: #E6AD43;
 			font-weight: 400
 		}
-
 		.sidebar {
 			background-color: #202020
 		}
-
 		textarea {
 			display: none
 		}
-
 		.sidebar a.section-link {
 			font-size: 0.8em
 		}
-
 		.app-sub-sidebar li>a.section-link {
 			color: var(--theme-color)
 		}
-
 		.app-sub-sidebar li {
 			margin: 0
 		}
-
 		.markdown-section code {
 			color: var(--theme-color);
 		}
-
 		.markdown-section h3 {
 			margin: 20px 0 0
 		}
-
 		.markdown-section p.tip {
 			border-left: 4px solid var(--theme-color);
 			color: #bbb;
 			border-radius: 6px
 		}
-
 		.markdown-section p.tip:before {
 			background: var(--theme-color)
 		}
-
 		.markdown-section p.tip code {
 			color: var(--theme-color);
 			background-color: #333
 		}
-
 		.markdown-section blockquote p {
 			padding: 10px;
 			color: white;
 		}
-
 		.markdown-section blockquote {
 			background: linear-gradient(0.25turn, #3953ABaa, #039BE5aa, #E6AD43);
 			border-radius: 4px;
 			box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)
 		}
-
 		.markdown-section pre {
 			border-radius: 12px
 		}
-
 		.markdown-section pre>code {
 			color: #eee;
 			line-height: 18px
 		}
-
 		.markdown-section p.tip,
 		.markdown-section tr:nth-child(2n) {
 			background: #222
 		}
-
 		.markdown-section p.warn {
 			border: 1px solid #bF7F7F;
 			color: white;
 			border-radius: 6px
 		}
-
 		.markdown-section td,
 		.markdown-section th {
 			border: 1px solid #555
 		}
-
 		.token.class-name {
 			color: #70d997
 		}
-
 		.token.function {
 			color: #efefbf
 		}
-
 		.token.keyword {
 			color: #569cd6
 		}
-
 		.token.comment {
 			color: #aaa
 		}
-
 		.token.punctuation {
 			color: #999
 		}
-
 		.token.attr-name {
 			color: #4993e7
 		}
-
 		.token.tag {
 			color: #a8caff
 		}
-
 		.token.string {
 			color: magenta
 		}
-
 		.sidebar ul>li>a {
 			color: #888
 		}
-
 		.token.punctuation.annotation {
 			color: #666
 		}
-
 		.sidebar-toggle {
 			width: 300px;
 			background: #555;
 			transition: width 0.2s linear
 		}
-
 		.sidebar-nav>ul>li>ul>li {
 			margin: 0
 		}
-
 		.token.attr-value,
 		.token.control,
 		.token.unit {
 			color: magenta
 		}
-
 		.token.directive {
 			color: #ADC8D6
 		}
-
 		body.close .sidebar-toggle {
 			width: 36px
 		}
-
 		h4 {
 			margin-block-end: 0.33em;
 			margin-block-start: 0.66em
 		}
-
 		h5 {
 			margin-block-start: 1em;
 			margin-block-end: 0
 		}
-
 		.markdown-section h5 {
 			font-size: 1.1rem
 		}
-
 		thead {
 			background: #333
 		}
-
 		.markdown-section code {
 			border-radius: 8px !important;
 		}
-
 		.markdown-section p.tip {
 			padding-left: 60px;
 		}
-
 		.markdown-section p.tip:before {
 			font-size: 10px;
 			font-weight: bolder;
@@ -1252,47 +1044,38 @@
 			content: url(_svgs/warn.svg);
 			background: none;
 		}
-
 		.anchor span {
 			font-weight: 600
 		}
-
 		::-webkit-scrollbar {
 			width: 6px;
 			height: 6px;
 		}
-
 		::-webkit-scrollbar-track {
 			background: none;
 		}
-
 		::-webkit-scrollbar-thumb {
 			background: #777;
 			border-radius: 6px;
 		}
-
 		::-webkit-scrollbar-thumb:hover {
 			background: #555;
 		}
-
 		::marker {
 			color: #999;
 			font-weight: 100
 		}
-
 		@media screen and (max-width: 768px) {
 			.sidebar-toggle {
 				width: auto
 			}
 		}
-
 		.cpp>pre,
 		img {
 			border-radius: 16px;
 			box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 			border: 1px solid black;
 		}
-
 		.switcher,
 		img,
 		.sidebar {
@@ -1308,13 +1091,11 @@
 			-o-user-drag: none;
 			user-drag: none;
 		}
-
 		.bpcode {
 			align-items: center;
 			display: flex;
 			flex-direction: column;
 		}
-
 		.bpcode>button {
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
@@ -1322,36 +1103,29 @@
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-
 			border: 1px solid white;
 			background: rgba(18, 18, 18, 0.1);
 			color: white;
 			padding: 10px 20px;
 			border-radius: 5px;
 			cursor: pointer;
-
 			width: 150px;
 			height: 40px;
 			position: relative;
 			top: -40px;
-
 			opacity: 0;
 			transition: opacity 0.2s ease-in-out, top 0.2s ease-in-out, background 0.2s ease-in-out;
 		}
-
 		.bpcode:hover>button {
 			opacity: 0.7;
 			top: -60px;
 		}
-
 		.bpcode:hover>button:hover {
 			background: rgba(255, 255, 255, 0.05)
 		}
-
 		.bpcode:hover>button:active {
 			background: rgba(255, 255, 255, 0.1)
 		}
-
 		.adblock-container {
 			position: fixed;
 			z-index: 9999;
@@ -1361,20 +1135,16 @@
 			padding: 20px;
 			right: 10px;
 			top: 10px;
-
 			display: none;
 		}
-
 		.adblock-container>h1 {
 			font-size: 18px;
 			margin: 0;
 			display: block;
 		}
-
 		.adblock-container>div {
 			color: #ddd;
 		}
-
 		.adblock-container>button {
 			position: absolute;
 			top: 0;
@@ -1384,23 +1154,19 @@
 			color: #bF7F7F;
 			cursor: pointer;
 		}
-
 		.code-switcher {
 			background: #333;
 			padding: 20px 30px;
 			border-radius: 12px;
 			position: relative;
 			border-top-right-radius: 0;
-
 			margin: 40px 0;
 		}
-
 		.switcher {
 			position: absolute;
 			right: 0;
 			top: -24px;
 		}
-
 		.sw-bp,
 		.sw-cpp {
 			padding: 5px 10px;
@@ -1408,125 +1174,99 @@
 			color: #bbb;
 			transition: background 0.2s ease-in-out;
 		}
-
 		.sw-bp:hover,
 		.sw-cpp:hover {
 			background: #222;
 			cursor: pointer;
 		}
-
 		.sw-cpp {
 			border-top-right-radius: 5px;
 			-border-bottom-right-radius: 5px;
 		}
-
 		.sw-bp {
 			border-top-left-radius: 5px;
 			-border-bottom-left-radius: 5px;
 		}
-
 		.code-switcher .bp {
 			margin: 20px 10px;
 		}
-
 		.code-switcher.show-cpp-false .bp,
 		.code-switcher.show-cpp-true .cpp {
 			display: block;
 		}
-
 		.code-switcher.show-cpp-false .cpp,
 		.code-switcher.show-cpp-true .bp {
 			display: none;
 		}
-
 		.code-switcher.show-cpp-false .switcher .sw-cpp,
 		.code-switcher.show-cpp-true .switcher .sw-bp {
 			background: #202020;
 		}
-
 		.centered {
 			text-align: center;
 			margin: 30px 0;
 		}
-
 		.token.ue-macro {
 			color: #ADA8E6;
 		}
-
 		.token.ue-class {
 			color: #70d997;
 		}
-
 		.bp .bpcode {
 			margin-bottom: 0;
 			position: relative;
 		}
-
 		.bp .bpcode>button {
 			position: absolute;
 			bottom: 20px;
 			top: unset;
 		}
-
 		input:focus-visible {
 			outline: none;
 		}
-
 		table {
 			border: 1px solid #555;
 			border-collapse: collapse;
 			-border-radius: 14px;
 		}
-
 		.markdown-section table {
 			width: fit-content;
 		}
-
 		.markdown-section td:last-child,
 		.markdown-section th:last-child {
 			border-right: none;
 		}
-
 		.markdown-section td:first-child,
 		.markdown-section th:first-child {
 			border-left: none;
 		}
-
 		.markdown-section th,
 		.markdown-section tr {
 			border-top: none;
 		}
-
 		.markdown-section tr:last-child,
 		.markdown-section tr:last-child>td {
 			border-bottom: none;
 		}
-
 		.markdown-section pre>code,
 		.markdown-section pre {
 			background-color: #181818;
 		}
-
 		.fb-elem>img {
 			box-shadow: none;
 		}
-
 		.markdown-section td {
 			padding: 10px 15px;
 		}
-
 		.work-container {
 			display: none
 		}
-
 		.ue-button:hover {
 			filter: invert(0);
 		}
-
 		.markdown-section p.warn {
 			border-radius: 12px;
 		}
-
 		.ue-button {
 			transition: 0.25s ease-in-out;
 			border: 3px solid #f2f2f2;
@@ -1540,7 +1280,6 @@
 			font-size: 1.2rem;
 			filter: invert(1) drop-shadow(0 0 0.75rem #00000055);
 		}
-
 		.ue-button img {
 			margin-left: 5px;
 			border-radius: 0;
@@ -1548,7 +1287,6 @@
 			box-shadow: none;
 			vertical-align: middle;
 		}
-
 		.work-container {
 			position: fixed;
 			z-index: 9999;
@@ -1559,17 +1297,14 @@
 			right: 10px;
 			top: 10px;
 		}
-
 		.work-container>h1 {
 			font-size: 18px;
 			margin: 0;
 			display: block;
 		}
-
 		.work-container>div {
 			color: #ddd;
 		}
-
 		.work-container>button {
 			position: absolute;
 			top: 0;
@@ -1579,17 +1314,14 @@
 			color: #bFbF7F;
 			cursor: pointer;
 		}
-
 		@media (max-width: 600px) {
 			.code-switcher {
 				padding: 8px 10px;
 			}
-
 			.markdown-section {
 				max-width: 95%
 			}
 		}
-
 		@media (max-width: 660px) {
 			a .fb {
 				border-radius: 0;
@@ -1597,31 +1329,26 @@
 				width: 70px;
 				height: 70px;
 			}
-
 			a .fb-txt {
 				font-size: 1rem;
 				display: none;
 			}
-
 			a.fb-elem {
 				margin: 5px;
 			}
 		}
-
 		@media (max-width: 330px) {
 			a .fb {
 				width: 50px;
 				height: 50px;
 			}
 		}
-
 		.fb {
 			border-radius: 0;
 			border-width: 0;
 			width: 100px;
 			height: 100px;
 		}
-
 		.fb-elem {
 			display: flex;
 			flex-direction: column;
@@ -1632,16 +1359,13 @@
 			margin: 20px 3%;
 			text-decoration: none !important;
 		}
-
 		.fb-txt {
 			margin-top: 10px;
 			font-size: 1.1rem;
 		}
-
 		.fb-elem:hover {
 			transform: scale(1.05);
 		}
-
 		.fb-f-cont {
 			display: flex;
 			flex-direction: row;
@@ -1651,7 +1375,6 @@
 			margin: 0 8%;
 		}
 	</style>
-
 <script>
 	function copyBlueprintCode(button) {
 		button.innerHTML = "Copied!";
@@ -1666,12 +1389,10 @@
 	function switchCode() {
 		bShowCPP = !bShowCPP;
 		var elems = document.getElementsByClassName('code-switcher');
-
 		for (var i = 0; i < elems.length; ++i) {
 			elems[i].classList.remove('show-cpp-' + !bShowCPP);
 			elems[i].classList.add('show-cpp-' + bShowCPP);
 		}
-
 		setCookie('bShowCPP', bShowCPP, 7);
 	}
 	function switchCpp() {
@@ -1701,27 +1422,20 @@
 		}
 		return null;
 	}
-
 	function changeSelectedCode() {
 		setTimeout(() => {
 			bShowCPP = !JSON.parse(getCookie('bShowCPP'));
 			switchCode();
 		}, 0);
 	}
-
 	bShowCPP = JSON.parse(getCookie('bShowCPP'));
-</script><style type="text/css">.docsify-pagination-container{display:flex;flex-wrap:wrap;justify-content:space-between;overflow:hidden;margin:5em 0 1em;border-top:1px solid rgba(0,0,0,.07)}.pagination-item{margin-top:2.5em}.pagination-item a,.pagination-item a:hover{text-decoration:none}.pagination-item a{color:currentColor}.pagination-item a:hover .pagination-item-title{text-decoration:underline}.pagination-item:not(:last-child) a .pagination-item-label,.pagination-item:not(:last-child) a .pagination-item-subtitle,.pagination-item:not(:last-child) a .pagination-item-title{opacity:.3;transition:all .2s}.pagination-item:last-child .pagination-item-label,.pagination-item:not(:last-child) a:hover .pagination-item-label{opacity:.6}.pagination-item:not(:last-child) a:hover .pagination-item-title{opacity:1}.pagination-item-label{font-size:.8em}.pagination-item-label>*{line-height:1;vertical-align:middle}.pagination-item-label svg{height:.8em;width:auto;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1px}.pagination-item--next{margin-left:auto;text-align:right}.pagination-item--next svg{margin-left:.5em}.pagination-item--previous svg{margin-right:.5em}.pagination-item-title{font-size:1.6em}.pagination-item-subtitle{text-transform:uppercase;opacity:.3}</style><script src="https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL" defer=""></script></head>
+</script><style type="text/css">.docsify-pagination-container{display:flex;flex-wrap:wrap;justify-content:space-between;overflow:hidden;margin:5em 0 1em;border-top:1px solid rgba(0,0,0,.07)}.pagination-item{margin-top:2.5em}.pagination-item a,.pagination-item a:hover{text-decoration:none}.pagination-item a{color:currentColor}.pagination-item a:hover .pagination-item-title{text-decoration:underline}.pagination-item:not(:last-child) a .pagination-item-label,.pagination-item:not(:last-child) a .pagination-item-subtitle,.pagination-item:not(:last-child) a .pagination-item-title{opacity:.3;transition:all .2s}.pagination-item:last-child .pagination-item-label,.pagination-item:not(:last-child) a:hover .pagination-item-label{opacity:.6}.pagination-item:not(:last-child) a:hover .pagination-item-title{opacity:1}.pagination-item-label{font-size:.8em}.pagination-item-label>*{line-height:1;vertical-align:middle}.pagination-item-label svg{height:.8em;width:auto;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1px}.pagination-item--next{margin-left:auto;text-align:right}.pagination-item--next svg{margin-left:.5em}.pagination-item--previous svg{margin-right:.5em}.pagination-item-title{font-size:1.6em}.pagination-item-subtitle{text-transform:uppercase;opacity:.3}</style></head>
 
-
-
-
-
-<body data-page="messaging.md" class="ready sticky"><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href=".">Firebase Features</a></h1><div class="sidebar-nav"><ul><li><p>Setup</p><ul><li><a href="introduction" title="Introduction">Introduction</a></li><li><a href="installation" title="Installation">Installation</a></li><li><a href="disableunusedfeatures" title="Disable Unused Features">Disable Unused Features</a></li><li><a href="rebuildplugin" title="Rebuild the Plugin">Rebuild the Plugin</a></li></ul></li><li><p>Components</p><ul><li><a href="admob" title="AdMob">AdMob</a></li><li><a href="analytics" title="Analytics">Analytics</a></li><li><a href="appcheck" title="AppCheck">AppCheck</a></li><li><a href="auth" title="Auth">Auth</a></li><li><a href="firestore" title="Cloud Firestore">Cloud Firestore</a></li><li><a href="functions" title="Cloud Functions">Cloud Functions</a></li><li class="active"><a href="messaging" title="Cloud Messaging">Cloud Messaging</a><ul class="app-sub-sidebar"><li><a class="section-link" href="messaging.html#cloud-messaging" title="Cloud Messaging">Cloud Messaging</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="messaging.html#receive-a-message" title="Receive a message">Receive a message</a></li></ul></ul></li><li><a href="storage" title="Cloud Storage">Cloud Storage</a></li><li><a href="crashlytics" title="Crashlytics">Crashlytics</a></li><li><a href="dynamiclinks" title="Dynamic Links">Dynamic Links</a></li><li><a href="performance" title="Performance">Performance</a></li><li><a href="database" title="Realtime Database">Realtime Database</a></li><li><a href="remoteconfig" title="Remote Config">Remote Config</a></li></ul></li><li><p>Support</p><ul><li><a href="patchnotes" title="Release Notes">Release Notes</a></li><li><a href="troubleshoting" title="Troubleshooting">Troubleshooting</a></li><li><a href="support" title="Support">Support</a></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h2 id="cloud-messaging"><a href="messaging.html#cloud-messaging" data-id="cloud-messaging" class="anchor"><span>Cloud Messaging</span></a></h2><p>Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably send messages at no cost.</p><p>Using FCM, you can notify a client app that new email or other data is available to sync. You can send notification messages to drive user re-engagement and retention. For use cases such as instant messaging, a message can transfer a payload of up to 4KB to a client app.</p><h3 id="receive-a-message"><a href="messaging.html#receive-a-message" data-id="receive-a-message" class="anchor"><span>Receive a message</span></a></h3><p>To handle Messaging's module events, we have to call the <code>Listen for Messaging Events</code> node:</p><div class="code-switcher show-cpp-false">
+<body data-page="messaging.md" class="ready sticky"><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href=".">Firebase Features</a></h1><div class="sidebar-nav"><ul><li><p>Setup</p><ul><li><a href="installation" title="Installation">Installation</a></li><li><a href="disableunusedfeatures" title="Disable Unused Features">Disable Unused Features</a></li><li><a href="rebuildplugin" title="Rebuild the Plugin">Rebuild the Plugin</a></li></ul></li><li><p>Components</p><ul><li><a href="admob" title="AdMob">AdMob</a></li><li><a href="analytics" title="Analytics">Analytics</a></li><li><a href="appcheck" title="AppCheck">AppCheck</a></li><li><a href="auth" title="Auth">Auth</a></li><li><a href="firestore" title="Cloud Firestore">Cloud Firestore</a></li><li><a href="functions" title="Cloud Functions">Cloud Functions</a></li><li class="active"><a href="messaging" title="Cloud Messaging">Cloud Messaging</a><ul class="app-sub-sidebar"><li><a class="section-link" href="messaging.html#cloud-messaging" title="Cloud Messaging">Cloud Messaging</a></li><ul class="app-sub-sidebar"><li><a class="section-link" href="messaging.html#receive-a-message" title="Receive a message">Receive a message</a></li></ul></ul></li><li><a href="storage" title="Cloud Storage">Cloud Storage</a></li><li><a href="crashlytics" title="Crashlytics">Crashlytics</a></li><li><a href="dynamiclinks" title="Dynamic Links">Dynamic Links</a></li><li><a href="performance" title="Performance">Performance</a></li><li><a href="database" title="Realtime Database">Realtime Database</a></li><li><a href="remoteconfig" title="Remote Config">Remote Config</a></li></ul></li><li><p>Support</p><ul><li><a href="patchnotes" title="Release Notes">Release Notes</a></li><li><a href="troubleshoting" title="Troubleshooting">Troubleshooting</a></li><li><a href="support" title="Support">Support</a></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h2 id="cloud-messaging"><a href="messaging.html#cloud-messaging" data-id="cloud-messaging" class="anchor"><span>Cloud Messaging</span></a></h2><p>Firebase Cloud Messaging (FCM) is a cross-platform messaging solution that lets you reliably send messages at no cost.</p><p>Using FCM, you can notify a client app that new email or other data is available to sync. You can send notification messages to drive user re-engagement and retention. For use cases such as instant messaging, a message can transfer a payload of up to 4KB to a client app.</p><h3 id="receive-a-message"><a href="messaging.html#receive-a-message" data-id="receive-a-message" class="anchor"><span>Receive a message</span></a></h3><p>To handle Messaging's module events, we have to call the <code>Listen for Messaging Events</code> node:</p><div class="code-switcher show-cpp-false">
 <div class="switcher">
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-
 <pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example code not available yet.</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
@@ -1754,7 +1468,6 @@ End Object
 </div>
 </div>
 </div>
-
 <p>After that, the execution pin <code>On Message</code> is going to fire each time a message is received.</p><div class="docsify-pagination-container">
         <div class="pagination-item pagination-item--previous">
           <a href="functions">
@@ -1780,7 +1493,6 @@ End Object
       <div class="pagination-item-subtitle">Components</div></a>
         </div>
       </div></article></section></main>
-
 <script>
 	function adblock() {
 		if (window.canRunAds === undefined) {
@@ -1788,10 +1500,7 @@ End Object
 		}
 	}
 </script>
-
 <script async="" src="./js/admob.js" onload="adblock()"></script>
-
-
 	<div id="block-notice" class="adblock-container">
 		<h1>Ad Blocker detected. The documentation might not work properly.</h1>
 		<div>
@@ -1801,7 +1510,6 @@ End Object
 			✖
 		</button>
 	</div>
-
 	<div id="work-notice" class="work-container">
 		<h1>The documentation is being reworked.</h1>
 		<div>
@@ -1811,9 +1519,6 @@ End Object
 			✖
 		</button>
 	</div>
-
-	
-
 	
 	
 	
@@ -1822,10 +1527,8 @@ End Object
 	
 	
 	
-
 	
-
-
+	
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag() { dataLayer.push(arguments); }
@@ -1835,6 +1538,7 @@ End Object
     const script = document.createElement('script');
     script.src = "https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL";
     script.defer = true;
+		script.setAttribute("class", "delete-static");
     document.getElementsByTagName('head')[0].appendChild(script);
   }, 3000);
 </script>
