@@ -1132,12 +1132,17 @@
 			border: 1px solid #bF7F7F;
 			color: white;
 			background: #281b19;
-			padding: 20px;
-			right: 10px;
-			top: 10px;
+			padding: 25px;
+			right: 20px;
+			top: 20px;
+			filter: drop-shadow(0 0 0.75rem black);
 			display: none;
+			border-radius: 10px;
 		}
-		.adblock-container>h1 {
+		.adblock-container>div:first-child {
+			font-weight: bolder; 
+			font-size: 1.5rem;
+			margin-bottom:10px;
 			font-size: 18px;
 			margin: 0;
 			display: block;
@@ -1433,17 +1438,14 @@
 
 <body data-page="introduction.md" class="ready sticky"><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href=".">Firebase Features</a></h1><div class="sidebar-nav"><ul><li><p>Setup</p><ul><li><a href="installation" title="Installation">Installation</a></li><li><a href="disableunusedfeatures" title="Disable Unused Features">Disable Unused Features</a></li><li><a href="rebuildplugin" title="Rebuild the Plugin">Rebuild the Plugin</a></li></ul></li><li><p>Components</p><ul><li><a href="admob" title="AdMob">AdMob</a></li><li><a href="analytics" title="Analytics">Analytics</a></li><li><a href="appcheck" title="AppCheck">AppCheck</a></li><li><a href="auth" title="Auth">Auth</a></li><li><a href="firestore" title="Cloud Firestore">Cloud Firestore</a></li><li><a href="functions" title="Cloud Functions">Cloud Functions</a></li><li><a href="messaging" title="Cloud Messaging">Cloud Messaging</a></li><li><a href="storage" title="Cloud Storage">Cloud Storage</a></li><li><a href="crashlytics" title="Crashlytics">Crashlytics</a></li><li><a href="dynamiclinks" title="Dynamic Links">Dynamic Links</a></li><li><a href="performance" title="Performance">Performance</a></li><li><a href="database" title="Realtime Database">Realtime Database</a></li><li><a href="remoteconfig" title="Remote Config">Remote Config</a></li></ul></li><li><p>Support</p><ul><li><a href="patchnotes" title="Release Notes">Release Notes</a></li><li><a href="troubleshoting" title="Troubleshooting">Troubleshooting</a></li><li><a href="support" title="Support">Support</a></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="introduction"><a href="introduction.html#introduction" data-id="introduction" class="anchor"><span>Introduction</span></a></h1><p>Firebase - Features allows you to easily use the Firebase SDK within Unreal Engine. Go full Blueprints without touching a single line of C++, full C++ with an API totally written for Unreal Engine C++ or mix both easily.</p><h1 id="features"><a href="introduction.html#features" data-id="features" class="anchor"><span>Features</span></a></h1><p>The following modules are available in the plugin:</p><ul><li>AdMob (iOS and Android only)</li><li>Analytics (iOS and Android only)</li><li>AppCheck</li><li>Authentication</li><li>Cloud Firestore</li><li>Cloud Functions</li><li>Cloud Messaging</li><li>Cloud Storage</li><li>Dynamic Links (iOS and Android only)</li><li>Remote Config</li><li>Crashlytics (iOS and Android only)</li><li>Performance (iOS and Android only)</li></ul><h1 id="getting-started"><a href="introduction.html#getting-started" data-id="getting-started" class="anchor"><span>Getting Started</span></a></h1><p>Follow the <a href="installation">installation guide</a>.</p><h1 id="contact"><a href="introduction.html#contact" data-id="contact" class="anchor"><span>Contact</span></a></h1><p>A question? An issue? Send an email to <a href="mailto:pandores.marketplace+doc@gmail.com">pandores.marketplace@gmail.com</a>.</p><p class="warn"><b>Please, include logs in your mail for bugs</b>.</p><div class="docsify-pagination-container"></div></article></section></main>
 <script>
-	function adblock() {
-		if (window.canRunAds === undefined) {
-			document.getElementById("block-notice").style.display = 'block';
-		}
-	}
+	function adblock() { if (window.canRunAds === undefined) { document.getElementById("block-notice").style.display = 'block'; } }
 </script>
 <script async="" src="./js/admob.js" onload="adblock()"></script>
 	<div id="block-notice" class="adblock-container">
-		<h1>Ad Blocker detected. The documentation might not work properly.</h1>
+		<div>Ad Blocker detected. The documentation might not work properly.</div>
 		<div>
-			Some pages or images might be blocked if your ad blocker uses URL-based blocking.
+			Some pages or images might be blocked if your ad blocker uses URL-based blocking as it contains the word "AdMob".<br>
+			This documentation doesn't show any ads whatsoever.
 		</div>
 		<button onclick="document.getElementById('block-notice').style.display = 'none'">
 			✖

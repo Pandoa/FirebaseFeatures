@@ -1132,12 +1132,17 @@
 			border: 1px solid #bF7F7F;
 			color: white;
 			background: #281b19;
-			padding: 20px;
-			right: 10px;
-			top: 10px;
+			padding: 25px;
+			right: 20px;
+			top: 20px;
+			filter: drop-shadow(0 0 0.75rem black);
 			display: none;
+			border-radius: 10px;
 		}
-		.adblock-container>h1 {
+		.adblock-container>div:first-child {
+			font-weight: bolder; 
+			font-size: 1.5rem;
+			margin-bottom:10px;
 			font-size: 18px;
 			margin: 0;
 			display: block;
@@ -1623,17 +1628,14 @@ Add <code>GetToken()</code> C++ function and <code>Get Token</code> async node t
         </div>
       </div></article></section></main>
 <script>
-	function adblock() {
-		if (window.canRunAds === undefined) {
-			document.getElementById("block-notice").style.display = 'block';
-		}
-	}
+	function adblock() { if (window.canRunAds === undefined) { document.getElementById("block-notice").style.display = 'block'; } }
 </script>
 <script async="" src="./js/admob.js" onload="adblock()"></script>
 	<div id="block-notice" class="adblock-container">
-		<h1>Ad Blocker detected. The documentation might not work properly.</h1>
+		<div>Ad Blocker detected. The documentation might not work properly.</div>
 		<div>
-			Some pages or images might be blocked if your ad blocker uses URL-based blocking.
+			Some pages or images might be blocked if your ad blocker uses URL-based blocking as it contains the word "AdMob".<br>
+			This documentation doesn't show any ads whatsoever.
 		</div>
 		<button onclick="document.getElementById('block-notice').style.display = 'none'">
 			✖

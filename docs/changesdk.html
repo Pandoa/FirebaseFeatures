@@ -1132,12 +1132,17 @@
 			border: 1px solid #bF7F7F;
 			color: white;
 			background: #281b19;
-			padding: 20px;
-			right: 10px;
-			top: 10px;
+			padding: 25px;
+			right: 20px;
+			top: 20px;
+			filter: drop-shadow(0 0 0.75rem black);
 			display: none;
+			border-radius: 10px;
 		}
-		.adblock-container>h1 {
+		.adblock-container>div:first-child {
+			font-weight: bolder; 
+			font-size: 1.5rem;
+			margin-bottom:10px;
 			font-size: 18px;
 			margin: 0;
 			display: block;
@@ -1433,17 +1438,14 @@
 
 <body data-page="changesdk.md" class="ready sticky"><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href=".">Firebase Features</a></h1><div class="sidebar-nav"><ul><li><p>Setup</p><ul><li><a href="installation" title="Installation">Installation</a></li><li><a href="disableunusedfeatures" title="Disable Unused Features">Disable Unused Features</a></li><li><a href="rebuildplugin" title="Rebuild the Plugin">Rebuild the Plugin</a></li></ul></li><li><p>Components</p><ul><li><a href="admob" title="AdMob">AdMob</a></li><li><a href="analytics" title="Analytics">Analytics</a></li><li><a href="appcheck" title="AppCheck">AppCheck</a></li><li><a href="auth" title="Auth">Auth</a></li><li><a href="firestore" title="Cloud Firestore">Cloud Firestore</a></li><li><a href="functions" title="Cloud Functions">Cloud Functions</a></li><li><a href="messaging" title="Cloud Messaging">Cloud Messaging</a></li><li><a href="storage" title="Cloud Storage">Cloud Storage</a></li><li><a href="crashlytics" title="Crashlytics">Crashlytics</a></li><li><a href="dynamiclinks" title="Dynamic Links">Dynamic Links</a></li><li><a href="performance" title="Performance">Performance</a></li><li><a href="database" title="Realtime Database">Realtime Database</a></li><li><a href="remoteconfig" title="Remote Config">Remote Config</a></li></ul></li><li><p>Support</p><ul><li><a href="patchnotes" title="Release Notes">Release Notes</a></li><li><a href="troubleshoting" title="Troubleshooting">Troubleshooting</a></li><li><a href="support" title="Support">Support</a></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="change-the-firebase-c-sdk-used-by-the-plugin"><a href="changesdk.html#change-the-firebase-c-sdk-used-by-the-plugin" data-id="change-the-firebase-c-sdk-used-by-the-plugin" class="anchor"><span>Change the Firebase C++ SDK Used by the Plugin</span></a></h1><p class="warn"><strong>This section is deprecated.</strong> The plugin ships with up to date SDKs, so you shouldn't need to change it.</p><p>The following steps will guide you to change the version of the SDK used internally by the plugin:</p><ol><li>Download the version of the SDK you want to use. Releases of the SDK can be found <a href="https://github.com/firebase/firebase-cpp-sdk/releases" target="_blank" rel="noopener">here</a>. If you don't want to build the SDK, you can download the prebuilt binaries.</li><li>Convert your project to a C++ project if it isn't the case already. It can be done by simply adding an empty C++ through the Editor.</li><li>Copy the plugin from <code>&lt;UE_ROOT&gt;/Engine/Plugins/Marketplace/FirebaseFeatures/</code> to <code>&lt;PROJECT_ROOT&gt;/Plugins/FirebaseFeatures</code>.</li><li>Replace the libraries of the current SDK by the ones you downlaoded. The location of the libraries depend of the platform:<ul><li>For Windows, libraries are in <code>FirebaseFeatures\Source\ThirdParty\firebase_cpp_sdk\libs\windows\VS2019\MD\x64\Release\</code>.</li><li>For MacOS, libraries are in <code>FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/libs/darwin/universal/</code>.</li><li>For Linux, libraries are in <code>FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/libs/darwin/universal/linux/x86_64/</code>.</li><li>For Android, libraries are in <code>FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/x.y.z/libs/android/{arch}/c++/</code>.</li><li>For iOS, frameworks are in <code>FirebaseFeatures/Source/ThirdParty/firebase_cpp_sdk/frameworks/ios/universal</code>. Note that every framework has to be zipped.</li></ul></li><li>Replace the includes in the corresponding directories.</li><li>Right click on your <code>.uproject</code> file and select <code>Generate &lt;IDE&gt; project files</code>.</li><li>Open the C++ solution by double clicking it. On Windows, the solution file is called <code>&lt;Project&gt;.sln</code>.</li><li>Build the project. The default shortcut to build the project is <code>CTRL + SHIFT + B</code> with Visual Studio or <code>CMD + B</code> with Xcode. </li></ol><p class="tip">As the plugin isn't compatible with all the existing Firebase C++ SDK versions, you might get build errors when building. If that is the case, send an email to <a href="mailto:pandores.marketplace+newsdk@gmail.com">pandores.marketplace@gmail.com</a> with the version you want to use. A plugin update will follow, making it compatible with the wanted version.</p><div class="docsify-pagination-container"></div></article></section></main>
 <script>
-	function adblock() {
-		if (window.canRunAds === undefined) {
-			document.getElementById("block-notice").style.display = 'block';
-		}
-	}
+	function adblock() { if (window.canRunAds === undefined) { document.getElementById("block-notice").style.display = 'block'; } }
 </script>
 <script async="" src="./js/admob.js" onload="adblock()"></script>
 	<div id="block-notice" class="adblock-container">
-		<h1>Ad Blocker detected. The documentation might not work properly.</h1>
+		<div>Ad Blocker detected. The documentation might not work properly.</div>
 		<div>
-			Some pages or images might be blocked if your ad blocker uses URL-based blocking.
+			Some pages or images might be blocked if your ad blocker uses URL-based blocking as it contains the word "AdMob".<br>
+			This documentation doesn't show any ads whatsoever.
 		</div>
 		<button onclick="document.getElementById('block-notice').style.display = 'none'">
 			✖
