@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.google.com/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>https://pandoa.github.io/FirebaseFeatures/</loc>
 		<changefreq>weekly</changefreq>
@@ -9,11 +11,39 @@
 		<loc>https://pandoa.github.io/FirebaseFeatures/installation</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
+		<video:video>
+			<video:player_loc allow_embed="yes">https://www.youtube.com/watch?v=SbVVrKnS78Y</video:player_loc>
+			<video:thumbnail_loc>https://img.youtube.com/vi/SbVVrKnS78Y/default.jpg</video:thumbnail_loc>
+			<video:title>Firebase Installation in Unreal Engine</video:title>
+			<video:description>Learn how to integrate Firebase in Unreal Engine.</video:description>
+			<video:tag>firebase</video:tag>
+			<video:tag>installation</video:tag>
+			<video:tag>how to</video:tag>
+			<video:tag>unreal engine</video:tag>
+			<video:tag>plugin</video:tag>
+			<video:tag>blueprints</video:tag>
+			<video:tag>cpp</video:tag>
+			<video:tag>install</video:tag>
+			<video:category>tutorial</video:category>
+		</video:video>
 	</url>
 	<url>
 		<loc>https://pandoa.github.io/FirebaseFeatures/admob</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
+		<video:video>
+			<video:player_loc allow_embed="yes">https://www.youtube.com/watch?v=rVBxrr6i76Q</video:player_loc>
+			<video:thumbnail_loc>https://img.youtube.com/vi/rVBxrr6i76Q/default.jpg</video:thumbnail_loc>
+			<video:title>Firebase AdMob in Unreal Engine</video:title>
+			<video:description>Learn how to integrate Firebase AdMob in Unreal Engine.</video:description>
+			<video:tag>firebase</video:tag>
+			<video:tag>admob</video:tag>
+			<video:tag>unreal engine</video:tag>
+			<video:tag>plugin</video:tag>
+			<video:tag>blueprints</video:tag>
+			<video:tag>cpp</video:tag>
+			<video:category>tutorial</video:category>
+		</video:video>
 	</url>
 	<url>
 		<loc>https://pandoa.github.io/FirebaseFeatures/crashlytics</loc>
