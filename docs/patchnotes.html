@@ -1661,16 +1661,18 @@ Add <code>GetToken()</code> C++ function and <code>Get Token</code> async node t
 	
 	
 <script>
-	if (window.puppeteer) return;
-	function gtag() { dataLayer.push(arguments); }
-	gtag('js', new Date());
-	gtag('config', 'G-EGXMT0XTHL');
-  setTimeout(() => {
-    const script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL";
-    script.defer = true;
-		script.setAttribute("class", "delete-static");
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }, 4000);
+	if (window.puppeteer !== true)
+	{
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-EGXMT0XTHL');
+		setTimeout(() => {
+			const script = document.createElement('script');
+			script.src = "https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL";
+			script.defer = true;
+			script.setAttribute("class", "delete-static");
+			document.getElementsByTagName('head')[0].appendChild(script);
+		}, 4000);
+	}
 </script>
 <div class="progress" style="opacity: 0; width: 0%;"></div></body></html>

@@ -1847,16 +1847,18 @@
 	</script>
 </body>
 <script>
-	if (window.puppeteer) return;
-	function gtag() { dataLayer.push(arguments); }
-	gtag('js', new Date());
-	gtag('config', 'G-EGXMT0XTHL');
-  setTimeout(() => {
-    const script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-EGXMT0XTHL";
-    script.defer = true;
-		script.setAttribute("class", "delete-static");
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }, 4000);
+	if (window.puppeteer !== true)
+	{
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-EGXMT0XTHL');
+		setTimeout(() => {
+			const script = document.createElement('script');
+			script.src = "https://www.googletagmanager.com/gtag/js?id=G-EGXMT0XTHL";
+			script.defer = true;
+			script.setAttribute("class", "delete-static");
+			document.getElementsByTagName('head')[0].appendChild(script);
+		}, 4000);
+	}
 </script>
 </html>
