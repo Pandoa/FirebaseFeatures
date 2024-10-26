@@ -18,6 +18,12 @@ This section guides you to install the plugin and start using it. You can skip t
 }
 </style>
 
+## 0. Install the Firebase Plugin
+1. Open [Fab](https://www.fab.com/listings/feaef5b9-d11d-4609-84de-f4551203682d) and download the Firebase plugin
+2. Start the Engine.
+3. Under Plugins, enable the Firebase plugin.
+4. Close the Engine.
+
 ## 1. Create a Firebase project.
 To use Firebase, you need a Firebase project. To create one, go to [the Firebase Console](https://console.firebase.google.com/u/0/), click on `Add a project` and fill the fields asked for your new project.
 
@@ -78,35 +84,35 @@ You can click on one of the modules below to access its documentation.
 
 <div class="fb-f-cont">
 
-<a class="fb-elem" href="#firestore">
+<a class="fb-elem" href="#/firestore">
   <image src="_images/firebase/Firestore.png" class="fb" width="360px" height="360px"  alt="Firestore icon"/>
   <div class="fb-txt">
     Firestore
   </div>
 </a>
 
-<a class="fb-elem" href="#functions">
+<a class="fb-elem" href="#/functions">
   <image src="_images/firebase/CloudFunctions.png" class="fb" width="360px" height="360px"  alt="Cloud Functions icon"/>
   <div class="fb-txt">
     Cloud Functions
   </div>
 </a>
 
-<a class="fb-elem" href="#auth">
+<a class="fb-elem" href="#/auth">
   <image src="_images/firebase/Auth.png" class="fb" width="360px" height="360px"  alt="Firebase Auth icon"/>
   <div class="fb-txt">
     Authentication
   </div>
 </a>
 
-<a class="fb-elem" href="#database">
+<a class="fb-elem" href="#/database">
   <image src="_images/firebase/Database.png" class="fb" width="360px" height="360px"  alt="Realtime Database icon"/>
   <div class="fb-txt">
     Realtime Database
   </div>
 </a>
 
-<a class="fb-elem" href="#storage">
+<a class="fb-elem" href="#/storage">
   <image src="_images/firebase/Storage.png" class="fb" width="360px" height="360px"  alt="Firebase Cloud Storage icon"/>
   <div class="fb-txt">
     Cloud Storage
@@ -114,56 +120,56 @@ You can click on one of the modules below to access its documentation.
 </a>
 
 
-<a class="fb-elem" href="#appcheck">
+<a class="fb-elem" href="#/appcheck">
   <image src="_images/firebase/AppCheck.png" class="fb" width="360px" height="360px"  alt="Firebase App Check icon"/>
   <div class="fb-txt">
     AppCheck
   </div>
 </a>
 
-<a class="fb-elem" href="#crashlytics">
+<a class="fb-elem" href="#/crashlytics">
   <image src="_images/firebase/Crashlytics.png" class="fb" width="360px" height="360px"  alt="Crashlytics icon"/>
   <div class="fb-txt">
     Crashlytics
   </div>
 </a>
 
-<a class="fb-elem" href="#admob">
+<a class="fb-elem" href="#/admob">
   <image src="_images/firebase/AdMob.png" class="fb" width="360px" height="360px"  alt="AdMob icon"/>
   <div class="fb-txt">
     AdMob
   </div>
 </a>
 
-<a class="fb-elem" href="#analytics">
+<a class="fb-elem" href="#/analytics">
   <image src="_images/firebase/Analytics.png" class="fb" width="360px" height="360px"  alt="Firebase Analytics icon"/>
   <div class="fb-txt">
     Analytics
   </div>
 </a>
 
-<a class="fb-elem" href="#messaging">
+<a class="fb-elem" href="#/messaging">
   <image src="_images/firebase/Messaging.png" class="fb" width="360px" height="360px"  alt="Firebase Messaging icon"/>
   <div class="fb-txt">
     Cloud Messaging
   </div>
 </a>
 
-<a class="fb-elem" href="#remoteconfig">
+<a class="fb-elem" href="#/remoteconfig">
   <image src="_images/firebase/RemoteConfig.png" class="fb" width="360px" height="360px"  alt="Remote Config icon"/>
   <div class="fb-txt">
     RemoteConfig
   </div>
 </a>
 
-<a class="fb-elem" href="#dynamiclinks">
+<a class="fb-elem" href="#/dynamiclinks">
   <image src="_images/firebase/Dynamicinks.png" class="fb" width="360px" height="360px"  alt="Dynamic Links icon" />
   <div class="fb-txt">
     Dynamic Links
   </div>
 </a>
 
-<a class="fb-elem" href="#performance">
+<a class="fb-elem" href="#/performance">
   <image src="_images/firebase/Performance.png" class="fb" width="360px" height="360px"  alt="Firebase Performance icon"/>
   <div class="fb-txt">
     Performance

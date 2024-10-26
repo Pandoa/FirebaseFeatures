@@ -1,7 +1,8 @@
 {
   "root_url": "http://localhost:3000",
-  "out_dir": "build/",
-  "load_timeout": 10000,
+  "out_dir": "docs/",
+  "src_dir": "src/",
+  "load_timeout": 20000,
   "remove_selectors": [
     ".delete-static",
     "script[src*=\"livereload.js\"]",

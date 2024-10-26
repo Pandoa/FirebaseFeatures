@@ -3,7 +3,7 @@
   <link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon-16x16.png" type="image/png" sizes="16x16">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon.svg" type="image/svg+xml" sizes="any">
-	<title>Installation | Firebase for Unreal Engine</title>
+	<title>How to Install Firebase in Unreal Engine</title>
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org/",
@@ -1436,7 +1436,7 @@
 	bShowCPP = JSON.parse(getCookie('bShowCPP'));
 </script><style type="text/css">.docsify-pagination-container{display:flex;flex-wrap:wrap;justify-content:space-between;overflow:hidden;margin:5em 0 1em;border-top:1px solid rgba(0,0,0,.07)}.pagination-item{margin-top:2.5em}.pagination-item a,.pagination-item a:hover{text-decoration:none}.pagination-item a{color:currentColor}.pagination-item a:hover .pagination-item-title{text-decoration:underline}.pagination-item:not(:last-child) a .pagination-item-label,.pagination-item:not(:last-child) a .pagination-item-subtitle,.pagination-item:not(:last-child) a .pagination-item-title{opacity:.3;transition:all .2s}.pagination-item:last-child .pagination-item-label,.pagination-item:not(:last-child) a:hover .pagination-item-label{opacity:.6}.pagination-item:not(:last-child) a:hover .pagination-item-title{opacity:1}.pagination-item-label{font-size:.8em}.pagination-item-label>*{line-height:1;vertical-align:middle}.pagination-item-label svg{height:.8em;width:auto;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1px}.pagination-item--next{margin-left:auto;text-align:right}.pagination-item--next svg{margin-left:.5em}.pagination-item--previous svg{margin-right:.5em}.pagination-item-title{font-size:1.6em}.pagination-item-subtitle{text-transform:uppercase;opacity:.3}</style></head>
 
-<body data-page="installation.md" class="ready sticky"><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href=".">Firebase Features</a></h1><div class="sidebar-nav"><ul><li><p>Setup</p><ul><li class="active"><a href="installation" title="Installation">Installation</a><ul class="app-sub-sidebar"><li><a class="section-link" href="installation.html#_1-create-a-firebase-project" title="1. Create a Firebase project.">1. Create a Firebase project.</a></li><li><a class="section-link" href="installation.html#_2-configure-admob-optional" title="2. Configure AdMob (optional)">2. Configure AdMob (optional)</a></li><li><a class="section-link" href="installation.html#_3-install-the-file-google-servicesjson" title="3. Install the File google-services.json">3. Install the File <code>google-services.json</code></a></li><li><a class="section-link" href="installation.html#_4-configuration-for-c-optional" title="4. Configuration for C++ (optional)">4. Configuration for C++ (optional)</a></li><li><a class="section-link" href="installation.html#_5-you-are-done" title="5. You are done!">5. You are done!</a></li></ul></li><li><a href="disableunusedfeatures" title="Disable Unused Features">Disable Unused Features</a></li><li><a href="rebuildplugin" title="Rebuild the Plugin">Rebuild the Plugin</a></li></ul></li><li><p>Components</p><ul><li><a href="admob" title="AdMob">AdMob</a></li><li><a href="analytics" title="Analytics">Analytics</a></li><li><a href="appcheck" title="AppCheck">AppCheck</a></li><li><a href="auth" title="Auth">Auth</a></li><li><a href="firestore" title="Cloud Firestore">Cloud Firestore</a></li><li><a href="functions" title="Cloud Functions">Cloud Functions</a></li><li><a href="messaging" title="Cloud Messaging">Cloud Messaging</a></li><li><a href="storage" title="Cloud Storage">Cloud Storage</a></li><li><a href="crashlytics" title="Crashlytics">Crashlytics</a></li><li><a href="dynamiclinks" title="Dynamic Links">Dynamic Links</a></li><li><a href="performance" title="Performance">Performance</a></li><li><a href="database" title="Realtime Database">Realtime Database</a></li><li><a href="remoteconfig" title="Remote Config">Remote Config</a></li></ul></li><li><p>Support</p><ul><li><a href="patchnotes" title="Release Notes">Release Notes</a></li><li><a href="troubleshoting" title="Troubleshooting">Troubleshooting</a></li><li><a href="support" title="Support">Support</a></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="setup-firebase-features"><a href="installation.html#setup-firebase-features" data-id="setup-firebase-features" class="anchor"><span>Setup Firebase Features</span></a></h1><p>This section guides you to install the plugin and start using it. You can skip the optional steps.</p><blockquote>
+<body data-page="installation.md" class="ready sticky"><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href=".">Firebase Features</a></h1><div class="sidebar-nav"><ul><li><p>Setup</p><ul><li class="active"><a href="installation" title="Installation">Installation</a><ul class="app-sub-sidebar"><li><a class="section-link" href="installation.html#_0-install-the-firebase-plugin" title="0. Install the Firebase Plugin">0. Install the Firebase Plugin</a></li><li><a class="section-link" href="installation.html#_1-create-a-firebase-project" title="1. Create a Firebase project.">1. Create a Firebase project.</a></li><li><a class="section-link" href="installation.html#_2-configure-admob-optional" title="2. Configure AdMob (optional)">2. Configure AdMob (optional)</a></li><li><a class="section-link" href="installation.html#_3-install-the-file-google-servicesjson" title="3. Install the File google-services.json">3. Install the File <code>google-services.json</code></a></li><li><a class="section-link" href="installation.html#_4-configuration-for-c-optional" title="4. Configuration for C++ (optional)">4. Configuration for C++ (optional)</a></li><li><a class="section-link" href="installation.html#_5-you-are-done" title="5. You are done!">5. You are done!</a></li></ul></li><li><a href="disableunusedfeatures" title="Disable Unused Features">Disable Unused Features</a></li><li><a href="rebuildplugin" title="Rebuild the Plugin">Rebuild the Plugin</a></li></ul></li><li><p>Components</p><ul><li><a href="admob" title="AdMob">AdMob</a></li><li><a href="analytics" title="Analytics">Analytics</a></li><li><a href="appcheck" title="AppCheck">AppCheck</a></li><li><a href="auth" title="Auth">Auth</a></li><li><a href="firestore" title="Cloud Firestore">Cloud Firestore</a></li><li><a href="functions" title="Cloud Functions">Cloud Functions</a></li><li><a href="messaging" title="Cloud Messaging">Cloud Messaging</a></li><li><a href="storage" title="Cloud Storage">Cloud Storage</a></li><li><a href="crashlytics" title="Crashlytics">Crashlytics</a></li><li><a href="dynamiclinks" title="Dynamic Links">Dynamic Links</a></li><li><a href="performance" title="Performance">Performance</a></li><li><a href="database" title="Realtime Database">Realtime Database</a></li><li><a href="remoteconfig" title="Remote Config">Remote Config</a></li></ul></li><li><p>Support</p><ul><li><a href="patchnotes" title="Release Notes">Release Notes</a></li><li><a href="troubleshoting" title="Troubleshooting">Troubleshooting</a></li><li><a href="support" title="Support">Support</a></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="setup-firebase-features"><a href="installation.html#setup-firebase-features" data-id="setup-firebase-features" class="anchor"><span>Setup Firebase Features</span></a></h1><p>This section guides you to install the plugin and start using it. You can skip the optional steps.</p><blockquote>
 <p>If you want to use the plugin for desktop (Windows, MacOS, Linux), the steps are the same as for Android.</p></blockquote>
 <div style="display:flex;justify-content:center">
 <div style="max-width: 640px;flex-grow:1;">
@@ -1450,86 +1450,86 @@
    padding-top: 35px;
 }
 </style>
-<h2 id="_1-create-a-firebase-project"><a href="installation.html#_1-create-a-firebase-project" data-id="_1-create-a-firebase-project" class="anchor"><span>1. Create a Firebase project.</span></a></h2><p>To use Firebase, you need a Firebase project. To create one, go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="noopener">the Firebase Console</a>, click on <code>Add a project</code> and fill the fields asked for your new project.</p><h2 id="_2-configure-admob-optional"><a href="installation.html#_2-configure-admob-optional" data-id="_2-configure-admob-optional" class="anchor"><span>2. Configure AdMob (optional)</span></a></h2><p>If you plan to use AdMob, you have to configure it first.</p><ol><li><p>Start by going to <a href="https://apps.admob.com/v2/home" target="_blank" rel="noopener">AdMob Home Page</a>.  </p></li><li><p>Click <code>Application</code> &gt; <code>Add an Application</code>. </p></li><li><p>Once the application is added, go to <code>Application Settings</code></p></li><li><p>Click on <code>Associate with Firebase</code>. This last step will ask you your application's package name that you choose while creating your Firebase Project.</p></li><li><p>You now need to go to <code>Apps</code> &gt; <code>YourApp</code> &gt; <code>App Settings</code>, copy the App ID and paste it in <code>DefaultEngine.ini</code> with the following structure:   </p><pre v-pre="" data-lang="ini"><code class="lang-ini"><span class="token section"><span class="token punctuation">[</span><span class="token section-name selector">Firebase</span><span class="token punctuation">]</span></span>
+<h2 id="_0-install-the-firebase-plugin"><a href="installation.html#_0-install-the-firebase-plugin" data-id="_0-install-the-firebase-plugin" class="anchor"><span>0. Install the Firebase Plugin</span></a></h2><ol><li>Open <a href="https://www.fab.com/listings/feaef5b9-d11d-4609-84de-f4551203682d" target="_blank" rel="noopener">Fab</a> and download the Firebase plugin</li><li>Start the Engine.</li><li>Under Plugins, enable the Firebase plugin.</li><li>Close the Engine.</li></ol><h2 id="_1-create-a-firebase-project"><a href="installation.html#_1-create-a-firebase-project" data-id="_1-create-a-firebase-project" class="anchor"><span>1. Create a Firebase project.</span></a></h2><p>To use Firebase, you need a Firebase project. To create one, go to <a href="https://console.firebase.google.com/u/0/" target="_blank" rel="noopener">the Firebase Console</a>, click on <code>Add a project</code> and fill the fields asked for your new project.</p><h2 id="_2-configure-admob-optional"><a href="installation.html#_2-configure-admob-optional" data-id="_2-configure-admob-optional" class="anchor"><span>2. Configure AdMob (optional)</span></a></h2><p>If you plan to use AdMob, you have to configure it first.</p><ol><li><p>Start by going to <a href="https://apps.admob.com/v2/home" target="_blank" rel="noopener">AdMob Home Page</a>.  </p></li><li><p>Click <code>Application</code> &gt; <code>Add an Application</code>. </p></li><li><p>Once the application is added, go to <code>Application Settings</code></p></li><li><p>Click on <code>Associate with Firebase</code>. This last step will ask you your application's package name that you choose while creating your Firebase Project.</p></li><li><p>You now need to go to <code>Apps</code> &gt; <code>YourApp</code> &gt; <code>App Settings</code>, copy the App ID and paste it in <code>DefaultEngine.ini</code> with the following structure:   </p><pre v-pre="" data-lang="ini"><code class="lang-ini"><span class="token section"><span class="token punctuation">[</span><span class="token section-name selector">Firebase</span><span class="token punctuation">]</span></span>
 <span class="token key attr-name">AdMobApplicationId</span><span class="token punctuation">=</span><span class="token value attr-value">"<span class="token inner-value">ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX</span>"</span>
 <span class="token comment">; Optional platform overrides, fall back to AdMobApplicationId if not set.</span>
 <span class="token key attr-name">AndroidAdMobApplicationId</span><span class="token punctuation">=</span><span class="token value attr-value">"<span class="token inner-value">ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX</span>"</span>
 <span class="token key attr-name">iOSAdMobApplicationId</span><span class="token punctuation">=</span><span class="token value attr-value">"<span class="token inner-value">ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX</span>"</span></code></pre></li></ol><h2 id="_3-install-the-file-google-servicesjson"><a href="installation.html#_3-install-the-file-google-servicesjson" data-id="_3-install-the-file-google-servicesjson" class="anchor"><span>3. Install the File <code>google-services.json</code></span></a></h2><p>To work, Firebase requires the file <code>google-services.json</code> (or <code>GoogleService-Info.plist</code> for iOS). </p><ol><li>Go to <code>Project Overview &gt; Project Settings</code> </li><li>Click on <img align="center" width="170" height="30" src="_images/download-gs.png"> to download the <code>google-services.json</code> file.</li><li>Now that <code>google-services.json</code> is downloaded, you need to copy it to <code>&lt;YourProject&gt;/Services/</code>.  You can then start the Editor and proceed to the next step.</li></ol><p>The following image shows the required steps to arrive to the Download button:</p><div class="centered">
 <p><img src="/_images/FBConsoleProjectSettings.png" data-origin="_images/FBConsoleProjectSettings.png" alt="Firebase Console Download Services Actions"></p></div>
 <p class="tip">If the file is invalid or placed incorrectly, you will see an error message in the output log when you start the Editor with the message <code>Failed to create Firebase Application. Make sure the google-services.json file exists and is valid</code>. If this message doesn't appear, you can assume it is correctly configured.</p><p class="tip">Even if you plan to only use <code>Firebase - Features</code> on iOS, we recommend to download the <code>.json</code> file as well as the <code>.plist</code> to test in-Editor.</p><p class="tip">Desktop platforms use the Android <code>google-services.json</code> file.</p><h2 id="_4-configuration-for-c-optional"><a href="installation.html#_4-configuration-for-c-optional" data-id="_4-configuration-for-c-optional" class="anchor"><span>4. Configuration for C++ (optional)</span></a></h2><p>This step is only required if you plan to use Firebase Features through C++ code. You can safely skip it if you plan to code using Blueprints only.</p><p>Open  <code>YourProject.Build.cs</code> and add the following line to your module's constructor:</p><pre v-pre="" data-lang="csharp"><code class="lang-csharp">PrivateDependencyModuleNames<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token string">"FirebaseFeatures"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p class="tip">You need to regenerate project files for the includes to work with your code editor.</p><h2 id="_5-you-are-done"><a href="installation.html#_5-you-are-done" data-id="_5-you-are-done" class="anchor"><span>5. You are done!</span></a></h2><p>If you correctly placed your <code>google-services.json</code> file in the <code>Services</code> folder, you can start the Unreal Engine Editor and use the plugin!</p><p>You can click on one of the modules below to access its documentation.</p><div class="fb-f-cont">
-<a class="fb-elem" href="#firestore">
+<a class="fb-elem" href="firestore">
   <img src="_images/firebase/Firestore.png" class="fb" width="360px" height="360px" alt="Firestore icon">
   <div class="fb-txt">
     Firestore
   </div>
 </a>
-<a class="fb-elem" href="#functions">
+<a class="fb-elem" href="functions">
   <img src="_images/firebase/CloudFunctions.png" class="fb" width="360px" height="360px" alt="Cloud Functions icon">
   <div class="fb-txt">
     Cloud Functions
   </div>
 </a>
-<a class="fb-elem" href="#auth">
+<a class="fb-elem" href="auth">
   <img src="_images/firebase/Auth.png" class="fb" width="360px" height="360px" alt="Firebase Auth icon">
   <div class="fb-txt">
     Authentication
   </div>
 </a>
-<a class="fb-elem" href="#database">
+<a class="fb-elem" href="database">
   <img src="_images/firebase/Database.png" class="fb" width="360px" height="360px" alt="Realtime Database icon">
   <div class="fb-txt">
     Realtime Database
   </div>
 </a>
-<a class="fb-elem" href="#storage">
+<a class="fb-elem" href="storage">
   <img src="_images/firebase/Storage.png" class="fb" width="360px" height="360px" alt="Firebase Cloud Storage icon">
   <div class="fb-txt">
     Cloud Storage
   </div>
 </a>
-<a class="fb-elem" href="#appcheck">
+<a class="fb-elem" href="appcheck">
   <img src="_images/firebase/AppCheck.png" class="fb" width="360px" height="360px" alt="Firebase App Check icon">
   <div class="fb-txt">
     AppCheck
   </div>
 </a>
-<a class="fb-elem" href="#crashlytics">
+<a class="fb-elem" href="crashlytics">
   <img src="_images/firebase/Crashlytics.png" class="fb" width="360px" height="360px" alt="Crashlytics icon">
   <div class="fb-txt">
     Crashlytics
   </div>
 </a>
-<a class="fb-elem" href="#admob">
+<a class="fb-elem" href="admob">
   <img src="_images/firebase/AdMob.png" class="fb" width="360px" height="360px" alt="AdMob icon">
   <div class="fb-txt">
     AdMob
   </div>
 </a>
-<a class="fb-elem" href="#analytics">
+<a class="fb-elem" href="analytics">
   <img src="_images/firebase/Analytics.png" class="fb" width="360px" height="360px" alt="Firebase Analytics icon">
   <div class="fb-txt">
     Analytics
   </div>
 </a>
-<a class="fb-elem" href="#messaging">
+<a class="fb-elem" href="messaging">
   <img src="_images/firebase/Messaging.png" class="fb" width="360px" height="360px" alt="Firebase Messaging icon">
   <div class="fb-txt">
     Cloud Messaging
   </div>
 </a>
-<a class="fb-elem" href="#remoteconfig">
+<a class="fb-elem" href="remoteconfig">
   <img src="_images/firebase/RemoteConfig.png" class="fb" width="360px" height="360px" alt="Remote Config icon">
   <div class="fb-txt">
     RemoteConfig
   </div>
 </a>
-<a class="fb-elem" href="#dynamiclinks">
+<a class="fb-elem" href="dynamiclinks">
   <img src="_images/firebase/Dynamicinks.png" class="fb" width="360px" height="360px" alt="Dynamic Links icon">
   <div class="fb-txt">
     Dynamic Links
   </div>
 </a>
-<a class="fb-elem" href="#performance">
+<a class="fb-elem" href="performance">
   <img src="_images/firebase/Performance.png" class="fb" width="360px" height="360px" alt="Firebase Performance icon">
   <div class="fb-txt">
     Performance
@@ -1582,7 +1582,7 @@
 	
 	
 <script>
-	window.dataLayer = window.dataLayer || [];
+	if (window.puppeteer) return;
 	function gtag() { dataLayer.push(arguments); }
 	gtag('js', new Date());
 	gtag('config', 'G-EGXMT0XTHL');
@@ -1592,6 +1592,6 @@
     script.defer = true;
 		script.setAttribute("class", "delete-static");
     document.getElementsByTagName('head')[0].appendChild(script);
-  }, 3000);
+  }, 4000);
 </script>
 <div class="progress" style="opacity: 0; width: 0%;"></div></body></html>

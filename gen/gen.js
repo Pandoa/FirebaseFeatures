@@ -7,8 +7,8 @@ const jsdom = require("jsdom");
 const WEBSITE_ROOT_URL = "http://localhost:3000";
 const OUT_DIR = 'build/';
 
-const getRoutes = async () => (
-  await readdir('./docs/')).filter(f => f.endsWith('.md')).map(r => r.split('.')[0]).concat('');
+const getRoutes = async (root) => (
+  await readdir(root)).filter(f => f.endsWith('.md')).map(r => r.split('.')[0]).concat('');
 
 const removeAllSelector = (document, selector) => {
   const deleteElems = document.querySelectorAll(selector);
@@ -35,9 +35,8 @@ const getConfig = () => {
 }
 
 async function main() {
-  const routes = await getRoutes();
-
   const config = getConfig();
+  const routes = await getRoutes(config["src_dir"]);
 
   const browser = await puppeteer.launch({ 
     headless: false,
@@ -47,13 +46,15 @@ async function main() {
     ignoreHTTPSErrors: true,
   });
 
+  const [page] = await browser.pages();
+  await page.evaluateOnNewDocument(() => window.puppeteer = true);
+  await setupPage(page);
+
   console.log("Building " + routes.length + " files.");
 
   for (const route of routes) {
     const routeName = route.length == 0 ? 'index' : route;
     console.log(` - Building ${route}`);
-    const [page] = await browser.pages();
-    await setupPage(page);
     await page.goto((config["root_url"] ?? WEBSITE_ROOT_URL) + '/#/' + route);
     await page.waitForNetworkIdle({  });
 
