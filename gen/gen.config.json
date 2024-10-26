@@ -12,6 +12,9 @@
     ["?id=", ".html#"],
     ["js.html#", "js.html?id="]
   ],
+  "title": {
+    "installation": "How to Install Firebase in Unreal Engine"
+  },
   "descriptions": {
     "admob": "Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.",
     "installation": "Easily install the Firebase plugin for Unreal Engine and start integrating Firebase services into your game. Follow our simple step-by-step guide and get up and running quickly. Explore the plugin's features and benefits for game development.",

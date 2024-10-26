@@ -7,7 +7,8 @@ const jsdom = require("jsdom");
 const WEBSITE_ROOT_URL = "http://localhost:3000";
 const OUT_DIR = 'build/';
 
-const getRoutes = async () => (await readdir('./docs/')).filter(f => f.endsWith('.md')).map(r => r.split('.')[0]);
+const getRoutes = async () => (
+  await readdir('./docs/')).filter(f => f.endsWith('.md')).map(r => r.split('.')[0]).concat('');
 
 const removeAllSelector = (document, selector) => {
   const deleteElems = document.querySelectorAll(selector);
@@ -49,6 +50,7 @@ async function main() {
   console.log("Building " + routes.length + " files.");
 
   for (const route of routes) {
+    const routeName = route.length == 0 ? 'index' : route;
     console.log(` - Building ${route}`);
     const [page] = await browser.pages();
     await setupPage(page);
@@ -64,7 +66,6 @@ async function main() {
     }
 
     const dom = new jsdom.JSDOM(pageSourceHTML);
-    
     const document = dom.window.document;
 
     for (const delSelector of (config["remove_selectors"] ?? [])) {
@@ -75,7 +76,12 @@ async function main() {
     const pageDescription = document.querySelector('meta[name="description"]');
     const pageKeywords = document.querySelector('meta[name="keywords"]');
 
-    pageTitle.innerHTML += ' | Firebase for Unreal Engine';
+    if (typeof config["title"] === 'object' && config["title"][route]) {
+      pageTitle.innerHTML = config["title"][route];
+    }
+    else {
+      pageTitle.innerHTML += ' | Firebase for Unreal Engine';
+    }
 
     if (typeof config["descriptions"] === 'object' && config["descriptions"][route]) {
       pageDescription.setAttribute("content", config["descriptions"][route]);
@@ -90,7 +96,7 @@ async function main() {
       linkToFix.href = linkToFix.getAttribute("href").slice(2);
     }
 
-    fs.writeFileSync((config["out_dir"] ?? OUT_DIR) + route + '.html', 
+    fs.writeFileSync((config["out_dir"] ?? OUT_DIR) + routeName + '.html', 
       dom.serialize().replaceAll('\n\n', '\n').replaceAll('\n\n', '\n'));
   }
 
