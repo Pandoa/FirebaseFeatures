@@ -1567,11 +1567,12 @@ End Object
 	
 	
 <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+	gtag('config', 'G-EGXMT0XTHL');
 	if (window.puppeteer !== true)
 	{
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'G-EGXMT0XTHL');
 		setTimeout(() => {
 			const script = document.createElement('script');
 			script.src = "https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL";
