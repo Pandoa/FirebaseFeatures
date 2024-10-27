@@ -14,12 +14,19 @@
     ["js.html#", "js.html?id="]
   ],
   "title": {
-    "installation": "How to Install Firebase in Unreal Engine"
+    "installation": "How to Install Firebase in Unreal Engine",
+    "firestore": "How to use Firestore in Unreal Engine",
+    "admob": "How to show ads in Unreal Engine with Firebase AdMob",
+    "appcheck": "How to add Firebase AppCheck in Unreal Engine",
+    "database": "How to interact with Firebase Realtime Database in Unreal Engine",
+    "analytics": "How to add Google Analytics in Unreal Engine",
+    "crashlytics": "How to use Crashlytics in Unreal Engine"
   },
   "descriptions": {
     "admob": "Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.",
     "installation": "Easily install the Firebase plugin for Unreal Engine and start integrating Firebase services into your game. Follow our simple step-by-step guide and get up and running quickly. Explore the plugin's features and benefits for game development.",
-    "analytics": "Learn how to use Google Analytics in your Unreal Engine projects with Firebase. Explore the available methods and dive into Blueprint code examples for practical implementation. Gain valuable insights into your game's user behavior and performance with Google Analytics."
+    "analytics": "Learn how to use Google Analytics in your Unreal Engine projects with Firebase. Explore the available methods and dive into Blueprint code examples for practical implementation. Gain valuable insights into your game's user behavior and performance with Google Analytics.",
+    "firestore": "Start using Firestore in your Unreal Engine projects with Firebase. Explore the available methods and dive into Blueprint code examples for practical implementation."
   },
   "keywords": {
     "admob": "Firebase plugin, AdMob, Unreal Engine, Blueprints, Blueprints, monetization, game development, mobile advertising",

@@ -3,7 +3,7 @@
   <link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon-16x16.png" type="image/png" sizes="16x16">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon.svg" type="image/svg+xml" sizes="any">
-	<title>Firebase for Unreal Engine | Firebase for Unreal Engine</title>
+	<title>Dynamic Links | Firebase for Unreal Engine</title>
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org/",
@@ -1436,110 +1436,66 @@
 	bShowCPP = JSON.parse(getCookie('bShowCPP'));
 </script><style type="text/css">.docsify-pagination-container{display:flex;flex-wrap:wrap;justify-content:space-between;overflow:hidden;margin:5em 0 1em;border-top:1px solid rgba(0,0,0,.07)}.pagination-item{margin-top:2.5em}.pagination-item a,.pagination-item a:hover{text-decoration:none}.pagination-item a{color:currentColor}.pagination-item a:hover .pagination-item-title{text-decoration:underline}.pagination-item:not(:last-child) a .pagination-item-label,.pagination-item:not(:last-child) a .pagination-item-subtitle,.pagination-item:not(:last-child) a .pagination-item-title{opacity:.3;transition:all .2s}.pagination-item:last-child .pagination-item-label,.pagination-item:not(:last-child) a:hover .pagination-item-label{opacity:.6}.pagination-item:not(:last-child) a:hover .pagination-item-title{opacity:1}.pagination-item-label{font-size:.8em}.pagination-item-label>*{line-height:1;vertical-align:middle}.pagination-item-label svg{height:.8em;width:auto;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1px}.pagination-item--next{margin-left:auto;text-align:right}.pagination-item--next svg{margin-left:.5em}.pagination-item--previous svg{margin-right:.5em}.pagination-item-title{font-size:1.6em}.pagination-item-subtitle{text-transform:uppercase;opacity:.3}</style></head>
 
-<body data-page="README.md" class="ready sticky"><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href=".">Firebase Features</a></h1><div class="sidebar-nav"><ul><li><p>Setup</p><ul><li><a href="installation" title="Installation">Installation</a></li><li><a href="disableunusedfeatures" title="Disable Unused Features">Disable Unused Features</a></li><li><a href="rebuildplugin" title="Rebuild the Plugin">Rebuild the Plugin</a></li></ul></li><li><p>Components</p><ul><li><a href="admob" title="AdMob">AdMob</a></li><li><a href="analytics" title="Analytics">Analytics</a></li><li><a href="appcheck" title="AppCheck">AppCheck</a></li><li><a href="auth" title="Auth">Auth</a></li><li><a href="firestore" title="Cloud Firestore">Cloud Firestore</a></li><li><a href="functions" title="Cloud Functions">Cloud Functions</a></li><li><a href="messaging" title="Cloud Messaging">Cloud Messaging</a></li><li><a href="storage" title="Cloud Storage">Cloud Storage</a></li><li><a href="crashlytics" title="Crashlytics">Crashlytics</a></li><li><a href="dynamiclinks" title="Dynamic Links">Dynamic Links</a></li><li><a href="performance" title="Performance">Performance</a></li><li><a href="database" title="Realtime Database">Realtime Database</a></li><li><a href="remoteconfig" title="Remote Config">Remote Config</a></li></ul></li><li><p>Support</p><ul><li><a href="patchnotes" title="Release Notes">Release Notes</a></li><li><a href="troubleshoting" title="Troubleshooting">Troubleshooting</a></li><li><a href="support" title="Support">Support</a></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><style>
-.markdown-section p strong {
-  color: #fff;
-}
-</style>
-<h1 id="firebase-features-firebase-integration-for-unreal-engine"><a href=".html#firebase-features-firebase-integration-for-unreal-engine" data-id="firebase-features-firebase-integration-for-unreal-engine" class="anchor"><span>Firebase Features - Firebase Integration for Unreal Engine</span></a></h1><blockquote>
-<p>A native Firebase integration for Unreal Engine supporting <strong>Windows</strong>, <strong>MacOS</strong>, <strong>Linux</strong> <strong>iOS</strong>, and <strong>Android</strong>.</p></blockquote>
-<p class="tip">Get started by reading the <a href="installation">installation guide</a>.</p><div class="centered" style="margin-top: 50px;">
-  <a class="ue-button" href="https://www.unrealengine.com/marketplace/en-US/product/firebase-features">Download this plugin <img width="40px" height="40px" src="_images/buyueicon.png" alt="Unreal Engine Icon"></a>
-<!--
-  <a class="gumroad-button" href="https://pandoresmarketplace.gumroad.com/l/FirebaseFeatures?wanted=true">Buy this product on</a>
--->
+<body data-page="dynamiclinks.md" class="ready sticky"><main><button class="sidebar-toggle" aria-label="Menu"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button><aside class="sidebar"><h1 class="app-name"><a class="app-name-link" data-nosearch="" href=".">Firebase Features</a></h1><div class="sidebar-nav"><ul><li><p>Setup</p><ul><li><a href="installation" title="Installation">Installation</a></li><li><a href="disableunusedfeatures" title="Disable Unused Features">Disable Unused Features</a></li><li><a href="rebuildplugin" title="Rebuild the Plugin">Rebuild the Plugin</a></li></ul></li><li><p>Components</p><ul><li><a href="admob" title="AdMob">AdMob</a></li><li><a href="analytics" title="Analytics">Analytics</a></li><li><a href="appcheck" title="AppCheck">AppCheck</a></li><li><a href="auth" title="Auth">Auth</a></li><li><a href="firestore" title="Cloud Firestore">Cloud Firestore</a></li><li><a href="functions" title="Cloud Functions">Cloud Functions</a></li><li><a href="messaging" title="Cloud Messaging">Cloud Messaging</a></li><li><a href="storage" title="Cloud Storage">Cloud Storage</a></li><li><a href="crashlytics" title="Crashlytics">Crashlytics</a></li><li class="active"><a href="dynamiclinks" title="Dynamic Links">Dynamic Links</a><ul class="app-sub-sidebar"><li><a class="section-link" href="dynamiclinks.html#listening-to-dynamic-links-events" title="Listening to Dynamic Links Events">Listening to Dynamic Links Events</a></li></ul></li><li><a href="performance" title="Performance">Performance</a></li><li><a href="database" title="Realtime Database">Realtime Database</a></li><li><a href="remoteconfig" title="Remote Config">Remote Config</a></li></ul></li><li><p>Support</p><ul><li><a href="patchnotes" title="Release Notes">Release Notes</a></li><li><a href="troubleshoting" title="Troubleshooting">Troubleshooting</a></li><li><a href="support" title="Support">Support</a></li></ul></li></ul></div></aside><section class="content"><article class="markdown-section" id="main"><h1 id="dynamic-links"><a href="dynamiclinks.html#dynamic-links" data-id="dynamic-links" class="anchor"><span>Dynamic Links</span></a></h1><p>Firebase Dynamic Links are links that work the way you want, on multiple platforms, and whether or not your app is already installed.</p><h2 id="listening-to-dynamic-links-events"><a href="dynamiclinks.html#listening-to-dynamic-links-events" data-id="listening-to-dynamic-links-events" class="anchor"><span>Listening to Dynamic Links Events</span></a></h2><p>You can listen to Dynamic Links with the <code>On Dynamic Link Received</code> node.</p><div class="code-switcher show-cpp-false">
+<div class="switcher">
+<span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
-<h2 id="explore-the-documentation"><a href=".html#explore-the-documentation" data-id="explore-the-documentation" class="anchor"><span>Explore the Documentation</span></a></h2><div class="fb-f-cont">
-<a class="fb-elem" href="firestore">
-  <img src="_images/firebase/Firestore.png" class="fb" width="360px" height="360px" alt="Firestore icon">
-  <div class="fb-txt">
-    Firestore
-  </div>
-</a>
-<a class="fb-elem" href="functions">
-  <img src="_images/firebase/CloudFunctions.png" class="fb" width="360px" height="360px" alt="Cloud Functions icon">
-  <div class="fb-txt">
-    Cloud Functions
-  </div>
-</a>
-<a class="fb-elem" href="auth">
-  <img src="_images/firebase/Auth.png" class="fb" width="360px" height="360px" alt="Firebase Auth icon">
-  <div class="fb-txt">
-    Authentication
-  </div>
-</a>
-<a class="fb-elem" href="database">
-  <img src="_images/firebase/Database.png" class="fb" width="360px" height="360px" alt="Realtime Database icon">
-  <div class="fb-txt">
-    Realtime Database
-  </div>
-</a>
-<a class="fb-elem" href="storage">
-  <img src="_images/firebase/Storage.png" class="fb" width="360px" height="360px" alt="Firebase Cloud Storage icon">
-  <div class="fb-txt">
-    Cloud Storage
-  </div>
-</a>
-<a class="fb-elem" href="appcheck">
-  <img src="_images/firebase/AppCheck.png" class="fb" width="360px" height="360px" alt="Firebase App Check icon">
-  <div class="fb-txt">
-    AppCheck
-  </div>
-</a>
-<a class="fb-elem" href="crashlytics">
-  <img src="_images/firebase/Crashlytics.png" class="fb" width="360px" height="360px" alt="Crashlytics icon">
-  <div class="fb-txt">
-    Crashlytics
-  </div>
-</a>
-<a class="fb-elem" href="admob">
-  <img src="_images/firebase/AdMob.png" class="fb" width="360px" height="360px" alt="AdMob icon">
-  <div class="fb-txt">
-    AdMob
-  </div>
-</a>
-<a class="fb-elem" href="analytics">
-  <img src="_images/firebase/Analytics.png" class="fb" width="360px" height="360px" alt="Firebase Analytics icon">
-  <div class="fb-txt">
-    Analytics
-  </div>
-</a>
-<a class="fb-elem" href="messaging">
-  <img src="_images/firebase/Messaging.png" class="fb" width="360px" height="360px" alt="Firebase Messaging icon">
-  <div class="fb-txt">
-    Cloud Messaging
-  </div>
-</a>
-<a class="fb-elem" href="remoteconfig">
-  <img src="_images/firebase/RemoteConfig.png" class="fb" width="360px" height="360px" alt="Remote Config icon">
-  <div class="fb-txt">
-    RemoteConfig
-  </div>
-</a>
-<a class="fb-elem" href="dynamiclinks">
-  <img src="_images/firebase/Dynamicinks.png" class="fb" width="360px" height="360px" alt="Dynamic Links icon">
-  <div class="fb-txt">
-    Dynamic Links
-  </div>
-</a>
-<a class="fb-elem" href="performance">
-  <img src="_images/firebase/Performance.png" class="fb" width="360px" height="360px" alt="Firebase Performance icon">
-  <div class="fb-txt">
-    Performance
-  </div>
-</a>
-</div>
-<h2 id="watch-tutorial-videos"><a href=".html#watch-tutorial-videos" data-id="watch-tutorial-videos" class="anchor"><span>Watch Tutorial Videos</span></a></h2><div style="display:flex;justify-content:space-evenly;">
-<div style="max-width: 400px;flex-grow:1;">
-<iframe src="https://www.youtube.com/embed/SbVVrKnS78Y?rel=0" class="video" alt="Installation Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" webkitallowfullscreen="">
-</iframe>
-</div>
-<div style="max-width: 400px;flex-grow:1;">
-<iframe src="https://www.youtube.com/embed/rVBxrr6i76Q?rel=0" class="video" alt="Installation Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" webkitallowfullscreen="">
-</iframe>
+<div class="cpp">
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example code not available yet.</span></code></pre></div>
+<div class="bp">
+<div class="bpcode">
+<textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_Event Name="K2Node_Event_0"
+   EventReference=(MemberParent=Class'"/Script/Engine.Actor"',MemberName="ReceiveBeginPlay")
+   bOverrideFunction=True
+   NodePosX=2864
+   NodePosY=-8000
+   NodeGuid=EDA9BCD24CAE469A81DBF3B3582B7D30
+   CustomProperties Pin (PinId=F155888A4133BB95B824C1BCAC89DF05,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent=Class'"/Script/Engine.Actor"',MemberName="ReceiveBeginPlay"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+   CustomProperties Pin (PinId=0B1ED49045A150980B45CFB205ADE038,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_AsyncAction_112 332501A247122FA70770B19F76CFE262,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+End Object
+Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_112"
+   ProxyFactoryFunctionName="ListenOnDynamicLinkReceived"
+   ProxyFactoryClass=Class'"/Script/FirebaseFeatures.BlueprintFirebaseDynamicLinksProxy"'
+   ProxyClass=Class'"/Script/FirebaseFeatures.BlueprintFirebaseDynamicLinksProxy"'
+   NodePosX=3056
+   NodePosY=-8000
+   NodeGuid=387B56BA41EDDD9B4FCA7189623A80B9
+   CustomProperties Pin (PinId=332501A247122FA70770B19F76CFE262,PinName="execute",PinToolTip="\nExec",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,LinkedTo=(K2Node_Event_0 0B1ED49045A150980B45CFB205ADE038,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+   CustomProperties Pin (PinId=CD9B72B84D3A553833A2D8B5B02CC9EA,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+   CustomProperties Pin (PinId=25820E8C45B9AD42ADE18FBF69C842EF,PinName="OnDynamicLinkReceived",PinFriendlyName="On Dynamic Link Received",PinToolTip="On Dynamic Link Received",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+   CustomProperties Pin (PinId=F1A0AFFC4E7AECE1ED3F288283153B8C,PinName="URL",PinToolTip="URL",Direction="EGPD_Output",PinType.PinCategory="string",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+   CustomProperties Pin (PinId=1A7DFE8F4527D0B09BD3ADA83D3F3A6E,PinName="MatchStrength",PinToolTip="Match Strength",Direction="EGPD_Output",PinType.PinCategory="byte",PinType.PinSubCategory="",PinType.PinSubCategoryObject=Enum'"/Script/FirebaseFeatures.ELinkMatchStrength"',PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=True,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+End Object
+</textarea>
+<img src="_images/DynamicLinksEvent.png">
+<button onclick="copyBlueprintCode(this)">Copy Code</button>
 </div>
 </div>
-<div class="docsify-pagination-container"></div></article></section></main>
+</div><div class="docsify-pagination-container">
+        <div class="pagination-item pagination-item--previous">
+          <a href="crashlytics">
+            <div class="pagination-item-label">
+              <svg width="10" height="16" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                <polyline fill="none" vector-effect="non-scaling-stroke" points="8,2 2,8 8,14"></polyline>
+              </svg>
+              <span>PREVIOUS</span>
+            </div>
+            <div class="pagination-item-title">Crashlytics</div>
+      <div class="pagination-item-subtitle">Components</div></a>
+        </div>
+      
+        <div class="pagination-item pagination-item--next">
+          <a href="performance">
+            <div class="pagination-item-label">
+              <span>NEXT</span>
+              <svg width="10" height="16" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                <polyline fill="none" vector-effect="non-scaling-stroke" points="2,2 8,8 2,14"></polyline>
+              </svg>
+            </div>
+            <div class="pagination-item-title">Performance</div>
+      <div class="pagination-item-subtitle">Components</div></a>
+        </div>
+      </div></article></section></main>
 <script>
 	function adblock() { if (window.canRunAds === undefined) { document.getElementById("block-notice").style.display = 'block'; } }
 </script>
