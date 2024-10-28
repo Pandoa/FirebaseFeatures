@@ -76,26 +76,35 @@ async function main() {
     const pageTitle = document.querySelector('title');
     const pageDescription = document.querySelector('meta[name="description"]');
     const pageKeywords = document.querySelector('meta[name="keywords"]');
+    const ldTag = document.querySelector('script[type="application/ld+json"]');
+    const ldTagContent = JSON.parse(ldTag.innerHTML);
+
+    ldTagContent["datePublished"] = new Date().toISOString();
 
     if (typeof config["title"] === 'object' && config["title"][route]) {
-      pageTitle.innerHTML = config["title"][route];
+      ldTagContent["headline"] = pageTitle.innerHTML = config["title"][route];
     }
     else {
       pageTitle.innerHTML += ' | Firebase for Unreal Engine';
     }
 
     if (typeof config["descriptions"] === 'object' && config["descriptions"][route]) {
-      pageDescription.setAttribute("content", config["descriptions"][route]);
+      ldTagContent["description"] = pageDescription.setAttribute("content", config["descriptions"][route]);
     }
     
     if (typeof config["keywords"] === 'object' && config["keywords"][route]) {
-      pageKeywords.setAttribute("content", config["keywords"][route]);
+      const keywords = config["keywords"][route];
+      pageKeywords.setAttribute("content", keywords);
+      ldTagContent["keywords"] = keywords.split(',').slice(0, 99);
     }
 
     const linksToFix = document.querySelectorAll('a[href^="#/"]');
     for (const linkToFix of linksToFix) {
       linkToFix.href = linkToFix.getAttribute("href").slice(2);
     }
+
+    
+    ldTag.innerHTML = JSON.stringify(ldTagContent);
 
     fs.writeFileSync((config["out_dir"] ?? OUT_DIR) + routeName + '.html', 
       dom.serialize().replaceAll('\n\n', '\n').replaceAll('\n\n', '\n'));
