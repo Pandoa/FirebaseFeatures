@@ -88,14 +88,14 @@ function onCollapserClicked(event) {
 <div class="collapser-container">
 <div class="collapser">
 <h2>
-  Application Crashes at Launch in Testflight 
+  Application Crashes at Launch in Testflight or Shipping Builds
   <span class="label-ios" />
 </h2>
 <div class="collapser-content">
 <div class="collapser-content-container">
 
-
-Open your project's `Target.cs` and add the lines of code under the `TODO` in the constructor:
+1. Make sure you have the latest version of the plugin downloaded from the latest Engine version.
+2. Open your project's `Target.cs` and add the lines of code under the `TODO` in the constructor:
 
 ```cs
 // Your target. Already present in the file.

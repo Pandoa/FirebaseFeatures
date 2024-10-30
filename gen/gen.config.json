@@ -3,6 +3,7 @@
   "out_dir": "docs/",
   "src_dir": "src/",
   "load_timeout": 20000,
+  "title_append": " | Firebase Features",
   "remove_selectors": [
     ".delete-static",
     "script[src*=\"livereload.js\"]",
