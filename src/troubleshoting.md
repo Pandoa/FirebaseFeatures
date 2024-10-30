@@ -19,12 +19,6 @@ function onCollapserClicked(event) {
     collapser.parentNode.className = collapser.parentNode.className.replaceAll("collapsed", "");
   }
 }
-(function () {
-  const collapsers = document.querySelectorAll(".collapser > h2");
-  for (const collapser of collapsers) {
-    collapser.onclick = onCollapserClicked;
-  }
-})();
 </script>
 
 <style>
@@ -417,3 +411,12 @@ CONTENT
 -->
 
 <div style="margin-bottom: 200px" />
+
+<script>  
+(function () {
+  const collapsers = document.querySelectorAll(".collapser > h2");
+  for (const collapser of collapsers) {
+    collapser.onclick = onCollapserClicked;
+  }
+})();
+</script>
