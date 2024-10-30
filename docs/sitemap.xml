@@ -7,6 +7,21 @@
 	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
 	<url>
+		<loc>https://pandoa.github.io/FirebaseFeatures/favicon.svg</loc>
+		<changefreq>yearly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>https://pandoa.github.io/FirebaseFeatures/favicon-32x32.png</loc>
+		<changefreq>yearly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>https://pandoa.github.io/FirebaseFeatures/favicon-16x16.png</loc>
+		<changefreq>yearly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
 		<loc>https://pandoa.github.io/FirebaseFeatures/</loc>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
