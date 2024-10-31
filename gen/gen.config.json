@@ -10,13 +10,24 @@
     "iframe[allow=\"join-ad-interest-group\"]"
   ],
   "string_replaces": [
-    ["href=\"/\"", "href=\".\""],
-    ["?id=", ".html#"],
-    ["js.html#", "js.html?id="]
+    [
+      "href=\"/\"",
+      "href=\".\""
+    ],
+    [
+      "?id=",
+      ".html#"
+    ],
+    [
+      "js.html#",
+      "js.html?id="
+    ]
   ],
   "pages": {
     "index": {
       "title": "How to add Firebase to Unreal Engine",
+      "description": "Unlock the power of Firebase to enhance your Unreal Engine projects. Learn how to easily integrate Firebase services like Realtime Database, Cloud Storage, and Authentication to build robust and scalable games and applications.",
+      "keywords": "Firebase, Unreal Engine, Google Firebase, Realtime Database, Cloud Storage, Authentication, Game Development, Mobile Game Development, Backend Services, Cloud Services, Game Development Tools, Mobile Game Development Tools",
       "priority": 1,
       "in_sitemap": true
     },
@@ -42,11 +53,15 @@
     },
     "appcheck": {
       "title": "How to add Firebase AppCheck in Unreal Engine",
+      "description": "Learn how to seamlessly integrate Firebase AppCheck into your Unreal Engine projects to enhance security and protect your backend services. Our comprehensive guide covers step-by-step instructions, code examples, and troubleshooting tips.",
+      "keywords": "Firebase AppCheck, Unreal Engine, Game Development, Mobile Game Development, Backend Security, App Security, Firebase, Google Firebase, Unreal Engine 5, Game Security, Mobile Game Security, App Protection, Cybersecurity, Cloud Security, Authentication, Authorization",
       "priority": 1,
       "in_sitemap": true
     },
     "database": {
       "title": "How to interact with Firebase Realtime Database in Unreal Engine",
+      "description": "Discover how to effectively interact with Firebase Realtime Database in Unreal Engine to create real-time, data-driven games and applications. Our guide provides clear explanations, code examples, and best practices for efficient data synchronization and management.",
+      "keywords": "Firebase Realtime Database, Unreal Engine, Real-time Database, Game Development, Mobile Game Development, Data Synchronization, Real-time Data, Cloud Database, Firebase, Google Firebase, Unreal Engine 5, Game Development Tools, Mobile Game Development Tools",
       "priority": 1,
       "in_sitemap": true
     },
@@ -59,8 +74,23 @@
     },
     "crashlytics": {
       "title": "How to use Crashlytics in Unreal Engine",
+      "description": "Enhance your Unreal Engine projects with Crashlytics to gain valuable insights into crashes and errors. Learn how to easily integrate Crashlytics to improve app stability and user experience.",
+      "keywords": "Crashlytics, Unreal Engine, Crash Reporting, Error Tracking, Mobile Game Development, Game Development, App Stability, Bug Tracking, Firebase, Google Firebase, Unreal Engine 5",
       "priority": 1,
       "in_sitemap": true
+    },
+    "remoteconfig": {
+      "title": "How to Use Firebase Remote Config in Unreal Engine",
+      "description": "Leverage Firebase Remote Config to dynamically update your Unreal Engine games without requiring app store updates. Learn how to easily implement remote configuration to personalize user experiences and A/B test features.",
+      "keywords": "Firebase Remote Config, Unreal Engine, Remote Configuration, A/B Testing, Feature Flags, Game Development, Mobile Game Development, App Customization, User Experience, Firebase, Google Firebase, Unreal Engine 5"
+    },
+    "auth": {
+      "title": "How to Implement Firebase Authentication in Unreal Engine",
+      "description": "Secure your Unreal Engine games with Firebase Authentication. Learn how to easily integrate email/password, phone number, Google Sign-In, Apple Sign-In, and social sign-in methods to provide a seamless user experience.",
+      "keywords": "Firebase Authentication, Unreal Engine, User Authentication, User Login, User Signup, Email/Password Authentication, Phone Number Authentication, Social Sign-in, Security, Game Development, Mobile Game Development, Firebase, Google Firebase, Unreal Engine 5, Apple"
+    },
+    "patchnotes": {
+
     }
   }
 }
