@@ -55,7 +55,7 @@ The following image shows the required steps to arrive to the Download button:
 
 <div class="centered">
 
-![Firebase Console Download Services Actions](_images/FBConsoleProjectSettings.png)
+<img src="_images/FBConsoleProjectSettings.png" alt="Firebase Console Download Services Actions" />
 
 </div>
 
