@@ -2,6 +2,8 @@
 
 Explore the [documentation](https://pandoa.github.io/FirebaseFeatures).
 
+The plugin can be downloaded from [this link](https://www.fab.com/listings/feaef5b9-d11d-4609-84de-f4551203682d).
+
 ## Setup
 - [Installation](https://pandoa.github.io/FirebaseFeatures/installation)
 
