@@ -26,7 +26,7 @@
   "pages": {
     "index": {
       "title": "How to add Firebase to Unreal Engine",
-      "description": "Unlock the power of Firebase to enhance your Unreal Engine projects. Learn how to easily integrate Firebase services like Realtime Database, Cloud Storage, and Authentication to build robust and scalable games and applications.",
+      "description": "Follow this guide to start using Firebase in Unreal Engine on Windows, Linux, MacOS, iOS, or Android. See how to authenticate users, show ads, get data from Firestore or Realtime Database, use Remote Config or add crashlytics to your game.",
       "keywords": "Firebase, Unreal Engine, Google Firebase, Realtime Database, Cloud Storage, Authentication, Game Development, Mobile Game Development, Backend Services, Cloud Services, Game Development Tools, Mobile Game Development Tools",
       "priority": 1,
       "in_sitemap": true
