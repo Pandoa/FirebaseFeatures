@@ -6,7 +6,7 @@
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon.svg" type="image/svg+xml" sizes="any">
 	<link rel="shortcut icon" href="https://pandoa.github.io/FirebaseFeatures/favicon.ico" type="image/x-icon">
 	<title>How to add Google Analytics in Unreal Engine</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to add Google Analytics in Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Learn how to use Google Analytics in your Unreal Engine projects with Firebase. Explore the available methods and dive into Blueprint code examples for practical implementation. Gain valuable insights into your game's user behavior and performance with Google Analytics.","image":"https://pandoa.github.io/FirebaseFeatures/favicon.svg","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/favicon.svg"}},"proficiencyLevel":"Beginner","datePublished":"2024-11-01T16:51:46.886Z","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","keywords":["Firebase plugin"," Google Analytics"," Unreal Engine"," Blueprints"," game development"," user analytics"," game performance"," data analysis"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to add Google Analytics in Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Learn how to use Google Analytics in your Unreal Engine projects with Firebase. Explore the available methods and dive into Blueprint code examples for practical implementation. Gain valuable insights into your game's user behavior and performance with Google Analytics.","image":"https://pandoa.github.io/FirebaseFeatures/favicon.svg","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/favicon.svg"}},"proficiencyLevel":"Beginner","datePublished":"2024-11-01T17:09:26.207Z","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","keywords":["Firebase plugin"," Google Analytics"," Unreal Engine"," Blueprints"," game development"," user analytics"," game performance"," data analysis"]}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="Firebase plugin, Google Analytics, Unreal Engine, Blueprints, game development, user analytics, game performance, data analysis">
 	<meta name="description" content="Learn how to use Google Analytics in your Unreal Engine projects with Firebase. Explore the available methods and dive into Blueprint code examples for practical implementation. Gain valuable insights into your game's user behavior and performance with Google Analytics.">
@@ -1544,6 +1544,25 @@ setTimeout(() => {
       <div class="pagination-item-subtitle">Components</div></a>
         </div>
       </div></article></section></main>
+	
+	<script>
+function setupStatic() {
+		const navbarButton = document.getElementsByClassName("sidebar-toggle");
+		if (navbarButton) {
+			for (const button of navbarButton) {
+				button.onclick = function() {
+					if (document.body.classList.contains("close")) {
+						document.body.classList.remove("close");
+					}
+					else {
+						document.body.classList.add("close");
+					}
+				}
+			}
+		}
+};
+setupStatic();
+	</script>
 	<script>
 		function adblock() { if (window.canRunAds === undefined) { document.getElementById("block-notice").style.display = 'block'; } }
 	</script>

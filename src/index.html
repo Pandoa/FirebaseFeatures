@@ -1735,6 +1735,25 @@
 	</script>
 
 	<div id="app"></div>
+	
+	<script>
+function setupStatic() {
+		const navbarButton = document.getElementsByClassName("sidebar-toggle");
+		if (navbarButton) {
+			for (const button of navbarButton) {
+				button.onclick = function() {
+					if (document.body.classList.contains("close")) {
+						document.body.classList.remove("close");
+					}
+					else {
+						document.body.classList.add("close");
+					}
+				}
+			}
+		}
+};
+setupStatic();
+	</script>
 
 	<script>
 		function adblock() { if (window.canRunAds === undefined) { document.getElementById("block-notice").style.display = 'block'; } }
