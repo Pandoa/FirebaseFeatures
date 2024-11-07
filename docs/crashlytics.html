@@ -1,12 +1,12 @@
 <!DOCTYPE html><html lang="en" style="background-color:#101010;"><head>
 	<meta charset="UTF-8">
-	<link rel="icon" type="image/x-icon" href="/favicon-32x32.png">
+	<link rel="icon" type="image/x-icon" href="favicon-32x32.png">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon-16x16.png" type="image/png" sizes="16x16">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon-32x32.png" type="image/png" sizes="32x32">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/favicon.svg" type="image/svg+xml" sizes="any">
 	<link rel="shortcut icon" href="https://pandoa.github.io/FirebaseFeatures/favicon.ico" type="image/x-icon">
 	<title>How to use Crashlytics in Unreal Engine</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to use Crashlytics in Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Enhance your Unreal Engine projects with Crashlytics to gain valuable insights into crashes and errors. Learn how to easily integrate Crashlytics to improve app stability and user experience.","image":"https://pandoa.github.io/FirebaseFeatures/favicon.svg","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/favicon.svg"}},"proficiencyLevel":"Beginner","datePublished":"2024-11-01T17:14:07.433Z","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","keywords":["Crashlytics"," Unreal Engine"," Crash Reporting"," Error Tracking"," Mobile Game Development"," Game Development"," App Stability"," Bug Tracking"," Firebase"," Google Firebase"," Unreal Engine 5"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to use Crashlytics in Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Enhance your Unreal Engine projects with Crashlytics to gain valuable insights into crashes and errors. Learn how to easily integrate Crashlytics to improve app stability and user experience.","image":"https://pandoa.github.io/FirebaseFeatures/favicon.svg","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/favicon.svg"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2024-11-07T08:27:27.278Z","keywords":["Crashlytics"," Unreal Engine"," Crash Reporting"," Error Tracking"," Mobile Game Development"," Game Development"," App Stability"," Bug Tracking"," Firebase"," Google Firebase"," Unreal Engine 5"]}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="Crashlytics, Unreal Engine, Crash Reporting, Error Tracking, Mobile Game Development, Game Development, App Stability, Bug Tracking, Firebase, Google Firebase, Unreal Engine 5">
 	<meta name="description" content="Enhance your Unreal Engine projects with Crashlytics to gain valuable insights into crashes and errors. Learn how to easily integrate Crashlytics to improve app stability and user experience.">
@@ -1503,13 +1503,13 @@ setupStatic();
 			gtag('js', new Date());
 			gtag('config', 'G-EGXMT0XTHL');
 			if (window.puppeteer !== true) {
-				setTimeout(() => {
+				// setTimeout(() => {
 					const script = document.createElement('script');
-					script.src = "https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL";
-					script.defer = true;
+					script.src = "https://www.googletagmanager.com/gtag/js?" + "id=G-EGXMT0XTHL";
+					script.async = true;
 					script.setAttribute("class", "delete-static");
-					document.getElementsByTagName('head')[0].appendChild(script);
-				}, 4000);
+					document.body.appendChild(script);
+				// }, 4000);
 			}
 	</script>
 <div class="progress" style="opacity: 0; width: 0%;"></div></body></html>
