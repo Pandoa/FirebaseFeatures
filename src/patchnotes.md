@@ -36,6 +36,20 @@ section.content li.new:before {
 }
 </style>
 
+### `1.7.25`
+<ul>
+  <li>
+    Updated the Firebase C++ SDK for Android to version <code>12.4.0</code>.
+  </li>
+  <li>
+    The plugin updates Gradle to <code>8.9</code> before a build to support Android API <code>34</code> and the latest Firebase Java libraries.
+  </li>
+  <li class="warn">
+    The plugin now requires a target and compile SDK of level <code>34+</code> for Android.
+  </li>
+</ul>
+
+
 ### `1.7.24`
 <ul>
   <li class="new">
