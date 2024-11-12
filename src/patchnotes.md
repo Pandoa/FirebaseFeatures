@@ -36,6 +36,14 @@ section.content li.new:before {
 }
 </style>
 
+
+### `1.7.26`
+<ul>
+<li class="new">
+Add support for Unreal Engine 5.5.
+</li>
+</ul>
+
 ### `1.7.25`
 <ul>
   <li>
