@@ -80,8 +80,8 @@
       "in_sitemap": true
     },
     "remoteconfig": {
-      "title": "How to Use Firebase Remote Config in Unreal Engine",
-      "description": "Leverage Firebase Remote Config to dynamically update your Unreal Engine games without requiring app store updates. Learn how to easily implement remote configuration to personalize user experiences and A/B test features.",
+      "title": "Tutorial UE + Firebase Remote Config",
+      "description": "Learn how to use Firebase Remote Config to dynamically update your Unreal Engine games without requiring app store updates. Learn how to easily implement remote configuration to personalize user experiences and A/B test features.",
       "keywords": "Firebase Remote Config, Unreal Engine, Remote Configuration, A/B Testing, Feature Flags, Game Development, Mobile Game Development, App Customization, User Experience, Firebase, Google Firebase, Unreal Engine 5"
     },
     "auth": {
@@ -90,7 +90,8 @@
       "keywords": "Firebase Authentication, Unreal Engine, User Authentication, User Login, User Signup, Email/Password Authentication, Phone Number Authentication, Social Sign-in, Security, Game Development, Mobile Game Development, Firebase, Google Firebase, Unreal Engine 5, Apple"
     },
     "patchnotes": {
-
+      "title": "Update Releases for the Firebase Plugin for Unreal Engine",
+      "description": "Check what new features were added to the plugin. Make sure you are using the latest version to get the latest features."
     }
   }
 }
