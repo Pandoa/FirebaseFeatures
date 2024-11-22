@@ -1494,7 +1494,7 @@ check(Collection);
 UFirestoreDocumentReference* const Document = Collection->GetDocumentFromPath(TEXT("LA"));
 check(Document);
 
-Document->AddSnapshotListener(FDocumentSnapshotListenerCallback::CreateLambda([](const EFirestoreError Error, const FFirestoreDocumentSnapshot& Snapshot) -> void
+Document->AddSnapshotListener(FDocumentSnapshotListenerCallback::CreateLambda([](const EFirestoreError Error, const FFirestoreDocumentSnapshot& Snapshot, const TArray<class UFirestoreDocumentChange*>& Changes) -> void
 {
     if (Error == EFirestoreError::Ok)
     {
@@ -1648,7 +1648,7 @@ check(Collection);
 UFirestoreQuery* const Query = Collection->WhereEqualTo(TEXT("state"), TEXT("CA"));
 check(Query);
 
-Query->AddSnapshotListener(FQuerySnapshotListenerCallback::CreateLambda([](const EFirestoreError Error, const TArray<FFirestoreDocumentSnapshot>& Snapshots) -> void
+Query->AddSnapshotListener(FQuerySnapshotListenerCallback::CreateLambda([](const EFirestoreError Error, const TArray<FFirestoreDocumentSnapshot>& Snapshots, const TArray<class UFirestoreDocumentChange*>& Changes) -> void
 {
     if (Error == EFirestoreError::Ok)
     {
