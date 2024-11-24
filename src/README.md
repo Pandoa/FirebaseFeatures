@@ -6,7 +6,7 @@
 
 # Firebase Features - Firebase Integration for Unreal Engine
 
-> A native Firebase integration for Unreal Engine supporting **Windows**, **MacOS**, **Linux** **iOS**, and **Android**.
+> A native Firebase integration for Unreal Engine supporting **Windows**, **MacOS**, **Linux**, **iOS**, and **Android**.
 
 !> Get started by reading the [installation guide](/installation).
 

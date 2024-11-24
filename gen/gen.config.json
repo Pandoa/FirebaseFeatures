@@ -1,5 +1,6 @@
 {
   "root_url": "http://localhost:3000",
+  "target_url": "https://pandoa.github.io/FirebaseFeatures/",
   "out_dir": "docs/",
   "src_dir": "src/",
   "load_timeout": 20000,
@@ -23,6 +24,9 @@
       "js.html?id="
     ]
   ],
+  "translations": {
+    "fr": "translation/fr.json"
+  },
   "pages": {
     "index": {
       "title": "How to add Firebase to Unreal Engine",
