@@ -8,6 +8,13 @@
 # Auth
 You can use Firebase Authentication to allow users to sign in to your app using one or more sign-in methods, including email address and password sign-in, and federated identity providers such as Google Sign-in and Facebook Login.
 
+<div style="display:flex;justify-content:center">
+<div style="max-width: 640px;flex-grow:1;">
+<iframe src="https://www.youtube.com/embed/TyGt6ZA816E?rel=0" class="video" alt="Firebase Auth Video Guide" title="How to login using Firebase" allow="fullscreen" allowfullscreen="1" mozallowfullscreen msallowfullscreen oallowfullscreen webkitallowfullscreen>
+</iframe>
+</div>
+</div>
+
 ## Get Started
 
 ### Sign Up new Users

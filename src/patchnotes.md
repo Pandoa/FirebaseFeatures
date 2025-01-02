@@ -36,6 +36,15 @@ section.content li.new:before {
 }
 </style>
 
+### `1.8.0`
+<ul>
+<li>
+Fixed a crash when trying to sign in with Apple with an invalid credential.
+</li>
+<li>
+Removed the deprecated methods in the AdMob API.
+</li>
+</ul>
 
 ### `1.7.26`
 <ul>
@@ -53,7 +62,7 @@ Add support for Unreal Engine 5.5.
     The plugin updates Gradle to <code>8.9</code> before a build to support Android API <code>34</code> and the latest Firebase Java libraries.
   </li>
   <li class="warn">
-    The plugin now requires a target and compile SDK of level <code>34+</code> for Android.
+    The plugin now requires a target and compile SDK of level <code>34+</code> for Android. Min SDK can be set lower.
   </li>
 </ul>
 

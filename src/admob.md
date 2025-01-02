@@ -14,7 +14,7 @@ AdMob helps you monetize your mobile app through in-app advertising. Three types
 
 <div style="display:flex;justify-content:center">
 <div style="max-width: 640px;flex-grow:1;">
-<iframe src="https://www.youtube.com/embed/rVBxrr6i76Q?rel=0" class="video" alt="Installation Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen msallowfullscreen oallowfullscreen webkitallowfullscreen>
+<iframe src="https://www.youtube.com/embed/rVBxrr6i76Q?rel=0" class="video" alt="AdMob Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen msallowfullscreen oallowfullscreen webkitallowfullscreen>
 </iframe>
 </div>
 </div>

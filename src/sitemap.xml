@@ -7,12 +7,40 @@
 	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
 	<url>
+		<loc>https://pandoa.github.io/FirebaseFeatures/favicon.svg</loc>
+		<changefreq>yearly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>https://pandoa.github.io/FirebaseFeatures/favicon.ico</loc>
+		<changefreq>yearly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>https://pandoa.github.io/FirebaseFeatures/favicon-32x32.png</loc>
+		<changefreq>yearly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>https://pandoa.github.io/FirebaseFeatures/favicon-16x16.png</loc>
+		<changefreq>yearly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
 		<loc>https://pandoa.github.io/FirebaseFeatures/</loc>
+		<xhtml:link
+			rel="alternate"
+			hreflang="fr"
+			href="https://pandoa.github.io/FirebaseFeatures/fr/"/>
 		<changefreq>weekly</changefreq>
 		<priority>1</priority>
 	</url>
 	<url>
 		<loc>https://pandoa.github.io/FirebaseFeatures/installation</loc>
+		<xhtml:link
+			rel="alternate"
+			hreflang="fr"
+			href="https://pandoa.github.io/FirebaseFeatures/fr/installation"/>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 		<video:video>
@@ -33,6 +61,10 @@
 	</url>
 	<url>
 		<loc>https://pandoa.github.io/FirebaseFeatures/admob</loc>
+		<xhtml:link
+			rel="alternate"
+			hreflang="fr"
+			href="https://pandoa.github.io/FirebaseFeatures/fr/admob"/>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 		<video:video>
