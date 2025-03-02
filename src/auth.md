@@ -1365,7 +1365,7 @@ End Object
 3. In the Editor, open the project's settings and fill the client ID given by Facebook.
 
 <div class="centered">
-<img src="_images/FacebookLoginConfig.png" alt="signin with facebook blueprint example"/>
+<img src="_images/FacebookLoginConfig.png" alt="setup facebook blueprint"/>
 </div>
 
 Now you can simply add the following node on the click of the button
