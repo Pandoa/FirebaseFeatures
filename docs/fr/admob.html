@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>How to show ads in Unreal Engine with Firebase AdMob</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to show ads in Unreal Engine with Firebase AdMob","name":"Firebase Integration for Unreal Engine","description":"Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2025-03-02T09:55:20.969Z","keywords":["Firebase plugin"," AdMob"," Unreal Engine"," Blueprints"," Blueprints"," monetization"," game development"," mobile advertising"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to show ads in Unreal Engine with Firebase AdMob","name":"Firebase Integration for Unreal Engine","description":"Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2025-04-05T15:27:33.961Z","keywords":["Firebase plugin"," AdMob"," Unreal Engine"," Blueprints"," Blueprints"," monetization"," game development"," mobile advertising"]}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="Firebase plugin, AdMob, Unreal Engine, Blueprints, Blueprints, monetization, game development, mobile advertising">
 	<meta name="description" content="Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.">
@@ -2276,15 +2276,26 @@ setupStatic();
 	
 	
 	
+	<script src="https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL&amp;l=dataLayer&amp;cx=c&amp;_dbg=918" async=""></script>
 	<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
 			gtag('config', 'G-EGXMT0XTHL');
-			if (window.puppeteer !== true) {
+			
+		  gtag('event', 'screen_view', {
+			'app_name': 'myAppName',
+			'screen_name': 'Home'
+		  });
+		  gtag('event', 'screen_view', {
+			'app_name': 'myAppName2',
+			'screen_name': 'Home 2 with spaces'
+		  });
+		  
+			if (window.puppeteer !== true && false) {
 				// setTimeout(() => {
 					const script = document.createElement('script');
-					script.src = "https://www.googletagmanager.com/gtag/js?" + "id=G-EGXMT0XTHL";
+					script.src = "https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL&_dbg=10";
 					script.async = true;
 					script.setAttribute("class", "delete-static");
 					document.body.appendChild(script);
