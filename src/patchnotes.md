@@ -4,6 +4,8 @@ This section contains release notes for the plugin.
 
 !> The Unreal Engine Marketplace allows updates only for the last three major Engine versions. To get the latest version of the plugin on older Engine versions, download the plugin through the latest Engine installation or contact our support email address.
 
+---
+
 <h2 style="display:none">Firebase Features Release Note List<h2>
 
 <style>
@@ -36,6 +38,28 @@ section.content li.new:before {
 }
 </style>
 
+
+### `1.8.2`
+<ul>
+<li class="new">
+  Added <code>WaitForEmailVerification</code> blueprints node.
+</li>
+<li>
+  Fixed an iOS build error when disabling Remote Config with Firebase Performance enabled.
+</li>
+</ul>
+
+
+### `1.8.1`
+<ul>
+<li class="new">
+  Added <code>TaggedForUnderAgeOfConsent</code> property on the Ad Request object.
+</li>
+<li>
+  Updated the Firebase C++ SDK for Windows to version <code>12.6.0</code>. This change is disabled by default due to incompatibility with Fab's build farm. Follow the instructions in <code>FirebaseFeatures.Build.cs</code> to use this version. 
+</li>
+</ul>
+
 ### `1.8.0`
 <ul>
 <li>
@@ -45,6 +69,8 @@ Fixed a crash when trying to sign in with Apple with an invalid credential.
 Removed the deprecated methods in the AdMob API.
 </li>
 </ul>
+
+---
 
 ### `1.7.26`
 <ul>

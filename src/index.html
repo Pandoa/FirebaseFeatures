@@ -450,7 +450,7 @@
 
 		.markdown-section hr {
 			border: none;
-			border-bottom: 1px solid #eee;
+			border-bottom: 1px solid #aaa;
 			margin: 2em 0
 		}
 
@@ -1848,15 +1848,26 @@ setupStatic();
 				});
 			})();
 	</script>
+	<script src="https://www.googletagmanager.com/gtag/js?id=G-EGXMT0XTHL&l=dataLayer&cx=c&_dbg=918" async></script>
 	<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
 			gtag('config', 'G-EGXMT0XTHL');
-			if (window.puppeteer !== true) {
+			
+		  gtag('event', 'screen_view', {
+			'app_name': 'myAppName',
+			'screen_name': 'Home'
+		  });
+		  gtag('event', 'screen_view', {
+			'app_name': 'myAppName2',
+			'screen_name': 'Home 2 with spaces'
+		  });
+		  
+			if (window.puppeteer !== true && false) {
 				// setTimeout(() => {
 					const script = document.createElement('script');
-					script.src = "https://www.googletagmanager.com/gtag/js?" + "id=G-EGXMT0XTHL";
+					script.src = "https://www.googletagmanager.com/gtag/js?id=G-EGXMT0XTHL&_dbg=10";
 					script.async = true;
 					script.setAttribute("class", "delete-static");
 					document.body.appendChild(script);
