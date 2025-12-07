@@ -36,8 +36,83 @@ section.content li.new {
 section.content li.new:before {
   content: url("_svgs/plus.svg");
 }
+
+section.content ul > li > ul {
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 </style>
 
+### `1.8.8`
+<ul>
+<li class="new">
+Add support for UMP:
+<ul>
+<li class="new" style="margin-left">Add method <code>GetConsentStatus</code></li>
+<li class="new" style="margin-left">Add method <code>GetConsentFormStatus</code></li>
+<li class="new" style="margin-left">Add method <code>GetPrivacyOptionsRequirementStatus</code></li>
+<li class="new" style="margin-left">Add method <code>CanRequestAds</code></li>
+<li class="new" style="margin-left">Add method <code>Reset</code></li>
+<li class="new" style="margin-left">Add method <code>RequestConsentInfoUpdate</code></li>
+<li class="new" style="margin-left">Add method <code>LoadConsentForm</code></li>
+<li class="new" style="margin-left">Add method <code>ShowConsentForm</code></li>
+<li class="new" style="margin-left">Add method <code>LoadAndShowConsentFormIfRequired</code></li>
+</ul>
+</li>
+<li>
+    Updated the Firebase C++ SDK for Windows to version <code>13.3.0</code>.
+</li>
+<li>
+    Updated the Firebase C++ SDK for iOS to version <code>13.3.0</code>.
+</li>
+
+</ul>
+
+### `1.8.7`
+<ul>
+<li class="new">
+Add support for Unreal Engine 5.7
+</li>
+</ul>
+
+### `1.8.6`
+<ul>
+<li class="new">
+Add support for the Firebase C++ SDK <code>13.2.0</code>
+</li>
+<li>
+Prepare the release of Firebase UMP
+</li>
+</ul>
+
+### `1.8.5`
+<ul>
+<li>
+Fix Realtime Database transactions aborting when using Blueprints
+</li>
+<li>
+Fix invalid config key name for Firebase Performance
+</li>
+</ul>
+
+### `1.8.4`
+
+<ul>
+<li class="new">
+Add Blueprint node Request App Tracking Transparency (iOS)
+</li>
+</ul>
+
+### `1.8.3`
+<ul>
+<li>
+    Updated the Firebase C++ SDK for Windows to version <code>11.10.0</code> for older Engine versions.
+</li>
+<li>
+    Updated the Firebase C++ SDK for MacOS to version <code>11.10.0</code> for older Engine versions.
+</li>
+</ul>
 
 ### `1.8.2`
 <ul>

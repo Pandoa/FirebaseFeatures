@@ -25,7 +25,8 @@
     ]
   ],
   "translations": {
-    "fr": "translation/fr.json"
+    "fr": "translation/fr.json",
+    "es": "translation/es.json"
   },
   "pages": {
     "index": {
@@ -96,6 +97,11 @@
     "patchnotes": {
       "title": "Update Releases for the Firebase Plugin for Unreal Engine",
       "description": "Check what new features were added to the plugin. Make sure you are using the latest version to get the latest features."
+    },
+    "ump": {
+      "title": "Manage User Consent for GDPR & CCPA in Unreal Engine using UMP",
+      "description": "Integrate Google's User Messaging Platform (UMP) into Unreal Engine to easily comply with privacy regulations like GDPR and CCPA by managing ad and data consent.",
+      "keywords": "UMP, User Messaging Platform, Unreal Engine, GDPR, CCPA, user consent, privacy, AdMob, Google, ads"
     }
   }
 }
