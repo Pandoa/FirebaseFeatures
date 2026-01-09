@@ -107,10 +107,14 @@ public class MyProjectTarget : TargetRules
 
         ExtraModuleNames.AddRange( new string[] { "MyProject" } );
 
-        // TODO: Add these three lines:
+        // TODO: Add these lines:
         if (Target.Platform == UnrealTargetPlatform.IOS)
         {
-            GlobalDefinitions.Add("FORCE_ANSI_ALLOCATOR=1");
+#if UE_5_6_OR_LATER
+            StaticAllocator = StaticAllocatorType.Ansi;
+#else
+            GlobalDefinitions.Add("FORCE_ANSI_ALLOCATOR=1");      
+#endif    
         }
     }
 }
