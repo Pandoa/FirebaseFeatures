@@ -9,7 +9,7 @@ adb logcat
 Some errors can be caused by stale build artifacts. If you encounter weird errors, try a full build without intermediate files:
 1. In your IDE, select Build > Clean.
 2. Remove the `Build` and `Intermediate` folders of your project directory.
-3. In your IDE, launch select Build > Full Rebuild.
+3. In your IDE, select Build > Full Rebuild.
 
 ## Android and iOS
 
