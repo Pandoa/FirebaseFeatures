@@ -52,9 +52,9 @@ Go to installation doc
 
 <div class="lang-selector">
 Documentation also available in
-<a href="#/" class="lang-link">English</a>
-<a href="#/es/" class="lang-link">Español</a>
-<a href="#/fr/" class="lang-link">Français</a>
+<a href="/index.html" class="lang-link">English</a>
+<a href="/es/index.html" class="lang-link">Español</a>
+<a href="/fr/index.html" class="lang-link">Français</a>
 </div>
 
 <h2 style="text-align: center;">Explore Components</h2>
