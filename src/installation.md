@@ -4,6 +4,8 @@ This section guides you to install the plugin and start using it. You can skip t
 
 > If you want to use the plugin for desktop (Windows, MacOS, Linux), the steps are the same as for Android.
 
+!> For LLM-assisted development, you can use [LLMs.txt](./llms.txt).
+
 <div style="display:flex;justify-content:center">
 <div style="max-width: 640px;flex-grow:1;">
 <iframe src="https://www.youtube.com/embed/SbVVrKnS78Y?rel=0" class="video" alt="Installation Video Guide" title="The installation instructions below in video" allow="fullscreen" allowfullscreen="1" mozallowfullscreen msallowfullscreen oallowfullscreen webkitallowfullscreen>
@@ -49,7 +51,7 @@ iOSAdMobApplicationId="ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX"
 To work, Firebase requires the file `google-services.json` (or `GoogleService-Info.plist` for iOS). 
 1. Go to `Project Overview > Project Settings` 
 2. Click on <img align="center" width="170" height="30" src="_images/download-gs.png"> to download the `google-services.json` file.
-3. Now that `google-services.json` is downloaded, you need to copy it to `<YourProject>/Services/`.  You can then start the Editor and proceed to the next step.
+3. Now that `google-services.json` is downloaded, you need to copy it to `<YourProject>/Services/`. You can then start the Editor and proceed to the next step.
 
 The following image shows the required steps to arrive to the Download button:
 
