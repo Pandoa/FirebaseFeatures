@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>Comment utiliser Firebase avec Unreal Engine</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Comment utiliser Firebase avec Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Suivez ce guide pour commencer à utiliser Firebase dans Unreal Engine sur Windows, Linux, MacOS, iOS ou Android. Découvrez comment authentifier les utilisateurs, afficher des publicités, obtenir des données depuis Firestore ou Realtime Database, utiliser Remote Config ou ajouter Crashlytics à votre jeu.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T08:21:57.899Z","keywords":["Firebase"," Unreal Engine"," Google Firebase"," Realtime Database"," Cloud Storage"," Authentication"," Game Development"," Mobile Game Development"," Backend Services"," Cloud Services"," Game Development Tools"," Mobile Game Development Tools"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Comment utiliser Firebase avec Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Suivez ce guide pour commencer à utiliser Firebase dans Unreal Engine sur Windows, Linux, MacOS, iOS ou Android. Découvrez comment authentifier les utilisateurs, afficher des publicités, obtenir des données depuis Firestore ou Realtime Database, utiliser Remote Config ou ajouter Crashlytics à votre jeu.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T08:30:12.594Z","keywords":["Firebase"," Unreal Engine"," Google Firebase"," Realtime Database"," Cloud Storage"," Authentication"," Game Development"," Mobile Game Development"," Backend Services"," Cloud Services"," Game Development Tools"," Mobile Game Development Tools"]}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="Firebase, Unreal Engine, Google Firebase, Realtime Database, Cloud Storage, Authentication, Game Development, Mobile Game Development, Backend Services, Cloud Services, Game Development Tools, Mobile Game Development Tools">
 	<meta name="description" content="Suivez ce guide pour commencer à utiliser Firebase dans Unreal Engine sur Windows, Linux, MacOS, iOS ou Android. Découvrez comment authentifier les utilisateurs, afficher des publicités, obtenir des données depuis Firestore ou Realtime Database, utiliser Remote Config ou ajouter Crashlytics à votre jeu.">
@@ -1434,10 +1434,14 @@
 .faq-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 50px; max-width: 1100px; margin: 40px auto 0; padding: 0 20px; }
 .faq-box h4 { color: #f3ad38; margin-bottom: 15px; font-size: 1.15em; font-weight: 800; }
 .faq-box p { line-height: 1.8; color: #cccccc; font-size: 1em; margin: 0; }
-.hero-btn { background: #f3ad38 !important; color: #000000 !important; font-weight: 800; padding: 18px 35px; border-radius: 4px; text-decoration: none !important; display: inline-flex; align-items: center; gap: 12px; font-size: 1.1em; border: none !important;}
-.hero-btn img { border: none !important; border-radius: 0 !important; box-shadow: none !important; vertical-align: middle; }
+/* Primary Button */
+.hero-btn { background: #f3ad38 !important; color: #000000 !important; font-weight: 800; padding: 18px 35px; border-radius: 4px; text-decoration: none !important; display: inline-flex; align-items: center; gap: 12px; font-size: 1.1em; border: none !important; transition: background 0.2s; }
 .hero-btn:hover { background: #ffc107 !important; }
-.lang-selector { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; align-items: center; }
+/* Secondary Button (Outline) */
+.hero-btn-secondary { background: transparent !important; color: #ffffff !important; font-weight: 700; padding: 18px 35px; border-radius: 4px; text-decoration: none !important; display: inline-flex; align-items: center; gap: 12px; font-size: 1.1em; border: 2px solid #333333 !important; transition: all 0.2s; }
+.hero-btn-secondary:hover { border-color: #ffffff !important; background: rgba(255,255,255,0.05) !important; }
+.hero-btn img, .hero-btn-secondary img { border: none !important; border-radius: 0 !important; box-shadow: none !important; vertical-align: middle; }
+.lang-selector { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; align-items: center; color: #888; font-size: 0.95em; }
 .lang-link { color: #ffffff; text-decoration: none; padding: 8px 16px; border: 1px solid #333; border-radius: 20px; font-size: 0.9em; transition: all 0.2s; background: rgba(255,255,255,0.05); }
 .lang-link:hover { border-color: #f3ad38; color: #f3ad38; background: rgba(243, 173, 56, 0.1); }
 </style>
@@ -1450,7 +1454,14 @@
 <span>🌐 Cross-Platform</span>
 <span>🛠️ Parité complète pour les Blueprints</span>
 </div>
-<a class="hero-btn" href="https://www.fab.com/listings/feaef5b9-d11d-4609-84de-f4551203682d">Télécharger sur Fab <img width="24" height="24" src="../_images/buyueicon.png" alt="Icon"></a>
+<div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+<a class="hero-btn" href="https://www.fab.com/listings/feaef5b9-d11d-4609-84de-f4551203682d">
+Télécharger sur Fab <img width="24" height="24" src="../_images/buyueicon.png" alt="Icon">
+</a>
+<a class="hero-btn-secondary" href="installation">
+Allez dansinstallation doc
+</a>
+</div>
 </div>
 <div class="lang-selector">
 Documentation aussi disponible en
@@ -1489,7 +1500,10 @@ Documentation aussi disponible en
 <div class="faq-box"><h4>Can I use Firebase for Real-time multiplayer data?</h4><p>Absolutely. Using the <strong>Realtime Database</strong> or <strong>Cloud Firestore</strong> listeners, you can sync scores, player locations, or inventory state across clients in milliseconds with built-in offline persistence.</p></div>
 <div class="faq-box"><h4>Is this plugin production-ready for large-scale games?</h4><p>Yes. Firebase Features is trusted by thousands of studios. It is designed with robust error handling, best-effort synchronization et has been battle-tested in games with millions of active users.</p></div>
 </div>
-<div style="text-align: center; margin-top: 100px; opacity: 0.3; font-size: 0.85em;"><div class="docsify-pagination-container"></div></div></footer></article></section></main>
+<div style="text-align: center; margin-top: 100px; opacity: 0.3; font-size: 0.85em;">
+<p>© 2026 Pandores Marketplace. Powering professional Unreal Engine games globally.</p>
+</div>
+</footer><div class="docsify-pagination-container"></div></article></section></main>
 	
 	<script>
 function setupStatic() {

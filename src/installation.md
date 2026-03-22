@@ -4,7 +4,7 @@ This section guides you to install the plugin and start using it. You can skip t
 
 > If you want to use the plugin for desktop (Windows, MacOS, Linux), the steps are the same as for Android.
 
-!> For LLM-assisted development, you can use [LLMs.txt](./llms.txt).
+!> For LLM-assisted development, you can use [LLMs.txt](#/llms.txt).
 
 <div style="display:flex;justify-content:center">
 <div style="max-width: 640px;flex-grow:1;">
