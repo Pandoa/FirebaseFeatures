@@ -25,3 +25,5 @@ The plugin can be downloaded from [this link](https://www.fab.com/listings/feaef
 ## Support
 - [Release Notes](https://pandoa.github.io/FirebaseFeatures/patchnotes)
 - [Troubleshooting](https://pandoa.github.io/FirebaseFeatures/troubleshoting)
+
+
