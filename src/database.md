@@ -47,7 +47,23 @@ To write data to the Database, you need an instance of DatabaseReference:
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+
+// 1. Get the Database instance (uses default URL from project settings)
+UDatabase* Database = UDatabase::GetInstance();
+
+// 2. Get a reference to the root of your database
+UDatabaseReference* RootRef = Database->GetReference();
+
+// 3. Get a reference to a specific path (e.g., "users/user_123")
+UDatabaseReference* UserRef = Database->GetReferenceFromPath(TEXT("users/user_123"));
+
+// 4. Alternatively, use a child path from an existing reference
+UDatabaseReference* ScoreRef = UserRef->Child(TEXT("stats/high_score"));
+
+// 5. You can also get a reference directly from a full URL
+UDatabaseReference* UrlRef = Database->GetReferenceFromUrl(TEXT("https://your-db.firebaseio.com/global_config"));
 ```
 
 </div>
@@ -140,7 +156,31 @@ could update the username as follows:
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+
+// 1. Get a reference to the user's profile
+UDatabaseReference* UserRef = UDatabase::GetInstanceReference()->Child(TEXT("users/user_123"));
+
+// 2. Perform a basic write to overwrite the entire node
+// Using FFirebaseVariant to wrap the data (String, Int64, Double, or Bool)
+UserRef->SetValue(FFirebaseVariant(TEXT("New Profile Data")), FDatabaseCallback::CreateLambda([](const EFirebaseDatabaseError Error)
+{
+    if (Error == EFirebaseDatabaseError::None)
+    {
+        UE_LOG(LogTemp, Log, TEXT("Value set successfully!"));
+    }
+}));
+
+// 3. Update only a specific child without overwriting the parent
+// This specifically updates "users/user_123/username"
+UserRef->Child(TEXT("username"))->SetValue(FFirebaseVariant(TEXT("JohnDoe")), FDatabaseCallback::CreateLambda([](const EFirebaseDatabaseError Error)
+{
+    if (Error == EFirebaseDatabaseError::None)
+    {
+        UE_LOG(LogTemp, Log, TEXT("Username updated successfully!"));
+    }
+}));
 ```
 
 </div>
@@ -254,7 +294,24 @@ The simplest way to delete data is to call `RemoveValue()` on a reference to the
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+
+// 1. Get a reference to the specific node you want to delete.
+UDatabaseReference* DataRef = UDatabase::GetInstanceReference()->Child(TEXT("users/user_123/old_data"));
+
+// 2. Call RemoveValue to delete the data at this location and all its children.
+DataRef->RemoveValue(FDatabaseCallback::CreateLambda([](const EFirebaseDatabaseError Error)
+{
+    if (Error == EFirebaseDatabaseError::None)
+    {
+        UE_LOG(LogTemp, Log, TEXT("Data removed successfully."));
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("Failed to remove data. Error Code: %d"), (int32)Error);
+    }
+}));
 ```
 
 </div>
@@ -321,7 +378,33 @@ You can use this technique with `UpdateChildren()` to delete multiple children i
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+#include "FirebaseSdk/FirebaseVariant.h"
+
+// 1. Get a reference to a user's node
+UDatabaseReference* UserRef = UDatabase::GetInstanceReference()->Child(TEXT("users/user_123"));
+
+// 2. Prepare a Map Variant containing the updates.
+// A null Variant acts as a deletion instruction for that specific path.
+TMap<FString, FFirebaseVariant> Updates;
+Updates.Add(TEXT("profile/bio"), FFirebaseVariant(TEXT("New Bio Content"))); // Update/Set
+Updates.Add(TEXT("temporary_token"), FFirebaseVariant());                    // Delete (Null Variant)
+Updates.Add(TEXT("old_settings/theme"), FFirebaseVariant());                 // Delete (Null Variant)
+
+// 3. Apply the updates atomically using a Map Variant
+// This will update the bio and delete both the token and the theme in one call.
+UserRef->UpdateChildren(FFirebaseVariant(Updates), FDatabaseCallback::CreateLambda([](const EFirebaseDatabaseError Error)
+{
+    if (Error == EFirebaseDatabaseError::None)
+    {
+        UE_LOG(LogTemp, Log, TEXT("Multiple deletions and updates processed successfully."));
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("UpdateChildren failed. Error Code: %d"), (int32)Error);
+    }
+}));
 ```
 
 </div>
@@ -430,7 +513,36 @@ Operations can be setup on the Database when a user disconnects.
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+#include "FirebaseSdk/FirebaseVariant.h"
+
+// 1. Get a reference to the user's presence node.
+UDatabaseReference* PresenceRef = UDatabase::GetInstanceReference()->Child(TEXT("users/user_123/online"));
+
+// 2. Obtain the disconnection handler for this specific reference.
+UDisconnectionHandler* Handler = PresenceRef->OnDisconnect();
+
+// 3. Queue an operation to be performed by the server when the client disconnects.
+// In this case, we set the 'online' status to false.
+Handler->SetValue(FFirebaseVariant(false), FDatabaseCallback::CreateLambda([](const EFirebaseDatabaseError Error)
+{
+    if (Error == EFirebaseDatabaseError::None)
+    {
+        UE_LOG(LogTemp, Log, TEXT("Disconnection operation successfully queued on the server."));
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("Failed to queue disconnection operation. Error Code: %d"), (int32)Error);
+    }
+}));
+
+// 4. You can also update multiple fields upon disconnection.
+TMap<FString, FFirebaseVariant> DisconnectUpdates;
+DisconnectUpdates.Add(TEXT("last_seen"), FFirebaseVariant(ServerValue::Timestamp()));
+DisconnectUpdates.Add(TEXT("status"), FFirebaseVariant(TEXT("offline")));
+
+PresenceRef->GetParent()->OnDisconnect()->UpdateChildren(FFirebaseVariant(DisconnectUpdates), FDatabaseCallback());
 ```
 
 </div>
@@ -554,7 +666,39 @@ contain a snapshot containing all data at that location, including child data. I
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+#include "Database/DataSnapshot.h"
+
+// 1. Get a reference to the data you want to read.
+UDatabaseReference* DataRef = UDatabase::GetInstanceReference()->Child(TEXT("scores/global_leaderboard"));
+
+// 2. Request the data snapshot once.
+DataRef->GetValue(FSnapshotCallback::CreateLambda([](const EFirebaseDatabaseError Error, UDataSnapshot* const Snapshot)
+{
+    if (Error == EFirebaseDatabaseError::None && Snapshot && Snapshot->Exists())
+    {
+        // 3. Process the data from the snapshot.
+        FFirebaseVariant Value = Snapshot->GetValue();
+        
+        if (Value.IsMap())
+        {
+            UE_LOG(LogTemp, Log, TEXT("Retrieved leaderboard with %lld children."), Snapshot->ChildrenCount());
+        }
+        else
+        {
+            UE_LOG(LogTemp, Log, TEXT("Retrieved value: %s"), *Value.AsString());
+        }
+    }
+    else if (Error != EFirebaseDatabaseError::None)
+    {
+        UE_LOG(LogTemp, Error, TEXT("Failed to read data. Error Code: %d"), (int32)Error);
+    }
+    else
+    {
+        UE_LOG(LogTemp, Warning, TEXT("No data found at this location."));
+    }
+}));
 ```
 
 </div>
@@ -620,7 +764,39 @@ The data from the snapshot can then be read as followed when we get a node with 
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+#include "FirebaseSdk/FirebaseVariant.h"
+
+// ... inside the FSnapshotCallback Lambda ...
+if (Error == EFirebaseDatabaseError::None && Snapshot && Snapshot->Exists())
+{
+    // 1. Check if the snapshot has children before iterating.
+    if (Snapshot->HasChildren())
+    {
+        // 2. Retrieve all immediate children as an array of snapshots.
+        TArray<UDataSnapshot*> LeaderboardEntries = Snapshot->GetChildren();
+
+        for (UDataSnapshot* Entry : LeaderboardEntries)
+        {
+            // 3. Each child snapshot represents a single node (e.g., a User ID).
+            FString UserID = Entry->GetKey();
+            FFirebaseVariant UserData = Entry->GetValue();
+
+            // 4. Access specific nested fields within this child entry.
+            if (Entry->HasChild(TEXT("score")))
+            {
+                int64 Score = Entry->GetChild(TEXT("score"))->GetValue().AsInt64();
+                UE_LOG(LogTemp, Log, TEXT("User: %s | Score: %lld"), *UserID, Score);
+            }
+        }
+    }
+    else 
+    {
+        // If it exists but has no children, it's a leaf node.
+        UE_LOG(LogTemp, Log, TEXT("Value: %s"), *Snapshot->GetValue().AsString());
+    }
+}
 ```
 
 </div>
@@ -736,7 +912,39 @@ The following example demonstrates a game retrieving the scores of a leaderboard
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+#include "FirebaseSdk/FirebaseVariant.h"
+
+// 1. Get a reference to the leaderboard.
+UDatabaseReference* LeaderboardRef = UDatabase::GetInstanceReference()->Child(TEXT("scores/global_leaderboard"));
+
+// 2. Bind the OnValueChanged dynamic multicast delegate.
+// Note: The function must be a UFUNCTION() to be bound to a dynamic delegate.
+LeaderboardRef->OnValueChanged.AddDynamic(this, &AYourActor::OnLeaderboardUpdated);
+
+// 3. Initialize the listener. Without this call, events will not trigger.
+LeaderboardRef->SetupListeners();
+
+// --- Implementation of the bound function ---
+
+void AYourActor::OnLeaderboardUpdated(UDataSnapshot* Snapshot)
+{
+    // This will fire immediately upon SetupListeners() and every time data changes thereafter.
+    if (Snapshot && Snapshot->Exists())
+    {
+        UE_LOG(LogTemp, Log, TEXT("Leaderboard updated! Processing %lld entries..."), Snapshot->ChildrenCount());
+
+        TArray<UDataSnapshot*> Entries = Snapshot->GetChildren();
+        for (UDataSnapshot* Entry : Entries)
+        {
+            FString UserName = Entry->GetKey();
+            int64 Score = Entry->GetChild(TEXT("score"))->GetValue().AsInt64();
+            
+            UE_LOG(LogTemp, Log, TEXT("User: %s - Score: %lld"), *UserName, Score);
+        }
+    }
+}
 ```
 
 </div>
@@ -873,7 +1081,43 @@ The following example demonstrates how you could subscribe to a score leaderboar
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+#include "FirebaseSdk/FirebaseVariant.h"
+
+// 1. Get a reference to the scores node.
+UDatabaseReference* ScoresRef = UDatabase::GetInstanceReference()->Child(TEXT("scores"));
+
+// 2. Create a Query by ordering by the "score" child key.
+// OrderByChild returns a UDatabaseQuery*.
+UDatabaseQuery* SortedQuery = ScoresRef->OrderByChild(TEXT("score"));
+
+// 3. Bind the OnValueChanged event to the sorted query.
+// This will return the children in ascending order of their "score" value.
+SortedQuery->OnValueChanged.AddDynamic(this, &AYourActor::OnSortedScoresReceived);
+
+// 4. Initialize the listener on the query.
+SortedQuery->SetupListeners();
+
+// --- Implementation ---
+
+void AYourActor::OnSortedScoresReceived(UDataSnapshot* Snapshot)
+{
+    if (Snapshot && Snapshot->Exists())
+    {
+        // When iterating through Snapshot->GetChildren(), 
+        // the array will respect the sort order defined in the query.
+        TArray<UDataSnapshot*> SortedEntries = Snapshot->GetChildren();
+
+        for (UDataSnapshot* Entry : SortedEntries)
+        {
+            FString User = Entry->GetKey();
+            int64 Val = Entry->GetChild(TEXT("score"))->GetValue().AsInt64();
+            
+            UE_LOG(LogTemp, Log, TEXT("Ranked User: %s | Score: %lld"), *User, Val);
+        }
+    }
+}
 ```
 
 </div>
@@ -960,7 +1204,40 @@ For example, the code below returns the top score from a leaderboard:
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Database/Database.h"
+#include "Database/DatabaseReference.h"
+#include "FirebaseSdk/FirebaseVariant.h"
+
+// 1. Get a reference to the scores.
+UDatabaseReference* ScoresRef = UDatabase::GetInstanceReference()->Child(TEXT("scores"));
+
+// 2. Chain order and limit methods.
+// OrderByChild orders ascending; LimitToLast(1) picks the highest value.
+UDatabaseQuery* TopScoreQuery = ScoresRef->OrderByChild(TEXT("score"))->LimitToLast(1);
+
+// 3. Bind the OnValueChanged event.
+TopScoreQuery->OnValueChanged.AddDynamic(this, &AYourActor::OnTopScoreReceived);
+
+// 4. Initialize the listener.
+TopScoreQuery->SetupListeners();
+
+// --- Implementation ---
+
+void AYourActor::OnTopScoreReceived(UDataSnapshot* Snapshot)
+{
+    if (Snapshot && Snapshot->Exists() && Snapshot->HasChildren())
+    {
+        // Even with a limit of 1, the result is returned as a parent snapshot 
+        // containing the matching child.
+        TArray<UDataSnapshot*> Children = Snapshot->GetChildren();
+        UDataSnapshot* TopEntry = Children[0];
+
+        FString PlayerName = TopEntry->GetKey();
+        int64 Score = TopEntry->GetChild(TEXT("score"))->GetValue().AsInt64();
+
+        UE_LOG(LogTemp, Log, TEXT("Current Top Player: %s with %lld points!"), *PlayerName, Score);
+    }
+}
 ```
 
 </div>
@@ -1055,3 +1332,11 @@ When using `OrderByKey()` to sort your data, data is returned in ascending order
 ##### OrderByValue
 When using `OrderByValue()`, children are ordered by their value. The ordering criteria are the same as in `OrderByChild()`, 
 except the value of the node is used instead of the value of a specified child key.
+
+
+<script>
+setTimeout(() => {
+	bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+	switchCode();
+}, 0);
+</script>

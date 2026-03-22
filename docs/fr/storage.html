@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>Cloud Storage | Firebase Features</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Firebase Features for Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"The most popular Firebase plugin for Unreal Engine. Easily integrate Firebase into your game and start developing something amazing. Start in minutes by following the guide d'installation. Support techniques AdMob, Google Analytics, AppCheck, Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Cloud Storage, Crashlytics, Dynamic Links, Firebase Performance, Realtime Database, Remote Config, ...","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T08:51:39.677Z"}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Firebase Features for Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"The most popular Firebase plugin for Unreal Engine. Easily integrate Firebase into your game and start developing something amazing. Start in minutes by following the guide d'installation. Support techniques AdMob, Google Analytics, AppCheck, Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Cloud Storage, Crashlytics, Dynamic Links, Firebase Performance, Realtime Database, Remote Config, ...","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T10:23:57.377Z"}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="firebase,unreal,engine,features,plugin,integrate,blueprint,code,blueprints,support,game,engine,doc,docs,documentation">
 	<meta name="description" content="The most popular Firebase plugin for Unreal Engine. Easily integrate Firebase into your game and start developing something amazing. Start in minutes by following the guide d'installation. Support techniques AdMob, Google Analytics, AppCheck, Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Cloud Storage, Crashlytics, Dynamic Links, Firebase Performance, Realtime Database, Remote Config, ...">
@@ -1430,7 +1430,12 @@
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/Storage.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/StorageReference.h"</span></span>
+<span class="token comment">// 1. Get a reference to the root of your bucket using the gs:// URL</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> RootRef <span class="token operator">=</span> <span class="token class-name ue-class">UFirebaseStorage</span><span class="token double-colon punctuation">::</span><span class="token function">GetReferenceFromUrl</span><span class="token punctuation">(</span><span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"gs://your-app.appspot.com"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 2. Create a reference to a specific file path</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> SpaceRef <span class="token operator">=</span> <span class="token class-name ue-class">UFirebaseStorage</span><span class="token double-colon punctuation">::</span><span class="token function">GetReferenceFromPath</span><span class="token punctuation">(</span><span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"images/space.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_265"
@@ -1454,7 +1459,16 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// 3. Create a reference relative to an existing reference using Child()</span>
+<span class="token comment">// This points to "images/stars.jpg"</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> StarsRef <span class="token operator">=</span> SpaceRef<span class="token operator">-&gt;</span><span class="token function">GetParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Child</span><span class="token punctuation">(</span><span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"stars.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 4. Navigate back up the tree</span>
+<span class="token comment">// ParentRef points to "images/"</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> ParentRef <span class="token operator">=</span> SpaceRef<span class="token operator">-&gt;</span><span class="token function">GetParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 5. Get basic info from the reference</span>
+<span class="token keyword ue-class">FString</span> FileName <span class="token operator">=</span> SpaceRef<span class="token operator">-&gt;</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// "space.jpg"</span>
+<span class="token keyword ue-class">FString</span> FullPath <span class="token operator">=</span> SpaceRef<span class="token operator">-&gt;</span><span class="token function">GetFullPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// "images/space.jpg"</span>
+<span class="token keyword ue-class">FString</span> Bucket   <span class="token operator">=</span> SpaceRef<span class="token operator">-&gt;</span><span class="token function">GetBucket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// "your-app.appspot.com"</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_CallFunction Name="K2Node_CallFunction_267"
@@ -1521,7 +1535,35 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/Storage.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/StorageReference.h"</span></span>
+<span class="token comment">// 1. Prepare your data and controller</span>
+<span class="token keyword ue-class">TArray</span><span class="token operator">&lt;</span><span class="token class-name ue-class">uint8</span><span class="token operator">&gt;</span> DataToUpload<span class="token punctuation">;</span>
+<span class="token comment">// ... fill DataToUpload with your binary data ...</span>
+<span class="token class-name ue-class">FFirebaseStorageController</span> Controller<span class="token punctuation">;</span>
+<span class="token comment">// 2. Start the upload</span>
+<span class="token comment">// We'll use a reference to "images/mountains.jpg"</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> StorageRef <span class="token operator">=</span> <span class="token class-name ue-class">UFirebaseStorage</span><span class="token double-colon punctuation">::</span><span class="token function">GetReferenceFromPath</span><span class="token punctuation">(</span><span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"images/mountains.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+StorageRef<span class="token operator">-&gt;</span><span class="token function">PutBytes</span><span class="token punctuation">(</span>
+    DataToUpload<span class="token punctuation">,</span> 
+    Controller<span class="token punctuation">,</span>
+    <span class="token class-name ue-class">FFirebaseStorageMetadataCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">EFirebaseStorageError</span> Error<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token class-name ue-class">FFirebaseStorageMetadata</span><span class="token operator">&amp;</span> Metadata<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token class-name ue-class">EFirebaseStorageError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Upload Complete! File size: %lld"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Metadata<span class="token punctuation">.</span><span class="token function">GetSizeBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Upload failed. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name ue-class">FFirebaseStorageControllerCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseStorageController</span><span class="token operator">&amp;</span> ProgressController<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">float</span> Progress <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>ProgressController<span class="token punctuation">.</span><span class="token function">BytesTransferred</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>ProgressController<span class="token punctuation">.</span><span class="token function">TotalByteCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Upload Progress: %f%%"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Progress <span class="token operator">*</span> <span class="token number">100.0f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_VariableGet Name="K2Node_VariableGet_8"
@@ -1572,7 +1614,43 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/Storage.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/StorageReference.h"</span></span>
+<span class="token comment">// 1. Define the local path on the device.</span>
+<span class="token keyword">const</span> <span class="token keyword ue-class">FString</span> LocalFilePath <span class="token operator">=</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"/storage/emulated/0/DCIM/Camera/photo.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 2. Obtain a reference to the destination in Cloud Storage.</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> StorageRef <span class="token operator">=</span> <span class="token class-name ue-class">UFirebaseStorage</span><span class="token double-colon punctuation">::</span><span class="token function">GetReferenceFromPath</span><span class="token punctuation">(</span><span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"uploads/user_photo.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 3. Create a controller to monitor and manage the operation.</span>
+<span class="token class-name ue-class">FFirebaseStorageController</span> Controller<span class="token punctuation">;</span>
+<span class="token comment">// 4. Start the upload process.</span>
+StorageRef<span class="token operator">-&gt;</span><span class="token function">PutFile</span><span class="token punctuation">(</span>
+    LocalFilePath<span class="token punctuation">,</span> 
+    Controller<span class="token punctuation">,</span>
+    <span class="token class-name ue-class">FFirebaseStorageMetadataCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">EFirebaseStorageError</span> Error<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token class-name ue-class">FFirebaseStorageMetadata</span><span class="token operator">&amp;</span> Metadata<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token class-name ue-class">EFirebaseStorageError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Upload successful.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"File upload successful: %s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">*</span>Metadata<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Handle upload error.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"File upload failed. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name ue-class">FFirebaseStorageControllerCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseStorageController</span><span class="token operator">&amp;</span> ProgressController<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Calculate and log progress.</span>
+        <span class="token keyword">const</span> <span class="token class-name ue-class">int64</span> Transferred <span class="token operator">=</span> ProgressController<span class="token punctuation">.</span><span class="token function">BytesTransferred</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> <span class="token class-name ue-class">int64</span> Total <span class="token operator">=</span> ProgressController<span class="token punctuation">.</span><span class="token function">TotalByteCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Total <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">float</span> ProgressPct <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>Transferred <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>Total <span class="token operator">*</span> <span class="token number">100.0f</span><span class="token punctuation">;</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Upload Progress: %.2f%%"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> ProgressPct<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_CustomEvent_48"
@@ -1624,7 +1702,41 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/Storage.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/StorageReference.h"</span></span>
+<span class="token comment">// 1. Define the maximum size you are willing to download (e.g., 5MB).</span>
+<span class="token keyword">const</span> <span class="token class-name ue-class">int64</span> MaxAllowedSize <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span><span class="token punctuation">;</span>
+<span class="token comment">// 2. Get the reference for the file.</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> StorageRef <span class="token operator">=</span> <span class="token class-name ue-class">UFirebaseStorage</span><span class="token double-colon punctuation">::</span><span class="token function">GetReferenceFromPath</span><span class="token punctuation">(</span><span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"images/profile.png"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 3. Create a controller.</span>
+<span class="token class-name ue-class">FFirebaseStorageController</span> Controller<span class="token punctuation">;</span>
+<span class="token comment">// 4. Download the bytes.</span>
+StorageRef<span class="token operator">-&gt;</span><span class="token function">GetBytes</span><span class="token punctuation">(</span>
+    MaxAllowedSize<span class="token punctuation">,</span>
+    Controller<span class="token punctuation">,</span>
+    <span class="token class-name ue-class">FFirebaseStorageBinaryCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">EFirebaseStorageError</span> Error<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword ue-class">TArray</span><span class="token operator">&lt;</span><span class="token class-name ue-class">uint8</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> DownloadedData<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token class-name ue-class">EFirebaseStorageError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Data successfully downloaded into the array.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Downloaded %d bytes."</span><span class="token punctuation">)</span><span class="token punctuation">,</span> DownloadedData<span class="token punctuation">.</span><span class="token function">Num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Handle error (e.g., if file exceeds MaxAllowedSize, Error will reflect this).</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Download failed. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name ue-class">FFirebaseStorageControllerCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseStorageController</span><span class="token operator">&amp;</span> ProgressController<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token class-name ue-class">int64</span> Transferred <span class="token operator">=</span> ProgressController<span class="token punctuation">.</span><span class="token function">BytesTransferred</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> <span class="token class-name ue-class">int64</span> Total <span class="token operator">=</span> ProgressController<span class="token punctuation">.</span><span class="token function">TotalByteCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Total <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Download Progress: %lld / %lld bytes"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Transferred<span class="token punctuation">,</span> Total<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_VariableGet Name="K2Node_VariableGet_7"
@@ -1674,7 +1786,43 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/Storage.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/StorageReference.h"</span></span>
+<span class="token comment">// 1. Define the relative or absolute path on the computer to save the file.</span>
+<span class="token keyword">const</span> <span class="token keyword ue-class">FString</span> LocalSavePath <span class="token operator">=</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Saved/Downloads/LargeAsset.pak"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 2. Get the reference for the file in Cloud Storage.</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> StorageRef <span class="token operator">=</span> <span class="token class-name ue-class">UFirebaseStorage</span><span class="token double-colon punctuation">::</span><span class="token function">GetReferenceFromPath</span><span class="token punctuation">(</span><span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"assets/LargeAsset.pak"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 3. Create a controller to manage the download.</span>
+<span class="token class-name ue-class">FFirebaseStorageController</span> Controller<span class="token punctuation">;</span>
+<span class="token comment">// 4. Start the download to the local file system.</span>
+StorageRef<span class="token operator">-&gt;</span><span class="token function">GetFile</span><span class="token punctuation">(</span>
+    LocalSavePath<span class="token punctuation">,</span>
+    Controller<span class="token punctuation">,</span>
+    <span class="token class-name ue-class">FFirebaseStorageInt64Callback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">EFirebaseStorageError</span> Error<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token class-name ue-class">int64</span> BytesTransferred<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token class-name ue-class">EFirebaseStorageError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Download complete.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"File successfully downloaded to disk. Total: %lld bytes"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> BytesTransferred<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Handle error.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Download failed. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token class-name ue-class">FFirebaseStorageControllerCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseStorageController</span><span class="token operator">&amp;</span> ProgressController<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Log progress updates.</span>
+        <span class="token keyword">const</span> <span class="token class-name ue-class">int64</span> Transferred <span class="token operator">=</span> ProgressController<span class="token punctuation">.</span><span class="token function">BytesTransferred</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> <span class="token class-name ue-class">int64</span> Total <span class="token operator">=</span> ProgressController<span class="token punctuation">.</span><span class="token function">TotalByteCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Total <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">float</span> ProgressPct <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>Transferred <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>Total <span class="token operator">*</span> <span class="token number">100.0f</span><span class="token punctuation">;</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Download Progress: %.2f%%"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> ProgressPct<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_130"
@@ -1724,7 +1872,25 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/Storage.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Storage/StorageReference.h"</span></span>
+<span class="token comment">// 1. Get the reference for the file you want to share.</span>
+<span class="token class-name ue-class">UFirebaseStorageReference</span><span class="token operator">*</span> StorageRef <span class="token operator">=</span> <span class="token class-name ue-class">UFirebaseStorage</span><span class="token double-colon punctuation">::</span><span class="token function">GetReferenceFromPath</span><span class="token punctuation">(</span><span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"public/images/logo.png"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 2. Request the long-lived download URL.</span>
+StorageRef<span class="token operator">-&gt;</span><span class="token function">GetDownloadUrl</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseStorageStringCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">EFirebaseStorageError</span> Error<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword ue-class">FString</span><span class="token operator">&amp;</span> DownloadUrl<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token class-name ue-class">EFirebaseStorageError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Successfully retrieved the URL. </span>
+        <span class="token comment">// This URL can be used in a browser or passed to other download managers.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Download URL: %s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">*</span>DownloadUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Handle error (e.g., file not found or permission denied).</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to get download URL. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_VariableGet Name="K2Node_VariableGet_11"
@@ -1784,6 +1950,12 @@ End Object
 </div>
 </div> 
 -->
+<script>
+setTimeout(() => {
+    bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+    switchCode();
+}, 0);
+</script>
 <div class="docsify-pagination-container">
         <div class="pagination-item pagination-item--previous">
           <a href="messaging">

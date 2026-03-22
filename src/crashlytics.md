@@ -63,3 +63,11 @@ void UMyClass::MyFunction()
 
 1. Go to the Crashlytics dashboard of the Firebase console to see your test crash.  
 If you've refreshed the console and you're still not seeing the test crash after five minutes, enable debug logging to see if your app is sending crash reports.
+
+
+<script>
+setTimeout(() => {
+	bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+	switchCode();
+}, 0);
+</script>

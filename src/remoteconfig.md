@@ -12,7 +12,34 @@ You start by fetching the Remote Config Data from Firebase's server. Once it's d
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "RemoteConfig/RemoteConfig.h"
+
+// 1. Fetch data from the server. 
+// A cache expiration of 0 will always fetch the latest data from the server.
+UFirebaseRemoteConfig::Fetch(0, FRemoteConfigCallback::CreateLambda([](int32 Error)
+{
+    // Error == 0 indicates success.
+    if (Error == 0)
+    {
+        // 2. Activate the fetched data so it can be accessed by the Get methods.
+        bool bNewDataActivated = UFirebaseRemoteConfig::ActivateFetched();
+
+        if (bNewDataActivated)
+        {
+            // 3. Retrieve the updated values to configure your game.
+            FString WelcomeMessage = UFirebaseRemoteConfig::GetString(TEXT("welcome_text"));
+            float GameGravity      = UFirebaseRemoteConfig::GetFloat(TEXT("world_gravity"));
+            bool bIsEventLive      = UFirebaseRemoteConfig::GetBoolean(TEXT("event_active"));
+            int32 MaxPlayers       = UFirebaseRemoteConfig::GetInt32(TEXT("lobby_size"));
+
+            UE_LOG(LogTemp, Log, TEXT("Config Activated. Gravity set to: %f"), GameGravity);
+        }
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("Failed to fetch Remote Config. Error Code: %d"), Error);
+    }
+}));
 ```
 
 </div>
@@ -84,6 +111,13 @@ End Object
 
 
 
+
+<script>
+setTimeout(() => {
+	bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+	switchCode();
+}, 0);
+</script>
 
 
 

@@ -18,7 +18,25 @@ updated again immediately before the `Info Updated` pin is fired.
 <div class="cpp">
 
 ```cpp
-// C++ code not available yet
+#include "UMP/FirebaseUMP.h"
+
+// 1. Prepare request parameters.
+FFirebaseUMPConsentRequestParameters Params;
+Params.bTagForUnderAgeOfConsent = false;
+
+// 2. Request the update.
+FirebaseUMP::RequestConsentInfoUpdate(Params, FFireabseUMPCallback::CreateLambda([](const FFirebaseError& Error)
+{
+    if (!Error)
+    {
+        // Consent information successfully updated.
+        const EFirebaseUMPConsentStatus Status = FirebaseUMP::GetConsentStatus();
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("UMP: Update failed [%d]: %s"), Error.Code, *Error.Message);
+    }
+}));
 ```
 
 </div>
@@ -91,7 +109,26 @@ will be completed with an error if the form fails to load or show.
 <div class="cpp">
 
 ```cpp
-// C++ code not available yet
+#include "UMP/FirebaseUMP.h"
+
+// 1. Call this after RequestConsentInfoUpdate has completed successfully.
+FirebaseUMP::LoadAndShowConsentFormIfRequired(FFireabseUMPCallback::CreateLambda([](const FFirebaseError& Error)
+{
+    // The operator bool() returns true if an error occurred.
+    if (!Error)
+    {
+        // 2. Check if the app is now authorized to request ads.
+        if (FirebaseUMP::CanRequestAds())
+        {
+            // Ready to initialize AdMob.
+        }
+    }
+    else
+    {
+        // 3. Log the failure using the error code and message.
+        UE_LOG(LogTemp, Error, TEXT("UMP: Form error [%d]: %s"), Error.Code, *Error.Message);
+    }
+}));
 ```
 
 </div>
@@ -191,7 +228,27 @@ You can also load and show the form separately, it can be useful to pre-load the
 <div class="cpp">
 
 ```cpp
-// C++ code not available yet
+#include "UMP/FirebaseUMP.h"
+
+// 1. Load the form.
+FirebaseUMP::LoadConsentForm(FFireabseUMPCallback::CreateLambda([](const FFirebaseError& Error)
+{
+    if (!Error)
+    {
+        // 2. Show the form once it is loaded.
+        FirebaseUMP::ShowConsentForm(FFireabseUMPCallback::CreateLambda([](const FFirebaseError& ShowError)
+        {
+            if (!ShowError)
+            {
+                // Form dismissed, check if ads can be requested.
+                if (FirebaseUMP::CanRequestAds())
+                {
+                    // Initialize ads.
+                }
+            }
+        }));
+    }
+}));
 ```
 
 </div>
@@ -229,3 +286,11 @@ End Object
 </div>
 </div>
 </div>
+
+
+<script>
+setTimeout(() => {
+	bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+	switchCode();
+}, 0);
+</script>

@@ -12,7 +12,37 @@ To handle Messaging's module events, we have to call the `Listen for Messaging E
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+#include "Messaging/MessagingLibrary.h"
+
+// 1. Bind to the OnMessage delegate to handle incoming messages.
+FFirebaseMessagingLibrary::OnMessage().AddLambda([](const FFirebaseMessage& Message)
+{
+    // Check if the message contains a notification.
+    if (!Message.Notification.Title.IsEmpty())
+    {
+        UE_LOG(LogTemp, Log, TEXT("Notification Received! Title: %s, Body: %s"), 
+            *Message.Notification.Title, *Message.Notification.Body);
+    }
+
+    // Access custom data sent with the message.
+    for (const auto& Entry : Message.Data)
+    {
+        UE_LOG(LogTemp, Log, TEXT("Key: %s, Value: %s"), *Entry.Key, *Entry.Value);
+    }
+
+    // Check if the message was opened via the system tray.
+    if (Message.bNotificationOpened)
+    {
+        UE_LOG(LogTemp, Log, TEXT("The user tapped the notification to open the app."));
+    }
+});
+
+// 2. Bind to the OnTokenReceived delegate.
+// You usually need this token to send messages to this specific device from your server.
+FFirebaseMessagingLibrary::OnTokenReceived().AddLambda([](const FString& Token)
+{
+    UE_LOG(LogTemp, Log, TEXT("FCM Registration Token: %s"), *Token);
+});
 ```
 
 </div>
@@ -50,3 +80,11 @@ End Object
 </div>
 
 After that, the execution pin `On Message` is going to fire each time a message is received.
+
+
+<script>
+setTimeout(() => {
+	bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+	switchCode();
+}, 0);
+</script>

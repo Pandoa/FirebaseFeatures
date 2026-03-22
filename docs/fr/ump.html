@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>Manage User Consent for GDPR &amp; CCPA in Unreal Engine using UMP</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Manage User Consent for GDPR & CCPA in Unreal Engine using UMP","name":"Firebase Integration for Unreal Engine","description":"Integrate Google's User Messaging Platform (UMP) into Unreal Engine to easily comply with privacy regulations like GDPR and CCPA by managing ad and data consent.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T08:51:42.088Z","keywords":["UMP"," User Messaging Platform"," Unreal Engine"," GDPR"," CCPA"," user consent"," privacy"," AdMob"," Google"," ads"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Manage User Consent for GDPR & CCPA in Unreal Engine using UMP","name":"Firebase Integration for Unreal Engine","description":"Integrate Google's User Messaging Platform (UMP) into Unreal Engine to easily comply with privacy regulations like GDPR and CCPA by managing ad and data consent.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T10:24:00.342Z","keywords":["UMP"," User Messaging Platform"," Unreal Engine"," GDPR"," CCPA"," user consent"," privacy"," AdMob"," Google"," ads"]}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="UMP, User Messaging Platform, Unreal Engine, GDPR, CCPA, user consent, privacy, AdMob, Google, ads">
 	<meta name="description" content="Integrate Google's User Messaging Platform (UMP) into Unreal Engine to easily comply with privacy regulations like GDPR and CCPA by managing ad and data consent.">
@@ -1430,7 +1430,23 @@ updated again immediately before the <code>Info Updated</code> pin is fired.</p>
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code not available yet</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"UMP/FirebaseUMP.h"</span></span>
+<span class="token comment">// 1. Prepare request parameters.</span>
+<span class="token class-name ue-class">FFirebaseUMPConsentRequestParameters</span> Params<span class="token punctuation">;</span>
+Params<span class="token punctuation">.</span>bTagForUnderAgeOfConsent <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token comment">// 2. Request the update.</span>
+<span class="token class-name ue-class">FirebaseUMP</span><span class="token double-colon punctuation">::</span><span class="token function">RequestConsentInfoUpdate</span><span class="token punctuation">(</span>Params<span class="token punctuation">,</span> <span class="token class-name ue-class">FFireabseUMPCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">FFirebaseError</span><span class="token operator">&amp;</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>Error<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Consent information successfully updated.</span>
+        <span class="token keyword">const</span> <span class="token class-name ue-class">EFirebaseUMPConsentStatus</span> Status <span class="token operator">=</span> <span class="token class-name ue-class">FirebaseUMP</span><span class="token double-colon punctuation">::</span><span class="token function">GetConsentStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"UMP: Update failed [%d]: %s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Error<span class="token punctuation">.</span>Code<span class="token punctuation">,</span> <span class="token operator">*</span>Error<span class="token punctuation">.</span>Message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_Event Name="K2Node_Event_0" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/DemoActor.DemoActor:EventGraph.K2Node_Event_0'"
@@ -1492,7 +1508,25 @@ will be completed with an error if the form fails to load or show.
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code not available yet</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"UMP/FirebaseUMP.h"</span></span>
+<span class="token comment">// 1. Call this after RequestConsentInfoUpdate has completed successfully.</span>
+<span class="token class-name ue-class">FirebaseUMP</span><span class="token double-colon punctuation">::</span><span class="token function">LoadAndShowConsentFormIfRequired</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFireabseUMPCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">FFirebaseError</span><span class="token operator">&amp;</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// The operator bool() returns true if an error occurred.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>Error<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 2. Check if the app is now authorized to request ads.</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name ue-class">FirebaseUMP</span><span class="token double-colon punctuation">::</span><span class="token function">CanRequestAds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Ready to initialize AdMob.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 3. Log the failure using the error code and message.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"UMP: Form error [%d]: %s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Error<span class="token punctuation">.</span>Code<span class="token punctuation">,</span> <span class="token operator">*</span>Error<span class="token punctuation">.</span>Message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_243" ExportPath="/Script/BlueprintGraph.K2Node_AsyncAction'/Game/DemoActor.DemoActor:EventGraph.K2Node_AsyncAction_243'"
@@ -1581,7 +1615,26 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ code not available yet</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"UMP/FirebaseUMP.h"</span></span>
+<span class="token comment">// 1. Load the form.</span>
+<span class="token class-name ue-class">FirebaseUMP</span><span class="token double-colon punctuation">::</span><span class="token function">LoadConsentForm</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFireabseUMPCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">FFirebaseError</span><span class="token operator">&amp;</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>Error<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// 2. Show the form once it is loaded.</span>
+        <span class="token class-name ue-class">FirebaseUMP</span><span class="token double-colon punctuation">::</span><span class="token function">ShowConsentForm</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFireabseUMPCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">FFirebaseError</span><span class="token operator">&amp;</span> ShowError<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ShowError<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">// Form dismissed, check if ads can be requested.</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name ue-class">FirebaseUMP</span><span class="token double-colon punctuation">::</span><span class="token function">CanRequestAds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    <span class="token comment">// Initialize ads.</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_246" ExportPath="/Script/BlueprintGraph.K2Node_AsyncAction'/Game/DemoActor.DemoActor:EventGraph.K2Node_AsyncAction_246'"
@@ -1616,7 +1669,12 @@ End Object
 </div>
 </div>
 </div>
-<div class="docsify-pagination-container">
+<script>
+setTimeout(() => {
+    bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+    switchCode();
+}, 0);
+</script><div class="docsify-pagination-container">
         <div class="pagination-item pagination-item--previous">
           <a href="remoteconfig">
             <div class="pagination-item-label">

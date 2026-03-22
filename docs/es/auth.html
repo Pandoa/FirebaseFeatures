@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>How to Implement Firebase Authentication in Unreal Engine</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to Implement Firebase Authentication in Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Secure your Unreal Engine games with Firebase Authentication. Learn how to easily integrate email/password, phone number, Google Sign-In, Apple Sign-In y social sign-in methods to provide a seamless user experience.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T08:51:28.130Z","keywords":["Firebase Authentication"," Unreal Engine"," User Authentication"," User Login"," User Signup"," Email/Password Authentication"," Phone Number Authentication"," Social Sign-in"," Security"," Game Development"," Mobile Game Development"," Firebase"," Google Firebase"," Unreal Engine 5"," Apple"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to Implement Firebase Authentication in Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Secure your Unreal Engine games with Firebase Authentication. Learn how to easily integrate email/password, phone number, Google Sign-In, Apple Sign-In y social sign-in methods to provide a seamless user experience.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T10:23:43.180Z","keywords":["Firebase Authentication"," Unreal Engine"," User Authentication"," User Login"," User Signup"," Email/Password Authentication"," Phone Number Authentication"," Social Sign-in"," Security"," Game Development"," Mobile Game Development"," Firebase"," Google Firebase"," Unreal Engine 5"," Apple"]}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="Firebase Authentication, Unreal Engine, User Authentication, User Login, User Signup, Email/Password Authentication, Phone Number Authentication, Social Sign-in, Security, Game Development, Mobile Game Development, Firebase, Google Firebase, Unreal Engine 5, Apple">
 	<meta name="description" content="Secure your Unreal Engine games with Firebase Authentication. Learn how to easily integrate email/password, phone number, Google Sign-In, Apple Sign-In y social sign-in methods to provide a seamless user experience.">
@@ -2065,7 +2065,21 @@ See <a href="https://support.google.com/firebase/answer/7000714" target="_blank"
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example code not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// Assuming 'User' is a valid UUser* instance obtained from FAuth::CurrentUser().</span>
+<span class="token keyword">const</span> <span class="token keyword ue-class">FString</span> NewPassword <span class="token operator">=</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"StrongPassword123!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+User<span class="token operator">-&gt;</span><span class="token function">UpdatePassword</span><span class="token punctuation">(</span>NewPassword<span class="token punctuation">,</span> <span class="token class-name ue-class">FUserVoidCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword ue-class">EFirebaseAuthError</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token keyword ue-class">EFirebaseAuthError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Password updated successfully.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"User password has been updated."</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// An error occurred. Check the error code (e.g., EFirebaseAuthError::WeakPassword).</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to update password. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_CustomEvent_33"
@@ -2111,7 +2125,20 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example code not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token keyword">const</span> <span class="token keyword ue-class">FString</span> Email <span class="token operator">=</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"user@example.com"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name ue-class">FAuth</span><span class="token double-colon punctuation">::</span><span class="token function">SendPasswordResetEmail</span><span class="token punctuation">(</span>Email<span class="token punctuation">,</span> <span class="token class-name ue-class">FAuthCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword ue-class">EFirebaseAuthError</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token keyword ue-class">EFirebaseAuthError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Password reset email sent successfully.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Password reset email sent."</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// An error occurred.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to send password reset email. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_106"
@@ -2147,7 +2174,21 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example code not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// Assuming 'User' is a valid UUser* instance.</span>
+User<span class="token operator">-&gt;</span><span class="token function">Delete</span><span class="token punctuation">(</span><span class="token class-name ue-class">FAuthCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword ue-class">EFirebaseAuthError</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token keyword ue-class">EFirebaseAuthError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// User account deleted successfully.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"User account has been deleted."</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// An error occurred. </span>
+        <span class="token comment">// Note: This often requires Recent Login (EFirebaseAuthError::RequiresRecentLogin).</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to delete user. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_107"
@@ -2192,7 +2233,22 @@ End Object
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example code not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// Assuming 'User' is a valid UUser* instance and 'Credential' was obtained</span>
+<span class="token comment">// via an Auth Provider (e.g. EmailAuthProvider::GetCredential).</span>
+User<span class="token operator">-&gt;</span><span class="token function">Reauthenticate</span><span class="token punctuation">(</span>Credential<span class="token punctuation">,</span> <span class="token class-name ue-class">FUserVoidCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword ue-class">EFirebaseAuthError</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">==</span> <span class="token keyword ue-class">EFirebaseAuthError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// User successfully re-authenticated. </span>
+        <span class="token comment">// You can now proceed with sensitive operations like Delete or UpdatePassword.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"User re-authenticated successfully."</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Re-authentication failed.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Re-authentication failed. Error Code: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_108"

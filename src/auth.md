@@ -788,7 +788,22 @@ You can set a user's password with the `UpdatePassword` method. For example:
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+// Assuming 'User' is a valid UUser* instance obtained from FAuth::CurrentUser().
+const FString NewPassword = TEXT("StrongPassword123!");
+
+User->UpdatePassword(NewPassword, FUserVoidCallback::CreateLambda([](const EFirebaseAuthError Error)
+{
+    if (Error == EFirebaseAuthError::None)
+    {
+        // Password updated successfully.
+        UE_LOG(LogTemp, Log, TEXT("User password has been updated."));
+    }
+    else
+    {
+        // An error occurred. Check the error code (e.g., EFirebaseAuthError::WeakPassword).
+        UE_LOG(LogTemp, Error, TEXT("Failed to update password. Error Code: %d"), (int32)Error);
+    }
+}));
 ```
 
 </div>
@@ -849,7 +864,21 @@ You can send a password reset email to a user with the `SendPasswordResetEmail` 
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+const FString Email = TEXT("user@example.com");
+
+FAuth::SendPasswordResetEmail(Email, FAuthCallback::CreateLambda([](const EFirebaseAuthError Error)
+{
+    if (Error == EFirebaseAuthError::None)
+    {
+        // Password reset email sent successfully.
+        UE_LOG(LogTemp, Log, TEXT("Password reset email sent."));
+    }
+    else
+    {
+        // An error occurred.
+        UE_LOG(LogTemp, Error, TEXT("Failed to send password reset email. Error Code: %d"), (int32)Error);
+    }
+}));
 ```
 
 </div>
@@ -901,7 +930,21 @@ You can delete a user account with the `Delete` method. For example:
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+// Assuming 'User' is a valid UUser* instance.
+User->Delete(FAuthCallback::CreateLambda([](const EFirebaseAuthError Error)
+{
+    if (Error == EFirebaseAuthError::None)
+    {
+        // User account deleted successfully.
+        UE_LOG(LogTemp, Log, TEXT("User account has been deleted."));
+    }
+    else
+    {
+        // An error occurred. 
+        // Note: This often requires Recent Login (EFirebaseAuthError::RequiresRecentLogin).
+        UE_LOG(LogTemp, Error, TEXT("Failed to delete user. Error Code: %d"), (int32)Error);
+    }
+}));
 ```
 
 </div>
@@ -965,7 +1008,22 @@ When this happens, re-authenticate the user by getting new sign-in credentials f
 <div class="cpp">
 
 ```cpp
-// C++ example code not available yet.
+// Assuming 'User' is a valid UUser* instance and 'Credential' was obtained
+// via an Auth Provider (e.g. EmailAuthProvider::GetCredential).
+User->Reauthenticate(Credential, FUserVoidCallback::CreateLambda([](const EFirebaseAuthError Error)
+{
+    if (Error == EFirebaseAuthError::None)
+    {
+        // User successfully re-authenticated. 
+        // You can now proceed with sensitive operations like Delete or UpdatePassword.
+        UE_LOG(LogTemp, Log, TEXT("User re-authenticated successfully."));
+    }
+    else
+    {
+        // Re-authentication failed.
+        UE_LOG(LogTemp, Error, TEXT("Re-authentication failed. Error Code: %d"), (int32)Error);
+    }
+}));
 ```
 
 </div>

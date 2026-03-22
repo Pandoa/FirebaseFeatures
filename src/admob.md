@@ -19,8 +19,6 @@ AdMob helps you monetize your mobile app through in-app advertising. Three types
 </div>
 </div>
 
-!> The examples require the plugin [version 1.7.24](http://localhost:3000/#/patchnotes?id=_1724) or newer.
-
 ## Banner View
 
 <img src="_svgs/format-banner.svg" align="left" width="100" style="margin-right:20px;border:0;box-shadow:none" alt="admob banner ad icon"/>
@@ -36,7 +34,84 @@ Banners are rectangular ads that occupy a portion of an app's layout. They can b
 <div class="cpp">
 
 ```cpp
-// C++ example not available yet.
+#include "AdMob/FbBannerView.h"
+
+/***********************************************
+    Create a banner. 
+************************************************/
+UBannerView* Banner = NewObject<UBannerView>();
+
+/***********************************************
+    Later, initialize the banner.
+************************************************/
+FAdMobAdSize Size;
+Size.bAdaptive = true;
+
+// Launch the initialization of the banner.
+Banner->Initialize(
+    /* The physical dimensions. */
+    Size, 
+    /* The screen position. */
+    EAdMobBannerViewPosition::Bottom, 
+    /* Offsets to avoid system UI overlays. */
+    true, 
+    /* Unique identifier for this banner. */
+    TEXT("ca-app-pub-3940256099942544/2435281174"),
+    /* Callback invoked once the native SDK setup is complete. */
+    FFirebaseAdMobCallback::CreateLambda([](EAdMobError Error)
+    {
+        if (Error != EAdMobError::None)
+        {
+            // SDK initialization failed. Check your App ID in the project settings.
+            UE_LOG(LogTemp, Error, TEXT("Failed to initialize banner (Error Code: %d)"), (int32)Error);
+        }
+        else
+        {
+            // Banner is initialized and ready to load an ad.
+        }
+    }));
+
+/***********************************************
+    Later, load an ad.
+************************************************/
+FAdMobAdRequest Request;
+
+// Launch the load of the ad.
+Banner->LoadAd(
+    /* Our request */
+    Request, 
+    /* Set to true to let the SDK manage refresh intervals. */
+    true, 
+    /* Callback when the ad is loaded. */
+    FFirebaseAdMobCallback::CreateLambda([](EAdMobError Error)
+    {
+        if (Error != EAdMobError::None)
+        {
+            // Failure is often due to No Fill (no ads available) or network issues.
+            UE_LOG(LogTemp, Error, TEXT("Failed to load banner ad (Error Code: %d)"), (int32)Error);
+        }
+        else
+        {
+            // Ad is loaded and ready to be shown.
+        }
+    }));
+
+/***********************************************
+    Finally, after the ad was loaded, show the ad.
+************************************************/
+/* Shows the ad */
+Banner->Show(FFirebaseAdMobCallback::CreateLambda([](EAdMobError Error)
+{
+    if (Error != EAdMobError::None)
+    {
+        // Failed to show the ad as something went wrong. Check the output log for reason.
+        UE_LOG(LogTemp, Error, TEXT("Failed to show banner: %d"), (int32)Error);
+    }
+    else
+    {
+        // Banner is currently on screen.
+    }
+}));
 ```
 
 </div>
@@ -371,7 +446,54 @@ Interstitial ads are full-page ad format that appear at natural breaks and trans
 
 
 ```cpp
-// C++ example not available yet.
+#include "AdMob/FbInterstitialAd.h"
+
+/***********************************************
+    Create an interstitial ad. 
+************************************************/
+UInterstitialAd* Interstitial = NewObject<UInterstitialAd>();
+
+/***********************************************
+    Later, load the ad.
+************************************************/
+FAdMobAdRequest Request;
+
+// Launch the load of the ad.
+Interstitial->LoadAd(
+    /* Unique identifier for this interstitial slot. */
+    TEXT("ca-app-pub-3940256099942544/1033173712"),
+    /* Our request */
+    Request, 
+    /* Callback invoked once the ad is loaded or failed. */
+    FFirebaseAdMobCallback::CreateLambda([](EAdMobError Error)
+    {
+        if (Error != EAdMobError::None)
+        {
+            // Failed to load the ad. Check the output log for the reason.
+            UE_LOG(LogTemp, Error, TEXT("Failed to load interstitial (Error Code: %d)"), (int32)Error);
+        }
+        else
+        {
+            // Ad is loaded and ready to be shown.
+        }
+    }));
+
+/***********************************************
+    Finally, after the ad was loaded, show the ad.
+************************************************/
+/* Shows the interstitial. */
+Interstitial->Show(FFirebaseAdMobCallback::CreateLambda([](EAdMobError Error)
+{
+    if (Error != EAdMobError::None)
+    {
+        // Failed to show the ad as something went wrong. Check the output log for reason.
+        UE_LOG(LogTemp, Error, TEXT("Failed to show interstitial: %d"), (int32)Error);
+    }
+    else
+    {
+        // Ad is currently covering the UI.
+    }
+}));
 ```
     
 </div>
@@ -589,7 +711,65 @@ Rewarded videos are ad formats that reward users for watching ads. They are grea
 
 
 ```cpp
-// C++ example not available yet.
+#include "AdMob/FbRewardedVideo.h"
+
+/***********************************************
+    Create a rewarded ad. 
+************************************************/
+URewardedVideo* RewardedAd = NewObject<URewardedVideo>();
+
+/***********************************************
+    Handle the reward event.
+************************************************/
+RewardedAd->OnAdReward().AddLambda([](const FAdMobRewardItem& Reward)
+{
+    // This is where you grant the user their items/currency.
+    UE_LOG(LogTemp, Log, TEXT("User rewarded: %f %s"), Reward.Amount, *Reward.Type);
+});
+
+/***********************************************
+    Later, load the ad.
+************************************************/
+FAdMobAdRequest Request;
+
+// Launch the load of the ad.
+RewardedAd->LoadAd(
+    /* Unique identifier for this rewarded slot. */
+    TEXT("ca-app-pub-3940256099942544/5224354917"),
+    /* Our request */
+    Request, 
+    /* Server-side verification (optional) */
+    {},
+    /* Callback invoked once the ad is loaded or failed. */
+    FFirebaseAdMobCallback::CreateLambda([](EAdMobError Error)
+    {
+        if (Error != EAdMobError::None)
+        {
+            // Failed to load the ad.
+            UE_LOG(LogTemp, Error, TEXT("Failed to load rewarded ad (Error Code: %d)"), (int32)Error);
+        }
+        else
+        {
+            // Ad is loaded and ready to be shown.
+        }
+    }));
+
+/***********************************************
+    Finally, after the ad was loaded, show the ad.
+************************************************/
+/* Shows the rewarded ad */
+RewardedAd->Show(FFirebaseAdMobCallback::CreateLambda([](EAdMobError Error)
+{
+    if (Error != EAdMobError::None)
+    {
+        // Failed to show the ad as something went wrong.
+        UE_LOG(LogTemp, Error, TEXT("Failed to show rewarded ad: %d"), (int32)Error);
+    }
+    else
+    {
+        // Ad is currently covering the UI.
+    }
+}));
 ```
     
 </div>
@@ -751,7 +931,7 @@ Ad->Load(
    /* Callback when the ad is loaded. */
    FFirebaseAdMobCallback::CreateLambda([](FFirebaseError Error)
    {
-      if (Error)
+      if (Error != EAdMobError::None)
       {
          // Failed to load the ad as something went wrong. Check the output log for the reason.
          UE_LOG(LogTemp, Error, TEXT("Failed to load an ad: %s"), *Error.Message);
@@ -770,7 +950,7 @@ Ad->Load(
 /* Shows the ad */
 Ad->Show(FFirebaseAdMobCallback::CreateLambda([](FFirebaseError Error)
 {
-   if (Error)
+   if (Error != EAdMobError::None)
    {
       // Failed to show the ad as something went wrong. Check the output log for reason.
       UE_LOG(LogTemp, Error, TEXT("Failed to show ad: %s"), *Error.Message);

@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>How to show ads in Unreal Engine with Firebase AdMob</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to show ads in Unreal Engine with Firebase AdMob","name":"Firebase Integration for Unreal Engine","description":"Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T08:51:24.917Z","keywords":["Firebase plugin"," AdMob"," Unreal Engine"," Blueprints"," Blueprints"," monetization"," game development"," mobile advertising"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to show ads in Unreal Engine with Firebase AdMob","name":"Firebase Integration for Unreal Engine","description":"Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-03-22T10:23:39.059Z","keywords":["Firebase plugin"," AdMob"," Unreal Engine"," Blueprints"," Blueprints"," monetization"," game development"," mobile advertising"]}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="Firebase plugin, AdMob, Unreal Engine, Blueprints, Blueprints, monetization, game development, mobile advertising">
 	<meta name="description" content="Learn how to integrate AdMob into your Unreal Engine projects with Firebase. Discover step-by-step Blueprints examples and explore the plugin's comprehensive documentation. Optimize your game's monetization with Firebase and AdMob.">
@@ -1431,14 +1431,85 @@
 </iframe>
 </div>
 </div>
-<p class="tip">The examples require the plugin <a href="http://localhost:3000/#/patchnotes.html#_1724" target="_blank" rel="noopener">version 1.7.24</a> or newer.</p><h2 id="banner-view"><a href="admob.html#banner-view" data-id="banner-view" class="anchor"><span>Banner View</span></a></h2><img src="_svgs/format-banner.svg" align="left" width="100" style="margin-right:20px;border:0;box-shadow:none" alt="admob banner ad icon">
+<h2 id="banner-view"><a href="admob.html#banner-view" data-id="banner-view" class="anchor"><span>Banner View</span></a></h2><img src="_svgs/format-banner.svg" align="left" width="100" style="margin-right:20px;border:0;box-shadow:none" alt="admob banner ad icon">
 <p>Banners are rectangular ads that occupy a portion of an app's layout. They can be refreshed automatically after a period of time.  </p><br>
 <div class="code-switcher show-cpp-false">
 <div class="switcher">
 <span class="sw-bp" onclick="switchBp()">Blueprints</span><span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"AdMob/FbBannerView.h"</span></span>
+<span class="token comment">/***********************************************
+    Create a banner. 
+************************************************/</span>
+<span class="token class-name ue-class">UBannerView</span><span class="token operator">*</span> Banner <span class="token operator">=</span> NewObject<span class="token operator">&lt;</span><span class="token class-name ue-class">UBannerView</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/***********************************************
+    Later, initialize the banner.
+************************************************/</span>
+<span class="token class-name ue-class">FAdMobAdSize</span> Size<span class="token punctuation">;</span>
+Size<span class="token punctuation">.</span>bAdaptive <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token comment">// Launch the initialization of the banner.</span>
+Banner<span class="token operator">-&gt;</span><span class="token function">Initialize</span><span class="token punctuation">(</span>
+    <span class="token comment">/* The physical dimensions. */</span>
+    Size<span class="token punctuation">,</span> 
+    <span class="token comment">/* The screen position. */</span>
+    <span class="token keyword ue-class">EAdMobBannerViewPosition</span><span class="token double-colon punctuation">::</span>Bottom<span class="token punctuation">,</span> 
+    <span class="token comment">/* Offsets to avoid system UI overlays. */</span>
+    <span class="token boolean">true</span><span class="token punctuation">,</span> 
+    <span class="token comment">/* Unique identifier for this banner. */</span>
+    <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"ca-app-pub-3940256099942544/2435281174"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">/* Callback invoked once the native SDK setup is complete. */</span>
+    <span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">EAdMobError</span> Error<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// SDK initialization failed. Check your App ID in the project settings.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to initialize banner (Error Code: %d)"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Banner is initialized and ready to load an ad.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/***********************************************
+    Later, load an ad.
+************************************************/</span>
+<span class="token class-name ue-class">FAdMobAdRequest</span> Request<span class="token punctuation">;</span>
+<span class="token comment">// Launch the load of the ad.</span>
+Banner<span class="token operator">-&gt;</span><span class="token function">LoadAd</span><span class="token punctuation">(</span>
+    <span class="token comment">/* Our request */</span>
+    Request<span class="token punctuation">,</span> 
+    <span class="token comment">/* Set to true to let the SDK manage refresh intervals. */</span>
+    <span class="token boolean">true</span><span class="token punctuation">,</span> 
+    <span class="token comment">/* Callback when the ad is loaded. */</span>
+    <span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">EAdMobError</span> Error<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Failure is often due to No Fill (no ads available) or network issues.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to load banner ad (Error Code: %d)"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Ad is loaded and ready to be shown.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/***********************************************
+    Finally, after the ad was loaded, show the ad.
+************************************************/</span>
+<span class="token comment">/* Shows the ad */</span>
+Banner<span class="token operator">-&gt;</span><span class="token function">Show</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">EAdMobError</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Failed to show the ad as something went wrong. Check the output log for reason.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to show banner: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Banner is currently on screen.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <p>It is possible to easily show a banner using a helper node to <em>create</em>, <em>load</em>, and <em>show</em> a banner view.</p><p class="tip">Make sure to keep the banner in a variable so it doesn't get garbage collected and removed from the screen.</p><div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_CustomEvent Name="K2Node_CustomEvent_70" ExportPath="/Script/BlueprintGraph.K2Node_CustomEvent'/Game/DemoActor.DemoActor:EventGraph.K2Node_CustomEvent_70'"
@@ -1745,7 +1816,50 @@ End Object
 <span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"AdMob/FbInterstitialAd.h"</span></span>
+<span class="token comment">/***********************************************
+    Create an interstitial ad. 
+************************************************/</span>
+<span class="token class-name ue-class">UInterstitialAd</span><span class="token operator">*</span> Interstitial <span class="token operator">=</span> NewObject<span class="token operator">&lt;</span><span class="token class-name ue-class">UInterstitialAd</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/***********************************************
+    Later, load the ad.
+************************************************/</span>
+<span class="token class-name ue-class">FAdMobAdRequest</span> Request<span class="token punctuation">;</span>
+<span class="token comment">// Launch the load of the ad.</span>
+Interstitial<span class="token operator">-&gt;</span><span class="token function">LoadAd</span><span class="token punctuation">(</span>
+    <span class="token comment">/* Unique identifier for this interstitial slot. */</span>
+    <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"ca-app-pub-3940256099942544/1033173712"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">/* Our request */</span>
+    Request<span class="token punctuation">,</span> 
+    <span class="token comment">/* Callback invoked once the ad is loaded or failed. */</span>
+    <span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">EAdMobError</span> Error<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Failed to load the ad. Check the output log for the reason.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to load interstitial (Error Code: %d)"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Ad is loaded and ready to be shown.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/***********************************************
+    Finally, after the ad was loaded, show the ad.
+************************************************/</span>
+<span class="token comment">/* Shows the interstitial. */</span>
+Interstitial<span class="token operator">-&gt;</span><span class="token function">Show</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">EAdMobError</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Failed to show the ad as something went wrong. Check the output log for reason.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to show interstitial: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Ad is currently covering the UI.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <p>The following Blueprint code can be used to <em>show</em> an interstitial ad using a helper node:</p><div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_211" ExportPath="/Script/BlueprintGraph.K2Node_AsyncAction'/Game/DemoActor.DemoActor:EventGraph.K2Node_AsyncAction_211'"
@@ -1935,7 +2049,60 @@ End Object
 <span class="sw-cpp" onclick="switchCpp()">C++</span>
 </div>
 <div class="cpp">
-<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token comment">// C++ example not available yet.</span></code></pre></div>
+<pre v-pre="" data-lang="cpp"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"AdMob/FbRewardedVideo.h"</span></span>
+<span class="token comment">/***********************************************
+    Create a rewarded ad. 
+************************************************/</span>
+<span class="token class-name ue-class">URewardedVideo</span><span class="token operator">*</span> RewardedAd <span class="token operator">=</span> NewObject<span class="token operator">&lt;</span><span class="token class-name ue-class">URewardedVideo</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/***********************************************
+    Handle the reward event.
+************************************************/</span>
+RewardedAd<span class="token operator">-&gt;</span><span class="token function">OnAdReward</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">AddLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token class-name ue-class">FAdMobRewardItem</span><span class="token operator">&amp;</span> Reward<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// This is where you grant the user their items/currency.</span>
+    <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Log<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"User rewarded: %f %s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Reward<span class="token punctuation">.</span>Amount<span class="token punctuation">,</span> <span class="token operator">*</span>Reward<span class="token punctuation">.</span>Type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/***********************************************
+    Later, load the ad.
+************************************************/</span>
+<span class="token class-name ue-class">FAdMobAdRequest</span> Request<span class="token punctuation">;</span>
+<span class="token comment">// Launch the load of the ad.</span>
+RewardedAd<span class="token operator">-&gt;</span><span class="token function">LoadAd</span><span class="token punctuation">(</span>
+    <span class="token comment">/* Unique identifier for this rewarded slot. */</span>
+    <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"ca-app-pub-3940256099942544/5224354917"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">/* Our request */</span>
+    Request<span class="token punctuation">,</span> 
+    <span class="token comment">/* Server-side verification (optional) */</span>
+    <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">/* Callback invoked once the ad is loaded or failed. */</span>
+    <span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">EAdMobError</span> Error<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Failed to load the ad.</span>
+            <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to load rewarded ad (Error Code: %d)"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Ad is loaded and ready to be shown.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/***********************************************
+    Finally, after the ad was loaded, show the ad.
+************************************************/</span>
+<span class="token comment">/* Shows the rewarded ad */</span>
+RewardedAd<span class="token operator">-&gt;</span><span class="token function">Show</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">EAdMobError</span> Error<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Failed to show the ad as something went wrong.</span>
+        <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to show rewarded ad: %d"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name ue-class">int32</span><span class="token punctuation">)</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Ad is currently covering the UI.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="bp">
 <p>Here's how to show a Rewarded Video to your users:</p><div class="bpcode">
 <textarea readonly="">Begin Object Class=/Script/BlueprintGraph.K2Node_AsyncAction Name="K2Node_AsyncAction_215" ExportPath="/Script/BlueprintGraph.K2Node_AsyncAction'/Game/DemoActor.DemoActor:EventGraph.K2Node_AsyncAction_215'"
@@ -2071,7 +2238,7 @@ Ad<span class="token operator">-&gt;</span><span class="token function">Load</sp
    <span class="token comment">/* Callback when the ad is loaded. */</span>
    <span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseError</span> Error<span class="token punctuation">)</span>
    <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>Error<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
       <span class="token punctuation">{</span>
          <span class="token comment">// Failed to load the ad as something went wrong. Check the output log for the reason.</span>
          <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to load an ad: %s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">*</span>Error<span class="token punctuation">.</span>Message<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2088,7 +2255,7 @@ Ad<span class="token operator">-&gt;</span><span class="token function">Load</sp
 <span class="token comment">/* Shows the ad */</span>
 Ad<span class="token operator">-&gt;</span><span class="token function">Show</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseAdMobCallback</span><span class="token double-colon punctuation">::</span><span class="token function">CreateLambda</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token class-name ue-class">FFirebaseError</span> Error<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-   <span class="token keyword">if</span> <span class="token punctuation">(</span>Error<span class="token punctuation">)</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>Error <span class="token operator">!=</span> <span class="token class-name ue-class">EAdMobError</span><span class="token double-colon punctuation">::</span>None<span class="token punctuation">)</span>
    <span class="token punctuation">{</span>
       <span class="token comment">// Failed to show the ad as something went wrong. Check the output log for reason.</span>
       <span class="token function ue-macro">UE_LOG</span><span class="token punctuation">(</span>LogTemp<span class="token punctuation">,</span> Error<span class="token punctuation">,</span> <span class="token function ue-macro">TEXT</span><span class="token punctuation">(</span><span class="token string">"Failed to show ad: %s"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">*</span>Error<span class="token punctuation">.</span>Message<span class="token punctuation">)</span><span class="token punctuation">;</span>

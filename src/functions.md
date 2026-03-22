@@ -142,3 +142,11 @@ End Object
 ## Write a Function
 
 To learn more about writing Cloud Functions and how to deploy them, refer to the [official Firebase Documentation](https://firebase.google.com/docs/functions).
+
+
+<script>
+setTimeout(() => {
+	bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+	switchCode();
+}, 0);
+</script>

@@ -44,7 +44,14 @@ References are created from the storage service on your Firebase app by calling 
 <div class="cpp">
 
 ```cpp
-// C++ code example not available yet.
+#include "Storage/Storage.h"
+#include "Storage/StorageReference.h"
+
+// 1. Get a reference to the root of your bucket using the gs:// URL
+UFirebaseStorageReference* RootRef = UFirebaseStorage::GetReferenceFromUrl(TEXT("gs://your-app.appspot.com"));
+
+// 2. Create a reference to a specific file path
+UFirebaseStorageReference* SpaceRef = UFirebaseStorage::GetReferenceFromPath(TEXT("images/space.jpg"));
 ```
 
 </div>
@@ -77,7 +84,18 @@ You can create a reference to a location lower in the tree, say `'images/space.j
 <div class="cpp">
 
 ```cpp
-// C++ code example not available yet.
+// 3. Create a reference relative to an existing reference using Child()
+// This points to "images/stars.jpg"
+UFirebaseStorageReference* StarsRef = SpaceRef->GetParent()->Child(TEXT("stars.jpg"));
+
+// 4. Navigate back up the tree
+// ParentRef points to "images/"
+UFirebaseStorageReference* ParentRef = SpaceRef->GetParent();
+
+// 5. Get basic info from the reference
+FString FileName = SpaceRef->GetName();      // "space.jpg"
+FString FullPath = SpaceRef->GetFullPath();  // "images/space.jpg"
+FString Bucket   = SpaceRef->GetBucket();    // "your-app.appspot.com"
 ```
 
 </div>
@@ -171,7 +189,39 @@ The `PutBytes()` method is the simplest way to upload a file to Cloud Storage. `
 <div class="cpp">
 
 ```cpp
-// C++ code example not available yet.
+#include "Storage/Storage.h"
+#include "Storage/StorageReference.h"
+
+// 1. Prepare your data and controller
+TArray<uint8> DataToUpload;
+// ... fill DataToUpload with your binary data ...
+
+FFirebaseStorageController Controller;
+
+// 2. Start the upload
+// We'll use a reference to "images/mountains.jpg"
+UFirebaseStorageReference* StorageRef = UFirebaseStorage::GetReferenceFromPath(TEXT("images/mountains.jpg"));
+
+StorageRef->PutBytes(
+    DataToUpload, 
+    Controller,
+    FFirebaseStorageMetadataCallback::CreateLambda([](const EFirebaseStorageError Error, const FFirebaseStorageMetadata& Metadata)
+    {
+        if (Error == EFirebaseStorageError::None)
+        {
+            UE_LOG(LogTemp, Log, TEXT("Upload Complete! File size: %lld"), Metadata.GetSizeBytes());
+        }
+        else
+        {
+            UE_LOG(LogTemp, Error, TEXT("Upload failed. Error Code: %d"), (int32)Error);
+        }
+    }),
+    FFirebaseStorageControllerCallback::CreateLambda([](FFirebaseStorageController& ProgressController)
+    {
+        float Progress = (float)ProgressController.BytesTransferred() / (float)ProgressController.TotalByteCount();
+        UE_LOG(LogTemp, Log, TEXT("Upload Progress: %f%%"), Progress * 100.0f);
+    })
+);
 ```
 
 </div>
@@ -233,7 +283,47 @@ End Object
 <div class="cpp">
 
 ```cpp
-// C++ code example not available yet.
+#include "Storage/Storage.h"
+#include "Storage/StorageReference.h"
+
+// 1. Define the local path on the device.
+const FString LocalFilePath = TEXT("/storage/emulated/0/DCIM/Camera/photo.jpg");
+
+// 2. Obtain a reference to the destination in Cloud Storage.
+UFirebaseStorageReference* StorageRef = UFirebaseStorage::GetReferenceFromPath(TEXT("uploads/user_photo.jpg"));
+
+// 3. Create a controller to monitor and manage the operation.
+FFirebaseStorageController Controller;
+
+// 4. Start the upload process.
+StorageRef->PutFile(
+    LocalFilePath, 
+    Controller,
+    FFirebaseStorageMetadataCallback::CreateLambda([](const EFirebaseStorageError Error, const FFirebaseStorageMetadata& Metadata)
+    {
+        if (Error == EFirebaseStorageError::None)
+        {
+            // Upload successful.
+            UE_LOG(LogTemp, Log, TEXT("File upload successful: %s"), *Metadata.GetName());
+        }
+        else
+        {
+            // Handle upload error.
+            UE_LOG(LogTemp, Error, TEXT("File upload failed. Error Code: %d"), (int32)Error);
+        }
+    }),
+    FFirebaseStorageControllerCallback::CreateLambda([](FFirebaseStorageController& ProgressController)
+    {
+        // Calculate and log progress.
+        const int64 Transferred = ProgressController.BytesTransferred();
+        const int64 Total = ProgressController.TotalByteCount();
+        if (Total > 0)
+        {
+            float ProgressPct = (float)Transferred / (float)Total * 100.0f;
+            UE_LOG(LogTemp, Log, TEXT("Upload Progress: %.2f%%"), ProgressPct);
+        }
+    })
+);
 ```
 
 </div>
@@ -304,7 +394,45 @@ Download the file to a byte buffer in memory using the `GetBytes()` method. This
 <div class="cpp">
 
 ```cpp
-// C++ code example not available yet.
+#include "Storage/Storage.h"
+#include "Storage/StorageReference.h"
+
+// 1. Define the maximum size you are willing to download (e.g., 5MB).
+const int64 MaxAllowedSize = 5 * 1024 * 1024;
+
+// 2. Get the reference for the file.
+UFirebaseStorageReference* StorageRef = UFirebaseStorage::GetReferenceFromPath(TEXT("images/profile.png"));
+
+// 3. Create a controller.
+FFirebaseStorageController Controller;
+
+// 4. Download the bytes.
+StorageRef->GetBytes(
+    MaxAllowedSize,
+    Controller,
+    FFirebaseStorageBinaryCallback::CreateLambda([](const EFirebaseStorageError Error, const TArray<uint8>& DownloadedData)
+    {
+        if (Error == EFirebaseStorageError::None)
+        {
+            // Data successfully downloaded into the array.
+            UE_LOG(LogTemp, Log, TEXT("Downloaded %d bytes."), DownloadedData.Num());
+        }
+        else
+        {
+            // Handle error (e.g., if file exceeds MaxAllowedSize, Error will reflect this).
+            UE_LOG(LogTemp, Error, TEXT("Download failed. Error Code: %d"), (int32)Error);
+        }
+    }),
+    FFirebaseStorageControllerCallback::CreateLambda([](FFirebaseStorageController& ProgressController)
+    {
+        const int64 Transferred = ProgressController.BytesTransferred();
+        const int64 Total = ProgressController.TotalByteCount();
+        if (Total > 0)
+        {
+            UE_LOG(LogTemp, Log, TEXT("Download Progress: %lld / %lld bytes"), Transferred, Total);
+        }
+    })
+);
 ```
 
 </div>
@@ -367,7 +495,47 @@ The `GetFile()` method downloads a file directly to a local device. Use this if 
 <div class="cpp">
 
 ```cpp
-// C++ code example not available yet.
+#include "Storage/Storage.h"
+#include "Storage/StorageReference.h"
+
+// 1. Define the relative or absolute path on the computer to save the file.
+const FString LocalSavePath = TEXT("Saved/Downloads/LargeAsset.pak");
+
+// 2. Get the reference for the file in Cloud Storage.
+UFirebaseStorageReference* StorageRef = UFirebaseStorage::GetReferenceFromPath(TEXT("assets/LargeAsset.pak"));
+
+// 3. Create a controller to manage the download.
+FFirebaseStorageController Controller;
+
+// 4. Start the download to the local file system.
+StorageRef->GetFile(
+    LocalSavePath,
+    Controller,
+    FFirebaseStorageInt64Callback::CreateLambda([](const EFirebaseStorageError Error, const int64 BytesTransferred)
+    {
+        if (Error == EFirebaseStorageError::None)
+        {
+            // Download complete.
+            UE_LOG(LogTemp, Log, TEXT("File successfully downloaded to disk. Total: %lld bytes"), BytesTransferred);
+        }
+        else
+        {
+            // Handle error.
+            UE_LOG(LogTemp, Error, TEXT("Download failed. Error Code: %d"), (int32)Error);
+        }
+    }),
+    FFirebaseStorageControllerCallback::CreateLambda([](FFirebaseStorageController& ProgressController)
+    {
+        // Log progress updates.
+        const int64 Transferred = ProgressController.BytesTransferred();
+        const int64 Total = ProgressController.TotalByteCount();
+        if (Total > 0)
+        {
+            float ProgressPct = (float)Transferred / (float)Total * 100.0f;
+            UE_LOG(LogTemp, Log, TEXT("Download Progress: %.2f%%"), ProgressPct);
+        }
+    })
+); 
 ```
 
 </div>
@@ -428,7 +596,27 @@ If you already have download infrastructure based around URLs, or just want a UR
 <div class="cpp">
 
 ```cpp
-// C++ code example not available yet.
+#include "Storage/Storage.h"
+#include "Storage/StorageReference.h"
+
+// 1. Get the reference for the file you want to share.
+UFirebaseStorageReference* StorageRef = UFirebaseStorage::GetReferenceFromPath(TEXT("public/images/logo.png"));
+
+// 2. Request the long-lived download URL.
+StorageRef->GetDownloadUrl(FFirebaseStorageStringCallback::CreateLambda([](const EFirebaseStorageError Error, const FString& DownloadUrl)
+{
+    if (Error == EFirebaseStorageError::None)
+    {
+        // Successfully retrieved the URL. 
+        // This URL can be used in a browser or passed to other download managers.
+        UE_LOG(LogTemp, Log, TEXT("Download URL: %s"), *DownloadUrl);
+    }
+    else
+    {
+        // Handle error (e.g., file not found or permission denied).
+        UE_LOG(LogTemp, Error, TEXT("Failed to get download URL. Error Code: %d"), (int32)Error);
+    }
+}));
 ```
 
 </div>
@@ -497,3 +685,11 @@ End Object
 </div>
 </div> 
 -->
+
+
+<script>
+setTimeout(() => {
+	bShowCPP = !JSON.parse(getCookie('bShowCPP'));
+	switchCode();
+}, 0);
+</script>
