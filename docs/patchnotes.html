@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>Update Releases for the Firebase Plugin for Unreal Engine</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Update Releases for the Firebase Plugin for Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Check what new features were added to the plugin. Make sure you are using the latest version to get the latest features.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-05-16T09:07:50.499Z"}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Update Releases for the Firebase Plugin for Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Check what new features were added to the plugin. Make sure you are using the latest version to get the latest features.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-05-24T10:05:48.393Z"}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="firebase,unreal,engine,features,plugin,integrate,blueprint,code,blueprints,support,game,engine,doc,docs,documentation">
 	<meta name="description" content="Check what new features were added to the plugin. Make sure you are using the latest version to get the latest features.">
@@ -1745,30 +1745,30 @@ setupStatic();
 	
 	
 	
-	<script src="https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL&amp;l=dataLayer&amp;cx=c&amp;_dbg=918" async=""></script>
+	
 	<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'G-EGXMT0XTHL');
-			
-		  gtag('event', 'screen_view', {
-			'app_name': 'myAppName',
-			'screen_name': 'Home'
-		  });
-		  gtag('event', 'screen_view', {
-			'app_name': 'myAppName2',
-			'screen_name': 'Home 2 with spaces'
-		  });
-		  
-			if (window.puppeteer !== true && false) {
-				// setTimeout(() => {
-					const script = document.createElement('script');
-					script.src = "https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL&_dbg=10";
-					script.async = true;
-					script.setAttribute("class", "delete-static");
-					document.body.appendChild(script);
-				// }, 4000);
-			}
-	</script>
+  (function () {
+    const shouldLoadAnalytics =
+      window.puppeteer !== true &&
+      !navigator.webdriver &&
+      location.hostname !== 'localhost' &&
+      location.hostname !== '127.0.0.1';
+    if (!shouldLoadAnalytics) {
+      return;
+    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL';
+    script.onload = function () {
+      gtag('config', 'G-EGXMT0XTHL');
+    };
+    document.head.appendChild(script);
+  })();
+</script>
 <div class="progress" style="opacity: 0; width: 0%;"></div></body></html>

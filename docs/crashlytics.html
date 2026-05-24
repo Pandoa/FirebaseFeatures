@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>How to use Crashlytics in Unreal Engine</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to use Crashlytics in Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Enhance your Unreal Engine projects with Crashlytics to gain valuable insights into crashes and errors. Learn how to easily integrate Crashlytics to improve app stability and user experience.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-05-16T09:07:42.388Z","keywords":["Crashlytics"," Unreal Engine"," Crash Reporting"," Error Tracking"," Mobile Game Development"," Game Development"," App Stability"," Bug Tracking"," Firebase"," Google Firebase"," Unreal Engine 5"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"How to use Crashlytics in Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Enhance your Unreal Engine projects with Crashlytics to gain valuable insights into crashes and errors. Learn how to easily integrate Crashlytics to improve app stability and user experience.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-05-24T10:05:39.397Z","keywords":["Crashlytics"," Unreal Engine"," Crash Reporting"," Error Tracking"," Mobile Game Development"," Game Development"," App Stability"," Bug Tracking"," Firebase"," Google Firebase"," Unreal Engine 5"]}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="Crashlytics, Unreal Engine, Crash Reporting, Error Tracking, Mobile Game Development, Game Development, App Stability, Bug Tracking, Firebase, Google Firebase, Unreal Engine 5">
 	<meta name="description" content="Enhance your Unreal Engine projects with Crashlytics to gain valuable insights into crashes and errors. Learn how to easily integrate Crashlytics to improve app stability and user experience.">
@@ -1501,30 +1501,30 @@ setupStatic();
 	
 	
 	
-	<script src="https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL&amp;l=dataLayer&amp;cx=c&amp;_dbg=918" async=""></script>
+	
 	<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'G-EGXMT0XTHL');
-			
-		  gtag('event', 'screen_view', {
-			'app_name': 'myAppName',
-			'screen_name': 'Home'
-		  });
-		  gtag('event', 'screen_view', {
-			'app_name': 'myAppName2',
-			'screen_name': 'Home 2 with spaces'
-		  });
-		  
-			if (window.puppeteer !== true && false) {
-				// setTimeout(() => {
-					const script = document.createElement('script');
-					script.src = "https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL&_dbg=10";
-					script.async = true;
-					script.setAttribute("class", "delete-static");
-					document.body.appendChild(script);
-				// }, 4000);
-			}
-	</script>
+  (function () {
+    const shouldLoadAnalytics =
+      window.puppeteer !== true &&
+      !navigator.webdriver &&
+      location.hostname !== 'localhost' &&
+      location.hostname !== '127.0.0.1';
+    if (!shouldLoadAnalytics) {
+      return;
+    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js.html?id=G-EGXMT0XTHL';
+    script.onload = function () {
+      gtag('config', 'G-EGXMT0XTHL');
+    };
+    document.head.appendChild(script);
+  })();
+</script>
 <div class="progress" style="opacity: 0; width: 0%;"></div></body></html>
