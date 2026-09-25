@@ -44,6 +44,16 @@ section.content ul > li > ul {
 }
 </style>
 
+### `1.8.9` - `1.8.10`
+<ul>
+<li class="new">
+Add support for Unreal Engine 5.8
+</li>
+<li>
+Miscellaneous bug fixes.
+</li>
+</ul>
+
 ### `1.8.8`
 <ul>
 <li class="new">

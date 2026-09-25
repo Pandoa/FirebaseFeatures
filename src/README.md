@@ -30,9 +30,9 @@
 </style>
 
 <div style="text-align: center; padding: 80px 20px; background: #0a0a0a; border-radius: 12px; margin-bottom: 60px;">
-<h1 style="font-size: 3.5em; margin-bottom: 10px; letter-spacing: -1px;">Firebase Features</h1>
-<p style="font-size: 1.4em; color: #f3ad38; font-weight: 600; margin-bottom: 15px;">C++ SDK Integration for Unreal Engine</p>
-<p style="font-size: 1.1em; opacity: 0.8; max-width: 800px; margin: 0 auto 30px; line-height: 1.6;">A high-performance, production-ready framework designed for professional game developers. Unlike REST-based wrappers, this plugin leverages the native Firebase C++ SDK to provide low-latency backend services with 100% Blueprint and C++ parity.</p>
+<h1 style="font-size: 3.5em; margin-bottom: 10px; letter-spacing: -1px;">{{hero_title}}</h1>
+<p style="font-size: 1.4em; color: #f3ad38; font-weight: 600; margin-bottom: 15px;">{{hero_subtitle}}</p>
+<p style="font-size: 1.1em; opacity: 0.8; max-width: 800px; margin: 0 auto 30px; line-height: 1.6;">{{hero_description}}</p>
 
 <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; font-size: 0.9em; font-weight: 700; text-transform: uppercase; opacity: 0.6;">
 <span>⚡ Native C++ Performance</span>
@@ -52,45 +52,45 @@ Go to installation doc
 
 <div class="lang-selector">
 Documentation also available in
-<a href="/FirebaseFeatures/index.html" class="lang-link">English</a>
-<a href="/FirebaseFeatures/es/index.html" class="lang-link">Español</a>
-<a href="/FirebaseFeatures/fr/index.html" class="lang-link">Français</a>
+<a href="/FirebaseFeatures/" class="lang-link">English</a>
+<a href="/FirebaseFeatures/es/" class="lang-link">Español</a>
+<a href="/FirebaseFeatures/fr/" class="lang-link">Français</a>
 </div>
 
 <h2 style="text-align: center;">Explore Components</h2>
 <div class="fb-grid">
-<a class="fb-card" href="#/firestore"><img src="_images/firebase/Firestore.png" width="64" height="64"/><div class="fb-name">Firestore</div></a>
-<a class="fb-card" href="#/functions"><img src="_images/firebase/CloudFunctions.png" width="64" height="64"/><div class="fb-name">Functions</div></a>
-<a class="fb-card" href="#/auth"><img src="_images/firebase/Auth.png" width="64" height="64"/><div class="fb-name">Authentication</div></a>
-<a class="fb-card" href="#/database"><img src="_images/firebase/Database.png" width="64" height="64"/><div class="fb-name">Realtime DB</div></a>
-<a class="fb-card" href="#/storage"><img src="_images/firebase/Storage.png" width="64" height="64"/><div class="fb-name">Storage</div></a>
-<a class="fb-card" href="#/appcheck"><img src="_images/firebase/AppCheck.png" width="64" height="64"/><div class="fb-name">App Check</div></a>
-<a class="fb-card" href="#/crashlytics"><img src="_images/firebase/Crashlytics.png" width="64" height="64"/><div class="fb-name">Crashlytics</div></a>
-<a class="fb-card" href="#/admob"><img src="_images/firebase/AdMob.png" width="64" height="64"/><div class="fb-name">AdMob</div></a>
-<a class="fb-card" href="#/analytics"><img src="_images/firebase/Analytics.png" width="64" height="64"/><div class="fb-name">Analytics</div></a>
-<a class="fb-card" href="#/messaging"><img src="_images/firebase/Messaging.png" width="64" height="64"/><div class="fb-name">Messaging</div></a>
-<a class="fb-card" href="#/remoteconfig"><img src="_images/firebase/RemoteConfig.png" width="64" height="64"/><div class="fb-name">Remote Config</div></a>
-<a class="fb-card" href="#/performance"><img src="_images/firebase/Performance.png" width="64" height="64"/><div class="fb-name">Performance</div></a>
+<a class="fb-card" href="#/firestore"><img alt="firebase firestore icon" src="_images/firebase/Firestore.png" width="64" height="64"/><div class="fb-name">Firestore</div></a>
+<a class="fb-card" href="#/functions"><img alt="firebase cloud functions icon" src="_images/firebase/CloudFunctions.png" width="64" height="64"/><div class="fb-name">Functions</div></a>
+<a class="fb-card" href="#/auth"><img alt="firebase auth icon" src="_images/firebase/Auth.png" width="64" height="64"/><div class="fb-name">Authentication</div></a>
+<a class="fb-card" href="#/database"><img alt="firebase database icon" src="_images/firebase/Database.png" width="64" height="64"/><div class="fb-name">Realtime DB</div></a>
+<a class="fb-card" href="#/storage"><img alt="firebase storage icon" src="_images/firebase/Storage.png" width="64" height="64"/><div class="fb-name">Storage</div></a>
+<a class="fb-card" href="#/appcheck"><img alt="firebase appcheck icon" src="_images/firebase/AppCheck.png" width="64" height="64"/><div class="fb-name">App Check</div></a>
+<a class="fb-card" href="#/crashlytics"><img alt="firebase crashlytics icon" src="_images/firebase/Crashlytics.png" width="64" height="64"/><div class="fb-name">Crashlytics</div></a>
+<a class="fb-card" href="#/admob"><img alt="firebase admob icon" src="_images/firebase/AdMob.png" width="64" height="64"/><div class="fb-name">AdMob</div></a>
+<a class="fb-card" href="#/analytics"><img alt="firebase analytics icon" src="_images/firebase/Analytics.png" width="64" height="64"/><div class="fb-name">Analytics</div></a>
+<a class="fb-card" href="#/messaging"><img alt="firebase messaging icon" src="_images/firebase/Messaging.png" width="64" height="64"/><div class="fb-name">Messaging</div></a>
+<a class="fb-card" href="#/remoteconfig"><img alt="firebase remoteconfig icon" src="_images/firebase/RemoteConfig.png" width="64" height="64"/><div class="fb-name">Remote Config</div></a>
+<a class="fb-card" href="#/performance"><img alt="firebase performance icon" src="_images/firebase/Performance.png" width="64" height="64"/><div class="fb-name">Performance</div></a>
 </div>
 
 <h2 style="text-align: center; margin-top: 80px;">Video Guides</h2>
 <div class="v-grid">
-<div class="v-wrapper"><iframe src="https://www.youtube.com/embed/SbVVrKnS78Y?rel=0" allowfullscreen></iframe></div>
-<div class="v-wrapper"><iframe src="https://www.youtube.com/embed/rVBxrr6i76Q?rel=0" allowfullscreen></iframe></div>
-<div class="v-wrapper"><iframe src="https://www.youtube.com/embed/TyGt6ZA816E?rel=0" allowfullscreen></iframe></div>
+<div class="v-wrapper"><iframe title="Firebase integration guide video" src="https://www.youtube.com/embed/SbVVrKnS78Y?rel=0" allowfullscreen></iframe></div>
+<div class="v-wrapper"><iframe title="Firebase admob guide video" src="https://www.youtube.com/embed/rVBxrr6i76Q?rel=0" allowfullscreen></iframe></div>
+<div class="v-wrapper"><iframe title="Firebase auth guide video" src="https://www.youtube.com/embed/TyGt6ZA816E?rel=0" allowfullscreen></iframe></div>
 </div>
 
 <footer class="pro-footer">
-<h2 style="text-align: center; font-size: 2em;">Frequently Asked Questions</h2>
+<h3 style="text-align: center; font-size: 2em;">Frequently Asked Questions</h3>
 <div class="faq-container">
-<div class="faq-box"><h4>How do I integrate Firebase with Unreal Engine 5?</h4><p>Integration is seamless. Download the plugin from Fab, add your <code>google-services.json</code> to the Services folder, and call the Initialize function. Our native C++ wrapper handles the complex configuration for you.</p></div>
-<div class="faq-box"><h4>Is there a performance difference vs REST wrappers?</h4><p>Yes. By leveraging the <strong>Native Firebase C++ SDK</strong>, this plugin offers lower latency, less overhead, and background processing capabilities that REST APIs cannot match, ensuring your game maintains a high frame rate.</p></div>
-<div class="faq-box"><h4>Which platforms are supported for Firebase in Unreal?</h4><p>We provide unified support for <strong>Windows, macOS, Linux, iOS, and Android</strong>. Write your logic once in Blueprints or C++ and deploy across all supported game platforms without changing your backend code.</p></div>
-<div class="faq-box"><h4>How does the plugin handle User Data Privacy (GDPR/UMP)?</h4><p>The plugin includes built-in modules for the <strong>Google User Messaging Platform (UMP)</strong>. This allows you to easily display legal consent forms and manage data privacy preferences required for AdMob and Analytics globally.</p></div>
-<div class="faq-box"><h4>Can I use Firebase for Real-time multiplayer data?</h4><p>Absolutely. Using the <strong>Realtime Database</strong> or <strong>Cloud Firestore</strong> listeners, you can sync scores, player locations, or inventory state across clients in milliseconds with built-in offline persistence.</p></div>
-<div class="faq-box"><h4>Is this plugin production-ready for large-scale games?</h4><p>Yes. Firebase Features is trusted by thousands of studios. It is designed with robust error handling, best-effort synchronization, and has been battle-tested in games with millions of active users.</p></div>
+<div class="faq-box"><h4>{{faq_q1}}</h4><p>{{faq_a1}}</p></div>
+<div class="faq-box"><h4>{{faq_q2}}</h4><p>{{faq_a2}}</p></div>
+<div class="faq-box"><h4>{{faq_q3}}</h4><p>{{faq_a3}}</p></div>
+<div class="faq-box"><h4>{{faq_q4}}</h4><p>{{faq_a4}}</p></div>
+<div class="faq-box"><h4>{{faq_q5}}</h4><p>{{faq_a5}}</p></div>
+<div class="faq-box"><h4>{{faq_q6}}</h4><p>{{faq_a6}}</p></div>
 </div>
 <div style="text-align: center; margin-top: 100px; opacity: 0.3; font-size: 0.85em;">
-<p>© 2026 Pandores Marketplace. Powering professional Unreal Engine games globally.</p>
+<p>© 2026 Pandores Marketplace.</p>
 </div>
 </footer>

@@ -103,5 +103,259 @@
       "description": "Integrate Google's User Messaging Platform (UMP) into Unreal Engine to easily comply with privacy regulations like GDPR and CCPA by managing ad and data consent.",
       "keywords": "UMP, User Messaging Platform, Unreal Engine, GDPR, CCPA, user consent, privacy, AdMob, Google, ads"
     }
+  },
+  "pseo": {
+    "index": [
+      {
+        "out_name": "index",
+        "keys": {
+          "hero_title": "Firebase Features",
+          "hero_subtitle": "C++ SDK Integration for Unreal Engine",
+          "hero_description": "A high-performance, production-ready framework designed for professional game developers. Unlike REST-based wrappers, this plugin leverages the native Firebase C++ SDK to provide low-latency backend services with 100% Blueprint and C++ parity.",
+          "faq_q1": "How do I integrate Firebase with Unreal Engine 5?",
+          "faq_a1": "Integration is seamless. Download the plugin from Fab, add your google-services.json to the Services folder, and call the Initialize function. Our native C++ wrapper handles the complex configuration for you.",
+          "faq_q2": "Is there a performance difference vs REST wrappers?",
+          "faq_a2": "Yes. By leveraging the Native Firebase C++ SDK, this plugin offers lower latency, less overhead, and background processing capabilities that REST APIs cannot match, ensuring your game maintains a high frame rate.",
+          "faq_q3": "Which platforms are supported for Firebase in Unreal?",
+          "faq_a3": "We provide unified support for Windows, macOS, Linux, iOS, and Android. Write your logic once in Blueprints or C++ and deploy across all supported game platforms without changing your backend code.",
+          "faq_q4": "How does the plugin handle User Data Privacy (GDPR/UMP)?",
+          "faq_a4": "The plugin includes built-in modules for the Google User Messaging Platform (UMP). This allows you to easily display legal consent forms and manage data privacy preferences required for AdMob and Analytics globally.",
+          "faq_q5": "Can I use Firebase for Real-time multiplayer data?",
+          "faq_a5": "Absolutely. Using the Realtime Database or Cloud Firestore listeners, you can sync scores, player locations, or inventory state across clients in milliseconds with built-in offline persistence.",
+          "faq_q6": "Is this plugin production-ready for large-scale games?",
+          "faq_a6": "Yes. Firebase Features is trusted by thousands of studios. It is designed with robust error handling, best-effort synchronization, and has been battle-tested in games with millions of active users."
+        }
+      },
+      {
+        "out_name": "firebase-unreal-mobile-ios-android",
+        "title": "Firebase Configuration for Unreal Engine Mobile (iOS & Android)",
+        "desc": "Configure native Firebase Crashlytics, AdMob, and Analytics for Unreal Engine iOS and Android builds.",
+        "keywords": "unreal engine mobile, firebase ios, firebase android, ue5 mobile optimization, admob unreal",
+        "keys": {
+          "hero_title": "Firebase for Mobile Games",
+          "hero_subtitle": "Native iOS & Android Deployment in Unreal Engine",
+          "hero_description": "Mobile-focused integration running on native iOS and Android Firebase binaries. Bypasses web views to process crash logs, serve adaptive ads, and track player telemetry without performance penalties.",
+          "faq_q1": "How do I set up Firebase for Unreal iOS and Android simultaneously?",
+          "faq_a1": "Add GoogleServices-Info.plist and google-services.json to your project's Config/Firebase folder. The Unreal Build Tool (UBT) automatically resolves and includes the platform-specific dependencies during packaging.",
+          "faq_q2": "Does this mobile plugin increase app package size (APK/IPA)?",
+          "faq_a2": "It adds a minimal footprint because it links directly to native static binaries, avoiding runtime web dependencies or heavy wrappers that cause builds to exceed cellular download limits.",
+          "faq_q3": "How are mobile push notifications handled on iOS and Android?",
+          "faq_a3": "Firebase Cloud Messaging (FCM) links natively into APNs for iOS and FCM services for Android, allowing the device to catch background push notifications when the Unreal engine loop is suspended.",
+          "faq_q4": "Can I use Apple Sign-In and Google Play Services with Auth?",
+          "faq_a4": "Yes. The Auth module contains explicit configurations to pass native Apple Sign-In OAuth tokens and Google Play Games authentication credentials into Firebase Auth, generating a single user UID.",
+          "faq_q5": "How accurate is Crashlytics on mobile devices?",
+          "faq_a5": "It captures native C++ call stacks, Android NDK signals, and iOS Mach exceptions, outputting accurate stack traces mapped to your engine source symbols rather than generic crash entries.",
+          "faq_q6": "Does AdMob support adaptive banners for mobile screens?",
+          "faq_a6": "Yes. The AdMob module interfaces with the hardware safe-zone API to compute screen boundaries dynamically, placing banners and interstitials without overlapping your custom UMG UI layout."
+        }
+      },
+      {
+        "out_name": "unreal-firebase-cpp-high-performance",
+        "title": "High-Performance Firebase C++ SDK for Unreal Engine Developers",
+        "desc": "Execute native Firebase C++ tasks. Implement multi-threaded database pipelines, thread-safe asynchronous operations, and low-overhead memory management.",
+        "keywords": "unreal engine c++, native firebase sdk, blueprint overhead, multi-threaded gamedev, backend architecture",
+        "keys": {
+          "hero_title": "Native C++ Architecture",
+          "hero_subtitle": "Multi-Threaded Firebase Subsystems for Unreal C++ Programmers",
+          "hero_description": "Engineered for projects utilizing pure C++ source code. Leverages the official Firebase C++ SDK architecture to provide explicit memory allocation control, multi-threaded operations, and standard asynchronous execution structures.",
+          "faq_q1": "Can I call these Firebase functions from non-game threads?",
+          "faq_a1": "Yes. The underlying C++ wrappers are thread-safe. You can initiate large Firestore queries, sync data, or execute file uploads via Cloud Storage on background worker threads without impacting the Game Thread.",
+          "faq_q2": "How does the C++ SDK handle asynchronous data promises?",
+          "faq_a2": "It uses standard Firebase::Future objects. You can poll futures inside an Actor Tick function, register completion callbacks, or use them alongside Unreal Insights to benchmark backend performance profiles.",
+          "faq_q3": "Is the codebase compatible with custom Unreal Engine source builds?",
+          "faq_a3": "Yes. The plugin consists of standard C++ source modules and precompiled binaries. It contains no locked engine modifications, compiling natively with launcher versions or custom engine forks.",
+          "faq_q4": "How do I handle memory allocation with real-time listeners?",
+          "faq_a4": "Listeners use reference counting bound to Unreal's lifecycle tracking. When the parent UObject or Subsystem is garbage collected, the underlying C++ wrapper tears down the listener automatically to prevent memory leaks.",
+          "faq_q5": "Can I access raw Firebase data pointers directly?",
+          "faq_a5": "Yes. The plugin exposes the underlying raw Firebase C++ SDK object pointers. You can access them directly to build custom serialization pipelines or use your own third-party data handlers.",
+          "faq_q6": "Does it support dedicated server deployments (Linux/Windows)?",
+          "faq_a6": "Yes. The plugin compiles under headless server target configurations, enabling dedicated Linux or Windows servers to securely handle admin writes, validate authentication, or stream telemetry to Firestore."
+        }
+      },
+      {
+        "out_name": "firebase-unreal-liveops-multiplayer",
+        "title": "Firebase LiveOps & Realtime Sync for Unreal Engine Multiplayer",
+        "desc": "Manage game parameters over-the-air. Synchronize player inventories, handle runtime variables via Remote Config, and deploy Realtime Database listeners.",
+        "keywords": "unreal engine liveops, realtime game database, remote config unreal, player inventory backend, dynamic game balance",
+        "keys": {
+          "hero_title": "LiveOps & Realtime Sync",
+          "hero_subtitle": "Runtime Configuration and Database Synchronization Subsystems",
+          "hero_description": "Modify game data tables, adjust balance values, and synchronize player parameters at runtime using Firebase Remote Config, Firestore, and Realtime Database pipelines.",
+          "faq_q1": "How fast does Remote Config update parameters inside the game client?",
+          "faq_a1": "Parameters fetch via standard asynchronous calls. Once cached, they apply immediately on application boot or mid-session without restarting the game executable.",
+          "faq_q2": "Is Firestore reliable enough to handle secure player inventories?",
+          "faq_a2": "Yes. Inventory operations are executed through Firestore Transactions. This guarantees atomic read-and-write cycles on the database cluster, preventing data race conditions or item duplication bugs.",
+          "faq_q3": "Can I use the Realtime Database to power a matchmaking lobby?",
+          "faq_a3": "Yes. Realtime Database maintains low-latency duplex connections. Combined with value-changed listeners, it can track active lobby slots, group formations, and client readiness states.",
+          "faq_q4": "How does offline persistence operate if a player loses connection?",
+          "faq_a4": "The local SDK caches write mutations to disk. The client fires success callbacks locally, and the plugin flushes the pending transaction queue sequentially once internet connection handshakes resume.",
+          "faq_q5": "Can I run targeted live-events for specific player segments?",
+          "faq_a5": "Yes. By mapping Firebase Analytics user properties to Remote Config criteria, you can adjust balance values, localized text string sets, or economy variables for specific regions or level brackets.",
+          "faq_q6": "How secure is player data against client-side memory editing?",
+          "faq_a6": "Completely secure when using Firebase Security Rules. You write server-side logic matching the requesting client's Auth token directly against their allocated data path to block unauthorized edits."
+        }
+      },
+      {
+        "out_name": "unreal-engine-multiplayer-backend-plugin",
+        "title": "Unreal Engine Firebase Backend Integration for Multiplayer",
+        "desc": "Integrate Firebase backend infrastructure into multiplayer workflows. Handle cloud storage saves, player profile records, and server authentication tracking.",
+        "keywords": "unreal engine backend plugin, ue5 firebase plugin, backend online subsystems, multiplayer database unreal engine, cloud save architecture",
+        "keys": {
+          "hero_title": "Firebase Multiplayer Integration",
+          "hero_subtitle": "Cloud Database and Identity Management Infrastructure for Games",
+          "hero_description": "Offload user account persistence, cloud save systems, and player lookup records to a managed cloud database using direct Firebase API bindings within the Unreal Engine runtime.",
+          "faq_q1": "How does the plugin interface with Unreal's Online Subsystem (OSS)?",
+          "faq_a1": "It operates as an independent data and identity layer. You can use it alongside platform-specific OSS setups or independently to handle cross-platform cloud saves and cross-play user indexing.",
+          "faq_q2": "Can this Firebase plugin validate game state to prevent cheating?",
+          "faq_a2": "Yes. You can invoke Firebase Cloud Functions to pass transaction requests. The serverless backend validates packet data before executing modifications inside Cloud Firestore.",
+          "faq_q3": "Does this backend setup support game cross-progression?",
+          "faq_a3": "Yes. By using Firebase Auth to bind multiple platform identity tokens to a single unique Firebase account identity, progress and inventory data sync uniformly across PC, mobile, and consoles.",
+          "faq_q4": "How does the backend infrastructure scale when traffic spikes?",
+          "faq_a4": "Google Cloud scales the underlying serverless architecture automatically. Firestore and Realtime Database scale out horizontally to manage thousands of concurrent open socket connections without rate limiting.",
+          "faq_q5": "Can I orchestrate a matchmaker using Firebase databases?",
+          "faq_a5": "Yes. By utilizing the realtime listener bindings on Firestore documents or Realtime Database paths, you can track queue parameters and use Cloud Run microservices to group players into sessions.",
+          "faq_q6": "What is the structural performance impact on authoritative game servers?",
+          "faq_a6": "The performance overhead is extremely minimal. Offloading player profile parsing, save validation, and analytics logging to Firebase frees up dedicated server CPU resources to handle physics and actor replication."
+        }
+      },
+      {
+        "out_name": "unreal-engine-online-services-alternative",
+        "title": "Unreal Engine Online Services Alternative (Firebase Integration)",
+        "desc": "Replace or complement standard online subsystems with a direct Firebase configuration. Implement structured NoSQL databases and cross-platform data syncing.",
+        "keywords": "unreal online services alternative, ue5 online subsystem replacement, multiplayer services unreal engine, eos alternative, firebase vs eos",
+        "keys": {
+          "hero_title": "Alternative Online Architecture",
+          "hero_subtitle": "NoSQL Database Integration and Subsystem Alternative",
+          "hero_description": "An alternative data pipeline configuration for developers requiring flexible document-based databases, live telemetry logging, and total rule-based control over user accounts instead of traditional rigid platform networks.",
+          "faq_q1": "Why use Firebase over Epic Online Services (EOS) or Steamworks?",
+          "faq_a1": "Standard platform subsystems handle lobby matching well but do not include general-purpose, scalable NoSQL databases. Firebase provides complete schema layout and database access controls that platform layers lack.",
+          "faq_q2": "Can I run this Firebase plugin alongside native platform achievements?",
+          "faq_a2": "Yes. The modules are isolated. You can utilize Steamworks or EOS for matchmaking, overlay management, and achievements, while routing backend data storage and analytics through this plugin.",
+          "faq_q3": "How does it handle cross-platform account linking?",
+          "faq_a3": "Firebase Auth links credentials from Steam, Epic, Apple, and Google Play into one unified user profile record, providing uniform database access regardless of the client hardware platform.",
+          "faq_q4": "Is there a local fallback when platform servers experience drops?",
+          "faq_a4": "Yes. The native Firebase C++ source libraries cache operations locally in the app sandbox directory. When network connectivity resolves, the plugin completes pending synchronization calls automatically.",
+          "faq_q5": "Does the plugin require separate compilation pipelines during packaging?",
+          "faq_a5": "No. It runs as a standard Unreal Engine runtime plugin. Dropping it into your project directory lets the standard Unreal Build Tool (UBT) handle compilation steps natively for your platform targets.",
+          "faq_q6": "How strict are the database security parameters compared to proprietary systems?",
+          "faq_a6": "Extremely strict. Firebase Security Rules allow you to construct structural, expression-based conditions mapping directly to the client's Auth UID, forcing absolute isolation of server paths."
+        }
+      },
+      {
+        "out_name": "feature-cloud-firestore",
+        "title": "Cloud Firestore Integration for Unreal Engine 5 | NoSQL Game Database",
+        "desc": "Implement low-latency Cloud Firestore collections, real-time data listeners, and atomic transactions natively via Blueprints and C++ in UE5.",
+        "keywords": "ue5 firestore integration, listen to document changes unreal engine, firestore collections blueprints, nosql game database ue5",
+        "keys": {
+          "hero_title": "Cloud Firestore for Unreal Engine",
+          "hero_subtitle": "Real-Time Document Data Syncing & NoSQL Scaling",
+          "hero_description": "Bridge your Unreal Engine game state directly to Google Cloud Firestore. Leverage native snapshot listeners to stream data updates instantly to your UI and gameplay actors without manual polling or costly HTTP REST operations.",
+          "faq_q1": "How do snapshot listeners work inside Unreal Engine Blueprints?",
+          "faq_a1": "Our plugin wraps the native C++ listener architecture into simple event-driven Blueprint pins. When a document or collection updates on the cloud, an execution thread fires natively in your Blueprint graph, passing a clean Data Snapshot.",
+          "faq_q2": "Can I run atomic data transactions to prevent player item duping?",
+          "faq_a2": "Yes. The Firestore module includes full support for native transaction blocks. It halts concurrent modifications, ensuring inventory additions or currency changes resolve sequentially and securely.",
+          "faq_q3": "Does the Firestore plugin require constant internet connection to function?",
+          "faq_a3": "No. Local offline persistence is enabled by default. The plugin handles queries using disk-cached data when offline and automatically pushes queued mutations once connection is re-established.",
+          "faq_q4": "How do I parse complex Firestore documents into Unreal variables?",
+          "faq_a4": "The plugin features automatic type-conversion nodes. Easily break apart Firestore maps, arrays, timestamps, and geo-points directly into standard Unreal Structs, FStrings, and Maps.",
+          "faq_q5": "Does this Firestore module support deep queries and collection groups?",
+          "faq_a5": "Yes. You can build complex queries using chained filtering nodes (WhereEqualTo, OrderBy, Limit) and execute collection group queries across geographically separated document paths natively.",
+          "faq_q6": "Is the Firestore implementation fully compatible with dedicated server builds?",
+          "faq_a6": "Yes. The module compiles cleanly for headless Linux and Windows dedicated servers, allowing authoritative servers to perform admin-level writes and data validation directly."
+        }
+      },
+      {
+        "out_name": "feature-firebase-auth",
+        "title": "Firebase Authentication & Player Sign-In States in Unreal Engine 5",
+        "desc": "Set up secure player onboarding with Firebase Anonymous Sign-In, OAuth providers, and persistent login state handling in UE5.",
+        "keywords": "firebase anonymous sign in ue5, unreal engine firebase authentication, persistent login state blueprints, secure player identity",
+        "keys": {
+          "hero_title": "Player Authentication Systems",
+          "hero_subtitle": "Secure Cross-Platform Identity Management for Games",
+          "hero_description": "Implement friction-free player registration and secure login pipelines. Handle anonymous temporary guest accounts, traditional email systems, and popular third-party identity authentications natively in Unreal Engine.",
+          "faq_q1": "How do I handle seamless onboarding using Anonymous Authentication?",
+          "faq_a1": "Call the 'Sign In Anonymously' node on boot. The plugin generates a unique user identity without requiring email or password strings, allowing players to jump straight into gameplay while saving data safely.",
+          "faq_q2": "Can a player link their anonymous guest account to an email later?",
+          "faq_a2": "Absolutely. The plugin supports safe credential linking tokens. Your players can attach an email address or third-party credential to their existing anonymous account profile without wiping out their cloud-saved progress.",
+          "faq_q3": "Does the plugin handle automatic persistent login on application launch?",
+          "faq_a3": "Yes. The underlying native SDK securely caches authorization tokens inside the operating system keychain. On game startup, you can check the current user state to bypass sign-in screens entirely.",
+          "faq_q4": "How secure is user profile data against memory injection tools?",
+          "faq_a4": "User sessions are protected via cryptographically signed JWT tokens generated directly by Firebase. As long as your backend security criteria check the request token, client-side data modifications are blocked.",
+          "faq_q5": "Can I integrate Apple Sign-In and Google Play Games via this Auth module?",
+          "faq_a5": "Yes. The module provides explicit nodes to accept native tokens from Epic Online Services, Steam, Apple, and Google Play, linking them all to a single, unified backend User ID.",
+          "faq_q6": "How do I log out a user or handle token expiration dynamically?",
+          "faq_a6": "The plugin features a global Auth State Listener node. When a token expires, or when you explicitly call the Sign Out node, an event delegates instantly across your UI to return the player to the login screen."
+        }
+      },
+      {
+        "out_name": "feature-google-admob",
+        "title": "Google AdMob & Mobile Monetization for Unreal Engine 5 Blueprints",
+        "desc": "Integrate responsive mobile ads in UE5. Serve adaptive banner layouts, interstitial ads, and rewarded video milestones cleanly using Blueprints.",
+        "keywords": "unreal engine admob blueprint nodes, ue5 mobile ads integration, reward video ads unreal, responsive banners mobile game",
+        "keys": {
+          "hero_title": "Google AdMob Monetization",
+          "hero_subtitle": "High-Yield Advertising Architectures Built for Unreal Mobile Games",
+          "hero_description": "Monetize your iOS and Android target builds without crippling performance. Interface natively with Google AdMob SDK structures to serve high-fill banner, interstitial, and rewarded ad units directly inside your gameplay loops.",
+          "faq_q1": "Will displaying AdMob banners overlap my custom UMG UI layouts?",
+          "faq_a1": "No. The plugin communicates with mobile hardware safe-zone arrays to compute exact screen aspect ratios, locking banner placements safely away from critical interactive UMG touch components.",
+          "faq_q2": "How do I award in-game currency safely using Rewarded Video Ads?",
+          "faq_a2": "The AdMob module exposes dedicated callback event pins ('On User Earned Reward'). This node outputs the exact reward type and amount configured on your AdMob dashboard only when the video finishes completely.",
+          "faq_q3": "Does this module support the required user privacy consent guidelines?",
+          "faq_a3": "Yes. It pairs perfectly with our UMP module to display Google's required Consent Management platform forms, safely enabling targeted ad delivery across the EU and regulated regions.",
+          "faq_q4": "Does serving ads introduce frame drops or runtime stuttering?",
+          "faq_a4": "No. Asset fetching and caching routines are offloaded to background threads. The game engine main thread only encounters execution requirements when displaying the pre-loaded ad assets.",
+          "faq_q5": "Can I configure AdMob test devices directly within Unreal Engine?",
+          "faq_a5": "Yes. The plugin includes a configuration array where you can supply test hardware IDs, preventing accidental policy violations on your live developer account during testing cycles.",
+          "faq_q6": "Does the plugin support interstitial ad preloading?",
+          "faq_a6": "Yes. You can invoke a background 'Load Interstitial Ad' node early in a match, then rapidly display it via the 'Show Interstitial Ad' node during natural gameplay transitions like game-over screens."
+        }
+      },
+      {
+        "out_name": "feature-realtime-database",
+        "title": "Firebase Realtime Database Subsystem for Unreal Engine Multiplayer",
+        "desc": "Sync multiplayer game data in milliseconds. Implement low-latency Realtime Database listeners and fast JSON snapshot data parsing.",
+        "keywords": "unreal engine firebase realtime database, data snapshot blueprints, fast game state sync firebase, live scoreboard backend",
+        "keys": {
+          "hero_title": "Realtime Database Subsystem",
+          "hero_subtitle": "Low-Latency Synchronized Key-Value Data Sockets",
+          "hero_description": "Synchronize global game values, chat room channels, or live multiplayer lobby states with sub-100ms response cycles. Utilize persistent WebSockets pipelines to drive quick cloud changes without continuous polling overhead.",
+          "faq_q1": "When should I choose Realtime Database instead of Cloud Firestore?",
+          "faq_a1": "Realtime Database is ideal for ultra-low-latency, simple JSON key-value synchronization like live server list updates, active matchmaking lobbies, or quick scoreboard feeds where rapid updates are critical.",
+          "faq_q2": "How does the engine process deep nested JSON data fields?",
+          "faq_a2": "The plugin processes database snapshots into an optimized key-value node loop. You can extract individual nested paths or serialize complete data keys directly into native engine strings or structs.",
+          "faq_q3": "Does the WebSocket pipeline drain mobile device battery packs quickly?",
+          "faq_a3": "No. The native C++ socket framework uses low-overhead transport layers that put connections into sleep states during gameplay inactivity, preventing background thread battery draining issues common in web wrappers.",
+          "faq_q4": "Can I limit database storage tracking to single player profiles?",
+          "faq_a4": "Yes. Realtime Database rules evaluate child nodes dynamically against the user's authenticating UID token, preventing unauthorized clients from altering other user node points.",
+          "faq_q5": "Does the Realtime Database plugin support atomic increments?",
+          "faq_a5": "Yes. It supports atomic transactions and direct data mutation increments (ServerValue::Increment), ensuring things like score totals or global match counts remain accurate across concurrent users.",
+          "faq_q6": "Can I monitor specific sub-keys without downloading the entire database JSON tree?",
+          "faq_a6": "Yes. You can attach value or child event listeners to precise data paths, ensuring your game client only streams mutations for the specific room or object it needs to track."
+        }
+      },
+      {
+        "out_name": "resolve-packaging-errors",
+        "title": "Fixing Common Firebase Packaging & Compile Errors in Unreal Engine 5",
+        "desc": "Resolve common Unreal Engine Firebase build errors. Repair Android UPL configurations, iOS CocoaPods link breaks, and missing application config dependencies.",
+        "keywords": "failed to create firebase application unreal, android_upl.xml firebase error, ue5 cocoapods xcode build failed, firebase compilation errors",
+        "keys": {
+          "hero_title": "Packaging & Build Diagnostics",
+          "hero_subtitle": "Resolving Automation Tool & Linker Bottlenecks for Firebase Build Targets",
+          "hero_description": "Stop struggling with broken platform configurations. This guide outlines solutions for common mobile packaging failures, compiler issues, and dependency errors encountered during Unreal Build Tool execution.",
+          "faq_q1": "How do I fix the 'Failed to create Firebase Application' runtime crash?",
+          "faq_a1": "This occurs when configuration assets are missing. Ensure google-services.json (Android) or GoogleService-Info.plist (iOS) are saved in your project's Config/Firebase directory so the build tool packages them properly.",
+          "faq_q2": "Why am I seeing Android NDK linker errors during gradle compilation loops?",
+          "faq_a2": "This happens when conflicting plugin layers import duplicate Firebase dependencies. Our plugin uses an isolation layer inside its Android_UPL.xml file to resolve dependencies cleanly without manual code hacks.",
+          "faq_q3": "How do I resolve CocoaPods workspace compilation failures on macOS builds?",
+          "faq_a3": "Ensure your machine has Ruby and CocoaPods installed. Run the packaging pipeline from the Unreal Editor to allow the plugin's automated script to generate and link the target Xcode workspace structures.",
+          "faq_q4": "Can I test my game's Firebase integration inside the Unreal Editor without packaging?",
+          "faq_a4": "Yes. Unlike basic wrappers that only function on target mobile devices, our plugin includes precompiled desktop binaries, enabling full database and auth testing directly inside the editor viewport.",
+          "faq_q5": "How do I fix bitcode or architecture mismatch errors in Xcode?",
+          "faq_a5": "Our plugin pre-configures custom target xcframeworks that strictly exclude legacy bitcode lines and include native arm64 support, bypassing the typical manually updated framework linking errors completely.",
+          "faq_q6": "What should I do if Proguard or R8 strips Firebase classes during Android release packaging?",
+          "faq_a6": "The plugin ships with integrated custom Proguard rule declarations embedded right within its configuration files, keeping necessary native callback endpoints intact automatically for shipping builds."
+        }
+      }
+    ]
   }
 }

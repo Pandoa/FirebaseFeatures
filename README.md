@@ -29,6 +29,7 @@ The plugin can be downloaded from [this link](https://www.fab.com/listings/feaef
 
 
 
+
 <!--backlinks-->
 
 #### Navigate the documentation
@@ -45,6 +46,12 @@ The plugin can be downloaded from [this link](https://www.fab.com/listings/feaef
  - [https://pandoa.github.io/FirebaseFeatures/database](https://pandoa.github.io/FirebaseFeatures/database),
  - [https://pandoa.github.io/FirebaseFeatures/disableunusedfeatures](https://pandoa.github.io/FirebaseFeatures/disableunusedfeatures),
  - [https://pandoa.github.io/FirebaseFeatures/dynamiclinks](https://pandoa.github.io/FirebaseFeatures/dynamiclinks),
+ - [https://pandoa.github.io/FirebaseFeatures/feature-cloud-firestore](https://pandoa.github.io/FirebaseFeatures/feature-cloud-firestore),
+ - [https://pandoa.github.io/FirebaseFeatures/feature-firebase-auth](https://pandoa.github.io/FirebaseFeatures/feature-firebase-auth),
+ - [https://pandoa.github.io/FirebaseFeatures/feature-google-admob](https://pandoa.github.io/FirebaseFeatures/feature-google-admob),
+ - [https://pandoa.github.io/FirebaseFeatures/feature-realtime-database](https://pandoa.github.io/FirebaseFeatures/feature-realtime-database),
+ - [https://pandoa.github.io/FirebaseFeatures/firebase-unreal-liveops-multiplayer](https://pandoa.github.io/FirebaseFeatures/firebase-unreal-liveops-multiplayer),
+ - [https://pandoa.github.io/FirebaseFeatures/firebase-unreal-mobile-ios-android](https://pandoa.github.io/FirebaseFeatures/firebase-unreal-mobile-ios-android),
  - [https://pandoa.github.io/FirebaseFeatures/firestore](https://pandoa.github.io/FirebaseFeatures/firestore),
  - [https://pandoa.github.io/FirebaseFeatures/functions](https://pandoa.github.io/FirebaseFeatures/functions),
  - [https://pandoa.github.io/FirebaseFeatures/installation](https://pandoa.github.io/FirebaseFeatures/installation),
@@ -54,8 +61,12 @@ The plugin can be downloaded from [this link](https://www.fab.com/listings/feaef
  - [https://pandoa.github.io/FirebaseFeatures/performance](https://pandoa.github.io/FirebaseFeatures/performance),
  - [https://pandoa.github.io/FirebaseFeatures/rebuildplugin](https://pandoa.github.io/FirebaseFeatures/rebuildplugin),
  - [https://pandoa.github.io/FirebaseFeatures/remoteconfig](https://pandoa.github.io/FirebaseFeatures/remoteconfig),
+ - [https://pandoa.github.io/FirebaseFeatures/resolve-packaging-errors](https://pandoa.github.io/FirebaseFeatures/resolve-packaging-errors),
  - [https://pandoa.github.io/FirebaseFeatures/storage](https://pandoa.github.io/FirebaseFeatures/storage),
  - [https://pandoa.github.io/FirebaseFeatures/support](https://pandoa.github.io/FirebaseFeatures/support),
  - [https://pandoa.github.io/FirebaseFeatures/troubleshoting](https://pandoa.github.io/FirebaseFeatures/troubleshoting),
  - [https://pandoa.github.io/FirebaseFeatures/ue5](https://pandoa.github.io/FirebaseFeatures/ue5),
- - [https://pandoa.github.io/FirebaseFeatures/ump](https://pandoa.github.io/FirebaseFeatures/ump)
+ - [https://pandoa.github.io/FirebaseFeatures/ump](https://pandoa.github.io/FirebaseFeatures/ump),
+ - [https://pandoa.github.io/FirebaseFeatures/unreal-engine-multiplayer-backend-plugin](https://pandoa.github.io/FirebaseFeatures/unreal-engine-multiplayer-backend-plugin),
+ - [https://pandoa.github.io/FirebaseFeatures/unreal-engine-online-services-alternative](https://pandoa.github.io/FirebaseFeatures/unreal-engine-online-services-alternative),
+ - [https://pandoa.github.io/FirebaseFeatures/unreal-firebase-cpp-high-performance](https://pandoa.github.io/FirebaseFeatures/unreal-firebase-cpp-high-performance)
