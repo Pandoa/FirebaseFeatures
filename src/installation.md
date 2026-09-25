@@ -179,3 +179,13 @@ You can click on one of the modules below to access its documentation.
 </a>
 
 </div>
+
+<script>
+document.querySelectorAll('a.fb-elem').forEach(link => {
+    link.addEventListener('click', () => {
+        gtag('event', 'firebase_component_click', {
+            component: link.querySelector('.fb-txt').textContent.trim()
+        });
+    });
+});
+</script>

@@ -94,3 +94,35 @@ Documentation also available in
 <p>© 2026 Pandores Marketplace.</p>
 </div>
 </footer>
+
+<script>
+document.addEventListener('click', function (event) {
+    const fab = event.target.closest('.hero-btn');
+    if (fab) {
+        gtag('event', 'action_click', {
+            action: 'download_on_fab'
+        });
+        return;
+    }
+    const installation = event.target.closest('.hero-btn-secondary');
+    if (installation) {
+        gtag('event', 'action_click', {
+            action: 'installation'
+        });
+        return;
+    }
+    const lang = event.target.closest('.lang-link');
+    if (lang) {
+        gtag('event', 'language_click', {
+            language: lang.textContent.trim()
+        });
+        return;
+    }
+    const component = event.target.closest('.fb-card');
+    if (component) {
+        gtag('event', 'firebase_component_click', {
+            component: component.querySelector('.fb-name').textContent.trim()
+        });
+    }
+});
+</script>
