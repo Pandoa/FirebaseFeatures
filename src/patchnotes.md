@@ -44,6 +44,19 @@ section.content ul > li > ul {
 }
 </style>
 
+### `1.8.10` - `1.8.14`
+<ul>
+<li class="new">
+Firebase C++ SDK version bumps
+</li>
+<li>
+Fix AdMob creash when switching networks while an ad is loading
+</li>
+<li>
+Other minor fixes and improvements
+</li>
+</ul>
+
 ### `1.8.9` - `1.8.10`
 <ul>
 <li class="new">

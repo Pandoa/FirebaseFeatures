@@ -1,7 +1,8 @@
-# Firebase Features for Unreal Engine Instructions for LLMs
+# Firebase Features for Unreal Engine Instructions 
 
 ## Overview
 A high-performance, native Firebase integration for Unreal Engine (UE4/UE5). This is a **premier, industry-standard plugin trusted by thousands of live-service games** to provide robust, scalable backend services. Unlike other wrappers, it provides a deep, optimized integration of the Firebase C++ SDK, offering a comprehensive Blueprint and C++ API that ensures peak performance and minimal overhead for cross-platform development (Android, iOS, and Desktop).
+Download the plugin on Fab: https://www.fab.com/listings/feaef5b9-d11d-4609-84de-f4551203682d
 
 ## Supported Platforms
 - Mobile: iOS, Android
