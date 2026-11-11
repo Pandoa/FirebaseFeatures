@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://pandoa.github.io/FirebaseFeatures/_media/icon.png">
 	<title>Update Releases for the Firebase Plugin for Unreal Engine</title>
-	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Update Releases for the Firebase Plugin for Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Check what new features were added to the plugin. Make sure you are using the latest version to get the latest features.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-11-11T12:29:28.019Z"}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org/","@type":"TechArticle","headline":"Update Releases for the Firebase Plugin for Unreal Engine","name":"Firebase Integration for Unreal Engine","description":"Check what new features were added to the plugin. Make sure you are using the latest version to get the latest features.","image":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png","author":{"@type":"Person","name":"Pandores","url":"https://www.fab.com/sellers/Pandores"},"publisher":{"@type":"Organization","name":"Pandores Marketplace","logo":{"@type":"ImageObject","url":"https://pandoa.github.io/FirebaseFeatures/_media/icon.png"}},"proficiencyLevel":"Beginner","datePublished":"2024-10-15","mainEntityOfPage":"https://pandoa.github.io/FirebaseFeatures/","dateModified":"2026-11-11T12:39:24.053Z"}</script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="firebase,unreal,engine,features,plugin,integrate,blueprint,code,blueprints,support,game,engine,doc,docs,documentation">
 	<meta name="description" content="Check what new features were added to the plugin. Make sure you are using the latest version to get the latest features.">
@@ -1370,6 +1370,12 @@
 			c.select();
 			document.execCommand("copy");
 			c.style.display = "none";
+			if (typeof gtag === 'function') {
+			gtag('event', 'copy_blueprint_code', {
+					'event_category': 'engagement',
+					'event_label': 'Copy Code Button'
+				});
+			}
 		}
 	</script>
 	<script>
@@ -1382,6 +1388,14 @@
 				elems[i].classList.add('show-cpp-' + bShowCPP);
 			}
 			setCookie('bShowCPP', bShowCPP, 7);
+			
+			if (typeof gtag === 'function') {
+				gtag('event', 'switch_code_view', {
+					'event_category': 'engagement',
+					'event_label': bShowCPP ? 'Blueprint' : 'C++',
+					'value': bShowCPP ? 1 : 0
+				});
+			}
 		}
 		function switchCpp() {
 			bShowCPP = false;
@@ -1766,6 +1780,12 @@ setupStatic();
 	
 	<script>
   (function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
     const shouldLoadAnalytics =
       window.puppeteer !== true &&
       !navigator.webdriver &&
@@ -1774,12 +1794,6 @@ setupStatic();
     if (!shouldLoadAnalytics) {
       return;
     }
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    window.gtag = gtag;
-    gtag('js', new Date());
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https' + '://www.googleta' + 'gmanager.com/gt' + 'ag/' + 'js' + '?' + 'id' + '=G-EGXMT0XTHL';
