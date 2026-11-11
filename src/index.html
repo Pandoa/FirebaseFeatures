@@ -38,7 +38,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<meta property="og:title" content="Firebase Features for Unreal Engine" />
 	<meta property="og:image" content="https://pandoa.github.io/FirebaseFeatures/_images/features.jpg" />
-	<meta property="og:image" content="https://pandoa.github.io/FirebaseFeatures/_media/icon.png" />
 	<meta property="og:site_name" content="Firebase" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://pandoa.github.io/FirebaseFeatures/" />
@@ -1679,6 +1678,12 @@
 			c.select();
 			document.execCommand("copy");
 			c.style.display = "none";
+			if (typeof gtag === 'function') {
+			gtag('event', 'copy_blueprint_code', {
+					'event_category': 'engagement',
+					'event_label': 'Copy Code Button'
+				});
+			}
 		}
 	</script>
 	<script>
@@ -1693,6 +1698,14 @@
 			}
 
 			setCookie('bShowCPP', bShowCPP, 7);
+			
+			if (typeof gtag === 'function') {
+				gtag('event', 'switch_code_view', {
+					'event_category': 'engagement',
+					'event_label': bShowCPP ? 'Blueprint' : 'C++',
+					'value': bShowCPP ? 1 : 0
+				});
+			}
 		}
 		function switchCpp() {
 			bShowCPP = false;
@@ -1874,6 +1887,12 @@ setupStatic();
 	
 	<script>
   (function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
     const shouldLoadAnalytics =
       window.puppeteer !== true &&
       !navigator.webdriver &&
@@ -1882,12 +1901,6 @@ setupStatic();
     if (!shouldLoadAnalytics) {
       return;
     }
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    window.gtag = gtag;
-    gtag('js', new Date());
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https' + '://www.googleta' + 'gmanager.com/gt' + 'ag/' + 'js' + '?' + 'id' + '=G-EGXMT0XTHL';

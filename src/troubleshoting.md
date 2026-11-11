@@ -14,17 +14,19 @@ Some errors can be caused by stale build artifacts. If you encounter weird error
 ## Android and iOS
 
 <script>
-function onCollapserClicked(event) {
-  const collapser = event.target.parentNode.children[1];
-  if (collapser.style.maxHeight) {
-    collapser.style.maxHeight = null;
-    collapser.parentNode.className += " collapsed";
+document.addEventListener('click', function (e) {
+  const header = e.target.closest('.collapser > h2');
+  if (!header) return;
+
+  const content = header.nextElementSibling; // .collapser-content
+  if (!content) return;
+
+  if (content.style.maxHeight) {
+    content.style.maxHeight = '';
+  } else {
+    content.style.maxHeight = content.scrollHeight + 'px';
   }
-  else {
-    collapser.style.maxHeight = collapser.scrollHeight + "px";
-    collapser.parentNode.className = collapser.parentNode.className.replaceAll("collapsed", "");
-  }
-}
+});
 </script>
 
 <style>
