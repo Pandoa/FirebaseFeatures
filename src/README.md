@@ -42,7 +42,7 @@
 
 <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
 <a class="hero-btn" href="https://www.fab.com/listings/feaef5b9-d11d-4609-84de-f4551203682d">
-Download on Fab Marketplace <img width="24" height="24" src="_images/buyueicon.png" alt="Icon"/>
+Download on Fab <img width="24" height="24" src="_images/buyueicon.png" alt="Icon"/>
 </a>
 <a class="hero-btn-secondary" href="#/installation">
 Go to installation doc
