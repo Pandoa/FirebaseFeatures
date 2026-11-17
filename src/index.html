@@ -43,6 +43,92 @@
 	<meta property="og:url" content="https://pandoa.github.io/FirebaseFeatures/" />
 	<meta itemprop="image" content="https://pandoa.github.io/FirebaseFeatures/_media/icon.png" />
 	<meta itemprop="thumbnailUrl" content="https://pandoa.github.io/FirebaseFeatures/_media/icon.png" />
+
+<style>
+  :root {
+    --bar-h: 52px;
+    --bg: #1a1a1a;
+    --bg-2: #161616;
+    --border: #2a2a2a;
+    --text: #ddd;
+    --muted: #888;
+  }
+  body { margin: 0; padding-top: var(--bar-h); background: var(--bg); color: var(--text); }
+
+  .app-nav.app-nav {
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    margin: 0 !important;
+    padding: 0 24px;
+    height: var(--bar-h);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Logo + site name, left, clickable */
+  .app-nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: auto;
+  }
+  .app-nav .brand img {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+
+  /* Links, right */
+  .app-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0 !important;
+    padding: 0;
+    list-style: none;
+  }
+  .app-nav ul li a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color .15s;
+  }
+  .app-nav ul li a:hover,
+  .app-nav ul li a.active { color: #fff; }
+
+  .app-nav ul li a[target="_blank"]::after {
+    content: "";
+    display: inline-block;
+    width: .7em; height: .7em;
+    margin-left: 5px;
+    vertical-align: -0.05em;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    top: var(--bar-h) !important;
+    height: calc(100vh - var(--bar-h)) !important;
+    padding-top: 8px !important;
+    background: var(--bg-2) !important;
+    border-right: 1px solid var(--border);
+  }
+  .sidebar .app-name { display: none; }
+  .sidebar-nav { padding: 12px 0 24px; }
+  .sidebar ul li a { color: var(--muted); font-size: 14px; }
+  .sidebar ul li a:hover,
+  .sidebar ul li.active > a { color: #fff; }
+</style>
 	<style>
 		* {
 			-webkit-font-smoothing: antialiased;
@@ -1696,9 +1782,7 @@
 				elems[i].classList.remove('show-cpp-' + !bShowCPP);
 				elems[i].classList.add('show-cpp-' + bShowCPP);
 			}
-
 			setCookie('bShowCPP', bShowCPP, 7);
-			
 			if (typeof gtag === 'function') {
 				gtag('event', 'switch_code_view', {
 					'event_category': 'engagement',
@@ -1773,13 +1857,28 @@ setupStatic();
 		window.$docsify = {
 			name: 'Firebase Features',
 			loadSidebar: true,
+			loadNavbar: true,
 			executeScript: true,
 			subMaxLevel: 3,
 			ga: 'UA-179486364-1',
 			pagination: {
 				crossChapter: true,
 				crossChapterText: true,
-			}
+			},
+			plugins: [
+  function (hook) {
+    hook.doneEach(function () {
+      var nav = document.querySelector('.app-nav');
+      if (nav && !nav.querySelector('.brand')) {
+        var a = document.createElement('a');
+        a.className = 'brand';
+        a.href = '#/';
+        a.innerHTML = '<img style="border:none;box-shadow:none;" src="https://pandoa.github.io/FirebaseFeatures/_media/icon.png" alt="Firebase Feature Icon">Firebase Features';
+        nav.insertBefore(a, nav.firstChild);
+      }
+    });
+  }
+],
 		}
 	</script>
 	<script class="delete-static">

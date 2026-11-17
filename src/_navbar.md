@@ -1,2 +1,4 @@
-- Translations
-  - [:uk: English](/)
+- [Installation](/installation)
+- [Support](/support)
+- [Download Plugin](https://www.fab.com/listings/feaef5b9-d11d-4609-84de-f4551203682d ':target=_blank')
+- [Discord](https://discord.gg/9dzAucgAS9 ':target=_blank')
