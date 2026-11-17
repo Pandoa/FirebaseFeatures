@@ -57,7 +57,7 @@ Documentation also available in
 <a href="/FirebaseFeatures/fr/" class="lang-link">Français</a>
 </div>
 
-<h2 style="text-align: center;">Explore Components</h2>
+<h2 style="text-align: center;">Explore the Documentation</h2>
 <div class="fb-grid">
 <a class="fb-card" href="#/firestore"><img alt="firebase firestore icon" src="_images/firebase/Firestore.png" width="64" height="64"/><div class="fb-name">Firestore</div></a>
 <a class="fb-card" href="#/functions"><img alt="firebase cloud functions icon" src="_images/firebase/CloudFunctions.png" width="64" height="64"/><div class="fb-name">Functions</div></a>
